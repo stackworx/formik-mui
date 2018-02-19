@@ -1,7 +1,13 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/flowtype', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'plugin:flowtype/recommended',
+    'prettier',
+    'prettier/flowtype',
+    'prettier/react',
+  ],
   parser: 'babel-eslint',
-  plugins: ['jest'],
+  plugins: ['jest', 'flowtype'],
   env: {
     'jest/globals': true,
   },
