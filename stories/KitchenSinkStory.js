@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
+import { action } from '@storybook/addon-actions';
 
 export default () => (
   <div>
@@ -24,7 +25,7 @@ export default () => (
       }}
       onSubmit={(values, { setSubmitting }) => {
         setSubmitting(false);
-        console.log(values);
+        action('submit')(values);
       }}
       render={({
         values,
