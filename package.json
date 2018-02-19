@@ -1,0 +1,52 @@
+{
+  "name": "formik-material-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "formik": "^0.11.10",
+    "material-ui": "^1.0.0-beta.34"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "@storybook/react": "^3.3.13",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.18.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.12.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "flow-bin": "^0.66.0",
+    "flow-typed": "^2.3.0",
+    "jest": "^22.3.0",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint": "eslint .",
+    "flow": "flow",
+    "test": "jest",
+    "test:updateSnapshot": "jest --updateSnapshot",
+    "prettier": "prettier --write \"src/**/*.js\"",
+    "prettier:list": "prettier --list-different \"src/**/*.js\"",
+    "pre:commit": "yarn prettier && yarn flow && yarn lint && yarn test"
+  }
+}
