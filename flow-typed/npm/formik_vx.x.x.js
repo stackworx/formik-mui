@@ -187,7 +187,7 @@ declare module 'formik' {
       /** Value of the input */
       value: any,
       /* name of the input */
-      name?: string,
+      name: string,
     },
     form: FormikProps<any>,
   };
