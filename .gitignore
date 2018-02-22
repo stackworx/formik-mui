@@ -2,3 +2,5 @@ node_modules
 build
 dist
 .DS_Store
+
+storybook-static/
