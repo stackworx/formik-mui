@@ -8,3 +8,12 @@ script:
   - yarn lint
   - yarn test
   - yarn build-storybook
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: storybook-static
+  on:
+    branch: master
