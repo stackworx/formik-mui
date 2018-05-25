@@ -1,5 +1,5 @@
 /* @flow */
-import TextField from 'material-ui/TextField';
+import TextField from '@material-ui/core/TextField';
 
 import createComponent from './createComponent';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
-import { LinearProgress } from 'material-ui/Progress';
+import { LinearProgress } from '@material-ui/core/LinearProgress';
 import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 
