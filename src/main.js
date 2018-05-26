@@ -1,4 +1,5 @@
 import TextField from './TextField';
+import Switch from './Switch';
+import Checkbox from './Checkbox';
 
-// eslint-disable-next-line import/prefer-default-export
-export { TextField };
+export { TextField, Switch, Checkbox };

@@ -45,9 +45,12 @@
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-flow": "^1.1.1",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "yup": "^0.25.1"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/formik-material-ui.es6.js",
   "scripts": {
@@ -61,7 +64,6 @@
     "prettier": "prettier --write \"src/**/*.js\"",
     "prettier:list": "prettier --list-different \"src/**/*.js\"",
     "prepublish": "yarn build",
-    "pre:commit":
-      "yarn prettier && yarn flow && yarn lint && yarn test && yarn build && yarn build-storybook"
+    "pre:commit": "yarn prettier && yarn flow && yarn lint && yarn test && yarn build && yarn build-storybook"
   }
 }
