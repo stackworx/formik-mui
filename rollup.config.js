@@ -20,7 +20,7 @@ export default [
           ],
           'react',
         ],
-        plugins: ['external-helpers', 'syntax-object-rest-spread'],
+        plugins: ['external-helpers', 'transform-object-rest-spread'],
         babelrc: false,
       }),
     ],
