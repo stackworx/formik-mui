@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Renders Correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="MuiInput-root-6 MuiInput-underline-10"
+    label="Select"
+  >
+    <div
+      className="MuiSelect-root-1"
+    >
+      <div
+        aria-haspopup="true"
+        aria-owns={null}
+        aria-pressed="false"
+        className="MuiSelect-select-2 MuiSelect-selectMenu-3 MuiInput-input-14"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203",
+            }
+          }
+        />
+      </div>
+      <input
+        aria-invalid={undefined}
+        aria-required={undefined}
+        autoComplete={undefined}
+        autoFocus={undefined}
+        defaultValue={undefined}
+        id={undefined}
+        name="test"
+        onKeyDown={undefined}
+        onKeyUp={undefined}
+        placeholder={undefined}
+        readOnly={undefined}
+        required={undefined}
+        rows={undefined}
+        type="hidden"
+        value=""
+      />
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-19 MuiSelect-icon-5"
+        color={undefined}
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</form>
+`;

@@ -9,36 +9,6 @@ exports[`Switch Renders Correctly 1`] = `
   >
     <span
       className="MuiButtonBase-root-20 MuiIconButton-root-14 MuiSwitchBase-root-10 MuiSwitch-switchBase-4 MuiSwitch-colorSecondary-7"
-      form={
-        Object {
-          "dirty": false,
-          "errors": Object {},
-          "handleBlur": [Function],
-          "handleChange": [Function],
-          "handleReset": [Function],
-          "handleSubmit": [Function],
-          "initialValues": Object {},
-          "isSubmitting": false,
-          "isValid": false,
-          "resetForm": [Function],
-          "setError": [Function],
-          "setErrors": [Function],
-          "setFieldError": [Function],
-          "setFieldTouched": [Function],
-          "setFieldValue": [Function],
-          "setFormikState": [Function],
-          "setStatus": [Function],
-          "setSubmitting": [Function],
-          "setTouched": [Function],
-          "setValues": [Function],
-          "submitForm": [Function],
-          "touched": Object {},
-          "validateForm": [Function],
-          "validateOnBlur": true,
-          "validateOnChange": true,
-          "values": Object {},
-        }
-      }
       label="Text"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -62,13 +32,13 @@ exports[`Switch Renders Correctly 1`] = `
         <input
           checked={false}
           className="MuiSwitchBase-input-13"
-          disabled={undefined}
+          disabled={false}
           id={undefined}
           name="test"
           onChange={[Function]}
           tabIndex={undefined}
           type="checkbox"
-          value={undefined}
+          value=""
         />
       </span>
       <span

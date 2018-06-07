@@ -10,6 +10,7 @@ import FormControl from '@material-ui/core/FormControl';
 import * as Yup from 'yup';
 
 import Wrapper from './Wrapper';
+import FormValues from './FormValues';
 import { Select } from '../src/main';
 
 const schema = Yup.object().shape({
@@ -34,12 +35,9 @@ export default withStyles(styles)(({ classes }) => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ handleSubmit, errors }) => (
+      render={({ handleSubmit, values }) => (
         <Form>
           <FormControl className={classes.formControl}>
-            {/* <Field name="age" htmlFor="age-simple" component={InputLabel}>
-              Age
-            </Field> */}
             <InputLabel htmlFor="age-simple">Age</InputLabel>
             <Field
               name="age"
@@ -61,6 +59,8 @@ export default withStyles(styles)(({ classes }) => (
           <Button variant="raised" color="primary" onClick={handleSubmit}>
             Submit
           </Button>
+          <br />
+          <FormValues values={values} />
         </Form>
       )}
     />

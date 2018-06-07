@@ -61,8 +61,7 @@
     "test:updateSnapshot": "jest --updateSnapshot",
     "prettier": "prettier --write \"src/**/*.js\"",
     "prettier:list": "prettier --list-different \"src/**/*.js\"",
-    "prepublish": "yarn build",
-    "pre:commit":
+    "prepare":
       "yarn prettier && yarn flow && yarn lint && yarn test && yarn build && yarn build-storybook"
   }
 }

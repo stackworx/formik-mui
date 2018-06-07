@@ -2,21 +2,23 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
 import { action } from '@storybook/addon-actions';
+
 import Wrapper from './Wrapper';
+import FormValues from './FormValues';
 
 import { Switch, Checkbox } from '../src/main';
 
 export default () => (
   <Wrapper title="Selectors">
     <Formik
-      initialValues={{ switch: false }}
+      initialValues={{ switch: false, checkbox: false }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           setSubmitting(false);
           action('submit')(values);
         }, 2000);
       }}
-      render={({ handleSubmit }) => (
+      render={({ handleSubmit, values }) => (
         <Form>
           <Field name="switch" component={Switch} />
           <br />
@@ -25,6 +27,8 @@ export default () => (
           <Button variant="raised" color="primary" onClick={handleSubmit}>
             Submit
           </Button>
+          <br />
+          <FormValues values={values} />
         </Form>
       )}
     />

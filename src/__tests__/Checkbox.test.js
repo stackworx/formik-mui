@@ -2,20 +2,14 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import renderer from 'react-test-renderer';
-import Switch from '@material-ui/core/Switch';
 
-import FormControlLabel from '../FormControlLabel';
+import Checkbox from '../Checkbox';
 
-test('FormControlLabel Renders Correctly', () => {
+test('Checkbox Renders Correctly', () => {
   const component = renderer.create(
     <Formik onSubmit={() => null}>
       <Form>
-        <Field
-          name="test"
-          label="Text"
-          component={FormControlLabel}
-          control={<Switch />}
-        />
+        <Field name="test" label="Checkbox" component={Checkbox} />
       </Form>
     </Formik>
   );

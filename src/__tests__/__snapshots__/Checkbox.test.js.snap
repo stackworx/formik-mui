@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Renders Correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <span
+    className="MuiButtonBase-root-16 MuiIconButton-root-10 MuiSwitchBase-root-6 MuiCheckbox-root-1 MuiCheckbox-colorSecondary-5"
+    label="Checkbox"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role={undefined}
+    tabIndex={null}
+  >
+    <span
+      className="MuiIconButton-label-15"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-19"
+        color={undefined}
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        />
+      </svg>
+      <input
+        checked={false}
+        className="MuiSwitchBase-input-9"
+        disabled={false}
+        id={undefined}
+        name="test"
+        onChange={[Function]}
+        tabIndex={undefined}
+        type="checkbox"
+        value=""
+      />
+    </span>
+    <span
+      className="MuiTouchRipple-root-25"
+    />
+  </span>
+</form>
+`;
