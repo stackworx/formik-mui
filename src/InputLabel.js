@@ -12,7 +12,6 @@ export default createComponent(
       ...props,
       ...field,
       error: touched[name] && !!errors[name],
-      helperText: errors[name] ? errors[name] : props.helperText,
       disabled: isSubmitting,
     };
   }

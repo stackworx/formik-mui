@@ -7,7 +7,7 @@ import Wrapper from './Wrapper';
 import { Switch, Checkbox } from '../src/main';
 
 export default () => (
-  <Wrapper title="Text Field">
+  <Wrapper title="Selectors">
     <Formik
       initialValues={{ switch: false }}
       onSubmit={(values, { setSubmitting }) => {

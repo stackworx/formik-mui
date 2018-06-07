@@ -1,10 +1,10 @@
 /* @flow */
-import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
 
 import createComponent from './createComponent';
 
 export default createComponent(
-  TextField,
+  FormControl,
   ({ field, form: { touched, errors, isSubmitting }, ...props }) => {
     const { name } = field;
 
@@ -12,7 +12,6 @@ export default createComponent(
       ...props,
       ...field,
       error: touched[name] && !!errors[name],
-      helperText: errors[name] ? errors[name] : props.helperText,
       disabled: isSubmitting,
     };
   }

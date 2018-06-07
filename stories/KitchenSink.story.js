@@ -8,7 +8,7 @@ import Wrapper from './Wrapper';
 import TextField from '../src/TextField';
 
 export default () => (
-  <Wrapper title="Text Field">
+  <Wrapper title="Kitchen Sink">
     <Formik
       initialValues={{ email: '', password: '' }}
       validate={values => {
