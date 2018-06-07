@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 
 import TextField from '../src/TextField';
+import FormValues from './FormValues';
 
 export default () => (
   <Wrapper title="Text Field">
@@ -28,7 +29,7 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ handleSubmit, isSubmitting }) => (
+      render={({ handleSubmit, isSubmitting, values }) => (
         <Form>
           <Field
             type="email"
@@ -54,6 +55,8 @@ export default () => (
           >
             Submit
           </Button>
+          <br />
+          <FormValues values={values} />
         </Form>
       )}
     />

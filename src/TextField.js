@@ -5,7 +5,7 @@ import createComponent from './createComponent';
 
 export default createComponent(
   TextField,
-  ({ field, form: { touched, errors }, ...props }) => {
+  ({ field, form: { touched, errors, isSubmitting }, ...props }) => {
     const { name } = field;
 
     return {
@@ -13,6 +13,7 @@ export default createComponent(
       ...field,
       error: touched[name] && !!errors[name],
       helperText: errors[name] ? errors[name] : props.helperText,
+      disabled: isSubmitting,
     };
   }
 );
