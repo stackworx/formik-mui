@@ -1,11 +1,10 @@
 {
   "name": "formik-material-ui",
   "version": "0.0.4",
-  "dependencies": {
-    "@material-ui/core": "^1.0.0",
-    "formik": "^0.11.10"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "@material-ui/core": ">=1.0.0",
+    "formik": ">=0.11.10",
     "react": "^15.0.0-0 || ^16.0.0-0"
   },
   "prettier": {
@@ -13,6 +12,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
+    "@material-ui/core": "^1.2.2",
     "@storybook/addon-actions": "^3.3.13",
     "@storybook/addon-links": "^3.3.13",
     "@storybook/addons": "^3.3.13",
@@ -37,6 +37,7 @@
     "flow-bin": "^0.66.0",
     "flow-typed": "^2.3.0",
     "jest": "^22.3.0",
+    "formik": "^0.11.10",
     "prettier": "^1.10.2",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",

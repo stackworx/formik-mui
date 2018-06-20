@@ -7,8 +7,6 @@ exports[`TextField Renders Correctly 1`] = `
   <div
     aria-describedby={undefined}
     className="MuiFormControl-root-1"
-    onBlur={[Function]}
-    onFocus={[Function]}
   >
     <label
       className="MuiFormLabel-root-10 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"

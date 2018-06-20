@@ -26,7 +26,7 @@ exports[`Select Renders Correctly 1`] = `
         <span
           dangerouslySetInnerHTML={
             Object {
-              "__html": "&#8203",
+              "__html": "&#8203;",
             }
           }
         />
