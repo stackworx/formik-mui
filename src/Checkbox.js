@@ -5,8 +5,8 @@ import createComponent from './createComponent';
 
 export default createComponent(
   Checkbox,
-  ({ field, form: { isSubmitting }, ...props }) => ({
-    disabled: isSubmitting,
+  ({ field, form: { isSubmitting }, disabled = false, ...props }) => ({
+    disabled: isSubmitting || disabled,
     ...props,
     ...field,
     // TODO: is this the correct way?
