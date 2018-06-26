@@ -5,7 +5,7 @@ import createComponent from './createComponent';
 
 export default createComponent(
   Switch,
-  ({ field, form: { isSubmitting }, disabled, ...props }) => ({
+  ({ field, form: { isSubmitting }, disabled = false, ...props }) => ({
     disabled: isSubmitting || disabled,
     ...props,
     ...field,
