@@ -11,7 +11,7 @@ import FormValues from './FormValues';
 export default () => (
   <Wrapper title="Kitchen Sink">
     <Formik
-      initialValues={{ email: '', password: '' }}
+      initialValues={{ email: '', password: '', dateTime: '', date: '' }}
       validate={values => {
         const errors = {};
         if (!values.email) {
@@ -42,6 +42,22 @@ export default () => (
             type="password"
             label="Password"
             name="password"
+            component={TextField}
+          />
+          <br />
+          <Field
+            InputLabelProps={{ shrink: true }}
+            type="datetime-local"
+            label="Date Time"
+            name="dateTime"
+            component={TextField}
+          />
+          <br />
+          <Field
+            InputLabelProps={{ shrink: true }}
+            type="date"
+            label="Date"
+            name="date"
             component={TextField}
           />
           <br />

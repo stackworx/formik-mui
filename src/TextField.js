@@ -5,7 +5,12 @@ import createComponent from './createComponent';
 
 export default createComponent(
   TextField,
-  ({ field, form: { touched, errors, isSubmitting }, disabled = false, ...props }) => {
+  ({
+    field,
+    form: { touched, errors, isSubmitting },
+    disabled = false,
+    ...props
+  }) => {
     const { name } = field;
 
     return {

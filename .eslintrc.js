@@ -10,6 +10,7 @@ module.exports = {
   plugins: ['jest', 'flowtype'],
   env: {
     'jest/globals': true,
+    browser: true,
   },
   rules: {
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
