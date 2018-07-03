@@ -4,11 +4,10 @@ node_js:
   - '8'
 script:
   - yarn prettier:list
-  - yarn flow check
-  - yarn lint
   - yarn test
-  - yarn build-storybook
   - yarn build
+  - yarn package
+  - yarn build-storybook
 
 deploy:
   provider: pages

@@ -2,5 +2,7 @@ node_modules
 build
 dist
 .DS_Store
+.rpt2_cache
+yarn-error.log
 
 storybook-static/
