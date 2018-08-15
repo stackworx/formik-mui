@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
 
 // TODO fix dependencies
@@ -6,22 +6,11 @@ const external = ['react', 'react-native'];
 
 export default [
   {
-    input: 'src/main.js',
+    input: 'src/main.tsx',
     plugins: [
-      babel({
-        exclude: 'node_modules/**', // only transpile our source code
-        presets: [
-          'flow',
-          [
-            'env',
-            {
-              modules: false,
-            },
-          ],
-          'react',
-        ],
-        plugins: ['external-helpers', 'transform-object-rest-spread'],
-        babelrc: false,
+      typescript({
+        // cacheRoot: `${os.tmpdir}/.rpt2_cache`,
+        tsconfig: 'tsconfig.package.json',
       }),
     ],
     external: external.concat(Object.keys(pkg.dependencies)),

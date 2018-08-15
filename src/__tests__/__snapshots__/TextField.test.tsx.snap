@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField Renders Correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="MuiFormControl-root-1"
+  >
+    <label
+      className="MuiFormLabel-root-10 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+      data-shrink={false}
+    >
+      Text
+    </label>
+    <div
+      className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-underline-19"
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInput-input-23"
+        disabled={false}
+        name="test"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="text"
+      />
+    </div>
+  </div>
+</form>
+`;
