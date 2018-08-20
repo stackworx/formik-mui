@@ -7,7 +7,7 @@ import { FieldProps } from 'formik';
 
 export interface TextFieldProps extends FieldProps, MuiTextFieldProps {}
 
-const TextField: React.SFC<TextFieldProps> = ({
+const TextField: React.ComponentType<TextFieldProps> = ({
   field,
   form,
   disabled = false,
