@@ -20,4 +20,6 @@ const Switch: React.ComponentType<MuiSwitchProps & FieldProps> = ({
   />
 );
 
+Switch.displayName = 'FormikMaterialUISwitch';
+
 export default Switch;
