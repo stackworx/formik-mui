@@ -1,16 +1,25 @@
 // @ts-ignore
 import * as React from 'react';
-import Checkbox from '@material-ui/core/Checkbox';
+import MuiCheckbox, {
+  CheckboxProps as MuiCheckboxProps,
+} from '@material-ui/core/Checkbox';
+import { FieldProps } from 'formik';
 
-import createComponent from './createComponent';
-
-export default createComponent(
-  Checkbox,
-  ({ field, form: { isSubmitting }, disabled = false, ...props }) => ({
-    disabled: isSubmitting || disabled,
-    ...props,
-    ...field,
+const Checkbox: React.ComponentType<FieldProps & MuiCheckboxProps> = ({
+  field,
+  form: { isSubmitting },
+  disabled = false,
+  ...props
+}) => (
+  <MuiCheckbox
+    disabled={isSubmitting || disabled}
+    {...props}
+    {...field}
     // TODO: is this the correct way?
-    value: field.value ? 'checked' : '',
-  })
+    value={field.value ? 'checked' : ''}
+  />
 );
+
+Checkbox.displayName = 'FormikMaterialUICheckbox';
+
+export default Checkbox;
