@@ -1,32 +1,34 @@
 // @ts-ignore
 import * as React from 'react';
-import TextField, {
+import MuiTextField, {
   TextFieldProps as MuiTextFieldProps,
 } from '@material-ui/core/TextField';
+import { FieldProps } from 'formik';
 
-import createComponent from './createComponent';
+export interface TextFieldProps extends FieldProps, MuiTextFieldProps {}
 
-export interface TextFieldProps extends MuiTextFieldProps {
-  disabled?: boolean;
-}
+const TextField: React.SFC<TextFieldProps> = ({
+  field,
+  form,
+  disabled = false,
+  ...props
+}) => {
+  const { name } = field;
+  const { touched, errors, isSubmitting } = form;
 
-export default createComponent<TextFieldProps>(
-  TextField,
-  ({
-    field,
-    form: { touched, errors, isSubmitting },
-    disabled = false,
-    ...props
-  }) => {
-    const { name } = field;
+  return (
+    <MuiTextField
+      {...props}
+      {...field}
+      error={touched[name] && !!errors[name]}
+      helperText={
+        touched[name] && errors[name] ? errors[name] : props.helperText
+      }
+      disabled={isSubmitting || disabled}
+    />
+  );
+};
 
-    return {
-      ...props,
-      ...field,
-      error: touched[name] && !!errors[name],
-      helperText:
-        touched[name] && errors[name] ? errors[name] : props.helperText,
-      disabled: isSubmitting || disabled,
-    };
-  }
-);
+TextField.displayName = 'FormikMaterialUITextField';
+
+export default TextField;
