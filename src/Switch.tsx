@@ -4,8 +4,11 @@ import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
 } from '@material-ui/core/Switch';
 import { FieldProps } from 'formik';
+import { Omit } from './types';
 
-const Switch: React.ComponentType<MuiSwitchProps & FieldProps> = ({
+export interface SwitchProps extends FieldProps, Omit<MuiSwitchProps, 'form'> {}
+
+const Switch: React.ComponentType<SwitchProps> = ({
   field,
   form: { isSubmitting },
   disabled = false,
