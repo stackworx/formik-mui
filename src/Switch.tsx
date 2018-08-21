@@ -1,16 +1,28 @@
 // @ts-ignore
 import * as React from 'react';
-import Switch from '@material-ui/core/Switch';
+import MuiSwitch, {
+  SwitchProps as MuiSwitchProps,
+} from '@material-ui/core/Switch';
+import { FieldProps } from 'formik';
+import { Omit } from './types';
 
-import createComponent from './createComponent';
+export interface SwitchProps extends FieldProps, Omit<MuiSwitchProps, 'form'> {}
 
-export default createComponent(
-  Switch,
-  ({ field, form: { isSubmitting }, disabled = false, ...props }) => ({
-    disabled: isSubmitting || disabled,
-    ...props,
-    ...field,
+const Switch: React.ComponentType<SwitchProps> = ({
+  field,
+  form: { isSubmitting },
+  disabled = false,
+  ...props
+}) => (
+  <MuiSwitch
+    disabled={isSubmitting || disabled}
+    {...props}
+    {...field}
     // TODO: is this the correct way?
-    value: field.value ? 'checked' : '',
-  })
+    value={field.value ? 'checked' : ''}
+  />
 );
+
+Switch.displayName = 'FormikMaterialUISwitch';
+
+export default Switch;

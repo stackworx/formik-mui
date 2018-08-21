@@ -4,5 +4,6 @@ dist
 .DS_Store
 .rpt2_cache
 yarn-error.log
+.idea
 
 storybook-static/
