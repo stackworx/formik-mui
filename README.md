@@ -4,7 +4,7 @@
 
 Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Material UI](https://material-ui.com/).
 
-[CodeSandbox](https://codesandbox.io/s/z65oq5q9y3)
+[Code Sandbox](https://codesandbox.io/s/z65oq5q9y3)
 
 ## Getting Started
 
