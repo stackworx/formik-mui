@@ -6,7 +6,9 @@ import MuiCheckbox, {
 import { FieldProps } from 'formik';
 import { Omit } from './types';
 
-export interface CheckboxProps extends FieldProps, Omit<MuiCheckboxProps, 'form'> {}
+export interface CheckboxProps
+  extends FieldProps,
+    Omit<MuiCheckboxProps, 'form'> {}
 
 const Checkbox: React.ComponentType<CheckboxProps> = ({
   field,
