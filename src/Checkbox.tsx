@@ -4,8 +4,11 @@ import MuiCheckbox, {
   CheckboxProps as MuiCheckboxProps,
 } from '@material-ui/core/Checkbox';
 import { FieldProps } from 'formik';
+import { Omit } from './types';
 
-const Checkbox: React.ComponentType<FieldProps & MuiCheckboxProps> = ({
+export interface CheckboxProps extends FieldProps, Omit<MuiCheckboxProps, 'form'> {}
+
+const Checkbox: React.ComponentType<CheckboxProps> = ({
   field,
   form: { isSubmitting },
   disabled = false,
