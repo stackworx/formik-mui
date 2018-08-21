@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
-export interface TextFieldProps extends MuiTextFieldProps {
-    disabled?: boolean;
+import { FieldProps } from 'formik';
+export interface TextFieldProps extends FieldProps, MuiTextFieldProps {
 }
-declare const _default: React.ComponentType<TextFieldProps & import("formik/dist/Field").FieldProps<any>>;
-export default _default;
+declare const TextField: React.ComponentType<TextFieldProps>;
+export default TextField;

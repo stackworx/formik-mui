@@ -1,3 +1,8 @@
 import * as React from 'react';
-declare const _default: React.ComponentType<import("@material-ui/core/Switch/Switch").SwitchProps & import("formik/dist/Field").FieldProps<any>>;
-export default _default;
+import { SwitchProps as MuiSwitchProps } from '@material-ui/core/Switch';
+import { FieldProps } from 'formik';
+import { Omit } from './types';
+export interface SwitchProps extends FieldProps, Omit<MuiSwitchProps, 'form'> {
+}
+declare const Switch: React.ComponentType<SwitchProps>;
+export default Switch;
