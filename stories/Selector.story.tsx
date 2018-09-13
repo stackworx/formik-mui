@@ -11,7 +11,11 @@ import { Switch, Checkbox } from '../src/main';
 export default () => (
   <Wrapper title="Selectors">
     <Formik
-      initialValues={{ switch: false, checkbox: false }}
+      initialValues={{
+        switch: false,
+        checkbox: false,
+        checkboxWithLabel: true,
+      }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           setSubmitting(false);
@@ -23,6 +27,12 @@ export default () => (
           <Field name="switch" component={Switch} />
           <br />
           <Field name="checkbox" component={Checkbox} />
+          <br />
+          <Field
+            name="checkboxWithLabel"
+            LabelProps={{ label: 'With Label' }}
+            component={Checkbox}
+          />
           <br />
           <Button variant="raised" color="primary" onClick={submitForm}>
             Submit
