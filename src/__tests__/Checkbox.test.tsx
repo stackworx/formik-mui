@@ -9,7 +9,11 @@ test('Checkbox Renders Correctly', () => {
   const component = renderer.create(
     <Formik initialValues={{ test: true }} onSubmit={() => null}>
       <Form>
-        <Field name="test" label="Checkbox Label" component={Checkbox} />
+        <Field
+          name="test"
+          LabelProps={{ label: 'Checkbox Label' }}
+          component={Checkbox}
+        />
       </Form>
     </Formik>
   );

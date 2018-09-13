@@ -30,7 +30,7 @@ export default () => (
           <br />
           <Field
             name="checkboxWithLabel"
-            label="With Label"
+            LabelProps={{ label: 'With Label' }}
             component={Checkbox}
           />
           <br />
