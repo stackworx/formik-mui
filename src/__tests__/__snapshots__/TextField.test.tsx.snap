@@ -14,11 +14,11 @@ exports[`TextField Renders Correctly 1`] = `
       Text
     </label>
     <div
-      className="MuiInput-root-15 MuiInput-formControl-16 MuiInput-underline-19"
+      className="MuiInput-root-17 MuiInput-formControl-18 MuiInput-underline-21"
     >
       <input
         aria-invalid={false}
-        className="MuiInput-input-23"
+        className="MuiInput-input-25"
         disabled={false}
         name="test"
         onBlur={[Function]}

@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
-import { LinearProgress } from '@material-ui/core';
+import { LinearProgress, FormControlLabel, Radio } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 
 import TextField from '../src/TextField';
 import FormValues from './FormValues';
+import { RadioGroup } from '../src/main';
 
 interface Values {
   email: string;
@@ -74,6 +75,24 @@ export default () => (
             name="date"
             component={TextField}
           />
+          <br />
+          <Field
+            type="radio"
+            label="radio group"
+            name="radio"
+            component={RadioGroup}
+          >
+            <FormControlLabel
+              value="painting"
+              control={<Radio />}
+              label="Painting"
+            />
+            <FormControlLabel
+              value="drawing"
+              control={<Radio />}
+              label="Drawing"
+            />
+          </Field>
           <br />
           {isSubmitting && <LinearProgress />}
           <br />

@@ -3,5 +3,6 @@ import Switch from './Switch';
 import Checkbox from './Checkbox';
 import Select from './Select';
 import SimpleFileUpload from './SimpleFileUpload';
+import RadioGroup from './RadioGroup';
 
-export { TextField, Switch, Checkbox, Select, SimpleFileUpload };
+export { TextField, Switch, Checkbox, Select, SimpleFileUpload, RadioGroup };
