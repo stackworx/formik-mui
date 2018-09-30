@@ -8,10 +8,16 @@ import RadioGroup from '../src/RadioGroup';
 import { FormControlLabel, Radio, LinearProgress } from '@material-ui/core';
 import FormValues from './FormValues';
 
+interface Values {
+  activity: string;
+}
+
 export default () => (
   <Wrapper title="Radio Group">
-    <Formik
-      initialValues={{}}
+    <Formik<Values>
+      initialValues={{
+        activity: '',
+      }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           setSubmitting(false);
@@ -21,11 +27,7 @@ export default () => (
       render={({ submitForm, values, isSubmitting, isValid }) => {
         return (
           <Form>
-            <Field
-              name="radio button"
-              label="Radio Group"
-              component={RadioGroup}
-            >
+            <Field name="activity" label="Radio Group" component={RadioGroup}>
               <FormControlLabel
                 value="painting"
                 control={<Radio disabled={isSubmitting} />}

@@ -15,7 +15,7 @@ interface Values {
 
 export default () => (
   <Wrapper title="Text Field">
-    <Formik
+    <Formik<Values>
       initialValues={{ user: { email: '' }, password: '' }}
       validate={values => {
         const errors: Partial<Values> = {};

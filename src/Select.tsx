@@ -3,15 +3,28 @@ import MuiSelect, {
   SelectProps as MuiSelectProps,
 } from '@material-ui/core/Select';
 import { FieldProps } from 'formik';
+import { Omit } from './types';
 
-export interface SelectProps extends FieldProps, MuiSelectProps {}
+export interface SelectProps
+  extends FieldProps,
+    Omit<MuiSelectProps, 'value'> {}
 
-const Select: React.ComponentType<SelectProps> = ({
+export const fieldToSelect = ({
   field,
   form: { isSubmitting },
   disabled = false,
   ...props
-}) => <MuiSelect disabled={isSubmitting || disabled} {...props} {...field} />;
+}: SelectProps) => {
+  return {
+    disabled: isSubmitting || disabled,
+    ...props,
+    ...field,
+  };
+};
+
+const Select: React.ComponentType<SelectProps> = props => (
+  <MuiSelect {...fieldToSelect(props)} />
+);
 
 Select.displayName = 'FormikMaterialUISelect';
 

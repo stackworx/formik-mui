@@ -4,13 +4,19 @@ import MuiRadioGroup, {
 } from '@material-ui/core/RadioGroup';
 import { FieldProps } from 'formik';
 
-export interface RadioGroupProps extends MuiRadioGroupProps, FieldProps {}
+import { Omit } from './types';
 
-const RadioGroup: React.ComponentType<RadioGroupProps> = ({
-  field,
-  ...props
-}) => {
-  return <MuiRadioGroup {...props} {...field} />;
+export interface RadioGroupProps
+  extends Omit<MuiRadioGroupProps, 'name' | 'onChange' | 'value'>,
+    FieldProps {}
+
+export const fieldToRadioGroup = ({ field, ...props }: RadioGroupProps) => ({
+  ...props,
+  ...field,
+});
+
+const RadioGroup: React.ComponentType<RadioGroupProps> = props => {
+  return <MuiRadioGroup {...fieldToRadioGroup(props)} />;
 };
 
 RadioGroup.displayName = 'FormikMaterialUIRadioGroup';

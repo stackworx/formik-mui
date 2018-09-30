@@ -7,21 +7,29 @@ import { Omit } from './types';
 
 export interface CheckboxProps
   extends FieldProps,
-    Omit<MuiCheckboxProps, 'form'> {}
+    Omit<
+      MuiCheckboxProps,
+      'form' | 'checked' | 'defaultChecked' | 'name' | 'onChange' | 'value'
+    > {}
 
-const Checkbox: React.ComponentType<CheckboxProps> = ({
+export const fieldToCheckbox = ({
   field,
   form: { isSubmitting },
   disabled = false,
   ...props
-}) => (
-  <MuiCheckbox
-    disabled={isSubmitting || disabled}
-    {...props}
-    {...field}
-    // TODO: is this the correct way?
-    value={field.value ? 'checked' : ''}
-  />
+}: CheckboxProps) => {
+  return {
+    disabled: isSubmitting || disabled,
+    ...props,
+    ...field,
+    // TODO handle indeterminate
+    checked: field.value ? 'checked' : '',
+    value: field.value ? 'checked' : '',
+  };
+};
+
+const Checkbox: React.ComponentType<CheckboxProps> = props => (
+  <MuiCheckbox {...fieldToCheckbox(props)} />
 );
 
 Checkbox.displayName = 'FormikMaterialUICheckbox';

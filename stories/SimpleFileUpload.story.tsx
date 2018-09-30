@@ -29,9 +29,13 @@ const styles = (theme: Theme) => ({
   },
 });
 
+interface Values {
+  file: '' | File;
+}
+
 export default withStyles(styles)(() => (
   <Wrapper title="File Upload">
-    <Formik
+    <Formik<Values>
       validationSchema={schema}
       initialValues={{ file: '' }}
       onSubmit={(values, { setSubmitting }) => {
