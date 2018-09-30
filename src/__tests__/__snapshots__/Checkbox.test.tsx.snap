@@ -34,7 +34,7 @@ exports[`Checkbox Renders Correctly 1`] = `
         />
       </svg>
       <input
-        checked={false}
+        checked=""
         className="MuiSwitchBase-input-10"
         data-indeterminate={false}
         disabled={false}
