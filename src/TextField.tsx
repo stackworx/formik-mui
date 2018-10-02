@@ -4,7 +4,7 @@ import MuiTextField, {
   TextFieldProps as MuiTextFieldProps,
 } from '@material-ui/core/TextField';
 import { FieldProps } from 'formik';
-import get from 'lodash/get';
+import get from 'lodash.get';
 
 export interface TextFieldProps extends FieldProps, MuiTextFieldProps {}
 
