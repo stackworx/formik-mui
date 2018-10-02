@@ -9,22 +9,22 @@ import TextField from '../src/TextField';
 import FormValues from './FormValues';
 
 interface Values {
-  user: {email : string};
+  user: { email: string };
   password: string;
 }
 
 export default () => (
   <Wrapper title="Text Field">
     <Formik
-      initialValues={{ user: {email: ''}, password: '' }}
-      validate={ values => {
+      initialValues={{ user: { email: '' }, password: '' }}
+      validate={values => {
         const errors: Partial<Values> = {};
         if (!values.user.email) {
-          errors.user = {email:'Required'};
+          errors.user = { email: 'Required' };
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.user.email)
         ) {
-          errors.user = {email:'Invalid email address'};
+          errors.user = { email: 'Invalid email address' };
         }
 
         if (!values.password) {

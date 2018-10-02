@@ -3,8 +3,7 @@ import * as React from 'react';
 import MuiTextField, {
   TextFieldProps as MuiTextFieldProps,
 } from '@material-ui/core/TextField';
-import { FieldProps } from 'formik';
-import get from 'lodash.get';
+import { FieldProps, getIn } from 'formik';
 
 export interface TextFieldProps extends FieldProps, MuiTextFieldProps {}
 
@@ -20,9 +19,11 @@ const TextField: React.ComponentType<TextFieldProps> = ({
     <MuiTextField
       {...props}
       {...field}
-      error={get(touched, name) && !!get(errors, name)}
+      error={getIn(touched, name) && !!getIn(errors, name)}
       helperText={
-        get(touched, name) && get(errors, name) ? get(errors, name) : props.helperText
+        getIn(touched, name) && getIn(errors, name)
+          ? getIn(errors, name)
+          : props.helperText
       }
       disabled={isSubmitting || disabled}
     />
