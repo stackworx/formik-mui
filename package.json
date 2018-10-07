@@ -46,6 +46,7 @@
     "babel-jest": "^23.4.2",
     "cross-env": "^5.2.0",
     "formik": "^1.0.2",
+    "husky": "^1.1.1",
     "jest": "^23.4.2",
     "prettier": "^1.14.0",
     "react": "^16.4.2",
@@ -64,6 +65,12 @@
   "files": [
     "dist"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier",
+      "pre-push": "yarn test -u"
+    }
+  },
   "main": "dist/index.js",
   "module": "dist/formik-material-ui.es6.js",
   "scripts": {
