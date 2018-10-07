@@ -8,17 +8,18 @@ exports[`TextField Renders Correctly 1`] = `
     className="MuiFormControl-root-1"
   >
     <label
-      className="MuiFormLabel-root-10 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+      className="MuiFormLabel-root-12 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
       data-shrink={false}
     >
       Text
     </label>
     <div
-      className="MuiInput-root-17 MuiInput-formControl-18 MuiInput-underline-21"
+      className="MuiInputBase-root-32 MuiInput-root-19 MuiInput-underline-23 MuiInputBase-formControl-33 MuiInput-formControl-20"
+      onClick={[Function]}
     >
       <input
         aria-invalid={false}
-        className="MuiInput-input-25"
+        className="MuiInputBase-input-42 MuiInput-input-27"
         disabled={false}
         name="test"
         onBlur={[Function]}

@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
 import { action } from '@storybook/addon-actions';
-import { withStyles, Theme } from '@material-ui/core';
+import { createStyles, withStyles, Theme, WithStyles } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -16,16 +16,21 @@ const schema = Yup.object().shape({
   age: Yup.string().required(),
 });
 
-const styles = (theme: Theme) => ({
-  formControl: {
-    margin: theme.spacing.unit,
-    minWidth: 120,
-  },
-});
+const styles = ({ spacing }: Theme) =>
+  createStyles({
+    formControl: {
+      margin: spacing.unit,
+      minWidth: 120,
+    },
+  });
 
-export default withStyles(styles)(({ classes }) => (
+interface Values {
+  age: string;
+}
+
+export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <Wrapper title="Select">
-    <Formik
+    <Formik<Values>
       validationSchema={schema}
       initialValues={{ age: '' }}
       onSubmit={(values, { setSubmitting }) => {
