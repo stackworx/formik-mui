@@ -1,4 +1,3 @@
-// @ts-ignore
 import * as React from 'react';
 import MuiRadioGroup, {
   RadioGroupProps as MuiRadioGroupProps,
