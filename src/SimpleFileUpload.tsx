@@ -1,5 +1,5 @@
 import React from 'react';
-import { FieldProps } from 'formik';
+import { FieldProps, getIn } from 'formik';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
@@ -16,7 +16,8 @@ export default ({
   form: { touched, errors, isSubmitting, setFieldValue },
   disabled = false,
 }: Props) => {
-  const error = touched[field.name] && errors[field.name];
+  const error = getIn(touched, field.name) && getIn(errors, field.name);
+
   return (
     <div>
       <FormControl>
