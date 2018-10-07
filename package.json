@@ -1,7 +1,9 @@
 {
   "name": "formik-material-ui",
   "version": "0.0.9",
-  "dependencies": {},
+  "dependencies": {
+    "husky": "^1.0.1"
+  },
   "peerDependencies": {
     "@material-ui/core": ">=1.0.0",
     "formik": ">=1.0.0",
@@ -32,6 +34,12 @@
       "json",
       "node"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier",
+      "pre-push": "yarn test -u"
+    }
   },
   "devDependencies": {
     "@material-ui/core": "^1.4.2",
