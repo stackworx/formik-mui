@@ -73,6 +73,7 @@ exports[`Radio Group Renders Correctly 1`] = `
             aria-hidden="true"
             className="MuiSvgIcon-root-25"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -89,11 +90,11 @@ exports[`Radio Group Renders Correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-32"
+          className="MuiTouchRipple-root-34"
         />
       </span>
       <span
-        className="MuiTypography-root-39 MuiTypography-body1-48 MuiFormControlLabel-label-6"
+        className="MuiTypography-root-41 MuiTypography-body1-50 MuiFormControlLabel-label-6"
       >
         Painting
       </span>
@@ -122,6 +123,7 @@ exports[`Radio Group Renders Correctly 1`] = `
             aria-hidden="true"
             className="MuiSvgIcon-root-25"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -138,11 +140,11 @@ exports[`Radio Group Renders Correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-32"
+          className="MuiTouchRipple-root-34"
         />
       </span>
       <span
-        className="MuiTypography-root-39 MuiTypography-body1-48 MuiFormControlLabel-label-6"
+        className="MuiTypography-root-41 MuiTypography-body1-50 MuiFormControlLabel-label-6"
       >
         Drawing
       </span>
@@ -171,6 +173,7 @@ exports[`Radio Group Renders Correctly 1`] = `
             aria-hidden="true"
             className="MuiSvgIcon-root-25"
             focusable="false"
+            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -189,7 +192,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-39 MuiTypography-body1-48 MuiFormControlLabel-label-6 MuiFormControlLabel-disabled-5"
+        className="MuiTypography-root-41 MuiTypography-body1-50 MuiFormControlLabel-label-6 MuiFormControlLabel-disabled-5"
       >
         None
       </span>

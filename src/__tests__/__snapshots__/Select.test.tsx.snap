@@ -5,8 +5,9 @@ exports[`Select Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiInput-root-6 MuiInput-underline-10"
+    className="MuiInputBase-root-21 MuiInput-root-8 MuiInput-underline-12"
     label="Select"
+    onClick={[Function]}
   >
     <div
       className="MuiSelect-root-1"
@@ -15,7 +16,7 @@ exports[`Select Renders Correctly 1`] = `
         aria-haspopup="true"
         aria-owns={null}
         aria-pressed="false"
-        className="MuiSelect-select-2 MuiSelect-selectMenu-3 MuiInput-input-14"
+        className="MuiSelect-select-2 MuiSelect-selectMenu-5 MuiInputBase-input-31 MuiInput-input-16"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -38,8 +39,9 @@ exports[`Select Renders Correctly 1`] = `
       />
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-19 MuiSelect-icon-5"
+        className="MuiSvgIcon-root-38 MuiSelect-icon-7"
         focusable="false"
+        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
