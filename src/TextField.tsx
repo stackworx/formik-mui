@@ -18,14 +18,14 @@ export const fieldToTextField = ({
   const { name } = field;
   const { touched, errors, isSubmitting } = form;
 
+  const fieldError = getIn(errors, name);
+  const showError = getIn(touched, name) && fieldError;
+
   return {
     ...props,
     ...field,
-    error: getIn(touched, name) && !!getIn(errors, name),
-    helperText:
-      getIn(touched, name) && getIn(errors, name)
-        ? getIn(errors, name)
-        : props.helperText,
+    error: showError,
+    helperText: showError ? fieldError : props.helperText,
     disabled: isSubmitting || disabled,
   };
 };
