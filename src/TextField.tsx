@@ -22,7 +22,10 @@ export const fieldToTextField = ({
     ...props,
     ...field,
     error: getIn(touched, name) && !!getIn(errors, name),
-    helperText: touched[name] && errors[name] ? errors[name] : props.helperText,
+    helperText:
+      getIn(touched, name) && getIn(errors, name)
+        ? getIn(errors, name)
+        : props.helperText,
     disabled: isSubmitting || disabled,
   };
 };
