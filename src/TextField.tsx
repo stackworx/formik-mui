@@ -14,7 +14,7 @@ export const fieldToTextField = ({
   form,
   disabled = false,
   ...props
-}: TextFieldProps) => {
+}: TextFieldProps): MuiTextFieldProps => {
   const { name } = field;
   const { touched, errors, isSubmitting } = form;
 
@@ -30,9 +30,9 @@ export const fieldToTextField = ({
   };
 };
 
-const TextField: React.ComponentType<TextFieldProps> = props => (
-  <MuiTextField {...fieldToTextField(props)} />
-);
+const TextField: React.ComponentType<TextFieldProps> = (
+  props: TextFieldProps
+) => <MuiTextField {...fieldToTextField(props)} />;
 
 TextField.displayName = 'FormikMaterialUITextField';
 

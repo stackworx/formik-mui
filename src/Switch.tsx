@@ -17,7 +17,7 @@ export const fieldToSwitch = ({
   form: { isSubmitting },
   disabled = false,
   ...props
-}: SwitchProps) => {
+}: SwitchProps): MuiSwitchProps => {
   return {
     disabled: isSubmitting || disabled,
     ...props,
@@ -27,7 +27,7 @@ export const fieldToSwitch = ({
   };
 };
 
-const Switch: React.ComponentType<SwitchProps> = props => (
+const Switch: React.ComponentType<SwitchProps> = (props: SwitchProps) => (
   <MuiSwitch {...fieldToSwitch(props)} />
 );
 

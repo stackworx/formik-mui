@@ -14,7 +14,7 @@ export const fieldToSelect = ({
   form: { isSubmitting },
   disabled = false,
   ...props
-}: SelectProps) => {
+}: SelectProps): MuiSelectProps => {
   return {
     disabled: isSubmitting || disabled,
     ...props,
@@ -22,7 +22,7 @@ export const fieldToSelect = ({
   };
 };
 
-const Select: React.ComponentType<SelectProps> = props => (
+const Select: React.ComponentType<SelectProps> = (props: SelectProps) => (
   <MuiSelect {...fieldToSelect(props)} />
 );
 

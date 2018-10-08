@@ -10,12 +10,19 @@ export interface RadioGroupProps
   extends Omit<MuiRadioGroupProps, 'name' | 'onChange' | 'value'>,
     FieldProps {}
 
-export const fieldToRadioGroup = ({ field, ...props }: RadioGroupProps) => ({
+export const fieldToRadioGroup = ({
+  field,
+  // Exclude Form
+  form,
+  ...props
+}: RadioGroupProps): MuiRadioGroupProps => ({
   ...props,
   ...field,
 });
 
-const RadioGroup: React.ComponentType<RadioGroupProps> = props => {
+const RadioGroup: React.ComponentType<RadioGroupProps> = (
+  props: RadioGroupProps
+) => {
   return <MuiRadioGroup {...fieldToRadioGroup(props)} />;
 };
 

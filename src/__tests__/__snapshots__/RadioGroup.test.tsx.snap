@@ -6,45 +6,6 @@ exports[`Radio Group Renders Correctly 1`] = `
 >
   <div
     className="MuiFormGroup-root-1"
-    form={
-      Object {
-        "dirty": false,
-        "errors": Object {},
-        "handleBlur": [Function],
-        "handleChange": [Function],
-        "handleReset": [Function],
-        "handleSubmit": [Function],
-        "initialValues": Object {
-          "test": "",
-        },
-        "isSubmitting": false,
-        "isValid": false,
-        "isValidating": false,
-        "registerField": [Function],
-        "resetForm": [Function],
-        "setError": [Function],
-        "setErrors": [Function],
-        "setFieldError": [Function],
-        "setFieldTouched": [Function],
-        "setFieldValue": [Function],
-        "setFormikState": [Function],
-        "setStatus": [Function],
-        "setSubmitting": [Function],
-        "setTouched": [Function],
-        "setValues": [Function],
-        "submitCount": 0,
-        "submitForm": [Function],
-        "touched": Object {},
-        "unregisterField": [Function],
-        "validateField": [Function],
-        "validateForm": [Function],
-        "validateOnBlur": true,
-        "validateOnChange": true,
-        "values": Object {
-          "test": "",
-        },
-      }
-    }
     label="Radio Group"
     onBlur={[Function]}
     role="radiogroup"

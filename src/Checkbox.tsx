@@ -17,7 +17,7 @@ export const fieldToCheckbox = ({
   form: { isSubmitting },
   disabled = false,
   ...props
-}: CheckboxProps) => {
+}: CheckboxProps): MuiCheckboxProps => {
   return {
     disabled: isSubmitting || disabled,
     ...props,
@@ -28,7 +28,7 @@ export const fieldToCheckbox = ({
   };
 };
 
-const Checkbox: React.ComponentType<CheckboxProps> = props => (
+const Checkbox: React.ComponentType<CheckboxProps> = (props: CheckboxProps) => (
   <MuiCheckbox {...fieldToCheckbox(props)} />
 );
 

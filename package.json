@@ -79,7 +79,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "cross-env NODE_ENV=production tsc --noEmit -p tsconfig.json",
+    "build": "cross-env NODE_ENV=production tsc --noEmit --project tsconfig.json",
     "package": "rimraf build dist && cross-env NODE_ENV=production tsc -p tsconfig.package.json && rollup -c && rimraf .rpt2_cache dist/.rpt2_cache",
     "test": "jest",
     "test:updateSnapshot": "jest --updateSnapshot",
