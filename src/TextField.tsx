@@ -19,7 +19,7 @@ export const fieldToTextField = ({
   const { touched, errors, isSubmitting } = form;
 
   const fieldError = getIn(errors, name);
-  const showError = getIn(touched, name) && fieldError;
+  const showError = getIn(touched, name) && !!fieldError;
 
   return {
     ...props,
