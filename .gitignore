@@ -9,3 +9,4 @@ package-lock.json
 
 storybook-static/
 coverage
+lerna-debug.log
