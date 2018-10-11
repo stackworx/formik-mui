@@ -3,17 +3,21 @@ import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
 import { LinearProgress, FormControlLabel, Radio } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
-import Wrapper from './Wrapper';
+import MenuItem from '@material-ui/core/MenuItem';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
 
-import { TextField } from '../src/TextField';
+import Wrapper from './Wrapper';
 import FormValues from './FormValues';
-import { RadioGroup } from '../src/main';
+import { CheckboxWithLabel, TextField, Select, RadioGroup } from '../src/main';
 
 interface Values {
   email: string;
   password: string;
   dateTime: string;
   date: string;
+  rememberMe: boolean;
+  age: string;
 }
 
 const initialValues: Values = {
@@ -21,6 +25,8 @@ const initialValues: Values = {
   password: '',
   dateTime: '',
   date: '',
+  rememberMe: false,
+  age: '',
 };
 
 export default () => (
@@ -61,6 +67,31 @@ export default () => (
           />
           <br />
           <Field
+            Label={{ label: 'Remember Me' }}
+            name="rememberMe"
+            component={CheckboxWithLabel}
+          />
+          <br />
+          <FormControl>
+            <InputLabel htmlFor="age-simple">Age</InputLabel>
+            <Field
+              name="age"
+              component={Select}
+              inputProps={{
+                name: 'age',
+                id: 'age-simple',
+              }}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
+          </FormControl>
+          <br />
+          <Field
             InputLabelProps={{ shrink: true }}
             type="datetime-local"
             label="Date Time"
@@ -76,21 +107,18 @@ export default () => (
             component={TextField}
           />
           <br />
-          <Field
-            type="radio"
-            label="radio group"
-            name="radio"
-            component={RadioGroup}
-          >
+          <Field name="activity" label="Radio Group" component={RadioGroup}>
             <FormControlLabel
               value="painting"
-              control={<Radio />}
+              control={<Radio disabled={isSubmitting} />}
               label="Painting"
+              disabled={isSubmitting}
             />
             <FormControlLabel
               value="drawing"
-              control={<Radio />}
+              control={<Radio disabled={isSubmitting} />}
               label="Drawing"
+              disabled={isSubmitting}
             />
           </Field>
           <br />
