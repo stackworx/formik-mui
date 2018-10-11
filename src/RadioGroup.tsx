@@ -20,12 +20,10 @@ export const fieldToRadioGroup = ({
   ...field,
 });
 
-const RadioGroup: React.ComponentType<RadioGroupProps> = (
+export const RadioGroup: React.ComponentType<RadioGroupProps> = (
   props: RadioGroupProps
 ) => {
   return <MuiRadioGroup {...fieldToRadioGroup(props)} />;
 };
 
 RadioGroup.displayName = 'FormikMaterialUIRadioGroup';
-
-export default RadioGroup;

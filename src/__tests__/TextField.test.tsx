@@ -1,9 +1,8 @@
-/* @flow */
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import renderer from 'react-test-renderer';
 
-import TextField from '../TextField';
+import { TextField } from '../TextField';
 
 test('TextField Renders Correctly', () => {
   const component = renderer.create(

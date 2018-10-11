@@ -1,10 +1,9 @@
-/* @flow */
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import renderer from 'react-test-renderer';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import Select from '../Select';
+import { Select } from '../Select';
 
 test('Select Renders Correctly', () => {
   const component = renderer.create(

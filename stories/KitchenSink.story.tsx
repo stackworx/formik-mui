@@ -5,7 +5,7 @@ import { LinearProgress, FormControlLabel, Radio } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 
-import TextField from '../src/TextField';
+import { TextField } from '../src/TextField';
 import FormValues from './FormValues';
 import { RadioGroup } from '../src/main';
 
@@ -25,7 +25,7 @@ const initialValues: Values = {
 
 export default () => (
   <Wrapper title="Kitchen Sink">
-    <Formik
+    <Formik<Values>
       initialValues={initialValues}
       validate={values => {
         const errors: Partial<Values> = {};

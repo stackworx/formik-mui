@@ -28,10 +28,8 @@ export const fieldToCheckbox = ({
   };
 };
 
-const Checkbox: React.ComponentType<CheckboxProps> = (props: CheckboxProps) => (
-  <MuiCheckbox {...fieldToCheckbox(props)} />
-);
+export const Checkbox: React.ComponentType<CheckboxProps> = (
+  props: CheckboxProps
+) => <MuiCheckbox {...fieldToCheckbox(props)} />;
 
 Checkbox.displayName = 'FormikMaterialUICheckbox';
-
-export default Checkbox;

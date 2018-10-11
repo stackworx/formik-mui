@@ -1,10 +1,9 @@
-/* @flow */
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import renderer from 'react-test-renderer';
 import { FormControlLabel, Radio } from '@material-ui/core';
 
-import RadioGroup from '../RadioGroup';
+import { RadioGroup } from '../RadioGroup';
 
 test('Radio Group Renders Correctly', () => {
   const component = renderer.create(

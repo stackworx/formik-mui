@@ -5,7 +5,7 @@ import { LinearProgress } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 
-import TextField from '../src/TextField';
+import { TextField } from '../src/TextField';
 import FormValues from './FormValues';
 
 interface Values {

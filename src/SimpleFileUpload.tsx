@@ -5,17 +5,17 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-type Props = {
+export interface SimpleFileUploadProps extends FieldProps {
   label: string;
   disabled?: boolean;
-} & FieldProps;
+}
 
-export default ({
+export const SimpleFileUpload = ({
   label,
   field,
   form: { touched, errors, isSubmitting, setFieldValue },
   disabled = false,
-}: Props) => {
+}: SimpleFileUploadProps) => {
   const error = getIn(touched, field.name) && getIn(errors, field.name);
 
   return (

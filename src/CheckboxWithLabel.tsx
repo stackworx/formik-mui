@@ -18,7 +18,7 @@ export interface CheckboxWithLabelProps extends CheckboxProps {
   >;
 }
 
-const CheckboxWithLabel: React.ComponentType<CheckboxWithLabelProps> = ({
+export const CheckboxWithLabel: React.ComponentType<CheckboxWithLabelProps> = ({
   Label,
   ...props
 }) => (
@@ -29,5 +29,3 @@ const CheckboxWithLabel: React.ComponentType<CheckboxWithLabelProps> = ({
 );
 
 CheckboxWithLabel.displayName = 'FormikMaterialUICheckboxWithLabel';
-
-export default CheckboxWithLabel;

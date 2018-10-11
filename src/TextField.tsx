@@ -30,10 +30,8 @@ export const fieldToTextField = ({
   };
 };
 
-const TextField: React.ComponentType<TextFieldProps> = (
+export const TextField: React.ComponentType<TextFieldProps> = (
   props: TextFieldProps
 ) => <MuiTextField {...fieldToTextField(props)} />;
 
 TextField.displayName = 'FormikMaterialUITextField';
-
-export default TextField;

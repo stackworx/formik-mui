@@ -1,9 +1,8 @@
-/* @flow */
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import renderer from 'react-test-renderer';
 
-import Switch from '../Switch';
+import { Switch } from '../Switch';
 
 test('Switch Renders Correctly', () => {
   const component = renderer.create(

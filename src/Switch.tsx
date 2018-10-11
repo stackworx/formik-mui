@@ -27,10 +27,8 @@ export const fieldToSwitch = ({
   };
 };
 
-const Switch: React.ComponentType<SwitchProps> = (props: SwitchProps) => (
-  <MuiSwitch {...fieldToSwitch(props)} />
-);
+export const Switch: React.ComponentType<SwitchProps> = (
+  props: SwitchProps
+) => <MuiSwitch {...fieldToSwitch(props)} />;
 
 Switch.displayName = 'FormikMaterialUISwitch';
-
-export default Switch;
