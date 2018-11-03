@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Button from '@material-ui/core/Button';
 import MuiCheckbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -16,7 +16,8 @@ import {
 } from '../src/main';
 
 interface Values {
-  switch: boolean;
+  switchOn: boolean;
+  switchOff: boolean;
   checkbox: boolean;
   checkboxWithLabel: boolean;
   custom: boolean;
@@ -26,7 +27,8 @@ export default () => (
   <Wrapper title="Selectors">
     <Formik<Values>
       initialValues={{
-        switch: false,
+        switchOn: true,
+        switchOff: false,
         checkbox: false,
         checkboxWithLabel: false,
         custom: true,
@@ -39,7 +41,9 @@ export default () => (
       }}
       render={({ submitForm, values }) => (
         <Form>
-          <Field name="switch" component={Switch} />
+          <Field name="switchOn" component={Switch} />
+          <br />
+          <Field name="switchOff" component={Switch} />
           <br />
           <Field name="checkbox" component={Checkbox} />
           <br />
