@@ -1,4 +1,3 @@
-// @ts-ignore
 import * as React from 'react';
 import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
@@ -6,23 +5,30 @@ import MuiSwitch, {
 import { FieldProps } from 'formik';
 import { Omit } from './types';
 
-export interface SwitchProps extends FieldProps, Omit<MuiSwitchProps, 'form'> {}
+export interface SwitchProps
+  extends FieldProps,
+    Omit<
+      MuiSwitchProps,
+      'form' | 'name' | 'onChange' | 'value' | 'defaultChecked'
+    > {}
 
-const Switch: React.ComponentType<SwitchProps> = ({
+export const fieldToSwitch = ({
   field,
   form: { isSubmitting },
   disabled = false,
   ...props
-}) => (
-  <MuiSwitch
-    disabled={isSubmitting || disabled}
-    {...props}
-    {...field}
+}: SwitchProps): MuiSwitchProps => {
+  return {
+    disabled: isSubmitting || disabled,
+    ...props,
+    ...field,
     // TODO: is this the correct way?
-    value={field.value ? 'checked' : ''}
-  />
-);
+    value: field.value ? 'checked' : '',
+  };
+};
+
+export const Switch: React.ComponentType<SwitchProps> = (
+  props: SwitchProps
+) => <MuiSwitch {...fieldToSwitch(props)} />;
 
 Switch.displayName = 'FormikMaterialUISwitch';
-
-export default Switch;

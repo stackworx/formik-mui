@@ -1,7 +1,7 @@
-import TextField from './TextField';
-import Switch from './Switch';
-import Checkbox from './Checkbox';
-import Select from './Select';
-import SimpleFileUpload from './SimpleFileUpload';
-
-export { TextField, Switch, Checkbox, Select, SimpleFileUpload };
+export * from './TextField';
+export * from './Switch';
+export * from './Checkbox';
+export * from './CheckboxWithLabel';
+export * from './Select';
+export * from './SimpleFileUpload';
+export * from './RadioGroup';

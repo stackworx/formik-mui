@@ -1,9 +1,8 @@
-/* @flow */
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import renderer from 'react-test-renderer';
 
-import Checkbox from '../Checkbox';
+import { Checkbox } from '../Checkbox';
 
 test('Checkbox Renders Correctly', () => {
   const component = renderer.create(

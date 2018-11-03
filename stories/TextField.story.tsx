@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
 import { LinearProgress } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 
-import TextField from '../src/TextField';
+import { TextField } from '../src/TextField';
 import FormValues from './FormValues';
 
 interface Values {
@@ -15,7 +15,7 @@ interface Values {
 
 export default () => (
   <Wrapper title="Text Field">
-    <Formik
+    <Formik<Values>
       initialValues={{ user: { email: '' }, password: '' }}
       validate={values => {
         const errors: Partial<Values> = {};
