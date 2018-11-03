@@ -16,8 +16,10 @@ import {
 } from '../src/main';
 
 interface Values {
-  switchOn: boolean;
-  switchOff: boolean;
+  switch: {
+    on: boolean;
+    off: boolean;
+  };
   checkbox: boolean;
   checkboxWithLabel: boolean;
   custom: boolean;
@@ -27,8 +29,10 @@ export default () => (
   <Wrapper title="Selectors">
     <Formik<Values>
       initialValues={{
-        switchOn: true,
-        switchOff: false,
+        switch: {
+          on: true,
+          off: false,
+        },
         checkbox: false,
         checkboxWithLabel: false,
         custom: true,
@@ -41,9 +45,9 @@ export default () => (
       }}
       render={({ submitForm, values }) => (
         <Form>
-          <Field name="switchOn" component={Switch} />
+          <Field name="switch.on" component={Switch} />
           <br />
-          <Field name="switchOff" component={Switch} />
+          <Field name="switch.off" component={Switch} />
           <br />
           <Field name="checkbox" component={Checkbox} />
           <br />
