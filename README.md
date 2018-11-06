@@ -12,6 +12,55 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Materia
 
     yarn add formik-material-ui
 
+## Goals
+
+- Convenience: This project containis mostly the tedious wrapper code needed to convert the formik field props
+  to Material UI shapes. Which is why certain assumptions are made (See below). The mapping functions are exported so you can build on top of them for more specialized behavior
+
+### Form Behaviour Assumptions
+
+- Errors are only displayed on touched/dirty fields
+- Fields are disabled during submission
+
+## Non Goals
+
+- Negate the need to import Material UI directly or create custom components
+
+## FAQ
+
+### Custom `onChange`
+
+```
+import MuiTextField from '@material-ui/core/TextField';
+import {fieldToTextField, TextField, TextFieldProps} from 'formik-material-ui';
+...
+const UppercasingTextField = (props: TextFieldProps) => (
+  <MuiTextField
+    {...fieldToTextField(props)}
+    onChange={event => {
+      const {value} = event.target;
+      props.form.setFieldValue(
+        props.field.name,
+        value ? value.toUpperCase() : ''
+      );
+    }}
+  />
+);
+...
+```
+
+### Composing mappers
+
+```
+import {fieldToTextField} from 'formik-material-ui';
+
+<Field name="name" render={(props) => (<div>
+  <Comp1 {...fieldToText(props)}>
+  <Comp2 {...fieldToText(props)}>
+  ...
+</div>)} />
+```
+
 ## Development
 
     yarn install
