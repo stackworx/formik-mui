@@ -22,8 +22,8 @@ export const fieldToSwitch = ({
     disabled: isSubmitting || disabled,
     ...props,
     ...field,
-    // TODO: is this the correct way?
-    checked: field.value,
+    value: field.name,
+    checked: field.value
   };
 };
 
