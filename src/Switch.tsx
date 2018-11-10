@@ -23,7 +23,7 @@ export const fieldToSwitch = ({
     ...props,
     ...field,
     value: field.name,
-    checked: field.value
+    checked: field.value,
   };
 };
 
