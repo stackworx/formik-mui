@@ -1,3 +1,7 @@
+## 0.0.15
+
+- Fixed switch behaviour (#42)
+
 ## 0.0.14
 
 - BREAKING: Remove all default exports
