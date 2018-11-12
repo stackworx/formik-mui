@@ -35,6 +35,7 @@ exports[`Switch Renders Correctly 1`] = `
           name="test"
           onChange={[Function]}
           type="checkbox"
+          value="test"
         />
       </span>
       <span
