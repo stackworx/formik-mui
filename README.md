@@ -6,7 +6,8 @@
 
 Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Material UI](https://material-ui.com/).
 
-[Code Sandbox](https://codesandbox.io/s/m56kj105n8)
+- [Code Sandbox](https://codesandbox.io/s/m56kj105n8)
+- [Demo](https://stackworx.github.io/formik-material-ui)
 
 ## Getting Started
 
@@ -65,5 +66,3 @@ import {fieldToTextField} from 'formik-material-ui';
 
     yarn install
     yarn storybook
-
-[Demo](https://stackworx.github.io/formik-material-ui)
