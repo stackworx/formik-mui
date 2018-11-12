@@ -66,3 +66,7 @@ import {fieldToTextField} from 'formik-material-ui';
 
     yarn install
     yarn storybook
+
+### Running tests
+
+    yarn prepublishOnly
