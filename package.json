@@ -7,6 +7,12 @@
     "formik": ">=1.0.0",
     "react": "^15.0.0-0 || ^16.0.0-0"
   },
+  "keywords": [
+    "react",
+    "formik",
+    "material-ui",
+    "form"
+  ],
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5"
