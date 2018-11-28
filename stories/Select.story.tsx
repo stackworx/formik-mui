@@ -26,13 +26,14 @@ const styles = ({ spacing }: Theme) =>
 
 interface Values {
   age: string;
+  pets: string[];
 }
 
 export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <Wrapper title="Select">
     <Formik<Values>
       validationSchema={schema}
-      initialValues={{ age: '' }}
+      initialValues={{ age: '', pets: [] }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           setSubmitting(false);
@@ -57,6 +58,24 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
+          </FormControl>
+          <br />
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="pets">Pets</InputLabel>
+            <Field
+              name="pets"
+              component={Select}
+              multiple={true}
+              inputProps={{
+                name: 'pets',
+                id: 'pets',
+              }}
+            >
+              <MenuItem value="dogs">Dogs</MenuItem>
+              <MenuItem value="cats">Cats</MenuItem>
+              <MenuItem value="rats">Rats</MenuItem>
+              <MenuItem value="snakes">Snakes</MenuItem>
             </Field>
           </FormControl>
           <br />
