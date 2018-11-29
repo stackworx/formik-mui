@@ -5,5 +5,4 @@ import { Omit } from './types';
 export interface CheckboxWithLabelProps extends CheckboxProps {
     Label: Omit<MuiFormControlLabelProps, 'checked' | 'name' | 'onChange' | 'value' | 'inputRef'>;
 }
-declare const CheckboxWithLabel: React.ComponentType<CheckboxWithLabelProps>;
-export default CheckboxWithLabel;
+export declare const CheckboxWithLabel: React.ComponentType<CheckboxWithLabelProps>;
