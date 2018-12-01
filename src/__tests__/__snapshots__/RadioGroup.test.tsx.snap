@@ -2,6 +2,7 @@
 
 exports[`Radio Group Renders Correctly 1`] = `
 <form
+  onReset={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -14,7 +15,7 @@ exports[`Radio Group Renders Correctly 1`] = `
       className="MuiFormControlLabel-root-3"
     >
       <span
-        className="MuiButtonBase-root-22 MuiIconButton-root-16 MuiSwitchBase-root-12 MuiRadio-root-7 MuiRadio-colorSecondary-11"
+        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiPrivateSwitchBase-root-14 MuiRadio-root-9 MuiRadio-colorSecondary-13"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -28,11 +29,11 @@ exports[`Radio Group Renders Correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-21"
+          className="MuiIconButton-label-23"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-25"
+            className="MuiSvgIcon-root-27"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -43,7 +44,7 @@ exports[`Radio Group Renders Correctly 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiSwitchBase-input-15"
+            className="MuiPrivateSwitchBase-input-17"
             name="radio-group"
             onChange={[Function]}
             type="radio"
@@ -51,11 +52,11 @@ exports[`Radio Group Renders Correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-34"
+          className="MuiTouchRipple-root-71"
         />
       </span>
       <span
-        className="MuiTypography-root-41 MuiTypography-body1-50 MuiFormControlLabel-label-6"
+        className="MuiTypography-root-36 MuiTypography-body1-45 MuiFormControlLabel-label-8"
       >
         Painting
       </span>
@@ -64,7 +65,7 @@ exports[`Radio Group Renders Correctly 1`] = `
       className="MuiFormControlLabel-root-3"
     >
       <span
-        className="MuiButtonBase-root-22 MuiIconButton-root-16 MuiSwitchBase-root-12 MuiRadio-root-7 MuiRadio-colorSecondary-11"
+        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiPrivateSwitchBase-root-14 MuiRadio-root-9 MuiRadio-colorSecondary-13"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -78,11 +79,11 @@ exports[`Radio Group Renders Correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-21"
+          className="MuiIconButton-label-23"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-25"
+            className="MuiSvgIcon-root-27"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -93,7 +94,7 @@ exports[`Radio Group Renders Correctly 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiSwitchBase-input-15"
+            className="MuiPrivateSwitchBase-input-17"
             name="radio-group"
             onChange={[Function]}
             type="radio"
@@ -101,20 +102,20 @@ exports[`Radio Group Renders Correctly 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-34"
+          className="MuiTouchRipple-root-71"
         />
       </span>
       <span
-        className="MuiTypography-root-41 MuiTypography-body1-50 MuiFormControlLabel-label-6"
+        className="MuiTypography-root-36 MuiTypography-body1-45 MuiFormControlLabel-label-8"
       >
         Drawing
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-3 MuiFormControlLabel-disabled-5"
+      className="MuiFormControlLabel-root-3 MuiFormControlLabel-disabled-7"
     >
       <span
-        className="MuiButtonBase-root-22 MuiButtonBase-disabled-23 MuiIconButton-root-16 MuiIconButton-disabled-20 MuiSwitchBase-root-12 MuiRadio-root-7 MuiRadio-colorSecondary-11 MuiSwitchBase-disabled-14 MuiRadio-disabled-9"
+        className="MuiButtonBase-root-24 MuiButtonBase-disabled-25 MuiIconButton-root-18 MuiIconButton-disabled-22 MuiPrivateSwitchBase-root-14 MuiRadio-root-9 MuiRadio-colorSecondary-13 MuiPrivateSwitchBase-disabled-16 MuiRadio-disabled-11"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -128,11 +129,11 @@ exports[`Radio Group Renders Correctly 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-21"
+          className="MuiIconButton-label-23"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-25"
+            className="MuiSvgIcon-root-27"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -143,7 +144,7 @@ exports[`Radio Group Renders Correctly 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiSwitchBase-input-15"
+            className="MuiPrivateSwitchBase-input-17"
             disabled={true}
             name="radio-group"
             onChange={[Function]}
@@ -153,7 +154,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-41 MuiTypography-body1-50 MuiFormControlLabel-label-6 MuiFormControlLabel-disabled-5"
+        className="MuiTypography-root-36 MuiTypography-body1-45 MuiFormControlLabel-label-8 MuiFormControlLabel-disabled-7"
       >
         None
       </span>

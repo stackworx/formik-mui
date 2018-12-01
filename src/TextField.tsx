@@ -12,6 +12,7 @@ export interface TextFieldProps
 export const fieldToTextField = ({
   field,
   form,
+  variant,
   disabled = false,
   ...props
 }: TextFieldProps): MuiTextFieldProps => {
@@ -24,14 +25,20 @@ export const fieldToTextField = ({
   return {
     ...props,
     ...field,
+    // Hack to work around type issue
+    // See: https://github.com/Microsoft/TypeScript/issues/28791
+    variant: variant as any,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
     disabled: isSubmitting || disabled,
   };
 };
 
-export const TextField: React.ComponentType<TextFieldProps> = (
-  props: TextFieldProps
-) => <MuiTextField {...fieldToTextField(props)} />;
+export const TextField: React.ComponentType<TextFieldProps> = ({
+  children,
+  ...props
+}: TextFieldProps) => (
+  <MuiTextField {...fieldToTextField(props)} children={children} />
+);
 
 TextField.displayName = 'FormikMaterialUITextField';

@@ -2,13 +2,14 @@
 
 exports[`Switch Renders Correctly 1`] = `
 <form
+  onReset={[Function]}
   onSubmit={[Function]}
 >
   <span
     className="MuiSwitch-root-1"
   >
     <span
-      className="MuiButtonBase-root-20 MuiIconButton-root-14 MuiSwitchBase-root-10 MuiSwitch-switchBase-4 MuiSwitch-colorSecondary-7"
+      className="MuiButtonBase-root-20 MuiIconButton-root-14 MuiPrivateSwitchBase-root-10 MuiSwitch-switchBase-4 MuiSwitch-colorSecondary-7"
       label="Text"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -29,8 +30,7 @@ exports[`Switch Renders Correctly 1`] = `
           className="MuiSwitch-icon-2"
         />
         <input
-          checked={false}
-          className="MuiSwitchBase-input-13"
+          className="MuiPrivateSwitchBase-input-13"
           disabled={false}
           name="test"
           onChange={[Function]}

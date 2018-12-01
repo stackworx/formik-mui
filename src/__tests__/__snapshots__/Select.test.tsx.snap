@@ -2,6 +2,7 @@
 
 exports[`Select Renders Correctly 1`] = `
 <form
+  onReset={[Function]}
   onSubmit={[Function]}
 >
   <div
@@ -14,7 +15,6 @@ exports[`Select Renders Correctly 1`] = `
     >
       <div
         aria-haspopup="true"
-        aria-owns={null}
         aria-pressed="false"
         className="MuiSelect-select-2 MuiSelect-selectMenu-5 MuiInputBase-input-31 MuiInput-input-16"
         onBlur={[Function]}

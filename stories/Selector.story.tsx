@@ -70,7 +70,7 @@ export default () => (
             )}
           />
           <br />
-          <Button variant="raised" color="primary" onClick={submitForm}>
+          <Button variant="contained" color="primary" onClick={submitForm}>
             Submit
           </Button>
           <br />

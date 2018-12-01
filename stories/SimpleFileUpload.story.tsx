@@ -48,7 +48,7 @@ export default withStyles(styles)(() => (
         <Form>
           <Field component={SimpleFileUpload} name="file" />
           <br />
-          <Button variant="raised" color="primary" onClick={submitForm}>
+          <Button variant="contained" color="primary" onClick={submitForm}>
             Submit
           </Button>
           <br />

@@ -125,7 +125,7 @@ export default () => (
           {isSubmitting && <LinearProgress />}
           <br />
           <Button
-            variant="raised"
+            variant="contained"
             color="primary"
             disabled={isSubmitting}
             onClick={submitForm}

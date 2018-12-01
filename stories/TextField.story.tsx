@@ -1,8 +1,17 @@
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
 import { Formik, Field, Form } from 'formik';
-import { LinearProgress } from '@material-ui/core';
+import {
+  LinearProgress,
+  MenuItem,
+  withStyles,
+  Theme,
+  createStyles,
+  WithStyles,
+} from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
+import * as yup from 'yup';
+
 import Wrapper from './Wrapper';
 
 import { TextField } from '../src/TextField';
@@ -11,27 +20,59 @@ import FormValues from './FormValues';
 interface Values {
   user: { email: string };
   password: string;
+  select: string;
 }
 
-export default () => (
+const schema = yup.object().shape({
+  user: yup.object().shape({
+    email: yup
+      .string()
+      .email()
+      .required(),
+  }),
+  password: yup.string().required(),
+  select: yup.mixed().required(),
+});
+
+const ranges = [
+  {
+    value: '0-20',
+    label: '0 to 20',
+  },
+  {
+    value: '21-50',
+    label: '21 to 50',
+  },
+  {
+    value: '51-100',
+    label: '51 to 100',
+  },
+];
+
+const styles = (theme: Theme) =>
+  createStyles({
+    container: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    textField: {
+      marginLeft: theme.spacing.unit,
+      marginRight: theme.spacing.unit,
+      width: 200,
+    },
+    dense: {
+      marginTop: 19,
+    },
+    menu: {
+      width: 200,
+    },
+  });
+
+export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <Wrapper title="Text Field">
     <Formik<Values>
-      initialValues={{ user: { email: '' }, password: '' }}
-      validate={values => {
-        const errors: Partial<Values> = {};
-        if (!values.user.email) {
-          errors.user = { email: 'Required' };
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.user.email)
-        ) {
-          errors.user = { email: 'Invalid email address' };
-        }
-
-        if (!values.password) {
-          errors.password = 'Required';
-        }
-        return errors;
-      }}
+      initialValues={{ user: { email: '' }, password: '', select: '' }}
+      validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           setSubmitting(false);
@@ -54,10 +95,31 @@ export default () => (
             component={TextField}
           />
           <br />
+          <Field
+            type="text"
+            name="select"
+            label="With Select"
+            select
+            SelectProps={{
+              MenuProps: {
+                className: classes.menu,
+              },
+            }}
+            helperText="Please select Range"
+            margin="normal"
+            component={TextField}
+          >
+            {ranges.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </Field>
+          <br />
           {isSubmitting && <LinearProgress />}
           <br />
           <Button
-            variant="raised"
+            variant="contained"
             color="primary"
             disabled={isSubmitting}
             onClick={submitForm}
@@ -70,4 +132,4 @@ export default () => (
       )}
     />
   </Wrapper>
-);
+));
