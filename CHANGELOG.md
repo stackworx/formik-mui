@@ -1,3 +1,8 @@
+## 0.0.16
+
+- Fixed TextField select variation
+- Updated storybook and other dependencies
+
 ## 0.0.15
 
 - Fixed switch behaviour (#42)
