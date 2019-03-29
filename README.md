@@ -11,7 +11,7 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Materia
 
 ## Getting Started
 
-Install the package as a depenency to your project (`yarn` or `npm`).
+Install the package as a dependency to your project (`yarn` or `npm`).
 
     yarn add formik-material-ui
 
