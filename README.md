@@ -11,7 +11,49 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Materia
 
 ## Getting Started
 
+Install the package as a dependency to your project (`yarn` or `npm`).
+
     yarn add formik-material-ui
+
+Then, import the components you need to use with Formik in the file you have your form component set up. THe components avaliable are:
+
+- Checkbox & CheckboxWithLabel
+- RadioGroup
+- Select
+- SimpleFileUpload
+- Switch
+- TextField
+
+In this case we will use `<TextField />`.
+
+```diff
+import { Formik, Field, Form } from 'formik';
++ import { TextField } from 'formik-material-ui';
+```
+
+Next, in your Formik form compont, pass this `<TextField />` component as the `component` prop of the Formik `<Field />` component:
+
+```diff
+<Field
+  name="email"
+  label="Email"
+  type="email"
++ component={TextField}
+/>
+```
+
+Now you can add any of the Material UI props to the `<Field />` component and `<TextField />` will be able to accept them.
+
+```diff
+<Field
+  name="email"
+  label="Email"
+  type="email"
+  component={TextField}
++ margin="normal"
++ fullWidth
+/>
+```
 
 ## Goals
 
