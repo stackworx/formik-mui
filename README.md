@@ -15,7 +15,7 @@ Install the package as a dependency to your project (`yarn` or `npm`).
 
     yarn add formik-material-ui
 
-Then, import the components you need to use with Formik in the file you have your form component set up. THe components avaliable are:
+Then, import the components you need to use with Formik in the file you have your form component set up. The components avaliable are:
 
 - Checkbox & CheckboxWithLabel
 - RadioGroup
@@ -31,7 +31,7 @@ import { Formik, Field, Form } from 'formik';
 + import { TextField } from 'formik-material-ui';
 ```
 
-Next, in your Formik form compont, pass this `<TextField />` component as the `component` prop of the Formik `<Field />` component:
+Next, in your Formik form component, pass this `<TextField />` component as the `component` prop of the Formik `<Field />` component:
 
 ```diff
 <Field
