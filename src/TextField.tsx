@@ -7,13 +7,14 @@ import { Omit } from './types';
 
 export interface TextFieldProps
   extends FieldProps,
-    Omit<MuiTextFieldProps, 'error' | 'name' | 'onChange' | 'value'> {}
+    Omit<MuiTextFieldProps, 'name' | 'onChange' | 'value'> {}
 
 export const fieldToTextField = ({
   field,
   form,
   variant,
   disabled = false,
+  error,
   ...props
 }: TextFieldProps): MuiTextFieldProps => {
   const { name } = field;
@@ -28,7 +29,7 @@ export const fieldToTextField = ({
     // Hack to work around type issue
     // See: https://github.com/Microsoft/TypeScript/issues/28791
     variant: variant as any,
-    error: showError,
+    error: showError || error,
     helperText: showError ? fieldError : props.helperText,
     disabled: isSubmitting || disabled,
   };
