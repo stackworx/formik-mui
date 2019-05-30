@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
     "@material-ui/core": ">=4.0.0",
@@ -99,5 +99,6 @@
     "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\"",
     "prepublishOnly": "yarn prettier && yarn test && yarn build && yarn package && yarn build-storybook",
     "publish": "lerna publish"
-  }
+  },
+  "gitHead": "78e367660b65605d8bfe50f635265336ad93c19f"
 }
