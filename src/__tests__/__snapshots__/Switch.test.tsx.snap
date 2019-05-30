@@ -6,10 +6,11 @@ exports[`Switch Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <span
-    className="MuiSwitch-root-1"
+    className="MuiSwitch-root"
   >
     <span
-      className="MuiButtonBase-root-20 MuiIconButton-root-14 MuiPrivateSwitchBase-root-10 MuiSwitch-switchBase-4 MuiSwitch-colorSecondary-7"
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-12 MuiSwitch-switchBase MuiSwitch-colorSecondary"
       label="Text"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -24,13 +25,13 @@ exports[`Switch Renders Correctly 1`] = `
       tabIndex={null}
     >
       <span
-        className="MuiIconButton-label-19"
+        className="MuiIconButton-label"
       >
         <span
-          className="MuiSwitch-icon-2"
+          className="MuiSwitch-thumb"
         />
         <input
-          className="MuiPrivateSwitchBase-input-13"
+          className="PrivateSwitchBase-input-15 MuiSwitch-input"
           disabled={false}
           name="test"
           onChange={[Function]}
@@ -38,12 +39,9 @@ exports[`Switch Renders Correctly 1`] = `
           value="test"
         />
       </span>
-      <span
-        className="MuiTouchRipple-root-23"
-      />
     </span>
     <span
-      className="MuiSwitch-bar-9"
+      className="MuiSwitch-track"
     />
   </span>
 </form>

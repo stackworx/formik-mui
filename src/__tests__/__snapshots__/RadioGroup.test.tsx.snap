@@ -6,16 +6,17 @@ exports[`Radio Group Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiFormGroup-root-1"
+    className="MuiFormGroup-root"
     label="Radio Group"
     onBlur={[Function]}
     role="radiogroup"
   >
     <label
-      className="MuiFormControlLabel-root-3"
+      className="MuiFormControlLabel-root"
     >
       <span
-        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiPrivateSwitchBase-root-14 MuiRadio-root-9 MuiRadio-colorSecondary-13"
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -29,43 +30,56 @@ exports[`Radio Group Renders Correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-23"
+          className="MuiIconButton-label"
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-27"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="PrivateRadioButtonIcon-root-30"
           >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-            />
-          </svg>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-31"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+              />
+            </svg>
+          </div>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-17"
+            className="PrivateSwitchBase-input-17"
             name="radio-group"
             onChange={[Function]}
             type="radio"
             value="painting"
           />
         </span>
-        <span
-          className="MuiTouchRipple-root-71"
-        />
       </span>
       <span
-        className="MuiTypography-root-36 MuiTypography-body1-45 MuiFormControlLabel-label-8"
+        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
       >
         Painting
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-3"
+      className="MuiFormControlLabel-root"
     >
       <span
-        className="MuiButtonBase-root-24 MuiIconButton-root-18 MuiPrivateSwitchBase-root-14 MuiRadio-root-9 MuiRadio-colorSecondary-13"
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -79,43 +93,56 @@ exports[`Radio Group Renders Correctly 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-23"
+          className="MuiIconButton-label"
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-27"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="PrivateRadioButtonIcon-root-30"
           >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-            />
-          </svg>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-31"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+              />
+            </svg>
+          </div>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-17"
+            className="PrivateSwitchBase-input-17"
             name="radio-group"
             onChange={[Function]}
             type="radio"
             value="drawing"
           />
         </span>
-        <span
-          className="MuiTouchRipple-root-71"
-        />
       </span>
       <span
-        className="MuiTypography-root-36 MuiTypography-body1-45 MuiFormControlLabel-label-8"
+        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
       >
         Drawing
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-3 MuiFormControlLabel-disabled-7"
+      className="MuiFormControlLabel-root Mui-disabled"
     >
       <span
-        className="MuiButtonBase-root-24 MuiButtonBase-disabled-25 MuiIconButton-root-18 MuiIconButton-disabled-22 MuiPrivateSwitchBase-root-14 MuiRadio-root-9 MuiRadio-colorSecondary-13 MuiPrivateSwitchBase-disabled-16 MuiRadio-disabled-11"
+        aria-disabled={true}
+        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary Mui-disabled PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-disabled-16 Mui-disabled Mui-disabled"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -126,25 +153,40 @@ exports[`Radio Group Renders Correctly 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        tabIndex="-1"
+        tabIndex={-1}
       >
         <span
-          className="MuiIconButton-label-23"
+          className="MuiIconButton-label"
         >
-          <svg
-            aria-hidden="true"
-            className="MuiSvgIcon-root-27"
-            focusable="false"
-            role="presentation"
-            viewBox="0 0 24 24"
+          <div
+            className="PrivateRadioButtonIcon-root-30"
           >
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-            />
-          </svg>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-31"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+              />
+            </svg>
+          </div>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-17"
+            className="PrivateSwitchBase-input-17"
             disabled={true}
             name="radio-group"
             onChange={[Function]}
@@ -154,7 +196,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-36 MuiTypography-body1-45 MuiFormControlLabel-label-8 MuiFormControlLabel-disabled-7"
+        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled"
       >
         None
       </span>

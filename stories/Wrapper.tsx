@@ -15,8 +15,8 @@ const styles = (theme: Theme) =>
       flexWrap: 'wrap',
     },
     textField: {
-      marginLeft: theme.spacing.unit,
-      marginRight: theme.spacing.unit,
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
       width: 200,
     },
     menu: {
@@ -31,7 +31,7 @@ interface Props extends WithStyles<typeof styles> {
 
 const Wrapper = ({ title, children }: Props) => (
   <Paper elevation={4} style={{ padding: 10 }}>
-    <Typography variant="headline" component="h3">
+    <Typography variant="h4" component="h3">
       {title}
     </Typography>
     {children}

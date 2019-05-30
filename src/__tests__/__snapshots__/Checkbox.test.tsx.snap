@@ -6,7 +6,8 @@ exports[`Checkbox Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <span
-    className="MuiButtonBase-root-17 MuiIconButton-root-11 MuiPrivateSwitchBase-root-7 MuiCheckbox-root-1 MuiCheckbox-colorSecondary-6"
+    aria-disabled={false}
+    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-7 MuiCheckbox-root MuiCheckbox-colorSecondary"
     label="Checkbox"
     onBlur={[Function]}
     onFocus={[Function]}
@@ -21,11 +22,11 @@ exports[`Checkbox Renders Correctly 1`] = `
     tabIndex={null}
   >
     <span
-      className="MuiIconButton-label-16"
+      className="MuiIconButton-label"
     >
       <svg
         aria-hidden="true"
-        className="MuiSvgIcon-root-20"
+        className="MuiSvgIcon-root"
         focusable="false"
         role="presentation"
         viewBox="0 0 24 24"
@@ -35,8 +36,7 @@ exports[`Checkbox Renders Correctly 1`] = `
         />
       </svg>
       <input
-        checked=""
-        className="MuiPrivateSwitchBase-input-10"
+        className="PrivateSwitchBase-input-10"
         data-indeterminate={false}
         disabled={false}
         name="test"
@@ -45,9 +45,6 @@ exports[`Checkbox Renders Correctly 1`] = `
         value=""
       />
     </span>
-    <span
-      className="MuiTouchRipple-root-29"
-    />
   </span>
 </form>
 `;

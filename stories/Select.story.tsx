@@ -19,7 +19,7 @@ const schema = Yup.object().shape({
 const styles = ({ spacing }: Theme) =>
   createStyles({
     formControl: {
-      margin: spacing.unit,
+      margin: spacing(1),
       minWidth: 120,
     },
   });

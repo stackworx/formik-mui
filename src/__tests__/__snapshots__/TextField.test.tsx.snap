@@ -6,21 +6,21 @@ exports[`TextField Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiFormControl-root-1"
+    className="MuiFormControl-root MuiTextField-root"
   >
     <label
-      className="MuiFormLabel-root-16 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13"
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
       data-shrink={false}
     >
       Text
     </label>
     <div
-      className="MuiInputBase-root-36 MuiInput-root-23 MuiInput-underline-27 MuiInputBase-formControl-37 MuiInput-formControl-24"
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
       onClick={[Function]}
     >
       <input
         aria-invalid={false}
-        className="MuiInputBase-input-46 MuiInput-input-31"
+        className="MuiInputBase-input MuiInput-input"
         disabled={false}
         name="test"
         onBlur={[Function]}

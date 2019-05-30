@@ -28,7 +28,7 @@ interface Props extends WithStyles<typeof styles> {
 
 const FormValues = ({ values, classes }: Props) => (
   <div className={classes.root}>
-    <Typography variant="headline" component="h5">
+    <Typography variant="h4" component="h5">
       State
     </Typography>
     <Typography component="p">{JSON.stringify(values, replacer, 2)}</Typography>
