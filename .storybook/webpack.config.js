@@ -1,11 +1,13 @@
 const path = require('path');
 
-module.exports = (baseConfig, env, config) => {
-  // Extend defaultConfig as you need.
-
+module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loader: require.resolve('ts-loader'),
+    use: [
+      {
+        loader: require.resolve('ts-loader'),
+      },
+    ],
   });
   config.resolve.extensions.push('.ts', '.tsx');
   return config;
