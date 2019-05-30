@@ -21,6 +21,7 @@ interface Values {
   user: { email: string };
   password: string;
   select: string;
+  outlined: string;
 }
 
 const schema = yup.object().shape({
@@ -71,7 +72,12 @@ const styles = (theme: Theme) =>
 export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <Wrapper title="Text Field">
     <Formik<Values>
-      initialValues={{ user: { email: '' }, password: '', select: '' }}
+      initialValues={{
+        user: { email: '' },
+        password: '',
+        select: '',
+        outlined: '',
+      }}
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -92,6 +98,14 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             type="password"
             label="Password"
             name="password"
+            component={TextField}
+          />
+          <br />
+          <br />
+          <Field
+            label="Outlined"
+            name="outlined"
+            variant="outlined"
             component={TextField}
           />
           <br />
