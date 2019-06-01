@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { FieldProps, getIn } from 'formik';
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
+import InputLabel, { InputLabelProps } from '@material-ui/core/InputLabel';
+import Input, { InputProps } from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
 export interface SimpleFileUploadProps extends FieldProps {
   label: string;
   disabled?: boolean;
+  inputProps: InputProps;
+  inputLabelProps: InputLabelProps;
 }
 
 export const SimpleFileUpload = ({
@@ -15,6 +17,8 @@ export const SimpleFileUpload = ({
   field,
   form: { touched, errors, isSubmitting, setFieldValue },
   disabled = false,
+  inputProps,
+  inputLabelProps,
 }: SimpleFileUploadProps) => {
   const error = getIn(touched, field.name) && getIn(errors, field.name);
 
@@ -22,7 +26,7 @@ export const SimpleFileUpload = ({
     <div>
       <FormControl>
         {label && (
-          <InputLabel shrink error={!!error}>
+          <InputLabel shrink error={!!error} {...inputLabelProps}>
             {label}
           </InputLabel>
         )}
@@ -37,6 +41,7 @@ export const SimpleFileUpload = ({
               setFieldValue(field.name, file);
             },
           }}
+          {...inputProps}
         />
         {error && <FormHelperText error>{error}</FormHelperText>}
       </FormControl>
