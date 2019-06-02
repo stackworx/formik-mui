@@ -8,9 +8,7 @@ test('SimpleFileUpload Renders Correctly', () => {
   const component = renderer.create(
     <Formik onSubmit={() => null} initialValues={{ test: '' }}>
       <Form>
-        <Field name="test" label="Select" component={SimpleFileUpload}>
-
-        </Field>
+        <Field name="test" label="Select" component={SimpleFileUpload} />
       </Form>
     </Formik>
   );
