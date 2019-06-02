@@ -4,12 +4,13 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel, { InputLabelProps } from '@material-ui/core/InputLabel';
 import Input, { InputProps } from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import { Omit } from './types';
 
 export interface SimpleFileUploadProps extends FieldProps {
   label: string;
   disabled?: boolean;
-  inputProps: InputProps;
-  inputLabelProps: InputLabelProps;
+  InputProps?: Omit<InputProps, 'name' | 'type' | 'onChange'>;
+  InputLabelProps?: InputLabelProps;
 }
 
 export const SimpleFileUpload = ({
@@ -17,8 +18,8 @@ export const SimpleFileUpload = ({
   field,
   form: { touched, errors, isSubmitting, setFieldValue },
   disabled = false,
-  inputProps,
-  inputLabelProps,
+  InputProps: inputProps,
+  InputLabelProps: inputLabelProps,
 }: SimpleFileUploadProps) => {
   const error = getIn(touched, field.name) && getIn(errors, field.name);
 
