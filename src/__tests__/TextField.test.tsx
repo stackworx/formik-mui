@@ -18,7 +18,7 @@ test('TextField Renders Correctly', () => {
 
 test('Wrapped TextField', () => {
   const TextFieldComponent = (p: TextFieldProps) => (
-    <TextField variant="outlined" {...p} />
+    <TextField variant="standard" {...p} />
   );
 
   const component = renderer.create(

@@ -4,18 +4,13 @@ import MuiTextField, {
 } from '@material-ui/core/TextField';
 import { FieldProps, getIn } from 'formik';
 
-// Special omit for TextField - https://github.com/microsoft/TypeScript/issues/28791
-export type AllKeys<T> = T extends T ? keyof T : never;
-export type Omit<T, K extends AllKeys<T>> = T extends T
-  ? Pick<T, Exclude<keyof T, K>>
-  : never;
-
 export type TextFieldProps = FieldProps &
   Omit<MuiTextFieldProps, 'error' | 'name' | 'onChange' | 'value'>;
 
 export const fieldToTextField = ({
   field,
   form,
+  variant = 'standard',
   disabled = false,
   ...props
 }: TextFieldProps): MuiTextFieldProps => {
@@ -28,6 +23,7 @@ export const fieldToTextField = ({
   return {
     ...props,
     ...field,
+    variant,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
     disabled: isSubmitting || disabled,
