@@ -10,7 +10,7 @@ const styles = () =>
     },
   });
 
-function replacer(_: string, value: any) {
+function replacer(_: string, value: unknown) {
   // Filtering out properties
   if (value instanceof File) {
     return {
@@ -23,7 +23,7 @@ function replacer(_: string, value: any) {
 }
 
 interface Props extends WithStyles<typeof styles> {
-  values: any;
+  values: unknown;
 }
 
 const FormValues = ({ values, classes }: Props) => (

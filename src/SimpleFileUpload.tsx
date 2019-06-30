@@ -37,7 +37,8 @@ export const SimpleFileUpload = ({
             type: 'file',
             disabled: disabled || isSubmitting,
             name: field.name,
-            onChange: (event: any) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onChange: (event: React.ChangeEvent<any>) => {
               const file = event.currentTarget.files[0];
               setFieldValue(field.name, file);
             },
