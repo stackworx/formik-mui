@@ -97,11 +97,13 @@ const UppercasingTextField = (props: TextFieldProps) => (
 ```
 import {fieldToTextField} from 'formik-material-ui';
 
-<Field name="name" render={(props) => (<div>
-  <Comp1 {...fieldToText(props)}>
-  <Comp2 {...fieldToText(props)}>
-  ...
-</div>)} />
+<Field name="name" render={(props) => (
+  <div>
+    <Comp1 {...fieldToTextField(props)} />
+    <Comp2 {...fieldToTextField(props)} />
+    ...
+  </div>
+)} />
 ```
 
 ## Development
