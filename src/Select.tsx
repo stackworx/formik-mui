@@ -11,14 +11,35 @@ export interface SelectProps
 
 export const fieldToSelect = ({
   field,
-  form: { isSubmitting },
+  form: { isSubmitting, setFieldValue },
   disabled = false,
   ...props
 }: SelectProps): MuiSelectProps => {
+  const onChange = React.useCallback(
+    (event: React.ChangeEvent<{ value: unknown }>) => {
+      // Special case for multiple and native
+      if (props.multiple && props.native) {
+        const { options } = event.target as HTMLSelectElement;
+        const value: string[] = [];
+        for (let i = 0, l = options.length; i < l; i += 1) {
+          if (options[i].selected) {
+            value.push(options[i].value);
+          }
+        }
+
+        setFieldValue(field.name, value);
+      } else {
+        field.onChange(event);
+      }
+    },
+    [field.name, props.multiple, props.native]
+  );
+
   return {
     disabled: isSubmitting || disabled,
     ...props,
     ...field,
+    onChange,
   };
 };
 
