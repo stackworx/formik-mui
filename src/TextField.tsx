@@ -11,7 +11,7 @@ export const fieldToTextField = ({
   field,
   form,
   variant = 'standard',
-  disabled = false,
+  disabled,
   ...props
 }: TextFieldProps): MuiTextFieldProps => {
   const { name } = field;
@@ -26,7 +26,7 @@ export const fieldToTextField = ({
     variant,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
-    disabled: isSubmitting || disabled,
+    disabled: disabled != undefined ? disabled : isSubmitting,
   };
 };
 

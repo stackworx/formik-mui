@@ -12,7 +12,7 @@ export interface SelectProps
 export const fieldToSelect = ({
   field,
   form: { isSubmitting, setFieldValue },
-  disabled = false,
+  disabled,
   ...props
 }: SelectProps): MuiSelectProps => {
   const onChange = React.useCallback(
@@ -36,7 +36,7 @@ export const fieldToSelect = ({
   );
 
   return {
-    disabled: isSubmitting || disabled,
+    disabled: disabled != undefined ? disabled : isSubmitting,
     ...props,
     ...field,
     onChange,

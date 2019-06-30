@@ -12,11 +12,11 @@ export interface InputBaseProps
 export const fieldToInputBase = ({
   field,
   form: { isSubmitting },
-  disabled = false,
+  disabled,
   ...props
 }: InputBaseProps): MuiInputBaseProps => {
   return {
-    disabled: isSubmitting || disabled,
+    disabled: disabled != undefined ? disabled : isSubmitting,
     ...props,
     ...field,
     value: field.name,

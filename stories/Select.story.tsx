@@ -6,15 +6,10 @@ import { createStyles, withStyles, Theme, WithStyles } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
-import * as Yup from 'yup';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 import { Select } from '../src/main';
-
-const schema = Yup.object().shape({
-  age: Yup.string().required(),
-});
 
 const styles = ({ spacing }: Theme) =>
   createStyles({
@@ -33,7 +28,6 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
   return (
     <Wrapper title="Select">
       <Formik<Values>
-        validationSchema={schema}
         initialValues={{ age: '', pets: [] }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {

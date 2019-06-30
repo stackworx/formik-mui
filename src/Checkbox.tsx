@@ -15,11 +15,11 @@ export interface CheckboxProps
 export const fieldToCheckbox = ({
   field,
   form: { isSubmitting },
-  disabled = false,
+  disabled,
   ...props
 }: CheckboxProps): MuiCheckboxProps => {
   return {
-    disabled: isSubmitting || disabled,
+    disabled: disabled != undefined ? disabled : isSubmitting,
     ...props,
     ...field,
     // TODO handle indeterminate
