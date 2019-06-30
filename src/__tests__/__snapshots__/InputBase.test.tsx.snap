@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputBase Renders Correctly 1`] = `
+<form
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="MuiInputBase-root"
+    label="InputBase"
+    onClick={[Function]}
+  >
+    <input
+      className="MuiInputBase-input"
+      disabled={false}
+      name="test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="text"
+      value="test"
+    />
+  </div>
+</form>
+`;

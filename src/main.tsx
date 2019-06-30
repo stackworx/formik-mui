@@ -5,3 +5,4 @@ export * from './CheckboxWithLabel';
 export * from './Select';
 export * from './SimpleFileUpload';
 export * from './RadioGroup';
+export * from './InputBase';
