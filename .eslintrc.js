@@ -14,6 +14,7 @@ module.exports = {
     'plugin:react/recommended',
     'prettier/@typescript-eslint',
   ],
+  plugins: ['react-hooks'],
   overrides: [
     {
       files: ['**/*.test.tsx'],
