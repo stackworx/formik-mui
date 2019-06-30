@@ -48,8 +48,25 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
               name="age"
               component={Select}
               inputProps={{
-                name: 'age',
                 id: 'age-simple',
+              }}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
+          </FormControl>
+          <br />
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="age-simple-empty" shrink>
+              Age (Empty)
+            </InputLabel>
+            <Field
+              name="age"
+              component={Select}
+              displayEmpty
+              inputProps={{
+                id: 'age-simple-empty',
               }}
             >
               <MenuItem value="">
