@@ -3,7 +3,6 @@ import MuiCheckbox, {
   CheckboxProps as MuiCheckboxProps,
 } from '@material-ui/core/Checkbox';
 import { FieldProps } from 'formik';
-import { Omit } from './types';
 
 export interface CheckboxProps
   extends FieldProps,

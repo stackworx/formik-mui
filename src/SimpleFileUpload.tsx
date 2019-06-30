@@ -4,7 +4,6 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel, { InputLabelProps } from '@material-ui/core/InputLabel';
 import Input, { InputProps } from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import { Omit } from './types';
 
 export interface SimpleFileUploadProps extends FieldProps {
   label: string;

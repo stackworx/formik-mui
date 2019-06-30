@@ -92,6 +92,7 @@
   "main": "dist/index.js",
   "module": "dist/formik-material-ui.es6.js",
   "scripts": {
+    "typecheck": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "cross-env NODE_ENV=production tsc --noEmit --project tsconfig.json",

@@ -4,8 +4,6 @@ import MuiRadioGroup, {
 } from '@material-ui/core/RadioGroup';
 import { FieldProps } from 'formik';
 
-import { Omit } from './types';
-
 export interface RadioGroupProps
   extends Omit<MuiRadioGroupProps, 'name' | 'onChange' | 'value'>,
     FieldProps {}

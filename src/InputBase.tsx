@@ -3,7 +3,6 @@ import MuiInputBase, {
   InputBaseProps as MuiInputBaseProps,
 } from '@material-ui/core/InputBase';
 import { FieldProps } from 'formik';
-import { Omit } from './types';
 
 export interface InputBaseProps
   extends FieldProps,

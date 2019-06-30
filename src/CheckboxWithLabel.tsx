@@ -5,7 +5,6 @@ import FormControlLabel, {
 } from '@material-ui/core/FormControlLabel';
 
 import { CheckboxProps, fieldToCheckbox } from './Checkbox';
-import { Omit } from './types';
 
 /**
  * Exclude props that are passed directly to the control

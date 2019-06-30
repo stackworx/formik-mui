@@ -106,6 +106,15 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             label="Outlined"
             name="outlined"
             variant="outlined"
+            notched
+            component={TextField}
+          />
+          <br />
+          <Field
+            label="Outlined"
+            name="outlined"
+            variant="standard"
+            notched
             component={TextField}
           />
           <br />

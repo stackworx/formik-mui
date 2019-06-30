@@ -3,7 +3,6 @@ import MuiSelect, {
   SelectProps as MuiSelectProps,
 } from '@material-ui/core/Select';
 import { FieldProps } from 'formik';
-import { Omit } from './types';
 
 export interface SelectProps
   extends FieldProps,

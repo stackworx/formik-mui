@@ -3,7 +3,6 @@ import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
 } from '@material-ui/core/Switch';
 import { FieldProps } from 'formik';
-import { Omit } from './types';
 
 export interface SwitchProps
   extends FieldProps,
