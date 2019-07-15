@@ -13,6 +13,7 @@ exports[`Switch Renders Correctly 1`] = `
       className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-12 MuiSwitch-switchBase MuiSwitch-colorSecondary"
       label="Text"
       onBlur={[Function]}
+      onDragLeave={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}

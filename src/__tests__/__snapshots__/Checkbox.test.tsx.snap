@@ -7,9 +7,10 @@ exports[`Checkbox Renders Correctly 1`] = `
 >
   <span
     aria-disabled={false}
-    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-7 MuiCheckbox-root MuiCheckbox-colorSecondary"
+    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
     label="Checkbox"
     onBlur={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}

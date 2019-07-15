@@ -64,6 +64,7 @@ Now you can add any of the Material UI props to the `<Field />` component and `<
 
 - Errors are only displayed on touched/dirty fields
 - Fields are disabled during submission
+- All form state is managed to Formik, so props such as `name`, `onChange` and `value` are excluded from the typescript types. Note: if you are using js this does not prevent you from providing these props but here be dragons.
 
 ## Non Goals
 

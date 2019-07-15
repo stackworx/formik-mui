@@ -16,8 +16,9 @@ exports[`Radio Group Renders Correctly 1`] = `
     >
       <span
         aria-disabled={false}
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary"
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
         onBlur={[Function]}
+        onDragLeave={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -69,7 +70,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
+        className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
       >
         Painting
       </span>
@@ -79,8 +80,9 @@ exports[`Radio Group Renders Correctly 1`] = `
     >
       <span
         aria-disabled={false}
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary"
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
         onBlur={[Function]}
+        onDragLeave={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -132,7 +134,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
+        className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
       >
         Drawing
       </span>
@@ -142,8 +144,9 @@ exports[`Radio Group Renders Correctly 1`] = `
     >
       <span
         aria-disabled={true}
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary Mui-disabled PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-disabled-16 Mui-disabled Mui-disabled"
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-disabled-16 Mui-disabled MuiIconButton-colorSecondary Mui-disabled Mui-disabled"
         onBlur={[Function]}
+        onDragLeave={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -196,7 +199,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled"
+        className="MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1"
       >
         None
       </span>

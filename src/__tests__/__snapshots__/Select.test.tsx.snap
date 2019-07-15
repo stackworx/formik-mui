@@ -11,45 +11,41 @@ exports[`Select Renders Correctly 1`] = `
     onClick={[Function]}
   >
     <div
-      className="MuiSelect-root"
+      aria-haspopup="true"
+      aria-pressed="false"
+      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
+      id="select-test"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex={0}
     >
-      <div
-        aria-haspopup="true"
-        aria-pressed="false"
-        className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-        id="select-test"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        role="button"
-        tabIndex={0}
-      >
-        <span
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "&#8203;",
-            }
+      <span
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "&#8203;",
           }
-        />
-      </div>
-      <input
-        name="test"
-        type="hidden"
-        value=""
+        }
       />
-      <svg
-        aria-hidden="true"
-        className="MuiSvgIcon-root MuiSelect-icon"
-        focusable="false"
-        role="presentation"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M7 10l5 5 5-5z"
-        />
-      </svg>
     </div>
+    <input
+      name="test"
+      type="hidden"
+      value=""
+    />
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root MuiSelect-icon"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 10l5 5 5-5z"
+      />
+    </svg>
   </div>
 </form>
 `;
