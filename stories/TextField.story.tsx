@@ -87,18 +87,13 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
       }}
       render={({ submitForm, isSubmitting, values }) => (
         <Form>
-          <Field
-            type="email"
-            label="Email"
-            name="user.email"
-            component={TextField}
-          />
+          <Field type="email" label="Email" name="user.email" as={TextField} />
           <br />
           <Field
             type="password"
             label="Password"
             name="password"
-            component={TextField}
+            as={TextField}
           />
           <br />
           <br />
@@ -107,7 +102,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             name="outlined"
             variant="outlined"
             notched
-            component={TextField}
+            as={TextField}
           />
           <br />
           <Field
@@ -115,7 +110,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             name="outlined"
             variant="standard"
             notched
-            component={TextField}
+            as={TextField}
           />
           <br />
           <Field
@@ -124,13 +119,14 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             label="With Select"
             select
             SelectProps={{
+              name: 'select',
               MenuProps: {
                 className: classes.menu,
               },
             }}
             helperText="Please select Range"
             margin="normal"
-            component={TextField}
+            as={TextField}
           >
             {ranges.map(option => (
               <MenuItem key={option.value} value={option.value}>

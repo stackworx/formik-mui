@@ -2,31 +2,39 @@ import * as React from 'react';
 import MuiTextField, {
   TextFieldProps as MuiTextFieldProps,
 } from '@material-ui/core/TextField';
-import { FieldProps, getIn } from 'formik';
+import { FieldProps, FieldConfig, useField } from 'formik';
 
 export type TextFieldProps = FieldProps &
-  Omit<MuiTextFieldProps, 'error' | 'name' | 'onChange' | 'value'>;
+  FieldConfig &
+  Omit<MuiTextFieldProps, 'error' | 'onChange' | 'value'>;
 
 export const fieldToTextField = ({
-  field,
+  name,
   form,
   variant = 'standard',
   disabled,
   ...props
 }: TextFieldProps): MuiTextFieldProps => {
-  const { name } = field;
-  const { touched, errors, isSubmitting } = form;
+  if (name === undefined)
+    throw TypeError(
+      'Missing required name attribute on <Field />. This is needed to hook up your @material-ui Text field with Formik.'
+    );
+  if (props.component)
+    throw TypeError(
+      '<Field component> is deprecated in favour of <Field as>. This is needed to hook up your @material-ui Text field with Formik.'
+    );
 
-  const fieldError = getIn(errors, name);
-  const showError = getIn(touched, name) && !!fieldError;
+  const [field, meta] = useField(name);
+  const { touched, error } = meta;
+  const showError = touched && !!error;
 
   return {
-    ...props,
     ...field,
+    ...props,
     variant,
     error: showError,
-    helperText: showError ? fieldError : props.helperText,
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    helperText: showError ? error : props.helperText,
+    disabled: disabled !== undefined ? disabled : false,
   };
 };
 

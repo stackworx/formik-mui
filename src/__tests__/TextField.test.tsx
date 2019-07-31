@@ -8,7 +8,7 @@ test('TextField Renders Correctly', () => {
   const component = renderer.create(
     <Formik initialValues={{}} onSubmit={() => null}>
       <Form>
-        <Field name="test" label="Text" component={TextField} />
+        <Field name="test" label="Text" as={TextField} />
       </Form>
     </Formik>
   );
@@ -24,7 +24,7 @@ test('Wrapped TextField', () => {
   const component = renderer.create(
     <Formik initialValues={{}} onSubmit={() => null}>
       <Form>
-        <Field name="test" label="Text" component={TextFieldComponent} />
+        <Field name="test" label="Text" as={TextFieldComponent} />
       </Form>
     </Formik>
   );
