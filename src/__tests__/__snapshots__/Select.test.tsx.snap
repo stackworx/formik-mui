@@ -11,8 +11,7 @@ exports[`Select Renders Correctly 1`] = `
     onClick={[Function]}
   >
     <div
-      aria-haspopup="true"
-      aria-pressed="false"
+      aria-haspopup="listbox"
       className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
       id="select-test"
       onBlur={[Function]}
