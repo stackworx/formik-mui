@@ -10,7 +10,7 @@ exports[`Switch Renders Correctly 1`] = `
   >
     <span
       aria-disabled={false}
-      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-12 MuiSwitch-switchBase MuiSwitch-colorSecondary"
+      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-13 MuiSwitch-switchBase MuiSwitch-colorSecondary"
       label="Text"
       onBlur={[Function]}
       onDragLeave={[Function]}
@@ -32,7 +32,7 @@ exports[`Switch Renders Correctly 1`] = `
           className="MuiSwitch-thumb"
         />
         <input
-          className="PrivateSwitchBase-input-15 MuiSwitch-input"
+          className="PrivateSwitchBase-input-16 MuiSwitch-input"
           disabled={false}
           name="test"
           onChange={[Function]}
