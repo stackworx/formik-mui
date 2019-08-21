@@ -22,7 +22,7 @@ export const fieldToCheckbox = ({
     ...props,
     ...field,
     // TODO handle indeterminate
-    checked: field.value,
+    checked: !!field.value,
     value: field.value ? 'checked' : '',
   };
 };

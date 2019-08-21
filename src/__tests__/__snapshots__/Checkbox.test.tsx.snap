@@ -37,6 +37,7 @@ exports[`Checkbox Renders Correctly 1`] = `
         />
       </svg>
       <input
+        checked={false}
         className="PrivateSwitchBase-input-10"
         data-indeterminate={false}
         disabled={false}
