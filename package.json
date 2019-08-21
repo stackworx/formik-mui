@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
     "@material-ui/core": ">=4.0.0",
