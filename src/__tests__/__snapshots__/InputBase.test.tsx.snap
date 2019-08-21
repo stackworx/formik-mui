@@ -18,7 +18,7 @@ exports[`InputBase Renders Correctly 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       type="text"
-      value="test"
+      value="Input"
     />
   </div>
 </form>
