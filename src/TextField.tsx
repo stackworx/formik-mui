@@ -5,12 +5,15 @@ import MuiTextField, {
 import { FieldProps, getIn } from 'formik';
 
 export type TextFieldProps = FieldProps &
-  Omit<MuiTextFieldProps, 'error' | 'name' | 'onChange' | 'value'>;
+  Omit<MuiTextFieldProps, 'error' | 'name' | 'onChange' | 'value'> & {
+    // Fix for the type for variant which is using union
+    // https://stackoverflow.com/questions/55664421
+    variant: 'standard' | 'filled' | 'outlined' | undefined;
+  };
 
 export const fieldToTextField = ({
   field,
   form,
-  variant = 'standard',
   disabled,
   ...props
 }: TextFieldProps): MuiTextFieldProps => {
@@ -23,7 +26,6 @@ export const fieldToTextField = ({
   return {
     ...props,
     ...field,
-    variant,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
