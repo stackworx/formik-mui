@@ -1,6 +1,7 @@
 {
   "name": "formik-material-ui",
   "version": "0.0.22",
+  "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
     "@material-ui/core": ">=4.0.0",
