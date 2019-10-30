@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
-import { SimpleFileUpload } from '../src/main';
+import { SimpleFileUpload } from '../packages/formik-material-ui/src/main';
 
 // 10 Megs
 const MAX_FILE_SIZE = 10485760;

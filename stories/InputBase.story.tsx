@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import Wrapper from './Wrapper';
 
-import { InputBase } from '../src/InputBase';
+import { InputBase } from '../packages/formik-material-ui/src/InputBase';
 import FormValues from './FormValues';
 
 interface Values {

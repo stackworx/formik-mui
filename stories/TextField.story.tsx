@@ -14,7 +14,7 @@ import * as yup from 'yup';
 
 import Wrapper from './Wrapper';
 
-import { TextField } from '../src/TextField';
+import { TextField } from '../packages/formik-material-ui/src/TextField';
 import FormValues from './FormValues';
 
 interface Values {

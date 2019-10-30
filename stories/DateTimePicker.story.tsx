@@ -7,8 +7,8 @@ import * as yup from 'yup';
 
 import Wrapper from './Wrapper';
 
-import { DateTimePicker } from '../src/DateTimePicker';
-import { KeyboardDateTimePicker } from '../src/KeyboardDateTimePicker';
+import { DateTimePicker } from '../packages/formik-material-ui-pickers/src/DateTimePicker';
+import { KeyboardDateTimePicker } from '../packages/formik-material-ui-pickers/src/KeyboardDateTimePicker';
 import FormValues from './FormValues';
 
 interface Values {

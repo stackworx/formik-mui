@@ -9,7 +9,12 @@ import FormControl from '@material-ui/core/FormControl';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
-import { CheckboxWithLabel, TextField, Select, RadioGroup } from '../src/main';
+import {
+  CheckboxWithLabel,
+  TextField,
+  Select,
+  RadioGroup,
+} from '../packages/formik-material-ui/src/main';
 
 interface Values {
   email: string;
