@@ -1,26 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputBase Renders Correctly 1`] = `
-<form
-  onReset={[Function]}
-  onSubmit={[Function]}
->
-  <div
-    className="MuiInputBase-root"
-    label="InputBase"
-    onClick={[Function]}
-  >
-    <input
-      className="MuiInputBase-input"
-      disabled={false}
-      name="test"
-      onAnimationStart={[Function]}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      type="text"
-      value="Input"
-    />
-  </div>
-</form>
+<DocumentFragment>
+  <form>
+    <div
+      class="MuiInputBase-root"
+      label="InputBase"
+    >
+      <input
+        class="MuiInputBase-input"
+        name="test"
+        type="text"
+        value="Input"
+      />
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`InputBase Renders Correctly disabled 1`] = `
+<DocumentFragment>
+  <form>
+    <div
+      class="MuiInputBase-root"
+      label="InputBase"
+    >
+      <input
+        class="MuiInputBase-input"
+        data-testid="input"
+        name="test"
+        type="text"
+        value="a"
+      />
+    </div>
+  </form>
+</DocumentFragment>
 `;
