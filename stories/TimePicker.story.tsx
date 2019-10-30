@@ -7,8 +7,8 @@ import * as yup from 'yup';
 
 import Wrapper from './Wrapper';
 
-import { TimePicker } from '../src/TimePicker';
-import { KeyboardTimePicker } from '../src/KeyboardTimePicker';
+import { TimePicker } from '../packages/formik-material-ui-pickers/src/TimePicker';
+import { KeyboardTimePicker } from '../packages/formik-material-ui-pickers/src/KeyboardTimePicker';
 import FormValues from './FormValues';
 
 interface Values {

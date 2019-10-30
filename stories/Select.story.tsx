@@ -9,7 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
-import { Select } from '../src/main';
+import { Select } from '../packages/formik-material-ui/src/main';
 
 const styles = ({ spacing }: Theme) =>
   createStyles({

@@ -13,7 +13,7 @@ import {
   Checkbox,
   fieldToCheckbox,
   CheckboxWithLabel,
-} from '../src/main';
+} from '../packages/formik-material-ui/src/main';
 
 interface Values {
   switch: {
