@@ -8,7 +8,7 @@ export interface CheckboxProps
   extends FieldProps,
     Omit<
       MuiCheckboxProps,
-      'form' | 'checked' | 'defaultChecked' | 'name' | 'onChange' | 'value'
+      'form' | 'checked' | 'defaultChecked' | 'name' | 'onChange'
     > {}
 
 export const fieldToCheckbox = ({
@@ -23,7 +23,7 @@ export const fieldToCheckbox = ({
     ...field,
     // TODO handle indeterminate
     checked: field.value,
-    value: field.value ? 'checked' : '',
+    value: field.value ? 'checked' : props.value,
   };
 };
 
