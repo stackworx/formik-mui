@@ -9,6 +9,9 @@ import SelectorStory from './Selector.story';
 import SelectStory from './Select.story';
 import SimpleFileUploadStory from './SimpleFileUpload.story';
 import RadioGroupStory from './RadioGroup.story.tsx';
+import DatePickerStory from './DatePicker.story.tsx';
+import TimePickerStory from './TimePicker.story.tsx';
+import DateTimePickerStory from './DateTimePicker.story.tsx';
 
 storiesOf('Formik', module)
   .add('Text Field', () => <TextFieldStory />)
@@ -17,4 +20,7 @@ storiesOf('Formik', module)
   .add('Selectors', () => <SelectorStory />)
   .add('Select', () => <SelectStory />)
   .add('Simple File Upload', () => <SimpleFileUploadStory />)
-  .add('Kitchen Sink', () => <KitchenSinkStory />);
+  .add('Kitchen Sink', () => <KitchenSinkStory />)
+  .add('Date Picker', () => <DatePickerStory />)
+  .add('Time Picker', () => <TimePickerStory />)
+  .add('Date and Time Picker', () => <DateTimePickerStory />);

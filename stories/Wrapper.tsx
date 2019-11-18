@@ -7,6 +7,8 @@ import {
   WithStyles,
   createStyles,
 } from '@material-ui/core/styles';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -34,7 +36,9 @@ const Wrapper = ({ title, children }: Props) => (
     <Typography variant="h4" component="h3">
       {title}
     </Typography>
-    {children}
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      {children}
+    </MuiPickersUtilsProvider>
   </Paper>
 );
 
