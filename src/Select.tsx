@@ -35,7 +35,7 @@ export const fieldToSelect = ({
   );
 
   return {
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
     ...props,
     ...field,
     onChange,
