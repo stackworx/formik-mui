@@ -6,7 +6,7 @@ import { InputBase } from '../InputBase';
 
 test('InputBase Renders Correctly', () => {
   const component = renderer.create(
-    <Formik onSubmit={() => null} initialValues={{ test: 'Input' }}>
+    <Formik onSubmit={() => {}} initialValues={{ test: 'Input' }}>
       <Form>
         <Field name="test" label="InputBase" component={InputBase} />
       </Form>

@@ -6,7 +6,7 @@ import { Checkbox } from '../Checkbox';
 
 test('Checkbox Renders Correctly', () => {
   const component = renderer.create(
-    <Formik initialValues={{}} onSubmit={() => null}>
+    <Formik initialValues={{}} onSubmit={() => {}}>
       <Form>
         <Field name="test" label="Checkbox" component={Checkbox} />
       </Form>
