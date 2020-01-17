@@ -2,6 +2,7 @@
 
 exports[`Switch Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
 >
@@ -28,9 +29,6 @@ exports[`Switch Renders Correctly 1`] = `
       <span
         className="MuiIconButton-label"
       >
-        <span
-          className="MuiSwitch-thumb"
-        />
         <input
           className="PrivateSwitchBase-input-16 MuiSwitch-input"
           disabled={false}
@@ -38,6 +36,9 @@ exports[`Switch Renders Correctly 1`] = `
           onChange={[Function]}
           type="checkbox"
           value="test"
+        />
+        <span
+          className="MuiSwitch-thumb"
         />
       </span>
     </span>
