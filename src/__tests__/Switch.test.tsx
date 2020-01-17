@@ -6,7 +6,7 @@ import { Switch } from '../Switch';
 
 test('Switch Renders Correctly', () => {
   const component = renderer.create(
-    <Formik initialValues={{}} onSubmit={() => null}>
+    <Formik initialValues={{}} onSubmit={() => {}}>
       <Form>
         <Field name="test" label="Text" component={Switch} />
       </Form>
