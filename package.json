@@ -1,11 +1,10 @@
 {
   "name": "formik-material-ui",
-  "version": "1.0.0",
-  "license": "MIT",
+  "version": "1.0.20",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
-    "@material-ui/core": ">=4.0.0",
-    "formik": ">=1.0.0",
+    "@material-ui/core": ">=4.3.0",
+    "formik": ">=2.0.0",
     "react": "^16.8.0"
   },
   "keywords": [
@@ -42,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
-    "@material-ui/core": "^4.0.1",
+    "@material-ui/core": "^4.3.0",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
     "@storybook/addons": "^5.0.11",
@@ -63,7 +62,7 @@
     "eslint-plugin-jest": "^22.7.1",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
-    "formik": "^1.5.7",
+    "formik": "^2.0.1-rc.12",
     "husky": "^1.2.0",
     "jest": "^23.4.2",
     "lerna": "^3.5.1",
