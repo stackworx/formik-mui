@@ -2,12 +2,13 @@
 
 exports[`Select Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
+  translate=""
 >
   <div
     className="MuiInputBase-root MuiInput-root MuiInput-underline"
-    label="Select"
     onClick={[Function]}
   >
     <div

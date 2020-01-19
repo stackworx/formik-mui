@@ -3,22 +3,26 @@ import {
   KeyboardDateTimePicker as MuiKeyboardDateTimePicker,
   KeyboardDateTimePickerProps as MuiKeyboardDateTimePickerProps,
 } from '@material-ui/pickers';
-import { FieldProps, getIn } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
-export type KeyboardDateTimePickerProps = FieldProps &
-  Omit<MuiKeyboardDateTimePickerProps, 'error' | 'name' | 'onChange' | 'value'>;
+export interface KeyboardDateTimePickerProps
+  extends Omit<
+    MuiKeyboardDateTimePickerProps,
+    'error' | 'name' | 'onChange' | 'value'
+  > {
+  name: string;
+}
 
-export const fieldToKeyboardDateTimePicker = ({
-  field,
-  form,
+export const useFieldToKeyboardDateTimePicker = ({
   disabled,
+  name,
   ...props
 }: KeyboardDateTimePickerProps): MuiKeyboardDateTimePickerProps => {
-  const { name } = field;
-  const { touched, errors, isSubmitting, setFieldValue, setFieldError } = form;
+  const { isSubmitting } = useFormikContext();
+  const [field, meta, helpers] = useField(name);
 
-  const fieldError = getIn(errors, name);
-  const showError = getIn(touched, name) && !!fieldError;
+  const fieldError = meta.error;
+  const showError = meta.touched && !!fieldError;
 
   return {
     ...props,
@@ -27,11 +31,11 @@ export const fieldToKeyboardDateTimePicker = ({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(name, date);
+      helpers.setValue(date);
     },
     onError(error) {
       if (error !== fieldError) {
-        setFieldError(name, String(error));
+        helpers.setError(String(error));
       }
     },
   };
@@ -41,7 +45,7 @@ export const KeyboardDateTimePicker: React.ComponentType<KeyboardDateTimePickerP
   children,
   ...props
 }: KeyboardDateTimePickerProps) => (
-  <MuiKeyboardDateTimePicker {...fieldToKeyboardDateTimePicker(props)}>
+  <MuiKeyboardDateTimePicker {...useFieldToKeyboardDateTimePicker(props)}>
     {children}
   </MuiKeyboardDateTimePicker>
 );

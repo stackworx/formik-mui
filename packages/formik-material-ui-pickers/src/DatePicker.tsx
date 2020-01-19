@@ -3,23 +3,23 @@ import {
   DatePicker as MuiDatePicker,
   DatePickerProps as MuiDatePickerProps,
 } from '@material-ui/pickers';
+import { useField, useFormikContext } from 'formik';
 
-import { FieldProps, getIn } from 'formik';
+export interface DatePickerProps
+  extends Omit<MuiDatePickerProps, 'error' | 'name' | 'onChange' | 'value'> {
+  name: string;
+}
 
-export type DatePickerProps = FieldProps &
-  Omit<MuiDatePickerProps, 'error' | 'name' | 'onChange' | 'value'>;
-
-export const fieldToDatePicker = ({
-  field,
-  form,
+export const useFieldToDatePicker = ({
+  name,
   disabled,
   ...props
 }: DatePickerProps): MuiDatePickerProps => {
-  const { name } = field;
-  const { touched, errors, isSubmitting, setFieldValue, setFieldError } = form;
+  const { isSubmitting } = useFormikContext();
+  const [field, meta, helpers] = useField(name);
 
-  const fieldError = getIn(errors, name);
-  const showError = getIn(touched, name) && !!fieldError;
+  const fieldError = meta.error;
+  const showError = meta.touched && !!fieldError;
 
   return {
     ...props,
@@ -28,11 +28,11 @@ export const fieldToDatePicker = ({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(name, date);
+      helpers.setValue(date);
     },
     onError(error) {
       if (error !== fieldError) {
-        setFieldError(name, String(error));
+        helpers.setError(String(error));
       }
     },
   };
@@ -42,7 +42,7 @@ export const DatePicker: React.ComponentType<DatePickerProps> = ({
   children,
   ...props
 }: DatePickerProps) => (
-  <MuiDatePicker {...fieldToDatePicker(props)}>{children}</MuiDatePicker>
+  <MuiDatePicker {...useFieldToDatePicker(props)}>{children}</MuiDatePicker>
 );
 
 DatePicker.displayName = 'FormikMaterialUIDatePicker';

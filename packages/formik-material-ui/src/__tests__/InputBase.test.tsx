@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import {
   render,
   fireEvent,
@@ -11,9 +11,9 @@ import { InputBase } from '../InputBase';
 
 test('InputBase Renders Correctly', () => {
   const { asFragment } = render(
-    <Formik onSubmit={() => null} initialValues={{ test: 'Input' }}>
-      <Form>
-        <Field name="test" label="InputBase" component={InputBase} />
+    <Formik onSubmit={() => {}} initialValues={{ test: 'Input' }}>
+      <Form translate="">
+        <InputBase name="test" />
       </Form>
     </Formik>
   );
@@ -24,14 +24,9 @@ test('InputBase Renders Correctly', () => {
 
 test('InputBase Renders Correctly disabled', () => {
   const { asFragment, getByTestId } = render(
-    <Formik onSubmit={() => null} initialValues={{ test: 'Input' }}>
-      <Form>
-        <Field
-          name="test"
-          inputProps={{ 'data-testid': 'input' }}
-          label="InputBase"
-          component={InputBase}
-        />
+    <Formik onSubmit={() => {}} initialValues={{ test: 'Input' }}>
+      <Form translate="">
+        <InputBase name="test" inputProps={{ 'data-testid': 'input' }} />
       </Form>
     </Formik>
   );

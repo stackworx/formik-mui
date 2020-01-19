@@ -4,7 +4,7 @@ import FormControlLabel, {
   FormControlLabelProps as MuiFormControlLabelProps,
 } from '@material-ui/core/FormControlLabel';
 
-import { CheckboxProps, fieldToCheckbox } from './Checkbox';
+import { CheckboxProps, useFieldToCheckbox } from './Checkbox';
 
 /**
  * Exclude props that are passed directly to the control
@@ -22,7 +22,7 @@ export const CheckboxWithLabel: React.ComponentType<CheckboxWithLabelProps> = ({
   ...props
 }) => (
   <FormControlLabel
-    control={<MuiCheckbox {...fieldToCheckbox(props)} />}
+    control={<MuiCheckbox {...useFieldToCheckbox(props)} />}
     {...Label}
   />
 );

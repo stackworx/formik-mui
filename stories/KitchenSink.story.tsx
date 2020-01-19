@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import { LinearProgress, FormControlLabel, Radio } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -10,7 +10,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 import {
-  CheckboxWithLabel,
+  // CheckboxWithLabel,
   TextField,
   Select,
   RadioGroup,
@@ -56,32 +56,20 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form>
-          <Field
-            type="email"
-            label="Email"
-            name="email"
-            component={TextField}
-          />
+        <Form translate="">
+          <TextField type="email" label="Email" name="email" />
           <br />
-          <Field
-            type="password"
-            label="Password"
-            name="password"
-            component={TextField}
-          />
-          <br />
-          <Field
+          <TextField type="password" label="Password" name="password" />
+          {/* <br />
+          <CheckboxWithLabel
             Label={{ label: 'Remember Me' }}
             name="rememberMe"
-            component={CheckboxWithLabel}
-          />
+          /> */}
           <br />
           <FormControl>
             <InputLabel htmlFor="age-simple">Age</InputLabel>
-            <Field
+            <Select
               name="age"
-              component={Select}
               inputProps={{
                 name: 'age',
                 id: 'age-simple',
@@ -93,26 +81,24 @@ export default () => (
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
-            </Field>
+            </Select>
           </FormControl>
           <br />
-          <Field
+          <TextField
             InputLabelProps={{ shrink: true }}
             type="datetime-local"
             label="Date Time"
             name="dateTime"
-            component={TextField}
           />
           <br />
-          <Field
+          <TextField
             InputLabelProps={{ shrink: true }}
             type="date"
             label="Date"
             name="date"
-            component={TextField}
           />
           <br />
-          <Field name="activity" label="Radio Group" component={RadioGroup}>
+          <RadioGroup name="activity">
             <FormControlLabel
               value="painting"
               control={<Radio disabled={isSubmitting} />}
@@ -125,7 +111,7 @@ export default () => (
               label="Drawing"
               disabled={isSubmitting}
             />
-          </Field>
+          </RadioGroup>
           <br />
           {isSubmitting && <LinearProgress />}
           <br />

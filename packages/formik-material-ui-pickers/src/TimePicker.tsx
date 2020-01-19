@@ -3,22 +3,23 @@ import {
   TimePicker as MuiTimePicker,
   TimePickerProps as MuiTimePickerProps,
 } from '@material-ui/pickers';
-import { FieldProps, getIn } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
-export type TimePickerProps = FieldProps &
-  Omit<MuiTimePickerProps, 'error' | 'name' | 'onChange' | 'value'>;
+export interface TimePickerProps
+  extends Omit<MuiTimePickerProps, 'error' | 'name' | 'onChange' | 'value'> {
+  name: string;
+}
 
-export const fieldToTimePicker = ({
-  field,
-  form,
+export const useFieldToTimePicker = ({
   disabled,
+  name,
   ...props
 }: TimePickerProps): MuiTimePickerProps => {
-  const { name } = field;
-  const { touched, errors, isSubmitting, setFieldValue, setFieldError } = form;
+  const { isSubmitting } = useFormikContext();
+  const [field, meta, helpers] = useField(name);
 
-  const fieldError = getIn(errors, name);
-  const showError = getIn(touched, name) && !!fieldError;
+  const fieldError = meta.error;
+  const showError = meta.touched && !!fieldError;
 
   return {
     ...props,
@@ -27,11 +28,11 @@ export const fieldToTimePicker = ({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(name, date);
+      helpers.setValue(date);
     },
     onError(error) {
       if (error !== fieldError) {
-        setFieldError(name, String(error));
+        helpers.setError(String(error));
       }
     },
   };
@@ -41,7 +42,7 @@ export const TimePicker: React.ComponentType<TimePickerProps> = ({
   children,
   ...props
 }: TimePickerProps) => (
-  <MuiTimePicker {...fieldToTimePicker(props)}>{children}</MuiTimePicker>
+  <MuiTimePicker {...useFieldToTimePicker(props)}>{children}</MuiTimePicker>
 );
 
 TimePicker.displayName = 'FormikMaterialUITimePicker';

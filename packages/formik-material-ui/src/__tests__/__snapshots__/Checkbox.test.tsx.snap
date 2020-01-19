@@ -3,12 +3,13 @@
 exports[`renders 1`] = `
 <DocumentFragment>
   <form
+    action="#"
     data-testid="form"
+    translate=""
   >
     <span
       aria-disabled="false"
       class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-7 MuiCheckbox-root MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
-      label="Checkbox"
     >
       <span
         class="MuiIconButton-label"

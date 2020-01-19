@@ -2,21 +2,30 @@ import * as React from 'react';
 import MuiCheckbox, {
   CheckboxProps as MuiCheckboxProps,
 } from '@material-ui/core/Checkbox';
-import { FieldProps } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
 export interface CheckboxProps
-  extends FieldProps,
-    Omit<
-      MuiCheckboxProps,
-      'form' | 'checked' | 'defaultChecked' | 'name' | 'onChange' | 'value'
-    > {}
+  extends Omit<
+    MuiCheckboxProps,
+    | 'name'
+    | 'form'
+    | 'checked'
+    | 'defaultChecked'
+    | 'onChange'
+    | 'onBlur'
+    | 'value'
+  > {
+  name: string;
+}
 
-export const fieldToCheckbox = ({
-  field,
-  form: { isSubmitting },
+export const useFieldToCheckbox = ({
   disabled,
+  name,
   ...props
 }: CheckboxProps): MuiCheckboxProps => {
+  const { isSubmitting } = useFormikContext();
+  const [field] = useField(name);
+
   return {
     disabled: disabled ?? isSubmitting,
     ...props,
@@ -29,6 +38,8 @@ export const fieldToCheckbox = ({
 
 export const Checkbox: React.ComponentType<CheckboxProps> = (
   props: CheckboxProps
-) => <MuiCheckbox {...fieldToCheckbox(props)} />;
+) => {
+  return <MuiCheckbox {...useFieldToCheckbox(props)} />;
+};
 
 Checkbox.displayName = 'FormikMaterialUICheckbox';

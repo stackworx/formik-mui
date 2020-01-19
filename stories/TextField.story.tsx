@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import {
   LinearProgress,
   MenuItem,
@@ -86,39 +86,24 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form>
-          <Field
-            type="email"
-            label="Email"
-            name="user.email"
-            component={TextField}
-          />
+        <Form translate="">
+          <TextField type="email" label="Email" name="user.email" />
           <br />
-          <Field
-            type="password"
-            label="Password"
-            name="password"
-            component={TextField}
-          />
+          <TextField type="password" label="Password" name="password" />
           <br />
           <br />
-          <Field
+          <TextField
             label="Outlined"
             name="outlined"
             variant="outlined"
-            notched
-            component={TextField}
+            InputProps={{ notched: true }}
           />
           <br />
-          <Field
-            label="Outlined"
-            name="outlined"
-            variant="standard"
-            notched
-            component={TextField}
-          />
           <br />
-          <Field
+          <TextField label="Filled" name="filled" variant="filled" />
+          <br />
+          <br />
+          <TextField
             type="text"
             name="select"
             label="With Select"
@@ -130,14 +115,13 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             }}
             helperText="Please select Range"
             margin="normal"
-            component={TextField}
           >
             {ranges.map(option => (
               <MenuItem key={option.value} value={option.value}>
                 {option.label}
               </MenuItem>
             ))}
-          </Field>
+          </TextField>
           <br />
           {isSubmitting && <LinearProgress />}
           <br />

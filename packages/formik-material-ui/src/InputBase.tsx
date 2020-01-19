@@ -2,18 +2,21 @@ import * as React from 'react';
 import MuiInputBase, {
   InputBaseProps as MuiInputBaseProps,
 } from '@material-ui/core/InputBase';
-import { FieldProps } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
 export interface InputBaseProps
-  extends FieldProps,
-    Omit<MuiInputBaseProps, 'name' | 'onChange' | 'value'> {}
+  extends Omit<MuiInputBaseProps, 'name' | 'onChange' | 'value'> {
+  name: string;
+}
 
-export const fieldToInputBase = ({
-  field,
-  form: { isSubmitting },
+export const useFieldToInputBase = ({
   disabled,
+  name,
   ...props
 }: InputBaseProps): MuiInputBaseProps => {
+  const { isSubmitting } = useFormikContext();
+  const [field] = useField(name);
+
   return {
     disabled: disabled ?? isSubmitting,
     ...props,
@@ -23,6 +26,6 @@ export const fieldToInputBase = ({
 
 export const InputBase: React.ComponentType<InputBaseProps> = (
   props: InputBaseProps
-) => <MuiInputBase {...fieldToInputBase(props)} />;
+) => <MuiInputBase {...useFieldToInputBase(props)} />;
 
 InputBase.displayName = 'FormikMaterialUIInputBase';
