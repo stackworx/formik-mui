@@ -45,7 +45,7 @@ export default withStyles(styles)(() => (
         }, 2000);
       }}
       render={({ submitForm, values }) => (
-        <Form translate="">
+        <Form >
           <SimpleFileUpload name="file" label="Simple File Upload" />
           <br />
           <Button variant="contained" color="primary" onClick={submitForm}>

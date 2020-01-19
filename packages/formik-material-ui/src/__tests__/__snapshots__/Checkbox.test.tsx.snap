@@ -5,7 +5,7 @@ exports[`renders 1`] = `
   <form
     action="#"
     data-testid="form"
-    translate=""
+    
   >
     <span
       aria-disabled="false"

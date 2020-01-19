@@ -36,7 +36,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
           }, 2000);
         }}
         render={({ submitForm, values }) => (
-          <Form translate="">
+          <Form >
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="age-simple">Age</InputLabel>
               <Select

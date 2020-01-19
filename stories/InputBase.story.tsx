@@ -26,7 +26,7 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form translate="">
+        <Form >
           <InputBase name="inputBase" />
           <br />
           {isSubmitting && <LinearProgress />}

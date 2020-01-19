@@ -15,7 +15,7 @@ const FormikWrapper = ({ children, ...config }: Props): React.ReactElement => {
     <Formik {...config}>
       {({ submitForm, submitCount }) => {
         return (
-          <Form data-testid="form" translate="">
+          <Form data-testid="form" >
             {children}
             {submitCount > 0 && <span>submitted</span>}
             <button data-testid="submit" onClick={submitForm}>

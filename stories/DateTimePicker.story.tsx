@@ -33,7 +33,7 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form translate="">
+        <Form >
           <DateTimePicker label="Date &amp; time" name="date" />
           <br />
           <DateTimePicker

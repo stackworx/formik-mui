@@ -4,7 +4,7 @@ exports[`InputBase Renders Correctly 1`] = `
 <DocumentFragment>
   <form
     action="#"
-    translate=""
+    
   >
     <div
       class="MuiInputBase-root"
@@ -24,7 +24,7 @@ exports[`InputBase Renders Correctly disabled 1`] = `
 <DocumentFragment>
   <form
     action="#"
-    translate=""
+    
   >
     <div
       class="MuiInputBase-root"

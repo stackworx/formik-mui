@@ -5,7 +5,7 @@ exports[`KeyboardDatePicker Renders Correctly 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  translate=""
+  
 >
   <div
     className="MuiFormControl-root MuiTextField-root"
