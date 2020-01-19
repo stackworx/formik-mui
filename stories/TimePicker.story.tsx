@@ -33,7 +33,7 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form translate="">
+        <Form >
           <TimePicker label="Time" name="time" />
           <br />
           <KeyboardTimePicker

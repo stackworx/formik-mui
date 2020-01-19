@@ -26,7 +26,7 @@ export default () => (
       }}
       render={({ submitForm, values, isSubmitting, isValid }) => {
         return (
-          <Form translate="">
+          <Form >
             <RadioGroup name="activity">
               <FormControlLabel
                 value="painting"

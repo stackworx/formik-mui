@@ -56,7 +56,7 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form translate="">
+        <Form >
           <TextField type="email" label="Email" name="email" />
           <br />
           <TextField type="password" label="Password" name="password" />

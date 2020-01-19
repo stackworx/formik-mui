@@ -7,7 +7,7 @@ import { TextField } from '../TextField';
 test('TextField Renders Correctly', () => {
   const component = renderer.create(
     <Formik initialValues={{}} onSubmit={() => {}}>
-      <Form translate="">
+      <Form >
         <TextField name="test" label="Text" />
       </Form>
     </Formik>
@@ -19,7 +19,7 @@ test('TextField Renders Correctly', () => {
 test('Outlined TextField', () => {
   const component = renderer.create(
     <Formik initialValues={{}} onSubmit={() => {}}>
-      <Form translate="">
+      <Form >
         <TextField name="test" label="Text" variant="outlined" />
       </Form>
     </Formik>

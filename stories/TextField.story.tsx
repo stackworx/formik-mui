@@ -86,7 +86,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form translate="">
+        <Form >
           <TextField type="email" label="Email" name="user.email" />
           <br />
           <TextField type="password" label="Password" name="password" />

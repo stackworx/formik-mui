@@ -38,7 +38,7 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, values }) => (
-        <Form translate="">
+        <Form >
           <Switch name="switch.on" />
           <br />
           <Switch name="switch.off" />

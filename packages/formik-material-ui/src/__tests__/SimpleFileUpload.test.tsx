@@ -7,7 +7,7 @@ import { SimpleFileUpload } from '../SimpleFileUpload';
 test('SimpleFileUpload Renders Correctly', () => {
   const component = renderer.create(
     <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
-      <Form translate="">
+      <Form >
         <SimpleFileUpload name="test" label="Select" />
       </Form>
     </Formik>
