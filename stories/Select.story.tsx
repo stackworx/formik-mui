@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import { action } from '@storybook/addon-actions';
 import { createStyles, withStyles, Theme, WithStyles } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -36,12 +36,11 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
           }, 2000);
         }}
         render={({ submitForm, values }) => (
-          <Form>
+          <Form translate="">
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="age-simple">Age</InputLabel>
-              <Field
+              <Select
                 name="age"
-                component={Select}
                 inputProps={{
                   id: 'age-simple',
                 }}
@@ -49,16 +48,15 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>
-              </Field>
+              </Select>
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="age-simple-empty" shrink>
                 Age (Empty)
               </InputLabel>
-              <Field
+              <Select
                 name="age"
-                component={Select}
                 displayEmpty
                 inputProps={{
                   id: 'age-simple-empty',
@@ -70,14 +68,31 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>
-              </Field>
+              </Select>
+            </FormControl>
+            <br />
+            <FormControl className={classes.formControl}>
+              <InputLabel shrink htmlFor="age-native">
+                Native Age
+              </InputLabel>
+              <Select
+                name="age"
+                native
+                inputProps={{
+                  id: 'age-native',
+                }}
+              >
+                <option value="">None</option>
+                <option value={10}>Ten</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
+              </Select>
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="pets">Pets</InputLabel>
-              <Field
+              <Select
                 name="pets"
-                component={Select}
                 multiple={true}
                 inputProps={{
                   name: 'pets',
@@ -88,37 +103,17 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
                 <MenuItem value="cats">Cats</MenuItem>
                 <MenuItem value="rats">Rats</MenuItem>
                 <MenuItem value="snakes">Snakes</MenuItem>
-              </Field>
-            </FormControl>
-            <br />
-            <FormControl className={classes.formControl}>
-              <InputLabel shrink htmlFor="age-native">
-                Native Age
-              </InputLabel>
-              <Field
-                name="age"
-                native
-                component={Select}
-                inputProps={{
-                  id: 'age-native',
-                }}
-              >
-                <option value="">None</option>
-                <option value={10}>Ten</option>
-                <option value={20}>Twenty</option>
-                <option value={30}>Thirty</option>
-              </Field>
+              </Select>
             </FormControl>
             <br />
             <FormControl className={classes.formControl}>
               <InputLabel shrink htmlFor="pets-native">
                 Native Pets
               </InputLabel>
-              <Field
+              <Select
                 name="pets"
                 native={true}
                 multiple={true}
-                component={Select}
                 inputProps={{
                   id: 'pets-native',
                 }}
@@ -127,7 +122,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
                 <option value="cats">Cats</option>
                 <option value="rats">Rats</option>
                 <option value="snakes">Snakes</option>
-              </Field>
+              </Select>
             </FormControl>
             <br />
             <Button variant="contained" color="primary" onClick={submitForm}>

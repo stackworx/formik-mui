@@ -2,8 +2,10 @@
 
 exports[`SimpleFileUpload Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
+  translate=""
 >
   <div>
     <div

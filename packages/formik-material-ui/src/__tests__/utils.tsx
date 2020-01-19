@@ -12,11 +12,10 @@ test.skip('skip', () => {});
 
 const FormikWrapper = ({ children, ...config }: Props): React.ReactElement => {
   return (
-    <Formik
-      {...config}
-      render={({ submitForm, submitCount }) => {
+    <Formik {...config}>
+      {({ submitForm, submitCount }) => {
         return (
-          <Form data-testid="form">
+          <Form data-testid="form" translate="">
             {children}
             {submitCount > 0 && <span>submitted</span>}
             <button data-testid="submit" onClick={submitForm}>
@@ -25,7 +24,7 @@ const FormikWrapper = ({ children, ...config }: Props): React.ReactElement => {
           </Form>
         );
       }}
-    />
+    </Formik>
   );
 };
 

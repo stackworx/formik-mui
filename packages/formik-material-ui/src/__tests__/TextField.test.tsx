@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import renderer from 'react-test-renderer';
 
-import { TextField, TextFieldProps } from '../TextField';
+import { TextField } from '../TextField';
 
 test('TextField Renders Correctly', () => {
   const component = renderer.create(
-    <Formik initialValues={{}} onSubmit={() => null}>
-      <Form>
-        <Field name="test" label="Text" component={TextField} />
+    <Formik initialValues={{}} onSubmit={() => {}}>
+      <Form translate="">
+        <TextField name="test" label="Text" />
       </Form>
     </Formik>
   );
@@ -16,15 +16,11 @@ test('TextField Renders Correctly', () => {
   expect(component.toJSON()).toMatchSnapshot();
 });
 
-test('Wrapped TextField', () => {
-  const TextFieldComponent = (p: TextFieldProps) => (
-    <TextField variant="standard" {...p} />
-  );
-
+test('Outlined TextField', () => {
   const component = renderer.create(
-    <Formik initialValues={{}} onSubmit={() => null}>
-      <Form>
-        <Field name="test" label="Text" component={TextFieldComponent} />
+    <Formik initialValues={{}} onSubmit={() => {}}>
+      <Form translate="">
+        <TextField name="test" label="Text" variant="outlined" />
       </Form>
     </Formik>
   );

@@ -2,21 +2,24 @@ import * as React from 'react';
 import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
 } from '@material-ui/core/Switch';
-import { FieldProps } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
 export interface SwitchProps
-  extends FieldProps,
-    Omit<
-      MuiSwitchProps,
-      'form' | 'name' | 'onChange' | 'value' | 'defaultChecked'
-    > {}
+  extends Omit<
+    MuiSwitchProps,
+    'form' | 'name' | 'onChange' | 'value' | 'defaultChecked'
+  > {
+  name: string;
+}
 
-export const fieldToSwitch = ({
-  field,
-  form: { isSubmitting },
+export const useFieldToSwitch = ({
   disabled,
+  name,
   ...props
 }: SwitchProps): MuiSwitchProps => {
+  const { isSubmitting } = useFormikContext();
+  const [field] = useField(name);
+
   return {
     disabled: disabled ?? isSubmitting,
     ...props,
@@ -28,6 +31,6 @@ export const fieldToSwitch = ({
 
 export const Switch: React.ComponentType<SwitchProps> = (
   props: SwitchProps
-) => <MuiSwitch {...fieldToSwitch(props)} />;
+) => <MuiSwitch {...useFieldToSwitch(props)} />;
 
 Switch.displayName = 'FormikMaterialUISwitch';

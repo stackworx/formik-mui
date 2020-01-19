@@ -2,12 +2,13 @@
 
 exports[`Radio Group Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
+  translate=""
 >
   <div
     className="MuiFormGroup-root"
-    label="Radio Group"
     onBlur={[Function]}
     role="radiogroup"
   >

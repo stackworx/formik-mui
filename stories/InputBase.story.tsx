@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import { LinearProgress } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 
@@ -26,8 +26,8 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form>
-          <Field name="inputBase" component={InputBase} />
+        <Form translate="">
+          <InputBase name="inputBase" />
           <br />
           {isSubmitting && <LinearProgress />}
           <br />

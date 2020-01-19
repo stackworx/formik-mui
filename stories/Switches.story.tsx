@@ -1,19 +1,13 @@
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
-import MuiCheckbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { Formik, Field, Form, FieldProps } from 'formik';
+import { Formik, Form } from 'formik';
 import { action } from '@storybook/addon-actions';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
-import {
-  Switch,
-  Checkbox,
-  fieldToCheckbox,
-  CheckboxWithLabel,
-} from '../packages/formik-material-ui/src/main';
+import { Switch, Checkbox } from '../packages/formik-material-ui/src/main';
 
 interface Values {
   switch: {
@@ -26,7 +20,7 @@ interface Values {
 }
 
 export default () => (
-  <Wrapper title="Selectors">
+  <Wrapper title="Switches">
     <Formik<Values>
       initialValues={{
         switch: {
@@ -44,30 +38,21 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, values }) => (
-        <Form>
-          <Field name="switch.on" component={Switch} />
+        <Form translate="">
+          <Switch name="switch.on" />
           <br />
-          <Field name="switch.off" component={Switch} />
+          <Switch name="switch.off" />
           <br />
-          <Field name="checkbox" component={Checkbox} />
-          <br />
-          <Field
-            name="checkboxWithLabel"
-            Label={{ label: 'Checkbox With Label' }}
-            component={CheckboxWithLabel}
+          <FormControlLabel
+            label="Switch With Label"
+            control={<Switch name="switchWithLabel" />}
           />
           <br />
-          <Field
-            name="custom"
-            render={(props: FieldProps) => (
-              <FormControlLabel
-                // Silly example: make it so that this checkbox can never be disabled
-                control={
-                  <MuiCheckbox {...fieldToCheckbox(props)} disabled={false} />
-                }
-                label="Custom Checkbox"
-              />
-            )}
+          <Checkbox name="checkbox" />
+          <br />
+          <FormControlLabel
+            label="Checkbox With Label"
+            control={<Checkbox name="checkboxWithLabel" />}
           />
           <br />
           <Button variant="contained" color="primary" onClick={submitForm}>

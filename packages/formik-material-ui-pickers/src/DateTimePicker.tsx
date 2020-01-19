@@ -3,22 +3,26 @@ import {
   DateTimePicker as MuiDateTimePicker,
   DateTimePickerProps as MuiDateTimePickerProps,
 } from '@material-ui/pickers';
-import { FieldProps, getIn } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
-export type DateTimePickerProps = FieldProps &
-  Omit<MuiDateTimePickerProps, 'error' | 'name' | 'onChange' | 'value'>;
+export interface DateTimePickerProps
+  extends Omit<
+    MuiDateTimePickerProps,
+    'error' | 'name' | 'onChange' | 'value'
+  > {
+  name: string;
+}
 
-export const fieldToDateTimePicker = ({
-  field,
-  form,
+export const useFieldToDateTimePicker = ({
   disabled,
+  name,
   ...props
 }: DateTimePickerProps): MuiDateTimePickerProps => {
-  const { name } = field;
-  const { touched, errors, isSubmitting, setFieldValue, setFieldError } = form;
+  const { isSubmitting } = useFormikContext();
+  const [field, meta, helpers] = useField(name);
 
-  const fieldError = getIn(errors, name);
-  const showError = getIn(touched, name) && !!fieldError;
+  const fieldError = meta.error;
+  const showError = meta.touched && !!fieldError;
 
   return {
     ...props,
@@ -27,11 +31,11 @@ export const fieldToDateTimePicker = ({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(name, date);
+      helpers.setValue(date);
     },
     onError(error) {
       if (error !== fieldError) {
-        setFieldError(name, String(error));
+        helpers.setError(String(error));
       }
     },
   };
@@ -41,7 +45,7 @@ export const DateTimePicker: React.ComponentType<DateTimePickerProps> = ({
   children,
   ...props
 }: DateTimePickerProps) => (
-  <MuiDateTimePicker {...fieldToDateTimePicker(props)}>
+  <MuiDateTimePicker {...useFieldToDateTimePicker(props)}>
     {children}
   </MuiDateTimePicker>
 );

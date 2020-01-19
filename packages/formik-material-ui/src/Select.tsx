@@ -2,18 +2,20 @@ import * as React from 'react';
 import MuiSelect, {
   SelectProps as MuiSelectProps,
 } from '@material-ui/core/Select';
-import { FieldProps } from 'formik';
+import { useField, useFormikContext } from 'formik';
 
-export interface SelectProps
-  extends FieldProps,
-    Omit<MuiSelectProps, 'value'> {}
+export interface SelectProps extends Omit<MuiSelectProps, 'value'> {
+  name: string;
+}
 
-export const fieldToSelect = ({
-  field,
-  form: { isSubmitting, setFieldValue },
+export const useFieldToSelect = ({
   disabled,
+  name,
   ...props
 }: SelectProps): MuiSelectProps => {
+  const { isSubmitting } = useFormikContext();
+  const [field, , helpers] = useField(name);
+
   const onChange = React.useCallback(
     (event: React.ChangeEvent<{ value: unknown }>) => {
       // Special case for multiple and native
@@ -26,7 +28,7 @@ export const fieldToSelect = ({
           }
         }
 
-        setFieldValue(field.name, value);
+        helpers.setValue(value);
       } else {
         field.onChange(event);
       }
@@ -44,6 +46,6 @@ export const fieldToSelect = ({
 
 export const Select: React.ComponentType<SelectProps> = (
   props: SelectProps
-) => <MuiSelect {...fieldToSelect(props)} />;
+) => <MuiSelect {...useFieldToSelect(props)} />;
 
 Select.displayName = 'FormikMaterialUISelect';

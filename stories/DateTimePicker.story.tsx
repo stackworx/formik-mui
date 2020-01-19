@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import { LinearProgress } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import * as yup from 'yup';
@@ -33,25 +33,19 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form>
-          <Field
-            label="Date &amp; time"
-            name="date"
-            component={DateTimePicker}
-          />
+        <Form translate="">
+          <DateTimePicker label="Date &amp; time" name="date" />
           <br />
-          <Field
+          <DateTimePicker
             label="Date &amp; time inline"
             name="date"
-            component={DateTimePicker}
             variant="inline"
           />
           <br />
-          <Field
+          <KeyboardDateTimePicker
             label="Keyboard date &amp; time picker"
             name="date"
             format="yyyy/MM/dd HH:mm"
-            component={KeyboardDateTimePicker}
           />
           <br />
           {isSubmitting && <LinearProgress />}

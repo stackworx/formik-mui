@@ -2,10 +2,12 @@
 
 exports[`InputBase Renders Correctly 1`] = `
 <DocumentFragment>
-  <form>
+  <form
+    action="#"
+    translate=""
+  >
     <div
       class="MuiInputBase-root"
-      label="InputBase"
     >
       <input
         class="MuiInputBase-input"
@@ -20,10 +22,12 @@ exports[`InputBase Renders Correctly 1`] = `
 
 exports[`InputBase Renders Correctly disabled 1`] = `
 <DocumentFragment>
-  <form>
+  <form
+    action="#"
+    translate=""
+  >
     <div
       class="MuiInputBase-root"
-      label="InputBase"
     >
       <input
         class="MuiInputBase-input"

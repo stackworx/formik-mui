@@ -1,27 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextField Renders Correctly 1`] = `
+exports[`Outlined TextField 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
+  translate=""
 >
   <div
     className="MuiFormControl-root MuiTextField-root"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
       data-shrink={false}
     >
       Text
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
       onClick={[Function]}
     >
       <input
         aria-invalid={false}
         autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
+        className="MuiInputBase-input MuiOutlinedInput-input"
         disabled={false}
         name="test"
         onAnimationStart={[Function]}
@@ -31,15 +33,43 @@ exports[`TextField Renders Correctly 1`] = `
         required={false}
         type="text"
       />
+      <fieldset
+        aria-hidden={true}
+        className="PrivateNotchedOutline-root-75 MuiOutlinedInput-notchedOutline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="PrivateNotchedOutline-legend-76"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
     </div>
   </div>
 </form>
 `;
 
-exports[`Wrapped TextField 1`] = `
+exports[`TextField Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
+  translate=""
 >
   <div
     className="MuiFormControl-root MuiTextField-root"

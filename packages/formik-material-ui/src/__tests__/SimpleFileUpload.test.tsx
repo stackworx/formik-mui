@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Formik, Field, Form } from 'formik';
+import { Formik, Form } from 'formik';
 import renderer from 'react-test-renderer';
 
 import { SimpleFileUpload } from '../SimpleFileUpload';
 
 test('SimpleFileUpload Renders Correctly', () => {
   const component = renderer.create(
-    <Formik onSubmit={() => null} initialValues={{ test: '' }}>
-      <Form>
-        <Field name="test" label="Select" component={SimpleFileUpload} />
+    <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
+      <Form translate="">
+        <SimpleFileUpload name="test" label="Select" />
       </Form>
     </Formik>
   );

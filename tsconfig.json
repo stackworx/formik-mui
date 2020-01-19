@@ -26,6 +26,6 @@
     "stripInternal": true,
     "target": "es5"
   },
-  "include": ["src", "types", "test", "stories"],
+  "include": ["packages/*/src", "stories"],
   "exclude": ["node_modules", "dist"]
 }

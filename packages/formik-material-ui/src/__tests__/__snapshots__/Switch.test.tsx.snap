@@ -2,8 +2,10 @@
 
 exports[`Switch Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
+  translate=""
 >
   <span
     className="MuiSwitch-root"
@@ -11,7 +13,6 @@ exports[`Switch Renders Correctly 1`] = `
     <span
       aria-disabled={false}
       className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-13 MuiSwitch-switchBase MuiSwitch-colorSecondary"
-      label="Text"
       onBlur={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
