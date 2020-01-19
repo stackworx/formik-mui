@@ -2,6 +2,7 @@
 
 exports[`Select Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
 >
@@ -12,12 +13,13 @@ exports[`Select Renders Correctly 1`] = `
   >
     <div
       aria-haspopup="listbox"
-      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
-      id="select-test"
+      aria-labelledby=" mui-component-select-test"
+      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+      id="mui-component-select-test"
       onBlur={[Function]}
-      onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
+      onMouseDown={[Function]}
       role="button"
       tabIndex={0}
     >
@@ -31,6 +33,7 @@ exports[`Select Renders Correctly 1`] = `
     </div>
     <input
       name="test"
+      onAnimationStart={[Function]}
       type="hidden"
       value=""
     />

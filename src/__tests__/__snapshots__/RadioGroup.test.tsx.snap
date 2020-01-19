@@ -2,6 +2,7 @@
 
 exports[`Radio Group Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
 >
@@ -33,6 +34,15 @@ exports[`Radio Group Renders Correctly 1`] = `
         <span
           className="MuiIconButton-label"
         >
+          <input
+            checked={false}
+            className="PrivateSwitchBase-input-17"
+            disabled={false}
+            name="radio-group"
+            onChange={[Function]}
+            type="radio"
+            value="painting"
+          />
           <div
             className="PrivateRadioButtonIcon-root-30"
           >
@@ -59,14 +69,6 @@ exports[`Radio Group Renders Correctly 1`] = `
               />
             </svg>
           </div>
-          <input
-            checked={false}
-            className="PrivateSwitchBase-input-17"
-            name="radio-group"
-            onChange={[Function]}
-            type="radio"
-            value="painting"
-          />
         </span>
       </span>
       <span
@@ -97,6 +99,15 @@ exports[`Radio Group Renders Correctly 1`] = `
         <span
           className="MuiIconButton-label"
         >
+          <input
+            checked={false}
+            className="PrivateSwitchBase-input-17"
+            disabled={false}
+            name="radio-group"
+            onChange={[Function]}
+            type="radio"
+            value="drawing"
+          />
           <div
             className="PrivateRadioButtonIcon-root-30"
           >
@@ -123,14 +134,6 @@ exports[`Radio Group Renders Correctly 1`] = `
               />
             </svg>
           </div>
-          <input
-            checked={false}
-            className="PrivateSwitchBase-input-17"
-            name="radio-group"
-            onChange={[Function]}
-            type="radio"
-            value="drawing"
-          />
         </span>
       </span>
       <span
@@ -161,6 +164,15 @@ exports[`Radio Group Renders Correctly 1`] = `
         <span
           className="MuiIconButton-label"
         >
+          <input
+            checked={false}
+            className="PrivateSwitchBase-input-17"
+            disabled={true}
+            name="radio-group"
+            onChange={[Function]}
+            type="radio"
+            value="none"
+          />
           <div
             className="PrivateRadioButtonIcon-root-30"
           >
@@ -187,15 +199,6 @@ exports[`Radio Group Renders Correctly 1`] = `
               />
             </svg>
           </div>
-          <input
-            checked={false}
-            className="PrivateSwitchBase-input-17"
-            disabled={true}
-            name="radio-group"
-            onChange={[Function]}
-            type="radio"
-            value="none"
-          />
         </span>
       </span>
       <span

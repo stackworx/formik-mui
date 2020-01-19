@@ -2,6 +2,7 @@
 
 exports[`InputBase Renders Correctly 1`] = `
 <form
+  action="#"
   onReset={[Function]}
   onSubmit={[Function]}
 >
@@ -14,11 +15,12 @@ exports[`InputBase Renders Correctly 1`] = `
       className="MuiInputBase-input"
       disabled={false}
       name="test"
+      onAnimationStart={[Function]}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       type="text"
-      value="test"
+      value="Input"
     />
   </div>
 </form>

@@ -18,7 +18,6 @@ export const fieldToInputBase = ({
     disabled: disabled != undefined ? disabled : isSubmitting,
     ...props,
     ...field,
-    value: field.name,
   };
 };
 

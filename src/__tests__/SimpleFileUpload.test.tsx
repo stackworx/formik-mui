@@ -6,7 +6,7 @@ import { SimpleFileUpload } from '../SimpleFileUpload';
 
 test('SimpleFileUpload Renders Correctly', () => {
   const component = renderer.create(
-    <Formik onSubmit={() => null} initialValues={{ test: '' }}>
+    <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
       <Form>
         <Field name="test" label="Select" component={SimpleFileUpload} />
       </Form>
