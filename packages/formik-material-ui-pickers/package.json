@@ -40,7 +40,8 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "globalSetup": "./global-setup.js"
   },
   "files": [
     "dist"
