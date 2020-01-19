@@ -11,14 +11,14 @@ exports[`Select Renders Correctly 1`] = `
     onClick={[Function]}
   >
     <div
-      aria-haspopup="true"
-      aria-pressed="false"
-      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input MuiInputBase-inputSelect"
-      id="select-test"
+      aria-haspopup="listbox"
+      aria-labelledby=" mui-component-select-test"
+      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+      id="mui-component-select-test"
       onBlur={[Function]}
-      onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
+      onMouseDown={[Function]}
       role="button"
       tabIndex={0}
     >
@@ -32,6 +32,7 @@ exports[`Select Renders Correctly 1`] = `
     </div>
     <input
       name="test"
+      onAnimationStart={[Function]}
       type="hidden"
       value=""
     />

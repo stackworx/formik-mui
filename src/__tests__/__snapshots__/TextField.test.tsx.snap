@@ -20,9 +20,11 @@ exports[`TextField Renders Correctly 1`] = `
     >
       <input
         aria-invalid={false}
+        autoFocus={false}
         className="MuiInputBase-input MuiInput-input"
         disabled={false}
         name="test"
+        onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -54,9 +56,11 @@ exports[`Wrapped TextField 1`] = `
     >
       <input
         aria-invalid={false}
+        autoFocus={false}
         className="MuiInputBase-input MuiInput-input"
         disabled={false}
         name="test"
+        onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}

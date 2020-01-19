@@ -24,6 +24,7 @@ exports[`SimpleFileUpload Renders Correctly 1`] = `
           className="MuiInputBase-input MuiInput-input"
           disabled={false}
           name="test"
+          onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
