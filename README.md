@@ -24,6 +24,15 @@ Then, import the components you need to use with Formik in the file you have you
 - Switch
 - TextField
 
+Avaliable with [@material-ui/pickers](https://github.com/mui-org/material-ui-pickers) peer dep
+
+- DatePicker
+- KeyboardDatePicker
+- TimePicker
+- KeyboardTimePicker
+- DateTimePicker
+- KeyboardDateTimePicker
+
 In this case we will use `<TextField />`.
 
 ```diff
