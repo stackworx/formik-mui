@@ -17,7 +17,7 @@ module.exports = {
   plugins: ['react-hooks'],
   overrides: [
     {
-      files: ['**/*.test.tsx'],
+      files: ['**/*.test.tsx?'],
       env: {
         jest: true, // now **/*.test.js files' env has both es6 *and* jest
       },
