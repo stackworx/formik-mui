@@ -5,7 +5,6 @@ exports[`Radio Group Renders Correctly 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  
 >
   <div
     className="MuiFormGroup-root"

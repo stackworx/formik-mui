@@ -5,7 +5,6 @@ exports[`Select Renders Correctly 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  
 >
   <div
     className="MuiInputBase-root MuiInput-root MuiInput-underline"
