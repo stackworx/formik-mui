@@ -5,7 +5,6 @@ exports[`Outlined TextField 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  
 >
   <div
     className="MuiFormControl-root MuiTextField-root"
@@ -69,7 +68,6 @@ exports[`TextField Renders Correctly 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  
 >
   <div
     className="MuiFormControl-root MuiTextField-root"
