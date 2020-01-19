@@ -28,7 +28,7 @@ export const fieldToTextField = ({
     ...field,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
   };
 };
 

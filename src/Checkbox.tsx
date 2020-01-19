@@ -18,7 +18,7 @@ export const fieldToCheckbox = ({
   ...props
 }: CheckboxProps): MuiCheckboxProps => {
   return {
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
     ...props,
     ...field,
     // TODO handle indeterminate
