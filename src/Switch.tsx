@@ -18,7 +18,7 @@ export const fieldToSwitch = ({
   ...props
 }: SwitchProps): MuiSwitchProps => {
   return {
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
     ...props,
     ...field,
     value: field.name,

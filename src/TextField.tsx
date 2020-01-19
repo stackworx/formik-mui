@@ -35,8 +35,8 @@ export const fieldToTextField = ({
     ...field,
     ...props,
     error: showError,
-    helperText: showError ? error : props.helperText,
-    disabled: disabled !== undefined ? disabled : false,
+    helperText: showError ? fieldError : props.helperText,
+    disabled: disabled ?? isSubmitting
   };
 };
 
