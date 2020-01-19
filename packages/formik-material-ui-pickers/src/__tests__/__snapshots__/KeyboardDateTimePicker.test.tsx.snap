@@ -5,7 +5,6 @@ exports[`KeyboardDateTimePicker Renders Correctly 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  
 >
   <div
     className="MuiFormControl-root MuiTextField-root"
@@ -33,7 +32,7 @@ exports[`KeyboardDateTimePicker Renders Correctly 1`] = `
         onFocus={[Function]}
         required={false}
         type="text"
-        value="January 1st 02:00 a.m."
+        value="January 1st 12:00 a.m."
       />
       <div
         className="MuiInputAdornment-root MuiInputAdornment-positionEnd"

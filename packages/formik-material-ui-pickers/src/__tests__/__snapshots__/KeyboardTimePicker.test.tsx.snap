@@ -5,7 +5,6 @@ exports[`KeyboardTimePicker Renders Correctly 1`] = `
   action="#"
   onReset={[Function]}
   onSubmit={[Function]}
-  
 >
   <div
     className="MuiFormControl-root MuiTextField-root"
@@ -33,7 +32,7 @@ exports[`KeyboardTimePicker Renders Correctly 1`] = `
         onFocus={[Function]}
         required={false}
         type="text"
-        value="02:00 AM"
+        value="12:00 AM"
       />
       <div
         className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
