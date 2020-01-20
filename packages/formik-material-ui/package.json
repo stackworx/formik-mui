@@ -47,8 +47,8 @@
   "module": "dist/formik-material-ui.es6.js",
   "scripts": {
     "typecheck": "tsc",
-    "build": "cross-env NODE_ENV=production tsc --noEmit --project ../../tsconfig.json",
-    "package": "rimraf build dist && cross-env NODE_ENV=production tsc -p ../../tsconfig.package.json && rollup -c && rimraf .rpt2_cache dist/.rpt2_cache",
+    "build": "cross-env NODE_ENV=production tsc --noEmit --project ./tsconfig.package.json",
+    "package": "rimraf build dist && cross-env NODE_ENV=production tsc -p ./tsconfig.package.json && rollup -c && rimraf .rpt2_cache dist/.rpt2_cache",
     "test": "jest",
     "test:updateSnapshot": "jest --updateSnapshot",
     "lint": "eslint \"./{src,stories}/**/*.{tsx,ts,js}\"",

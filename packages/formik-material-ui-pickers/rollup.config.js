@@ -1,11 +1,11 @@
 import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
 
-const external = ['react', 'react-native'];
+const external = ['react', 'react-native', 'formik', '@material-ui/pickers'];
 
 export default [
   {
-    input: 'src/main.tsx',
+    input: 'src/main.ts',
     plugins: [
       typescript({
         // cacheRoot: `${os.tmpdir}/.rpt2_cache`,
