@@ -4,8 +4,8 @@ module.exports = {
   url: 'https://stackworx.github.io/',
   baseUrl: '/formik-material-ui/',
   favicon: 'img/favicon.ico',
-  organizationName: 'stackworx', // Usually your GitHub org/user name.
-  projectName: 'formik-material-ui', // Usually your repo name.
+  organizationName: 'stackworx',
+  projectName: 'formik-material-ui',
   themeConfig: {
     navbar: {
       title: 'Formik Material-UI',
@@ -36,7 +36,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/stackworx/formik-material-ui/edit/master/website/',
+            'https://github.com/stackworx/formik-material-ui/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

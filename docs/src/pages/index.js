@@ -13,7 +13,7 @@ const features = [
     description: <>Get going quickly with Formik and Material-UI</>,
   },
   {
-    title: <>Material-UI</>,
+    title: <a href="https://material-ui.com/">Material-UI</a>,
     // imageUrl: 'img/mui-logo.svg',
     description: (
       <>
@@ -23,7 +23,7 @@ const features = [
     ),
   },
   {
-    title: <>Formik</>,
+    title: <a href="https://jaredpalmer.com/formik">Formik</a>,
     // imageUrl: 'img/formik-logo.png',
     description: <>Build forms in React, without the tears.</>,
   },

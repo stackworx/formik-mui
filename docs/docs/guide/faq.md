@@ -27,7 +27,7 @@ function App() {
 }
 ```
 
-From this code is not at all obvious who is in control of the state. Therefore we purposefully hand over all control (`name, value, onChange, onBlur`) to formik. This ensures where is no confusion.
+From this code is not at all obvious who is in control of the state. Therefore we purposefully hand over all control (`name, value, onChange, onBlur`) to formik. This ensures that there is no confusion.
 
 But you can do this a custom field
 
