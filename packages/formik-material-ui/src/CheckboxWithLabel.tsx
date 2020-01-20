@@ -13,7 +13,7 @@ import { CheckboxProps, useFieldToCheckbox } from './Checkbox';
 export interface CheckboxWithLabelProps extends CheckboxProps {
   Label: Omit<
     MuiFormControlLabelProps,
-    'checked' | 'name' | 'onChange' | 'value' | 'inputRef'
+    'checked' | 'name' | 'onChange' | 'value' | 'inputRef' | 'control'
   >;
 }
 
