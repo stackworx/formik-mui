@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/stackworx/formik-material-ui.svg?branch=master)](https://travis-ci.org/stackworx/formik-material-ui)
+[![Actions Status](https://github.com/stackworx/formik-material-ui/workflows/formik-material-ui/badge.svg)](https://github.com/stackworx/formik-material-ui/actions)
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/stackworx/formik-material-ui/badge.svg?branch=master)](https://coveralls.io/github/stackworx/formik-material-ui?branch=master)
 

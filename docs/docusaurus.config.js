@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Formik Material-UI',
   tagline: 'Easily combine formik with Material-UI',
-  url: 'https://stackworx.github.io/formik-material-ui/',
-  baseUrl: '/',
+  url: 'https://stackworx.github.io/',
+  baseUrl: '/formik-material-ui/',
   favicon: 'img/favicon.ico',
   organizationName: 'stackworx', // Usually your GitHub org/user name.
   projectName: 'formik-material-ui', // Usually your repo name.
