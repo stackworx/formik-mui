@@ -6,7 +6,7 @@ import { useField, useFormikContext } from 'formik';
 
 export type TextFieldProps = Omit<
   MuiTextFieldProps,
-  'error' | 'name' | 'onChange' | 'value'
+  'error' | 'name' | 'onChange' | 'onBlur' | 'value'
 > & {
   name: string;
 };

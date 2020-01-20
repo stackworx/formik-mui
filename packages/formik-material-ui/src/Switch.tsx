@@ -7,7 +7,13 @@ import { useField, useFormikContext } from 'formik';
 export interface SwitchProps
   extends Omit<
     MuiSwitchProps,
-    'form' | 'name' | 'onChange' | 'value' | 'defaultChecked'
+    | 'checked'
+    | 'name'
+    | 'onChange'
+    | 'onBlur'
+    | 'value'
+    | 'defaultChecked'
+    | 'inputRef'
   > {
   name: string;
 }

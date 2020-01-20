@@ -5,7 +5,7 @@ import MuiInputBase, {
 import { useField, useFormikContext } from 'formik';
 
 export interface InputBaseProps
-  extends Omit<MuiInputBaseProps, 'name' | 'onChange' | 'value'> {
+  extends Omit<MuiInputBaseProps, 'name' | 'onChange' | 'onBlur' | 'value'> {
   name: string;
 }
 
