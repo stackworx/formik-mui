@@ -58,7 +58,7 @@
     "lint:fix": "eslint --fix \"./{src,stories}/**/*.{tsx,ts,js}\"",
     "prettier": "prettier --write \"{src,stories}/**/*.{js,tsx,ts}\"",
     "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\"",
-    "prepublishOnly": "yarn prettier && yarn test && yarn build && yarn package && yarn build-storybook"
+    "prepublishOnly": "yarn prettier --list-different && yarn test && yarn build && yarn package"
   },
   "devDependencies": {
     "@material-ui/pickers": "^3.2.8"
