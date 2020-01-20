@@ -5,12 +5,14 @@ title: Migrating
 
 ## Migrating from formik-material-ui 1.0.0
 
+### Standard Components
+
 ### Changes
 
 - All fieldToX have been renamed to useFieldX which are hooks
 - Field wrapper no longer needed (useField is used internally)
 
-### Before
+#### Before
 
 ```jsx {1}
 - import { Field } from 'formik';
@@ -22,7 +24,7 @@ title: Migrating
 - Replace field with component
 - Delete component prop
 
-### After
+#### After
 
 ```jsx
 <TextField name="email" type="email" label="Email" />
@@ -30,7 +32,7 @@ title: Migrating
 
 ## Migrating Custom Components
 
-### Before
+#### Before
 
 ```jsx
 import MuiTextField from '@material-ui/core/TextField';
@@ -58,7 +60,7 @@ const UppercasingTextField = (props: TextFieldProps) => (
 - Add `import {useField} from 'formik'` is you need access to field helpers
 - Add `import {useForm} from 'formik'` is you need access to form helpers
 
-### After
+#### After
 
 ```jsx
 import MuiTextField from '@material-ui/core/TextField';

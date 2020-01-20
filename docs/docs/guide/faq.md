@@ -3,7 +3,7 @@ id: faq
 title: FAQ
 ---
 
-# Why can't I pass in `name`, `value`, `onChange` etc into my component?
+## Why can't I pass in `name`, `value`, `onChange` etc into my component?
 
 This is to prevent there being 2 sources of truth for value
 
@@ -48,17 +48,17 @@ const UppercasingTextField = (props: TextFieldProps) => {
 );
 ```
 
-# Why does this library not work with `Field`?
+## Why does this library not work with `Field`?
 
 After using formik with Material-UI in several projects I felt the `Field` wrapper was just extra noise.
 Also in some cases it interfered with typescript autocompletion especially with the TextField union types.
 
-# Why does a wrapper for component x not exist?
+## Why does a wrapper for component x not exist?
 
 Some components require many decisions to be made which would make then only work for some situations.
 A good example is the slider. Should the onChange event be fired while dragging or only when the thumb is dropped? This will depend on your use-case.
 
-# Why does the field auto disable during submission?
+## Why does the field auto disable during submission?
 
 This is a convenience meant for the standard form. If this was omitted the isSubmitting property would have to be manually passed into every single field
 

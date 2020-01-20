@@ -7,9 +7,9 @@ The following props are always excluded: `name, onChange, onBlur, value, error`,
 
 When using picker components initalize the starting value to `new Date()` and not the empty string
 
-# DatePicker
+## DatePicker
 
-## Example
+#### Example
 
 ```jsx
 import { DatePicker } from 'formik-material-ui-pickers';
@@ -17,11 +17,11 @@ import { DatePicker } from 'formik-material-ui-pickers';
 <DatePicker label="label" name="name" />;
 ```
 
-## [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/DatePicker)
+#### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/DatePicker)
 
-# DateTimePicker
+## DateTimePicker
 
-## Example
+#### Example
 
 ```jsx
 import { DateTimePicker } from 'formik-material-ui-pickers';
@@ -29,11 +29,11 @@ import { DateTimePicker } from 'formik-material-ui-pickers';
 <DateTimePicker label="label" name="name" />;
 ```
 
-## [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/DateTimePicker)
+#### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/DateTimePicker)
 
-# KeyboardDatePicker
+## KeyboardDatePicker
 
-## Example
+#### Example
 
 ```jsx
 import { KeyboardDatePicker } from 'formik-material-ui-pickers';
@@ -41,11 +41,11 @@ import { KeyboardDatePicker } from 'formik-material-ui-pickers';
 <KeyboardDatePicker label="label" name="name" />;
 ```
 
-## [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardDatePicker)
+#### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardDatePicker)
 
-# KeyboardDateTimePicker
+## KeyboardDateTimePicker
 
-## Example
+#### Example
 
 ```jsx
 import { KeyboardDateTimePicker } from 'formik-material-ui-pickers';
@@ -53,11 +53,11 @@ import { KeyboardDateTimePicker } from 'formik-material-ui-pickers';
 <KeyboardDateTimePicker label="label" name="name" />;
 ```
 
-## [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardDateTimePicker)
+#### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardDateTimePicker)
 
-# KeyboardTimePicker
+## KeyboardTimePicker
 
-## Example
+#### Example
 
 ```jsx
 import { KeyboardTimePicker } from 'formik-material-ui-pickers';
@@ -65,11 +65,11 @@ import { KeyboardTimePicker } from 'formik-material-ui-pickers';
 <KeyboardTimePicker label="label" name="name" />;
 ```
 
-## [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardTimePicker)
+#### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardTimePicker)
 
-# TimePicker
+## TimePicker
 
-## Example
+#### Example
 
 ```jsx
 import { TimePicker } from 'formik-material-ui-pickers';
@@ -77,4 +77,4 @@ import { TimePicker } from 'formik-material-ui-pickers';
 <TimePicker label="label" name="name" />;
 ```
 
-## [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/TimePicker)
+#### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/TimePicker)

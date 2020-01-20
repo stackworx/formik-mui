@@ -5,9 +5,9 @@ title: Material-UI
 
 The following props are always excluded: `name, onChange, onBlur, value, error`, and additional ones where it makes sense
 
-# Checkbox
+## Checkbox
 
-## Example
+#### Example
 
 ```jsx
 import { Checkbox } from 'formik-material-ui';
@@ -15,13 +15,13 @@ import { Checkbox } from 'formik-material-ui';
 <Checkbox name="checked" />;
 ```
 
-## [Material-UI Documentation](https://material-ui.com/api/checkbox/)
+#### [Material-UI Documentation](https://material-ui.com/api/checkbox/)
 
-# CheckboxWithLabel
+## CheckboxWithLabel
 
 Convenience Wrapper that adds label to Checkbox, Supports all the same properties as Checkbox and accepts an Additional `Label` prop
 
-## Example
+#### Example
 
 ```jsx
 import { CheckboxWithLabel } from 'formik-material-ui';
@@ -29,9 +29,9 @@ import { CheckboxWithLabel } from 'formik-material-ui';
 <CheckboxWithLabel name="checked" label="Checkbox" />;
 ```
 
-# InputBase
+## InputBase
 
-## Example
+#### Example
 
 ```jsx
 import { InputBase } from 'formik-material-ui';
@@ -39,11 +39,11 @@ import { InputBase } from 'formik-material-ui';
 <InputBase name="inputBase" />;
 ```
 
-## [Material-UI Documentation](https://material-ui.com/api/input-base/)
+#### [Material-UI Documentation](https://material-ui.com/api/input-base/)
 
-# RadioGroup
+## RadioGroup
 
-## Example
+#### Example
 
 ```jsx
 import { FormControlLabel, Radio, LinearProgress } from '@material-ui/core';
@@ -76,11 +76,11 @@ import { RadioGroup } from 'formik-material-ui';
 </Formik>;
 ```
 
-## [Material-UI Documentation](https://material-ui.com/api/radio-group/#radiogroup-api)
+#### [Material-UI Documentation](https://material-ui.com/api/radio-group/#radiogroup-api)
 
-# Select
+## Select
 
-## Example
+#### Example
 
 ```jsx
 import MenuItem from '@material-ui/core/MenuItem';
@@ -104,11 +104,11 @@ import { Select } from 'formik-material-ui';
 </FormControl>;
 ```
 
-## [Material-UI Documentation](https://material-ui.com/api/select/)
+#### [Material-UI Documentation](https://material-ui.com/api/select/)
 
-# SimpleFileUpload
+## SimpleFileUpload
 
-## Example
+#### Example
 
 ```jsx
 import { SimpleFileUpload } from 'formik-material-ui';
@@ -116,7 +116,7 @@ import { SimpleFileUpload } from 'formik-material-ui';
 <SimpleFileUpload name="file" label="Simple File Upload" />;
 ```
 
-## API
+#### API
 
 ```jsx
 interface SimpleFileUploadProps {
@@ -130,7 +130,7 @@ interface SimpleFileUploadProps {
 }
 ```
 
-# Switch
+## Switch
 
 ```jsx
 import { Switch } from 'formik-material-ui';
@@ -138,11 +138,11 @@ import { Switch } from 'formik-material-ui';
 <Switch name="switch" />;
 ```
 
-## [Material-UI Documentation](https://material-ui.com/api/select/)
+#### [Material-UI Documentation](https://material-ui.com/api/select/)
 
-# TextField
+## TextField
 
-## Example
+#### Example
 
 ```jsx
 import { TextField } from 'formik-material-ui';
@@ -155,4 +155,4 @@ import { TextField } from 'formik-material-ui';
 />;
 ```
 
-## [Material-UI Documentation](https://material-ui.com/api/text-field/#textfield-api)
+#### [Material-UI Documentation](https://material-ui.com/api/text-field/#textfield-api)

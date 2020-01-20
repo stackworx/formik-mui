@@ -3,7 +3,7 @@ id: getting-started
 title: Getting Started
 ---
 
-# Installation
+## Installation
 
 ```
 yarn add formik formik-material-ui @material-ui/core
@@ -15,9 +15,9 @@ yarn add formik formik-material-ui @material-ui/core
 yarn add formik-material-ui-pickers @date-io/date-fns@1.x date-fns
 ```
 
-# Quick Start
+## Quick Start
 
-```jsx {4,37,39}
+```jsx {4,38,40}
 import * as React from 'react';
 import { Formik, Form } from 'formik';
 import { Button, LinearProgress } from '@material-ui/core';
