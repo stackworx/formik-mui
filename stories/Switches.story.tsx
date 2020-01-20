@@ -7,7 +7,11 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
-import { Switch, Checkbox } from '../packages/formik-material-ui/src/main';
+import {
+  Switch,
+  Checkbox,
+  CheckboxWithLabel,
+} from '../packages/formik-material-ui/src/main';
 
 interface Values {
   switch: {
@@ -38,7 +42,7 @@ export default () => (
         }, 2000);
       }}
       render={({ submitForm, values }) => (
-        <Form >
+        <Form>
           <Switch name="switch.on" />
           <br />
           <Switch name="switch.off" />
@@ -50,9 +54,9 @@ export default () => (
           <br />
           <Checkbox name="checkbox" />
           <br />
-          <FormControlLabel
-            label="Checkbox With Label"
-            control={<Checkbox name="checkboxWithLabel" />}
+          <CheckboxWithLabel
+            Label={{ label: 'Checkbox With Label' }}
+            name="checkboxWithLabel"
           />
           <br />
           <Button variant="contained" color="primary" onClick={submitForm}>
