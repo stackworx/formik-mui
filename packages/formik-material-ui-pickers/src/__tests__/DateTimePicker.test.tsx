@@ -13,7 +13,7 @@ test('DateTimePicker Renders Correctly', () => {
         initialValues={{ test: new Date('2020-01-01') }}
         onSubmit={() => {}}
       >
-        <Form >
+        <Form>
           <DateTimePicker name="test" label="Datetime" />
         </Form>
       </Formik>

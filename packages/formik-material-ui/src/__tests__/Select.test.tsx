@@ -8,7 +8,7 @@ import { Select } from '../Select';
 test('Select Renders Correctly', () => {
   const component = renderer.create(
     <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
-      <Form >
+      <Form>
         <Select name="test">
           <MenuItem value="">
             <em>None</em>

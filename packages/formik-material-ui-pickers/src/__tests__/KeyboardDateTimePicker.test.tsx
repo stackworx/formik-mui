@@ -13,7 +13,7 @@ test('KeyboardDateTimePicker Renders Correctly', () => {
         initialValues={{ test: new Date('2020-01-01') }}
         onSubmit={() => {}}
       >
-        <Form >
+        <Form>
           <KeyboardDateTimePicker name="test" label="Datetime" />
         </Form>
       </Formik>

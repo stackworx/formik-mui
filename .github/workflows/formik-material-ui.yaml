@@ -17,6 +17,7 @@ jobs:
       - name: build
         run: |
           yarn install --frozen-lockfile
+          yarn prettier --list-different
           yarn typecheck
           yarn lint
           yarn test

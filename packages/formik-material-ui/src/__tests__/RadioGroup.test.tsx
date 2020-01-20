@@ -8,7 +8,7 @@ import { RadioGroup } from '../RadioGroup';
 test('Radio Group Renders Correctly', () => {
   const component = renderer.create(
     <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
-      <Form >
+      <Form>
         <RadioGroup name="radio-group">
           <FormControlLabel
             value="painting"
