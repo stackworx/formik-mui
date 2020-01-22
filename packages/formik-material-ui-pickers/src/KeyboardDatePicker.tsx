@@ -3,23 +3,32 @@ import {
   KeyboardDatePicker as MuiKeyboardDatePicker,
   KeyboardDatePickerProps as MuiKeyboardDatePickerProps,
 } from '@material-ui/pickers';
-import { useField, useFormikContext } from 'formik';
+import {
+  FieldInputProps,
+  FieldMetaProps,
+  FieldHelperProps,
+  useField,
+  useFormikContext,
+} from 'formik';
 
 export interface KeyboardDatePickerProps
   extends Omit<
     MuiKeyboardDatePickerProps,
-    'error' | 'name' | 'onChange' | 'value'
+    'name' | 'value' | 'error' | 'onChange'
   > {
   name: string;
+  onChange?: MuiKeyboardDatePickerProps['onChange'];
 }
 
-export const useFieldToKeyboardDatePicker = ({
-  disabled,
-  name,
-  ...props
-}: KeyboardDatePickerProps): MuiKeyboardDatePickerProps => {
+export function useFieldToKeyboardDatePicker<Val = unknown>(
+  { disabled, name, ...props }: KeyboardDatePickerProps,
+  customize?: (
+    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
+  ) => Partial<Omit<KeyboardDatePickerProps, 'name'>>
+): MuiKeyboardDatePickerProps {
   const { isSubmitting } = useFormikContext();
-  const [field, meta, helpers] = useField(name);
+  const fieldProps = useField(name);
+  const [field, meta, helpers] = fieldProps;
 
   const fieldError = meta.error;
   const showError = meta.touched && !!fieldError;
@@ -38,16 +47,19 @@ export const useFieldToKeyboardDatePicker = ({
         helpers.setError(String(error));
       }
     },
+    ...customize?.(fieldProps),
   };
-};
+}
 
-export const KeyboardDatePicker: React.ComponentType<KeyboardDatePickerProps> = ({
+export function KeyboardDatePicker({
   children,
   ...props
-}: KeyboardDatePickerProps) => (
-  <MuiKeyboardDatePicker {...useFieldToKeyboardDatePicker(props)}>
-    {children}
-  </MuiKeyboardDatePicker>
-);
+}: KeyboardDatePickerProps) {
+  return (
+    <MuiKeyboardDatePicker {...useFieldToKeyboardDatePicker(props)}>
+      {children}
+    </MuiKeyboardDatePicker>
+  );
+}
 
 KeyboardDatePicker.displayName = 'FormikMaterialUIKeyboardDatePicker';

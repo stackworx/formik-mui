@@ -136,7 +136,7 @@ function App() {
 }
 ```
 
-## Customizing Components
+## Configuring Components
 
 Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
 

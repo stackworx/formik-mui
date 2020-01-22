@@ -2,29 +2,32 @@ import * as React from 'react';
 import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
 } from '@material-ui/core/Switch';
-import { useField, useFormikContext } from 'formik';
+import {
+  FieldInputProps,
+  FieldMetaProps,
+  FieldHelperProps,
+  useField,
+  useFormikContext,
+} from 'formik';
 
 export interface SwitchProps
   extends Omit<
     MuiSwitchProps,
-    | 'checked'
-    | 'name'
-    | 'onChange'
-    | 'onBlur'
-    | 'value'
-    | 'defaultChecked'
-    | 'inputRef'
+    'checked' | 'name' | 'value' | 'defaultChecked'
   > {
   name: string;
 }
 
-export const useFieldToSwitch = ({
-  disabled,
-  name,
-  ...props
-}: SwitchProps): MuiSwitchProps => {
+export function useFieldToSwitch<Val = unknown>(
+  { disabled, name, ...props }: SwitchProps,
+  customize?: (
+    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
+  ) => Partial<Omit<SwitchProps, 'name'>>
+): MuiSwitchProps {
   const { isSubmitting } = useFormikContext();
-  const [field] = useField(name);
+  const fieldProps = useField(name);
+
+  const [field] = fieldProps;
 
   return {
     disabled: disabled ?? isSubmitting,
@@ -32,11 +35,12 @@ export const useFieldToSwitch = ({
     ...field,
     value: field.name,
     checked: field.value,
+    ...customize?.(fieldProps),
   };
-};
+}
 
-export const Switch: React.ComponentType<SwitchProps> = (
-  props: SwitchProps
-) => <MuiSwitch {...useFieldToSwitch(props)} />;
+export function Switch(props: SwitchProps) {
+  return <MuiSwitch {...useFieldToSwitch(props)} />;
+}
 
 Switch.displayName = 'FormikMaterialUISwitch';

@@ -18,7 +18,11 @@ interface Values {
     on: boolean;
     off: boolean;
   };
-  checkbox: boolean;
+  checkbox: {
+    on: boolean;
+    off: boolean;
+    null: null;
+  };
   checkboxWithLabel: boolean;
   custom: boolean;
 }
@@ -31,7 +35,11 @@ export default () => (
           on: true,
           off: false,
         },
-        checkbox: false,
+        checkbox: {
+          on: true,
+          off: false,
+          null: null,
+        },
         checkboxWithLabel: false,
         custom: true,
       }}
@@ -52,7 +60,9 @@ export default () => (
             control={<Switch name="switchWithLabel" />}
           />
           <br />
-          <Checkbox name="checkbox" />
+          <Checkbox name="checkbox.on" />
+          <Checkbox name="checkbox.off" />
+          <Checkbox name="checkbox.null" />
           <br />
           <CheckboxWithLabel
             Label={{ label: 'Checkbox With Label' }}

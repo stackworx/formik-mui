@@ -3,23 +3,32 @@ import {
   KeyboardDateTimePicker as MuiKeyboardDateTimePicker,
   KeyboardDateTimePickerProps as MuiKeyboardDateTimePickerProps,
 } from '@material-ui/pickers';
-import { useField, useFormikContext } from 'formik';
+import {
+  FieldInputProps,
+  FieldMetaProps,
+  FieldHelperProps,
+  useField,
+  useFormikContext,
+} from 'formik';
 
 export interface KeyboardDateTimePickerProps
   extends Omit<
     MuiKeyboardDateTimePickerProps,
-    'error' | 'name' | 'onChange' | 'value'
+    'name' | 'value' | 'error' | 'onChange'
   > {
   name: string;
+  onChange?: MuiKeyboardDateTimePickerProps['onChange'];
 }
 
-export const useFieldToKeyboardDateTimePicker = ({
-  disabled,
-  name,
-  ...props
-}: KeyboardDateTimePickerProps): MuiKeyboardDateTimePickerProps => {
+export function useFieldToKeyboardDateTimePicker<Val = unknown>(
+  { disabled, name, ...props }: KeyboardDateTimePickerProps,
+  customize?: (
+    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
+  ) => Partial<Omit<KeyboardDateTimePickerProps, 'name'>>
+): MuiKeyboardDateTimePickerProps {
   const { isSubmitting } = useFormikContext();
-  const [field, meta, helpers] = useField(name);
+  const fieldProps = useField(name);
+  const [field, meta, helpers] = fieldProps;
 
   const fieldError = meta.error;
   const showError = meta.touched && !!fieldError;
@@ -38,16 +47,19 @@ export const useFieldToKeyboardDateTimePicker = ({
         helpers.setError(String(error));
       }
     },
+    ...customize?.(fieldProps),
   };
-};
+}
 
-export const KeyboardDateTimePicker: React.ComponentType<KeyboardDateTimePickerProps> = ({
+export function KeyboardDateTimePicker({
   children,
   ...props
-}: KeyboardDateTimePickerProps) => (
-  <MuiKeyboardDateTimePicker {...useFieldToKeyboardDateTimePicker(props)}>
-    {children}
-  </MuiKeyboardDateTimePicker>
-);
+}: KeyboardDateTimePickerProps) {
+  return (
+    <MuiKeyboardDateTimePicker {...useFieldToKeyboardDateTimePicker(props)}>
+      {children}
+    </MuiKeyboardDateTimePicker>
+  );
+}
 
 KeyboardDateTimePicker.displayName = 'FormikMaterialUIKeyboardDateTimePicker';

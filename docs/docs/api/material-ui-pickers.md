@@ -3,9 +3,9 @@ id: material-ui-pickers
 title: Material-UI Pickers
 ---
 
-The following props are always excluded: `name, onChange, onBlur, value, error`, and additional ones where it makes sense
+The following props are always excluded: `name, value, error`, and additional ones where it makes sense
 
-When using picker components initalize the starting value to `new Date()` and not the empty string
+When using picker components initialize the starting value to `new Date()` and not the empty string
 
 ## DatePicker
 

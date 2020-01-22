@@ -3,7 +3,7 @@ id: faq
 title: FAQ
 ---
 
-## Why can't I pass in `name`, `value`, `onChange` etc into my component?
+## Why can't I pass in `name`, `value`, `error` etc into my component?
 
 This is to prevent there being 2 sources of truth for value
 
@@ -36,16 +36,17 @@ import MuiTextField from '@material-ui/core/TextField';
 import {useFieldToTextField, TextField, TextFieldProps} from 'formik-material-ui';
 
 const UppercasingTextField = (props: TextFieldProps) => {
-  const fieldProps = useFieldToTextField(props);
-  const [,,helpers] = useField(props.name);
-  return (<MuiTextField
-    {...fieldProps}
-    onChange={event => {
-      const {value} = event.target;
-      helpers.setValue(value ? value.toUpperCase() : '')
-    }}
-  />
-);
+  const customize = React.useCallback(([,,helpers]) => {
+    return {
+      onChange: event => {
+          const {value} = event.target;
+          helpers.setValue(value ? value.toUpperCase() : '')
+        }
+    }
+  }, []);
+
+  const fieldProps = useFieldToTextField(props, customize);
+  return <MuiTextField {...fieldProps}/>;
 ```
 
 ## Why does this library not work with `Field`?
