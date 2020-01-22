@@ -8,18 +8,24 @@ import {
   Theme,
   createStyles,
   WithStyles,
+  TextField as MuiTextField,
 } from '@material-ui/core';
 import { action } from '@storybook/addon-actions';
 import * as yup from 'yup';
 
 import Wrapper from './Wrapper';
 
-import { TextField } from '../packages/formik-material-ui/src/TextField';
+import {
+  TextField,
+  TextFieldProps,
+  useFieldToTextField,
+} from '../packages/formik-material-ui/src/TextField';
 import FormValues from './FormValues';
 
 interface Values {
   user: { email: string };
   password: string;
+  uppercasing: string;
   select: string;
   outlined: string;
 }
@@ -69,12 +75,26 @@ const styles = (theme: Theme) =>
     },
   });
 
+const UpperCasingTextField = (props: TextFieldProps) => {
+  const customize = React.useCallback(([, , helpers]) => {
+    return {
+      onChange: (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        helpers.setValue(value ? value.toUpperCase() : '');
+      },
+    };
+  }, []);
+
+  return <MuiTextField {...useFieldToTextField(props, customize)} />;
+};
+
 export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <Wrapper title="Text Field">
     <Formik<Values>
       initialValues={{
         user: { email: '' },
         password: '',
+        uppercasing: '',
         select: '',
         outlined: '',
       }}
@@ -86,10 +106,12 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
         }, 2000);
       }}
       render={({ submitForm, isSubmitting, values }) => (
-        <Form >
+        <Form>
           <TextField type="email" label="Email" name="user.email" />
           <br />
           <TextField type="password" label="Password" name="password" />
+          <br />
+          <UpperCasingTextField label="Uppercasing" name="uppercasing" />
           <br />
           <br />
           <TextField

@@ -3,7 +3,7 @@ id: material-ui
 title: Material-UI
 ---
 
-The following props are always excluded: `name, onChange, onBlur, value, error`, and additional ones where it makes sense
+The following props are always excluded: `name, value, error`, and additional ones where it makes sense
 
 ## Checkbox
 

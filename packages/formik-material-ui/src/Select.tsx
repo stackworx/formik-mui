@@ -2,19 +2,28 @@ import * as React from 'react';
 import MuiSelect, {
   SelectProps as MuiSelectProps,
 } from '@material-ui/core/Select';
-import { useField, useFormikContext } from 'formik';
+import {
+  FieldInputProps,
+  FieldMetaProps,
+  FieldHelperProps,
+  useField,
+  useFormikContext,
+} from 'formik';
 
-export interface SelectProps extends Omit<MuiSelectProps, 'value'> {
+export interface SelectProps extends Omit<MuiSelectProps, 'name' | 'value'> {
   name: string;
 }
 
-export const useFieldToSelect = ({
-  disabled,
-  name,
-  ...props
-}: SelectProps): MuiSelectProps => {
+export function useFieldToSelect<Val = unknown>(
+  { disabled, name, ...props }: SelectProps,
+  customize?: (
+    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
+  ) => Partial<Omit<SelectProps, 'name'>>
+): MuiSelectProps {
   const { isSubmitting } = useFormikContext();
-  const [field, , helpers] = useField(name);
+  const fieldProps = useField(name);
+
+  const [field, , helpers] = fieldProps;
 
   const onChange = React.useCallback(
     (event: React.ChangeEvent<{ value: unknown }>) => {
@@ -41,11 +50,12 @@ export const useFieldToSelect = ({
     ...props,
     ...field,
     onChange,
+    ...customize?.(fieldProps),
   };
-};
+}
 
-export const Select: React.ComponentType<SelectProps> = (
-  props: SelectProps
-) => <MuiSelect {...useFieldToSelect(props)} />;
+export function Select(props: SelectProps) {
+  return <MuiSelect {...useFieldToSelect(props)} />;
+}
 
 Select.displayName = 'FormikMaterialUISelect';

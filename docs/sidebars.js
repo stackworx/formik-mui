@@ -7,7 +7,12 @@
 
 module.exports = {
   someSidebar: {
-    Guide: ['guide/getting-started', 'guide/migrating', 'guide/faq'],
+    Guide: [
+      'guide/getting-started',
+      'guide/custom-component',
+      'guide/migrating',
+      'guide/faq',
+    ],
     API: ['api/material-ui', 'api/material-ui-pickers'],
   },
 };

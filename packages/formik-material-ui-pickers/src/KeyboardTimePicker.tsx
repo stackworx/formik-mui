@@ -3,23 +3,32 @@ import {
   KeyboardTimePicker as MuiKeyboardTimePicker,
   KeyboardTimePickerProps as MuiKeyboardTimePickerProps,
 } from '@material-ui/pickers';
-import { useField, useFormikContext } from 'formik';
+import {
+  FieldInputProps,
+  FieldMetaProps,
+  FieldHelperProps,
+  useField,
+  useFormikContext,
+} from 'formik';
 
 export interface KeyboardTimePickerProps
   extends Omit<
     MuiKeyboardTimePickerProps,
-    'error' | 'name' | 'onChange' | 'value'
+    'name' | 'value' | 'error' | 'onChange'
   > {
   name: string;
+  onChange?: MuiKeyboardTimePickerProps['onChange'];
 }
 
-export const useFieldToKeyboardTimePicker = ({
-  disabled,
-  name,
-  ...props
-}: KeyboardTimePickerProps): MuiKeyboardTimePickerProps => {
+export function useFieldToKeyboardTimePicker<Val = unknown>(
+  { disabled, name, ...props }: KeyboardTimePickerProps,
+  customize?: (
+    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
+  ) => Partial<Omit<KeyboardTimePickerProps, 'name'>>
+): MuiKeyboardTimePickerProps {
   const { isSubmitting } = useFormikContext();
-  const [field, meta, helpers] = useField(name);
+  const fieldProps = useField(name);
+  const [field, meta, helpers] = fieldProps;
 
   const fieldError = meta.error;
   const showError = meta.touched && !!fieldError;
@@ -38,16 +47,19 @@ export const useFieldToKeyboardTimePicker = ({
         helpers.setError(String(error));
       }
     },
+    ...customize?.(fieldProps),
   };
-};
+}
 
-export const KeyboardTimePicker: React.ComponentType<KeyboardTimePickerProps> = ({
+export function KeyboardTimePicker({
   children,
   ...props
-}: KeyboardTimePickerProps) => (
-  <MuiKeyboardTimePicker {...useFieldToKeyboardTimePicker(props)}>
-    {children}
-  </MuiKeyboardTimePicker>
-);
+}: KeyboardTimePickerProps) {
+  return (
+    <MuiKeyboardTimePicker {...useFieldToKeyboardTimePicker(props)}>
+      {children}
+    </MuiKeyboardTimePicker>
+  );
+}
 
 KeyboardTimePicker.displayName = 'FormikMaterialUIKeyboardTimePicker';

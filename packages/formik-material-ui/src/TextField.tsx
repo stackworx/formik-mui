@@ -2,22 +2,31 @@ import * as React from 'react';
 import MuiTextField, {
   TextFieldProps as MuiTextFieldProps,
 } from '@material-ui/core/TextField';
-import { useField, useFormikContext } from 'formik';
+import {
+  FieldInputProps,
+  FieldMetaProps,
+  FieldHelperProps,
+  useField,
+  useFormikContext,
+} from 'formik';
 
 export type TextFieldProps = Omit<
   MuiTextFieldProps,
-  'error' | 'name' | 'onChange' | 'onBlur' | 'value'
+  'name' | 'value' | 'error'
 > & {
   name: string;
 };
 
-export const useFieldToTextField = ({
-  disabled,
-  name,
-  ...props
-}: TextFieldProps): MuiTextFieldProps => {
+export function useFieldToTextField<Val = unknown>(
+  { disabled, name, ...props }: TextFieldProps,
+  customize?: (
+    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
+  ) => Partial<Omit<TextFieldProps, 'name'>>
+): MuiTextFieldProps {
   const { isSubmitting } = useFormikContext();
-  const [field, meta] = useField(name);
+  const fieldProps = useField(name);
+
+  const [field, meta] = fieldProps;
 
   const fieldError = meta.error;
   const showError = meta.touched && !!fieldError;
@@ -29,14 +38,14 @@ export const useFieldToTextField = ({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled ?? isSubmitting,
     variant: props.variant ?? 'standard',
+    ...customize?.(fieldProps),
   };
-};
+}
 
-export const TextField: React.ComponentType<TextFieldProps> = ({
-  children,
-  ...props
-}: TextFieldProps) => (
-  <MuiTextField {...useFieldToTextField(props)}>{children}</MuiTextField>
-);
+export function TextField({ children, ...props }: TextFieldProps) {
+  return (
+    <MuiTextField {...useFieldToTextField(props)}>{children}</MuiTextField>
+  );
+}
 
 TextField.displayName = 'FormikMaterialUITextField';
