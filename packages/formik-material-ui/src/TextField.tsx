@@ -37,7 +37,7 @@ export function useFieldToTextField<Val = unknown>(
     error: showError,
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled ?? isSubmitting,
-    variant: props.variant ?? 'standard',
+    variant: props.variant,
     ...customize?.(fieldProps),
   };
 }
