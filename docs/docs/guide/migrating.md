@@ -58,7 +58,7 @@ const UppercasingTextField = (props: TextFieldProps) => (
 
 - Rename fieldToTextField to useFieldToTextField
 - Add `import {useField} from 'formik'` is you need access to field helpers
-- Add `import {useForm} from 'formik'` is you need access to form helpers
+- Add `import {useFormik} from 'formik'` is you need access to form helpers
 
 #### After
 
