@@ -19,7 +19,7 @@ import { Checkbox } from 'formik-material-ui';
 
 ## CheckboxWithLabel
 
-A convenience wrapper that adds label to Checkbox using FormControlLabel. Supports all the same properties as Checkbox and accepts an additional `Label` prop, which is passed directly into the FormControlLabel.
+A convenience wrapper that adds label to Checkbox using FormControlLabel. Supports all the same properties as Checkbox and accepts an additional `Label` prop, which are props applied to FormControlLabel.
 
 #### Example
 
