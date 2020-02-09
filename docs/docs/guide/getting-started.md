@@ -18,7 +18,7 @@ yarn add formik-material-ui-pickers @date-io/date-fns@1.x date-fns
 ## Quick Start
 
 ```jsx {4,38,40}
-import * as React from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import { Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
@@ -82,7 +82,7 @@ Note: that the `Field` wrapper is not used, for more details on why see the [FAQ
 See [Material-UI Pickers getting started](https://material-ui-pickers.dev/getting-started/installation) for more information
 
 ```jsx {4-8,9,12,16,32,34,36}
-import * as React from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import { Button, LinearProgress } from '@material-ui/core';
 import {
