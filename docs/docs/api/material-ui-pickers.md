@@ -14,7 +14,7 @@ When using picker components initialize the starting value to `new Date()` and n
 ```jsx
 import { DatePicker } from 'formik-material-ui-pickers';
 
-<DatePicker label="label" name="name" />;
+<Field component={DatePicker} label="label" name="name" />;
 ```
 
 #### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/DatePicker)
@@ -26,7 +26,7 @@ import { DatePicker } from 'formik-material-ui-pickers';
 ```jsx
 import { DateTimePicker } from 'formik-material-ui-pickers';
 
-<DateTimePicker label="label" name="name" />;
+<Field component={DateTimePicker} label="label" name="name" />;
 ```
 
 #### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/DateTimePicker)
@@ -38,7 +38,7 @@ import { DateTimePicker } from 'formik-material-ui-pickers';
 ```jsx
 import { KeyboardDatePicker } from 'formik-material-ui-pickers';
 
-<KeyboardDatePicker label="label" name="name" />;
+<Field component={KeyboardDatePicker} label="label" name="name" />;
 ```
 
 #### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardDatePicker)
@@ -50,7 +50,7 @@ import { KeyboardDatePicker } from 'formik-material-ui-pickers';
 ```jsx
 import { KeyboardDateTimePicker } from 'formik-material-ui-pickers';
 
-<KeyboardDateTimePicker label="label" name="name" />;
+<Field component={KeyboardDateTimePicker} label="label" name="name" />;
 ```
 
 #### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardDateTimePicker)
@@ -62,7 +62,7 @@ import { KeyboardDateTimePicker } from 'formik-material-ui-pickers';
 ```jsx
 import { KeyboardTimePicker } from 'formik-material-ui-pickers';
 
-<KeyboardTimePicker label="label" name="name" />;
+<Field component={KeyboardTimePicker} label="label" name="name" />;
 ```
 
 #### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/KeyboardTimePicker)
@@ -74,7 +74,7 @@ import { KeyboardTimePicker } from 'formik-material-ui-pickers';
 ```jsx
 import { TimePicker } from 'formik-material-ui-pickers';
 
-<TimePicker label="label" name="name" />;
+<Field component={TimePicker} label="label" name="name" />;
 ```
 
 #### [Material-UI Pickers Documentation](https://material-ui-pickers.dev/api/TimePicker)
