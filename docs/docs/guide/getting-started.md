@@ -17,9 +17,9 @@ yarn add formik-material-ui-pickers @date-io/date-fns@1.x date-fns
 
 ## Quick Start
 
-```jsx {4,38,40}
+```jsx {4,39,46}
 import * as React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
 
@@ -55,9 +55,19 @@ function App() {
     >
       {({ submitForm, isSubmitting }) => (
         <Form>
-          <TextField name="email" type="email" label="Email" />
+          <Field
+            component={TextField}
+            name="email"
+            type="email"
+            label="Email"
+          />
           <br />
-          <TextField type="password" label="Password" name="password" />
+          <Field
+            component={TextField}
+            type="password"
+            label="Password"
+            name="password"
+          />
           {isSubmitting && <LinearProgress />}
           <br />
           <Button

@@ -3,24 +3,9 @@ id: custom-component
 title: Creating Custom Components
 ---
 
-## Notes
+# Notes
 
-All of the exported hooks (E.g. `useFieldToTextField`) has an optional second parameter called `customize`
-
-```jsx
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-} from 'formik';
-
-
-customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<TextFieldProps, 'name'>>
-```
-
-This will allow you to override any of the properties normally passed in by `formik-material-ui` or `formik-material-ui-pickers`.
+Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulate the logic used to map formik props into the Material-UI shapes
 
 # Examples
 
@@ -30,22 +15,20 @@ A simple test input that always uppercases the input
 
 ```jsx
 import MuiTextField from '@material-ui/core/TextField';
-import {
-  useFieldToTextField,
-  TextField,
-  TextFieldProps,
-} from 'formik-material-ui';
+import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 
-const UpperCasingTextField = (props: TextFieldProps) => {
-  const customize = React.useCallback(([, , helpers]) => {
-    return {
-      onChange: (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { value } = event.target;
-        helpers.setValue(value ? value.toUpperCase() : '');
-      },
-    };
-  }, []);
-
-  return <MuiTextField {...useFieldToTextField(props, customize)} />;
-};
+function UpperCasingTextField(props: TextFieldProps) {
+  const {
+    form: { setFieldValue },
+    field: { name },
+  } = props;
+  const onChange = React.useCallback(
+    event => {
+      const { value } = event.target;
+      setFieldValue(field.name, value ? value.toUpperCase() : '');
+    },
+    [setFieldValue, name]
+  );
+  return <MuiTextField {...fieldToTextField(props)} onChange={onChange} />;
+}
 ```
