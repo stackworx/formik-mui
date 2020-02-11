@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TextFieldStory from './TextField.story';
+import CheckboxStory from './Checkbox.story';
 import InputBaseStory from './InputBase.story';
 import KitchenSinkStory from './KitchenSink.story';
 import SelectStory from './Select.story';
@@ -18,6 +19,7 @@ storiesOf('Formik', module)
   .add('Input Base', () => <InputBaseStory />)
   .add('Radio Group', () => <RadioGroupStory />)
   .add('Select', () => <SelectStory />)
+  .add('Checkbox', () => <CheckboxStory />)
   .add('Switches', () => <SwitchesStory />)
   .add('Simple File Upload', () => <SimpleFileUploadStory />)
   .add('Kitchen Sink', () => <KitchenSinkStory />)

@@ -3,35 +3,23 @@ import {
   KeyboardDateTimePicker as MuiKeyboardDateTimePicker,
   KeyboardDateTimePickerProps as MuiKeyboardDateTimePickerProps,
 } from '@material-ui/pickers';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps, getIn } from 'formik';
 
 export interface KeyboardDateTimePickerProps
-  extends Omit<
-    MuiKeyboardDateTimePickerProps,
-    'name' | 'value' | 'error' | 'onChange'
-  > {
-  name: string;
-  onChange?: MuiKeyboardDateTimePickerProps['onChange'];
-}
+  extends FieldProps,
+    Omit<
+      MuiKeyboardDateTimePickerProps,
+      'name' | 'value' | 'error' | 'onChange'
+    > {}
 
-export function useFieldToKeyboardDateTimePicker<Val = unknown>(
-  { disabled, name, ...props }: KeyboardDateTimePickerProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<KeyboardDateTimePickerProps, 'name'>>
-): MuiKeyboardDateTimePickerProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-  const [field, meta, helpers] = fieldProps;
-
-  const fieldError = meta.error;
-  const showError = meta.touched && !!fieldError;
+export function fieldToKeyboardDateTimePicker({
+  disabled,
+  field,
+  form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  ...props
+}: KeyboardDateTimePickerProps): MuiKeyboardDateTimePickerProps {
+  const fieldError = getIn(errors, field.name);
+  const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
     ...props,
@@ -40,14 +28,13 @@ export function useFieldToKeyboardDateTimePicker<Val = unknown>(
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      helpers.setValue(date);
+      setFieldValue(field.name, date);
     },
     onError(error) {
       if (error !== fieldError) {
-        helpers.setError(String(error));
+        setFieldError(field.name, String(error));
       }
     },
-    ...customize?.(fieldProps),
   };
 }
 
@@ -56,7 +43,7 @@ export function KeyboardDateTimePicker({
   ...props
 }: KeyboardDateTimePickerProps) {
   return (
-    <MuiKeyboardDateTimePicker {...useFieldToKeyboardDateTimePicker(props)}>
+    <MuiKeyboardDateTimePicker {...fieldToKeyboardDateTimePicker(props)}>
       {children}
     </MuiKeyboardDateTimePicker>
   );

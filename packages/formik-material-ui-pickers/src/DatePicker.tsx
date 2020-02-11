@@ -3,32 +3,20 @@ import {
   DatePicker as MuiDatePicker,
   DatePickerProps as MuiDatePickerProps,
 } from '@material-ui/pickers';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps, getIn } from 'formik';
 
 export interface DatePickerProps
-  extends Omit<MuiDatePickerProps, 'name' | 'value' | 'error' | 'onChange'> {
-  name: string;
-  onChange?: MuiDatePickerProps['onChange'];
-}
+  extends FieldProps,
+    Omit<MuiDatePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
 
-export function useFieldToDatePicker<Val = unknown>(
-  { name, disabled, ...props }: DatePickerProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<DatePickerProps, 'name'>>
-): MuiDatePickerProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-  const [field, meta, helpers] = fieldProps;
-
-  const fieldError = meta.error;
-  const showError = meta.touched && !!fieldError;
+export function fieldToDatePicker({
+  field,
+  form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  disabled,
+  ...props
+}: DatePickerProps): MuiDatePickerProps {
+  const fieldError = getIn(errors, field.name);
+  const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
     ...props,
@@ -37,20 +25,19 @@ export function useFieldToDatePicker<Val = unknown>(
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      helpers.setValue(date);
+      setFieldValue(field.name, date);
     },
     onError(error) {
       if (error !== fieldError) {
-        helpers.setError(String(error));
+        setFieldError(field.name, String(error));
       }
     },
-    ...customize?.(fieldProps),
   };
 }
 
 export function DatePicker({ children, ...props }: DatePickerProps) {
   return (
-    <MuiDatePicker {...useFieldToDatePicker(props)}>{children}</MuiDatePicker>
+    <MuiDatePicker {...fieldToDatePicker(props)}>{children}</MuiDatePicker>
   );
 }
 

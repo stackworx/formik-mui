@@ -2,34 +2,20 @@ import * as React from 'react';
 import MuiTextField, {
   TextFieldProps as MuiTextFieldProps,
 } from '@material-ui/core/TextField';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps, getIn } from 'formik';
 
-export type TextFieldProps = Omit<
-  MuiTextFieldProps,
-  'name' | 'value' | 'error'
-> & {
-  name: string;
-};
+export interface TextFieldProps
+  extends FieldProps,
+    Omit<MuiTextFieldProps, 'name' | 'value' | 'error'> {}
 
-export function useFieldToTextField<Val = unknown>(
-  { disabled, name, ...props }: TextFieldProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<TextFieldProps, 'name'>>
-): MuiTextFieldProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-
-  const [field, meta] = fieldProps;
-
-  const fieldError = meta.error;
-  const showError = meta.touched && !!fieldError;
+export function fieldToTextField({
+  disabled,
+  field,
+  form: { isSubmitting, touched, errors },
+  ...props
+}: TextFieldProps): MuiTextFieldProps {
+  const fieldError = getIn(errors, field.name);
+  const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
     ...props,
@@ -38,14 +24,11 @@ export function useFieldToTextField<Val = unknown>(
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled ?? isSubmitting,
     variant: props.variant,
-    ...customize?.(fieldProps),
   };
 }
 
 export function TextField({ children, ...props }: TextFieldProps) {
-  return (
-    <MuiTextField {...useFieldToTextField(props)}>{children}</MuiTextField>
-  );
+  return <MuiTextField {...fieldToTextField(props)}>{children}</MuiTextField>;
 }
 
 TextField.displayName = 'FormikMaterialUITextField';

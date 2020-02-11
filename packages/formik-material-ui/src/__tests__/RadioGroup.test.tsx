@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
 import { FormControlLabel, Radio } from '@material-ui/core';
 
@@ -9,7 +9,7 @@ test('Radio Group Renders Correctly', () => {
   const component = renderer.create(
     <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
       <Form>
-        <RadioGroup name="radio-group">
+        <Field component={RadioGroup} name="radio-group">
           <FormControlLabel
             value="painting"
             control={<Radio />}
@@ -25,7 +25,7 @@ test('Radio Group Renders Correctly', () => {
             control={<Radio disabled />}
             label="None"
           />
-        </RadioGroup>
+        </Field>
       </Form>
     </Formik>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Field } from 'formik';
 
 import { render, fireEvent } from './utils';
 
@@ -6,12 +7,15 @@ import { Checkbox } from '../Checkbox';
 
 test('renders', async () => {
   const onSubmit = jest.fn();
-  const { asFragment } = render(<Checkbox name="checked" />, {
-    initialValues: {
-      checked: false,
-    },
-    onSubmit,
-  });
+  const { asFragment } = render(
+    <Field component={Checkbox} name="checked" type="checkbox" />,
+    {
+      initialValues: {
+        checked: false,
+      },
+      onSubmit,
+    }
+  );
 
   expect(asFragment()).toMatchSnapshot();
 });
@@ -20,9 +24,11 @@ test('checked', async () => {
   // given
   const onSubmit = jest.fn();
   const { getByTestId, findByText } = render(
-    <Checkbox
+    <Field
+      component={Checkbox}
       name="checked"
       label="Checkbox"
+      type="checkbox"
       inputProps={{
         // @ts-ignore
         'data-testid': 'checkbox',

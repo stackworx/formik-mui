@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
@@ -14,7 +14,11 @@ test('KeyboardDateTimePicker Renders Correctly', () => {
         onSubmit={() => {}}
       >
         <Form>
-          <KeyboardDateTimePicker name="test" label="Datetime" />
+          <Field
+            component={KeyboardDateTimePicker}
+            name="test"
+            label="Datetime"
+          />
         </Form>
       </Formik>
     </MuiPickersUtilsProvider>

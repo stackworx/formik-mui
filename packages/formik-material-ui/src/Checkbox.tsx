@@ -2,46 +2,51 @@ import * as React from 'react';
 import MuiCheckbox, {
   CheckboxProps as MuiCheckboxProps,
 } from '@material-ui/core/Checkbox';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps } from 'formik';
+import invariant from 'tiny-warning';
 
 export interface CheckboxProps
-  extends Omit<
-    MuiCheckboxProps,
-    'name' | 'value' | 'error' | 'form' | 'checked' | 'defaultChecked'
-  > {
-  name: string;
+  extends FieldProps,
+    Omit<
+      MuiCheckboxProps,
+      | 'name'
+      | 'value'
+      | 'error'
+      | 'form'
+      | 'checked'
+      | 'defaultChecked'
+      // Excluded for conflict with Field type
+      | 'type'
+    > {
+  type?: string;
 }
 
-export function useFieldToCheckbox<Val = unknown>(
-  { disabled, name, ...props }: CheckboxProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<CheckboxProps, 'name'>>
-): MuiCheckboxProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
+export function fieldToCheckbox({
+  disabled,
+  field,
+  form: { isSubmitting },
+  type,
+  ...props
+}: CheckboxProps): MuiCheckboxProps {
+  const indeterminate = !Array.isArray(field.value) && field.value == null;
 
-  const [field] = fieldProps;
+  if (process.env.NODE_ENV !== 'production') {
+    invariant(
+      type === 'checkbox',
+      `property type=checkbox is missing from field ${field.name}, this can caused unexpected behaviour`
+    );
+  }
 
   return {
     disabled: disabled ?? isSubmitting,
+    indeterminate,
     ...props,
     ...field,
-    // TODO handle indeterminate
-    checked: field.value,
-    value: field.value ? 'checked' : '',
-    ...customize?.(fieldProps),
   };
 }
 
 export function Checkbox(props: CheckboxProps) {
-  return <MuiCheckbox {...useFieldToCheckbox(props)} />;
+  return <MuiCheckbox {...fieldToCheckbox(props)} />;
 }
 
 Checkbox.displayName = 'FormikMaterialUICheckbox';
