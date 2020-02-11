@@ -25,7 +25,7 @@ function UpperCasingTextField(props: TextFieldProps) {
   const onChange = React.useCallback(
     event => {
       const { value } = event.target;
-      setFieldValue(field.name, value ? value.toUpperCase() : '');
+      setFieldValue(name, value ? value.toUpperCase() : '');
     },
     [setFieldValue, name]
   );
