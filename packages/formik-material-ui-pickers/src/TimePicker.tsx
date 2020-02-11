@@ -3,32 +3,20 @@ import {
   TimePicker as MuiTimePicker,
   TimePickerProps as MuiTimePickerProps,
 } from '@material-ui/pickers';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps, getIn } from 'formik';
 
 export interface TimePickerProps
-  extends Omit<MuiTimePickerProps, 'name' | 'value' | 'error' | 'onChange'> {
-  name: string;
-  onChange?: MuiTimePickerProps['onChange'];
-}
+  extends FieldProps,
+    Omit<MuiTimePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
 
-export function useFieldToTimePicker<Val = unknown>(
-  { disabled, name, ...props }: TimePickerProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<TimePickerProps, 'name'>>
-): MuiTimePickerProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-  const [field, meta, helpers] = fieldProps;
-
-  const fieldError = meta.error;
-  const showError = meta.touched && !!fieldError;
+export function fieldToTimePicker({
+  disabled,
+  field,
+  form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  ...props
+}: TimePickerProps): MuiTimePickerProps {
+  const fieldError = getIn(errors, field.name);
+  const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
     ...props,
@@ -37,20 +25,19 @@ export function useFieldToTimePicker<Val = unknown>(
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      helpers.setValue(date);
+      setFieldValue(field.name, date);
     },
     onError(error) {
       if (error !== fieldError) {
-        helpers.setError(String(error));
+        setFieldError(field.name, String(error));
       }
     },
-    ...customize?.(fieldProps),
   };
 }
 
 export function TimePicker({ children, ...props }: TimePickerProps) {
   return (
-    <MuiTimePicker {...useFieldToTimePicker(props)}>{children}</MuiTimePicker>
+    <MuiTimePicker {...fieldToTimePicker(props)}>{children}</MuiTimePicker>
   );
 }
 

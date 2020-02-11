@@ -18,7 +18,7 @@ exports[`renders 1`] = `
           data-indeterminate="false"
           name="checked"
           type="checkbox"
-          value=""
+          value="false"
         />
         <svg
           aria-hidden="true"

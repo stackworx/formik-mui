@@ -1,28 +1,26 @@
 import * as React from 'react';
-import { useField, useFormikContext } from 'formik';
+import { FieldProps, getIn } from 'formik';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel, { InputLabelProps } from '@material-ui/core/InputLabel';
 import Input, { InputProps } from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-export interface SimpleFileUploadProps {
-  name: string;
+export interface SimpleFileUploadProps extends FieldProps {
   label: string;
   disabled?: boolean;
-  InputProps?: Omit<InputProps, 'name' | 'type' | 'onChange'>;
+  InputProps?: Omit<InputProps, 'name' | 'type' | 'onChange' | 'label'>;
   InputLabelProps?: InputLabelProps;
 }
 
 export const SimpleFileUpload = ({
-  name,
+  field,
+  form: { isSubmitting, touched, errors, setFieldValue },
   label,
   disabled = false,
   InputProps: inputProps,
   InputLabelProps: inputLabelProps,
 }: SimpleFileUploadProps) => {
-  const { isSubmitting } = useFormikContext();
-  const [field, meta, helpers] = useField(name);
-  const error = meta.touched && meta.error;
+  const error = getIn(touched, field.name) && getIn(errors, field.name);
 
   return (
     <div>
@@ -41,7 +39,7 @@ export const SimpleFileUpload = ({
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             onChange: (event: React.ChangeEvent<any>) => {
               const file = event.currentTarget.files[0];
-              helpers.setValue(file);
+              setFieldValue(field.name, file);
             },
           }}
           {...inputProps}

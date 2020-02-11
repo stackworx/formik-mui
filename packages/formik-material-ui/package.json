@@ -23,6 +23,9 @@
     "url": "https://github.com/stackworx/formik-material-ui"
   },
   "jest": {
+    "globals": {
+      "__DEV__": "boolean"
+    },
     "testURL": "http://localhost/",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

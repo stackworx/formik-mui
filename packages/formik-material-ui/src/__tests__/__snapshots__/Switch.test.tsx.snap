@@ -29,12 +29,12 @@ exports[`Switch Renders Correctly 1`] = `
         className="MuiIconButton-label"
       >
         <input
+          checked={false}
           className="PrivateSwitchBase-input-16 MuiSwitch-input"
           disabled={false}
           name="test"
           onChange={[Function]}
           type="checkbox"
-          value="test"
         />
         <span
           className="MuiSwitch-thumb"
