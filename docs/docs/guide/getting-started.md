@@ -123,11 +123,15 @@ function App() {
       >
         {({ submitForm, isSubmitting }) => (
           <Form>
-            <TimePicker name="time" label="Time" />
+            <Field component={TimePicker} name="time" label="Time" />
             <br />
-            <DatePicker name="date" label="Date" />
+            <Field component={DatePicker} name="date" label="Date" />
             <br />
-            <DateTimePicker name="dateTime" label="Date Time" />
+            <Field
+              component={DateTimePicker}
+              name="dateTime"
+              label="Date Time"
+            />
             {isSubmitting && <LinearProgress />}
             <br />
             <Button
