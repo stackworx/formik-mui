@@ -32,7 +32,8 @@ export function fieldToKeyboardDateTimePicker({
     },
     onError(error) {
       if (error !== fieldError) {
-        setFieldError(field.name, String(error));
+        // @ts-ignore - https://github.com/jaredpalmer/formik/pull/2286
+        setFieldError(field.name, error ?? String(error));
       }
     },
   };
