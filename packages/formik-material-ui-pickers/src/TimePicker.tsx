@@ -28,9 +28,10 @@ export function fieldToTimePicker({
       setFieldValue(field.name, date);
     },
     onError(error) {
-      if (error !== fieldError) {
+      if (error !== fieldError && !(error == '' && !fieldError)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
         // @ts-ignore - https://github.com/jaredpalmer/formik/pull/2286
-        setFieldError(field.name, error ?? String(error));
+        setFieldError(field.name, error ? String(error) : undefined);
       }
     },
   };
