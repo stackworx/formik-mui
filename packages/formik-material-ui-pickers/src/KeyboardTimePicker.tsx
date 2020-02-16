@@ -3,35 +3,20 @@ import {
   KeyboardTimePicker as MuiKeyboardTimePicker,
   KeyboardTimePickerProps as MuiKeyboardTimePickerProps,
 } from '@material-ui/pickers';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps, getIn } from 'formik';
 
 export interface KeyboardTimePickerProps
-  extends Omit<
-    MuiKeyboardTimePickerProps,
-    'name' | 'value' | 'error' | 'onChange'
-  > {
-  name: string;
-  onChange?: MuiKeyboardTimePickerProps['onChange'];
-}
+  extends FieldProps,
+    Omit<MuiKeyboardTimePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
 
-export function useFieldToKeyboardTimePicker<Val = unknown>(
-  { disabled, name, ...props }: KeyboardTimePickerProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<KeyboardTimePickerProps, 'name'>>
-): MuiKeyboardTimePickerProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-  const [field, meta, helpers] = fieldProps;
-
-  const fieldError = meta.error;
-  const showError = meta.touched && !!fieldError;
+export function fieldToKeyboardTimePicker({
+  disabled,
+  field,
+  form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  ...props
+}: KeyboardTimePickerProps): MuiKeyboardTimePickerProps {
+  const fieldError = getIn(errors, field.name);
+  const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
     ...props,
@@ -40,14 +25,15 @@ export function useFieldToKeyboardTimePicker<Val = unknown>(
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      helpers.setValue(date);
+      setFieldValue(field.name, date);
     },
     onError(error) {
-      if (error !== fieldError) {
-        helpers.setError(String(error));
+      if (error !== fieldError && !(error == '' && !fieldError)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // @ts-ignore - https://github.com/jaredpalmer/formik/pull/2286
+        setFieldError(field.name, error ? String(error) : undefined);
       }
     },
-    ...customize?.(fieldProps),
   };
 }
 
@@ -56,7 +42,7 @@ export function KeyboardTimePicker({
   ...props
 }: KeyboardTimePickerProps) {
   return (
-    <MuiKeyboardTimePicker {...useFieldToKeyboardTimePicker(props)}>
+    <MuiKeyboardTimePicker {...fieldToKeyboardTimePicker(props)}>
       {children}
     </MuiKeyboardTimePicker>
   );

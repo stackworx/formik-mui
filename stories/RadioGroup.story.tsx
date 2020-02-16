@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import Wrapper from './Wrapper';
 import { action } from '@storybook/addon-actions';
 
@@ -26,8 +26,8 @@ export default () => (
       }}
       render={({ submitForm, values, isSubmitting, isValid }) => {
         return (
-          <Form >
-            <RadioGroup name="activity">
+          <Form>
+            <Field component={RadioGroup} name="activity">
               <FormControlLabel
                 value="painting"
                 control={<Radio disabled={isSubmitting} />}
@@ -46,7 +46,7 @@ export default () => (
                 label="None"
                 disabled
               />
-            </RadioGroup>
+            </Field>
             <br />
             {isSubmitting && <LinearProgress />}
             <br />

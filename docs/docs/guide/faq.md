@@ -15,7 +15,8 @@ function App() {
   const [error, setError] = useState(null');
 
   return (
-    <TextField
+    <Field
+      component={TextField}
       name="email"
       type="email"
       label="Email"
@@ -33,26 +34,24 @@ But you can do this a custom field
 
 ```jsx
 import MuiTextField from '@material-ui/core/TextField';
-import {useFieldToTextField, TextField, TextFieldProps} from 'formik-material-ui';
+import { Field } from 'formik';
+import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 
-const UppercasingTextField = (props: TextFieldProps) => {
-  const customize = React.useCallback(([,,helpers]) => {
-    return {
-      onChange: event => {
-          const {value} = event.target;
-          helpers.setValue(value ? value.toUpperCase() : '')
-        }
-    }
-  }, []);
-
-  const fieldProps = useFieldToTextField(props, customize);
-  return <MuiTextField {...fieldProps}/>;
+function UpperCasingTextField(props: TextFieldProps) {
+  const {
+    form: { setFieldValue },
+    field: { name },
+  } = props;
+  const onChange = React.useCallback(
+    event => {
+      const { value } = event.target;
+      setFieldValue(name, value ? value.toUpperCase() : '');
+    },
+    [setFieldValue, name]
+  );
+  return <MuiTextField {...fieldToTextField(props)} onChange={onChange} />;
+}
 ```
-
-## Why does this library not work with `Field`?
-
-After using formik with Material-UI in several projects I felt the `Field` wrapper was just extra noise.
-Also in some cases it interfered with typescript autocompletion especially with the TextField union types.
 
 ## Why does a wrapper for component x not exist?
 

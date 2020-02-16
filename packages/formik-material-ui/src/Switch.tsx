@@ -2,45 +2,47 @@ import * as React from 'react';
 import MuiSwitch, {
   SwitchProps as MuiSwitchProps,
 } from '@material-ui/core/Switch';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps } from 'formik';
+import invariant from 'tiny-warning';
 
 export interface SwitchProps
-  extends Omit<
-    MuiSwitchProps,
-    'checked' | 'name' | 'value' | 'defaultChecked'
-  > {
-  name: string;
+  extends FieldProps,
+    Omit<
+      MuiSwitchProps,
+      | 'checked'
+      | 'name'
+      | 'value'
+      | 'defaultChecked'
+      | 'form'
+      // Excluded for conflict with Field type
+      | 'type'
+    > {
+  type?: string;
 }
 
-export function useFieldToSwitch<Val = unknown>(
-  { disabled, name, ...props }: SwitchProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<SwitchProps, 'name'>>
-): MuiSwitchProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-
-  const [field] = fieldProps;
+export function fieldToSwitch({
+  disabled,
+  field,
+  form: { isSubmitting },
+  type,
+  ...props
+}: SwitchProps): MuiSwitchProps {
+  if (process.env.NODE_ENV !== 'production') {
+    invariant(
+      type === 'checkbox',
+      `property type=checkbox is missing from field ${field.name}, this can caused unexpected behaviour`
+    );
+  }
 
   return {
     disabled: disabled ?? isSubmitting,
     ...props,
     ...field,
-    value: field.name,
-    checked: field.value,
-    ...customize?.(fieldProps),
   };
 }
 
 export function Switch(props: SwitchProps) {
-  return <MuiSwitch {...useFieldToSwitch(props)} />;
+  return <MuiSwitch {...fieldToSwitch(props)} />;
 }
 
 Switch.displayName = 'FormikMaterialUISwitch';
