@@ -146,7 +146,7 @@ import { Switch } from 'formik-material-ui';
 <Field component={Switch} name="switch" />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/select/)
+#### [Material-UI Documentation](https://material-ui.com/api/switch/)
 
 ## TextField
 
