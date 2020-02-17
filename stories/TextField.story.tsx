@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import {
   LinearProgress,
   MenuItem,
@@ -18,7 +18,7 @@ import Wrapper from './Wrapper';
 import {
   TextField,
   TextFieldProps,
-  useFieldToTextField,
+  fieldToTextField,
 } from '../packages/formik-material-ui/src/TextField';
 import FormValues from './FormValues';
 
@@ -76,16 +76,17 @@ const styles = (theme: Theme) =>
   });
 
 const UpperCasingTextField = (props: TextFieldProps) => {
-  const customize = React.useCallback(([, , helpers]) => {
-    return {
-      onChange: (event: React.ChangeEvent<HTMLInputElement>) => {
+  return (
+    <MuiTextField
+      {...fieldToTextField(props)}
+      onChange={event => {
         const { value } = event.target;
-        helpers.setValue(value ? value.toUpperCase() : '');
-      },
-    };
-  }, []);
 
-  return <MuiTextField {...useFieldToTextField(props, customize)} />;
+        const { form, field } = props;
+        form.setFieldValue(field.name, value ? value.toUpperCase() : '');
+      }}
+    />
+  );
 };
 
 export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
@@ -107,14 +108,29 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
       }}
       render={({ submitForm, isSubmitting, values }) => (
         <Form>
-          <TextField type="email" label="Email" name="user.email" />
+          <Field
+            component={TextField}
+            type="email"
+            label="Email"
+            name="user.email"
+          />
           <br />
-          <TextField type="password" label="Password" name="password" />
+          <Field
+            component={TextField}
+            type="password"
+            label="Password"
+            name="password"
+          />
           <br />
-          <UpperCasingTextField label="Uppercasing" name="uppercasing" />
+          <Field
+            component={UpperCasingTextField}
+            label="Uppercasing"
+            name="uppercasing"
+          />
           <br />
           <br />
-          <TextField
+          <Field
+            component={TextField}
             label="Outlined"
             name="outlined"
             variant="outlined"
@@ -122,10 +138,16 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
           />
           <br />
           <br />
-          <TextField label="Filled" name="filled" variant="filled" />
+          <Field
+            component={TextField}
+            label="Filled"
+            name="filled"
+            variant="filled"
+          />
           <br />
           <br />
-          <TextField
+          <Field
+            component={TextField}
             type="text"
             name="select"
             label="With Select"
@@ -143,7 +165,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
                 {option.label}
               </MenuItem>
             ))}
-          </TextField>
+          </Field>
           <br />
           {isSubmitting && <LinearProgress />}
           <br />

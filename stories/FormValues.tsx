@@ -31,7 +31,9 @@ const FormValues = ({ values, classes }: Props) => (
     <Typography variant="h4" component="h5">
       State
     </Typography>
-    <Typography component="p">{JSON.stringify(values, replacer, 2)}</Typography>
+    <Typography component="pre">
+      {JSON.stringify(values, replacer, 2)}
+    </Typography>
   </div>
 );
 

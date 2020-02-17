@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0-beta.1",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
@@ -23,6 +23,9 @@
     "url": "https://github.com/stackworx/formik-material-ui"
   },
   "jest": {
+    "globals": {
+      "__DEV__": "boolean"
+    },
     "testURL": "http://localhost/",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

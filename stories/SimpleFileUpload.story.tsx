@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { Formik, Form } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { action } from '@storybook/addon-actions';
 import { withStyles, Theme } from '@material-ui/core';
 import * as Yup from 'yup';
@@ -45,8 +45,12 @@ export default withStyles(styles)(() => (
         }, 2000);
       }}
       render={({ submitForm, values }) => (
-        <Form >
-          <SimpleFileUpload name="file" label="Simple File Upload" />
+        <Form>
+          <Field
+            component={SimpleFileUpload}
+            name="file"
+            label="Simple File Upload"
+          />
           <br />
           <Button variant="contained" color="primary" onClick={submitForm}>
             Submit

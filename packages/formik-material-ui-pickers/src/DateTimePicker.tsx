@@ -3,35 +3,20 @@ import {
   DateTimePicker as MuiDateTimePicker,
   DateTimePickerProps as MuiDateTimePickerProps,
 } from '@material-ui/pickers';
-import {
-  FieldInputProps,
-  FieldMetaProps,
-  FieldHelperProps,
-  useField,
-  useFormikContext,
-} from 'formik';
+import { FieldProps, getIn } from 'formik';
 
 export interface DateTimePickerProps
-  extends Omit<
-    MuiDateTimePickerProps,
-    'name' | 'value' | 'error' | 'onChange'
-  > {
-  name: string;
-  onChange?: MuiDateTimePickerProps['onChange'];
-}
+  extends FieldProps,
+    Omit<MuiDateTimePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
 
-export function useFieldToDateTimePicker<Val = unknown>(
-  { disabled, name, ...props }: DateTimePickerProps,
-  customize?: (
-    props: [FieldInputProps<Val>, FieldMetaProps<Val>, FieldHelperProps<Val>]
-  ) => Partial<Omit<DateTimePickerProps, 'name'>>
-): MuiDateTimePickerProps {
-  const { isSubmitting } = useFormikContext();
-  const fieldProps = useField(name);
-  const [field, meta, helpers] = fieldProps;
-
-  const fieldError = meta.error;
-  const showError = meta.touched && !!fieldError;
+export function fieldToDateTimePicker({
+  disabled,
+  field,
+  form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  ...props
+}: DateTimePickerProps): MuiDateTimePickerProps {
+  const fieldError = getIn(errors, field.name);
+  const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
     ...props,
@@ -40,20 +25,21 @@ export function useFieldToDateTimePicker<Val = unknown>(
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      helpers.setValue(date);
+      setFieldValue(field.name, date);
     },
     onError(error) {
-      if (error !== fieldError) {
-        helpers.setError(String(error));
+      if (error !== fieldError && !(error == '' && !fieldError)) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // @ts-ignore - https://github.com/jaredpalmer/formik/pull/2286
+        setFieldError(field.name, error ? String(error) : undefined);
       }
     },
-    ...customize?.(fieldProps),
   };
 }
 
 export function DateTimePicker({ children, ...props }: DateTimePickerProps) {
   return (
-    <MuiDateTimePicker {...useFieldToDateTimePicker(props)}>
+    <MuiDateTimePicker {...fieldToDateTimePicker(props)}>
       {children}
     </MuiDateTimePicker>
   );

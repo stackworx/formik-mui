@@ -12,22 +12,28 @@ The following props are always excluded: `name, value, error`, and additional on
 ```jsx
 import { Checkbox } from 'formik-material-ui';
 
-<Checkbox name="checked" />;
+<Field component={Checkbox} name="checked" />;
 ```
 
 #### [Material-UI Documentation](https://material-ui.com/api/checkbox/)
 
 ## CheckboxWithLabel
 
-Convenience Wrapper that adds label to Checkbox, Supports all the same properties as Checkbox and accepts an Additional `Label` prop
+A convenience wrapper that adds label to Checkbox using FormControlLabel. Supports all the same properties as Checkbox and accepts an additional `Label` prop, which are props applied to FormControlLabel.
 
 #### Example
 
 ```jsx
 import { CheckboxWithLabel } from 'formik-material-ui';
 
-<CheckboxWithLabel name="checked" label="Checkbox" />;
+<Field
+  component={CheckboxWithLabel}
+  name="checked"
+  Label={{ label: 'Checkbox' }}
+/>;
 ```
+
+#### [Material-UI Documentation](https://material-ui.com/api/form-control-label/)
 
 ## InputBase
 
@@ -36,7 +42,7 @@ import { CheckboxWithLabel } from 'formik-material-ui';
 ```jsx
 import { InputBase } from 'formik-material-ui';
 
-<InputBase name="inputBase" />;
+<Field component={InputBase} name="inputBase" />;
 ```
 
 #### [Material-UI Documentation](https://material-ui.com/api/input-base/)
@@ -47,12 +53,12 @@ import { InputBase } from 'formik-material-ui';
 
 ```jsx
 import { FormControlLabel, Radio, LinearProgress } from '@material-ui/core';
-import { Formik } from 'formik';
+import { Formik, Field } from 'formik';
 import { RadioGroup } from 'formik-material-ui';
 
 <Formik {...otherProps}>
   {({ isSubmitting }) => (
-    <RadioGroup name="activity">
+    <Field component={RadioGroup} name="activity">
       <FormControlLabel
         value="painting"
         control={<Radio disabled={isSubmitting} />}
@@ -71,7 +77,7 @@ import { RadioGroup } from 'formik-material-ui';
         label="None"
         disabled
       />
-    </RadioGroup>
+    </Field>
   )}
 </Formik>;
 ```
@@ -83,6 +89,7 @@ import { RadioGroup } from 'formik-material-ui';
 #### Example
 
 ```jsx
+import { Field } from 'formik';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -91,7 +98,8 @@ import { Select } from 'formik-material-ui';
 
 <FormControl>
   <InputLabel htmlFor="age-simple">Age</InputLabel>
-  <Select
+  <Field
+    component={Select}
     name="age"
     inputProps={{
       id: 'age-simple',
@@ -100,7 +108,7 @@ import { Select } from 'formik-material-ui';
     <MenuItem value={10}>Ten</MenuItem>
     <MenuItem value={20}>Twenty</MenuItem>
     <MenuItem value={30}>Thirty</MenuItem>
-  </Select>
+  </Field>
 </FormControl>;
 ```
 
@@ -113,7 +121,7 @@ import { Select } from 'formik-material-ui';
 ```jsx
 import { SimpleFileUpload } from 'formik-material-ui';
 
-<SimpleFileUpload name="file" label="Simple File Upload" />;
+<Field component={SimpleFileUpload} name="file" label="Simple File Upload" />;
 ```
 
 #### API
@@ -124,7 +132,7 @@ interface SimpleFileUploadProps {
   label: string; // Field Label
   disabled?: boolean;
   // Customize the Input Component
-  InputProps?: Omit<InputProps, 'name' | 'type' | 'onChange'>;
+  InputProps?: Omit<InputProps, 'name' | 'type' | 'onChange' | 'label'>;
   // Customize the Input Label Component
   InputLabelProps?: InputLabelProps;
 }
@@ -135,10 +143,10 @@ interface SimpleFileUploadProps {
 ```jsx
 import { Switch } from 'formik-material-ui';
 
-<Switch name="switch" />;
+<Field component={Switch} name="switch" />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/select/)
+#### [Material-UI Documentation](https://material-ui.com/api/switch/)
 
 ## TextField
 
@@ -147,7 +155,8 @@ import { Switch } from 'formik-material-ui';
 ```jsx
 import { TextField } from 'formik-material-ui';
 
-<TextField
+<Field
+  component={TextField}
   label="Outlined"
   name="outlined"
   variant="outlined"
