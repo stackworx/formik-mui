@@ -7,7 +7,7 @@ import { FieldProps, getIn } from 'formik';
 
 export interface KeyboardDatePickerProps
   extends FieldProps,
-    Omit<MuiKeyboardDatePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
+    Omit<MuiKeyboardDatePickerProps, 'name' | 'value' | 'error'> {}
 
 export function fieldToKeyboardDatePicker({
   disabled,
@@ -25,7 +25,7 @@ export function fieldToKeyboardDatePicker({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(field.name, date);
+      props.onChange ? props.onChange(date) : setFieldValue(field.name, date);
     },
     onError(error) {
       if (error !== fieldError && !(error == '' && !fieldError)) {
