@@ -22,7 +22,7 @@ export function fieldToTextField({
     ...props,
     ...field,
     onChange(e) {
-      if (touchOnChange) {
+      if (touchOnChange && !touched) {
         setTouched({ [field.name]: true });
       }
       const onChange = props.onChange || field.onChange;
