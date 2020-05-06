@@ -18,8 +18,8 @@ export function fieldToTextField({
   const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
-    ...props,
     ...field,
+    ...props,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled ?? isSubmitting,
