@@ -4,6 +4,7 @@ import {
   KeyboardDateTimePickerProps as MuiKeyboardDateTimePickerProps,
 } from '@material-ui/pickers';
 import { FieldProps, getIn } from 'formik';
+import { createErrorHandler } from './errorHandler';
 
 export interface KeyboardDateTimePickerProps
   extends FieldProps,
@@ -30,13 +31,7 @@ export function fieldToKeyboardDateTimePicker({
     onChange(date) {
       setFieldValue(field.name, date);
     },
-    onError(error) {
-      if (error !== fieldError && !(error == '' && !fieldError)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-        // @ts-ignore - https://github.com/jaredpalmer/formik/pull/2286
-        setFieldError(field.name, error ? String(error) : undefined);
-      }
-    },
+    onError: createErrorHandler(fieldError, field.name, setFieldError)
   };
 }
 
