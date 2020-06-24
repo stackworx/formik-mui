@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { subDays } from 'date-fns';
 import Button from '@material-ui/core/Button';
 import { Formik, Form, Field } from 'formik';
 import { LinearProgress } from '@material-ui/core';
@@ -17,6 +18,10 @@ interface Values {
 
 const schema = yup.object().shape({
   date: yup.date().required(),
+  futureDate: yup
+    .date()
+    .required()
+    .min(subDays(new Date(), 1)),
 });
 
 export default () => (
@@ -47,6 +52,13 @@ export default () => (
             component={KeyboardDatePicker}
             label="Keyboard date picker"
             name="date"
+            format="MM/dd/yyyy"
+          />
+          <br />
+          <Field
+            component={KeyboardDatePicker}
+            label="Keyboard date picker"
+            name="futureDate"
             format="MM/dd/yyyy"
           />
           <br />

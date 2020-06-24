@@ -28,7 +28,7 @@ export function fieldToDatePicker({
     onChange(date) {
       props.onChange ? props.onChange(date) : setFieldValue(field.name, date);
     },
-    onError: createErrorHandler(fieldError, field.name, setFieldError)
+    onError: createErrorHandler(fieldError, field.name, setFieldError),
   };
 }
 
