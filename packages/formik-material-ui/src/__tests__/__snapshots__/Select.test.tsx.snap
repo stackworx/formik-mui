@@ -12,7 +12,7 @@ exports[`Select Renders Correctly 1`] = `
   >
     <div
       aria-haspopup="listbox"
-      aria-labelledby=" mui-component-select-test"
+      aria-labelledby="mui-component-select-test"
       className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
       id="mui-component-select-test"
       onBlur={[Function]}
@@ -31,16 +31,18 @@ exports[`Select Renders Correctly 1`] = `
       />
     </div>
     <input
+      aria-hidden={true}
+      className="MuiSelect-nativeInput"
       name="test"
       onAnimationStart={[Function]}
-      type="hidden"
+      onChange={[Function]}
+      tabIndex={-1}
       value=""
     />
     <svg
-      aria-hidden="true"
+      aria-hidden={true}
       className="MuiSvgIcon-root MuiSelect-icon"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path

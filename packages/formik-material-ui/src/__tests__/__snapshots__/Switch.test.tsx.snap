@@ -11,7 +11,7 @@ exports[`Switch Renders Correctly 1`] = `
   >
     <span
       aria-disabled={false}
-      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-13 MuiSwitch-switchBase MuiSwitch-colorSecondary"
+      className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary"
       onBlur={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
@@ -30,7 +30,7 @@ exports[`Switch Renders Correctly 1`] = `
       >
         <input
           checked={false}
-          className="PrivateSwitchBase-input-16 MuiSwitch-input"
+          className="PrivateSwitchBase-input-4 MuiSwitch-input"
           disabled={false}
           name="test"
           onChange={[Function]}

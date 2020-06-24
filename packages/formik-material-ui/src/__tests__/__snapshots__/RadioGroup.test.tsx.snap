@@ -16,7 +16,7 @@ exports[`Radio Group Renders Correctly 1`] = `
     >
       <span
         aria-disabled={false}
-        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
         onBlur={[Function]}
         onDragLeave={[Function]}
         onFocus={[Function]}
@@ -35,21 +35,19 @@ exports[`Radio Group Renders Correctly 1`] = `
         >
           <input
             checked={false}
-            className="PrivateSwitchBase-input-17"
-            disabled={false}
+            className="PrivateSwitchBase-input-4"
             name="radio-group"
             onChange={[Function]}
             type="radio"
             value="painting"
           />
           <div
-            className="PrivateRadioButtonIcon-root-30"
+            className="PrivateRadioButtonIcon-root-5"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -57,10 +55,9 @@ exports[`Radio Group Renders Correctly 1`] = `
               />
             </svg>
             <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-31"
+              aria-hidden={true}
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-6"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -81,7 +78,7 @@ exports[`Radio Group Renders Correctly 1`] = `
     >
       <span
         aria-disabled={false}
-        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary"
         onBlur={[Function]}
         onDragLeave={[Function]}
         onFocus={[Function]}
@@ -100,21 +97,19 @@ exports[`Radio Group Renders Correctly 1`] = `
         >
           <input
             checked={false}
-            className="PrivateSwitchBase-input-17"
-            disabled={false}
+            className="PrivateSwitchBase-input-4"
             name="radio-group"
             onChange={[Function]}
             type="radio"
             value="drawing"
           />
           <div
-            className="PrivateRadioButtonIcon-root-30"
+            className="PrivateRadioButtonIcon-root-5"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -122,10 +117,9 @@ exports[`Radio Group Renders Correctly 1`] = `
               />
             </svg>
             <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-31"
+              aria-hidden={true}
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-6"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -146,7 +140,7 @@ exports[`Radio Group Renders Correctly 1`] = `
     >
       <span
         aria-disabled={true}
-        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-14 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-disabled-16 Mui-disabled MuiIconButton-colorSecondary Mui-disabled Mui-disabled"
+        className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-disabled-3 Mui-disabled MuiIconButton-colorSecondary Mui-disabled Mui-disabled"
         onBlur={[Function]}
         onDragLeave={[Function]}
         onFocus={[Function]}
@@ -165,7 +159,7 @@ exports[`Radio Group Renders Correctly 1`] = `
         >
           <input
             checked={false}
-            className="PrivateSwitchBase-input-17"
+            className="PrivateSwitchBase-input-4"
             disabled={true}
             name="radio-group"
             onChange={[Function]}
@@ -173,13 +167,12 @@ exports[`Radio Group Renders Correctly 1`] = `
             value="none"
           />
           <div
-            className="PrivateRadioButtonIcon-root-30"
+            className="PrivateRadioButtonIcon-root-5"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -187,10 +180,9 @@ exports[`Radio Group Renders Correctly 1`] = `
               />
             </svg>
             <svg
-              aria-hidden="true"
-              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-31"
+              aria-hidden={true}
+              className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-6"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path

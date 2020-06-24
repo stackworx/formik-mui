@@ -32,7 +32,7 @@ exports[`KeyboardTimePicker Renders Correctly 1`] = `
         onFocus={[Function]}
         required={false}
         type="text"
-        value="12:00 AM"
+        value="02:00 AM"
       />
       <div
         className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
@@ -59,10 +59,9 @@ exports[`KeyboardTimePicker Renders Correctly 1`] = `
             className="MuiIconButton-label"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden={true}
               className="MuiSvgIcon-root"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path

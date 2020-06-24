@@ -34,28 +34,14 @@ exports[`Outlined TextField 1`] = `
       />
       <fieldset
         aria-hidden={true}
-        className="PrivateNotchedOutline-root-75 MuiOutlinedInput-notchedOutline"
-        style={
-          Object {
-            "paddingLeft": 8,
-          }
-        }
+        className="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="PrivateNotchedOutline-legend-76"
-          style={
-            Object {
-              "width": 0.01,
-            }
-          }
+          className="PrivateNotchedOutline-legendLabelled-3"
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "&#8203;",
-              }
-            }
-          />
+          <span>
+            Text
+          </span>
         </legend>
       </fieldset>
     </div>
@@ -97,28 +83,14 @@ exports[`Override TextField Theme Variant 1`] = `
       />
       <fieldset
         aria-hidden={true}
-        className="PrivateNotchedOutline-root-137 MuiOutlinedInput-notchedOutline"
-        style={
-          Object {
-            "paddingLeft": 8,
-          }
-        }
+        className="PrivateNotchedOutline-root-5 MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="PrivateNotchedOutline-legend-138"
-          style={
-            Object {
-              "width": 0.01,
-            }
-          }
+          className="PrivateNotchedOutline-legendLabelled-7"
         >
-          <span
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "&#8203;",
-              }
-            }
-          />
+          <span>
+            Text
+          </span>
         </legend>
       </fieldset>
     </div>
