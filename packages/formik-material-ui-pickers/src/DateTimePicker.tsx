@@ -7,7 +7,7 @@ import { FieldProps, getIn } from 'formik';
 
 export interface DateTimePickerProps
   extends FieldProps,
-    Omit<MuiDateTimePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
+    Omit<MuiDateTimePickerProps, 'name' | 'value' | 'error'> {}
 
 export function fieldToDateTimePicker({
   disabled,
@@ -25,7 +25,7 @@ export function fieldToDateTimePicker({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(field.name, date);
+      props.onChange ? props.onChange(date) : setFieldValue(field.name, date);
     },
     onError(error) {
       if (error !== fieldError && !(error == '' && !fieldError)) {

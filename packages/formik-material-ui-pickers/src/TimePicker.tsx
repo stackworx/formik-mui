@@ -7,7 +7,7 @@ import { FieldProps, getIn } from 'formik';
 
 export interface TimePickerProps
   extends FieldProps,
-    Omit<MuiTimePickerProps, 'name' | 'value' | 'error' | 'onChange'> {}
+    Omit<MuiTimePickerProps, 'name' | 'value' | 'error'> {}
 
 export function fieldToTimePicker({
   disabled,
@@ -25,7 +25,7 @@ export function fieldToTimePicker({
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled != undefined ? disabled : isSubmitting,
     onChange(date) {
-      setFieldValue(field.name, date);
+      props.onChange ? props.onChange(date) : setFieldValue(field.name, date);
     },
     onError(error) {
       if (error !== fieldError && !(error == '' && !fieldError)) {
