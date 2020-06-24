@@ -36,7 +36,7 @@ exports[`TimePicker Renders Correctly 1`] = `
         readOnly={true}
         required={false}
         type="text"
-        value="02:00 AM"
+        value="12:00 AM"
       />
     </div>
   </div>
