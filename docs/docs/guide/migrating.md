@@ -22,14 +22,19 @@ import { Checkbox, Switch } from 'formik-material-ui';
 ```
 
 - Rename fieldToTextField to useFieldToTextField
-- Add `import {useField} from 'formik'` if you need access to field helpers
-- Add `import {useFormik} from 'formik'` if you need access to form helpers
 
 #### After
 
 ```jsx
 import { Field } from 'formik';
 import { Checkbox, Switch } from 'formik-material-ui';
+
+import {
+  // Field Helpers
+  useField,
+  // Form Helpers
+  useFormik,
+} from 'formik';
 
 <Field name="checkbox" type="checkbox" component={Checkbox} />;
 <Field name="switch" type="checkbox" component={Switch} />;
