@@ -7,6 +7,7 @@ import { render, fireEvent } from './utils';
 import { Checkbox } from '../Checkbox';
 
 test('renders', async () => {
+  // @ts-ignore
   const onSubmit = jest.fn();
   const { asFragment } = render(
     <Field component={Checkbox} name="checked" type="checkbox" />,

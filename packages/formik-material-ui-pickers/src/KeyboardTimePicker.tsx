@@ -28,7 +28,7 @@ export function fieldToKeyboardTimePicker({
     onChange(date) {
       setFieldValue(field.name, date);
     },
-    onError: createErrorHandler(fieldError, field.name, setFieldError)
+    onError: createErrorHandler(fieldError, field.name, setFieldError),
   };
 }
 
