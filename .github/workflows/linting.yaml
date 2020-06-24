@@ -1,4 +1,4 @@
-name: Build formik-material-ui
+name: Linting
 on: [push]
 
 jobs:
@@ -18,10 +18,6 @@ jobs:
       - name: build
         run: |
           yarn install --frozen-lockfile
-          yarn typecheck
-          yarn lint
-          yarn test
-          yarn build
-        working-directory: packages/formik-material-ui-pickers
+          yarn prettier --list-different
         env:
           CI: true

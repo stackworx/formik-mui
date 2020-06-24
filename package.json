@@ -69,6 +69,8 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook --quiet"
+    "build-storybook": "build-storybook --quiet",
+    "prettier": "prettier --write \"{packages,stories}/**/*.{js,tsx,ts}\"",
+    "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\""
   }
 }
