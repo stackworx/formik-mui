@@ -6,7 +6,8 @@
   "peerDependencies": {
     "@material-ui/core": ">=4.0.0",
     "formik": ">=2.0.0",
-    "react": "^16.8.0"
+    "react": "^16.8.0",
+    "tiny-warning": ">=1.0.2"
   },
   "keywords": [
     "react",
