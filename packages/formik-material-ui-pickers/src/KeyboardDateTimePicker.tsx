@@ -7,10 +7,7 @@ import { FieldProps, getIn } from 'formik';
 
 export interface KeyboardDateTimePickerProps
   extends FieldProps,
-    Omit<
-      MuiKeyboardDateTimePickerProps,
-      'name' | 'value' | 'error'
-    > {}
+    Omit<MuiKeyboardDateTimePickerProps, 'name' | 'value' | 'error'> {}
 
 export function fieldToKeyboardDateTimePicker({
   disabled,
