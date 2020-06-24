@@ -6,33 +6,31 @@ exports[`SimpleFileUpload Renders Correctly 1`] = `
   onReset={[Function]}
   onSubmit={[Function]}
 >
-  <div>
-    <div
-      className="MuiFormControl-root"
+  <div
+    className="MuiFormControl-root"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+      data-shrink={true}
     >
-      <label
-        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
-        data-shrink={true}
-      >
-        Select
-      </label>
-      <div
-        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-        onClick={[Function]}
-      >
-        <input
-          aria-invalid={false}
-          className="MuiInputBase-input MuiInput-input"
-          disabled={false}
-          name="test"
-          onAnimationStart={[Function]}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          required={false}
-          type="file"
-        />
-      </div>
+      Select
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        name="test"
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        type="file"
+      />
     </div>
   </div>
 </form>
