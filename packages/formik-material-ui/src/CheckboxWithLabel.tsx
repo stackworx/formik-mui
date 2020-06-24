@@ -14,7 +14,7 @@ import { CheckboxProps, fieldToCheckbox } from './Checkbox';
 export interface CheckboxWithLabelProps extends FieldProps, CheckboxProps {
   Label: Omit<
     MuiFormControlLabelProps,
-    'checked' | 'name' | 'onChange' | 'value' | 'control'
+    'checked' | 'name' | 'value' | 'control'
   >;
 }
 

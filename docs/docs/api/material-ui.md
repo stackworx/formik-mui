@@ -132,7 +132,7 @@ interface SimpleFileUploadProps {
   label: string; // Field Label
   disabled?: boolean;
   // Customize the Input Component
-  InputProps?: Omit<InputProps, 'name' | 'type' | 'onChange' | 'label'>;
+  InputProps?: Omit<InputProps, 'name' | 'type' | 'label'>;
   // Customize the Input Label Component
   InputLabelProps?: InputLabelProps;
 }
