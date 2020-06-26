@@ -131,7 +131,7 @@ const top100Films: Movie[] = [
   { title: 'Monty Python and the Holy Grail', year: 1975 },
 ];
 
-const groupedOptions = top100Films.map(option => {
+const groupedOptions = top100Films.map((option) => {
   const firstLetter = option.title[0].toUpperCase();
   return {
     firstLetter: /[0-9]/.test(firstLetter) ? '0-9' : firstLetter,

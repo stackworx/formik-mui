@@ -38,7 +38,7 @@ export default () => (
   <Wrapper title="Kitchen Sink">
     <Formik<Values>
       initialValues={initialValues}
-      validate={values => {
+      validate={(values) => {
         const errors: Partial<Values> = {};
         if (!values.email) {
           errors.email = 'Required';

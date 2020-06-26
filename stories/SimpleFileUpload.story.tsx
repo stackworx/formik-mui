@@ -18,7 +18,7 @@ const schema = Yup.object().shape({
     .test(
       'file',
       'File must be less than 10MB',
-      value => value == null || value.size < MAX_FILE_SIZE
+      (value) => value == null || value.size < MAX_FILE_SIZE
     ),
 });
 

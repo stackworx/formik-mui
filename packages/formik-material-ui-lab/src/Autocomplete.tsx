@@ -50,7 +50,6 @@ export function fieldToAutocomplete<
         `value for ${field.name} is not an array, this can caused unexpected behaviour`
       );
     }
-    
   }
 
   const {
@@ -68,10 +67,12 @@ export function fieldToAutocomplete<
         },
     onChange: onChange
       ? onChange
-      : (_event: React.ChangeEvent<{}>,
-        value: Value<T, Multiple, DisableClearable, FreeSolo>,
-        _reason: AutocompleteChangeReason,
-        _details?: AutocompleteChangeDetails<T>) => {
+      : (
+          _event: React.ChangeEvent<{}>,
+          value: Value<T, Multiple, DisableClearable, FreeSolo>,
+          _reason: AutocompleteChangeReason,
+          _details?: AutocompleteChangeDetails<T>
+        ) => {
           form.setFieldValue(field.name, value);
         },
     loading: form.isSubmitting,

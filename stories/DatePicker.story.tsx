@@ -18,10 +18,7 @@ interface Values {
 
 const schema = yup.object().shape({
   date: yup.date().required(),
-  futureDate: yup
-    .date()
-    .required()
-    .min(subDays(new Date(), 1)),
+  futureDate: yup.date().required().min(subDays(new Date(), 1)),
 });
 
 export default () => (

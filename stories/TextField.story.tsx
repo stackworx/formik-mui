@@ -32,10 +32,7 @@ interface Values {
 
 const schema = yup.object().shape({
   user: yup.object().shape({
-    email: yup
-      .string()
-      .email()
-      .required(),
+    email: yup.string().email().required(),
   }),
   password: yup.string().required(),
   select: yup.mixed().required(),
@@ -79,7 +76,7 @@ const UpperCasingTextField = (props: TextFieldProps) => {
   return (
     <MuiTextField
       {...fieldToTextField(props)}
-      onChange={event => {
+      onChange={(event) => {
         const { value } = event.target;
 
         const { form, field } = props;
@@ -160,7 +157,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             helperText="Please select Range"
             margin="normal"
           >
-            {ranges.map(option => (
+            {ranges.map((option) => (
               <MenuItem key={option.value} value={option.value}>
                 {option.label}
               </MenuItem>
