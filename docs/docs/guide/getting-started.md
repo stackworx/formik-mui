@@ -9,6 +9,12 @@ title: Getting Started
 yarn add formik formik-material-ui @material-ui/core
 ```
 
+### Material-UI Lab (Optional)
+
+```
+yarn add formik-material-ui-lab @material-ui/lab
+```
+
 ### Material-UI Pickers (Optional)
 
 ```
@@ -86,6 +92,120 @@ function App() {
 ```
 
 Note: that the `Field` wrapper is not used, for more details on why see the [FAQ](guide/faq.md).
+
+## Configuring Components
+
+Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
+
+```jsx
+import { TextField } from 'formik-material-ui';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+
+<TextField
+  name="customized"
+  label="Outlined"
+  variant="outlined"
+  InputProps={{
+    startAdornment: (
+      <InputAdornment position="start">
+        <AccountCircle />
+      </InputAdornment>
+    ),
+  }}
+/>;
+```
+
+## Quick Start (Lab)
+
+See [Material-UI Lab Info](https://material-ui.com/components/about-the-lab/) for more information
+
+```jsx {4,31,52}
+import * as React from 'react';
+import { Formik, Form, Field } from 'formik';
+import { Button, LinearProgress } from '@material-ui/core';
+import { Autocomplete, ToggleButtonGroup } from 'formik-material-ui-lab';
+import Box from '@material-ui/core/Box';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
+import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
+import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
+import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
+
+function App() {
+  return (
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <Formik
+        initialValues={{
+          toggle: null,
+          autocomplete: null,
+        }}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            setSubmitting(false);
+            alert(JSON.stringify(values, null, 2));
+          }, 500);
+        }}
+      >
+        {({ submitForm, isSubmitting, errors }) => (
+          <Form>
+            <Box margin={1}>
+              <Field
+                component={ToggleButtonGroup}
+                name="toggle"
+                type="checkbox"
+              >
+                <ToggleButton value="left" aria-label="left aligned">
+                  <FormatAlignLeftIcon />
+                </ToggleButton>
+                <ToggleButton value="center" aria-label="centered">
+                  <FormatAlignCenterIcon />
+                </ToggleButton>
+                <ToggleButton value="right" aria-label="right aligned">
+                  <FormatAlignRightIcon />
+                </ToggleButton>
+                <ToggleButton value="justify" aria-label="justified" disabled>
+                  <FormatAlignJustifyIcon />
+                </ToggleButton>
+              </Field>
+            </Box>
+            <Box margin={1}>
+              <Field
+                name="autocomplete"
+                component={Autocomplete}
+                options={top100Films}
+                getOptionLabel={(option: Movie) => option.title}
+                style={{ width: 300 }}
+                renderInput={(params: AutocompleteRenderInputParams) => (
+                  <TextField
+                    {...params}
+                    error={touched['autocomplete'] && !!errors['autocomplete']}
+                    helperText={
+                      touched['autocomplete'] && errors['autocomplete']
+                    }
+                    label="Autocomplete"
+                    variant="outlined"
+                  />
+                )}
+              />
+            </Box>
+            <Box margin={1}>
+              <Button
+                variant="contained"
+                color="primary"
+                disabled={isSubmitting}
+                onClick={submitForm}
+              >
+                Submit
+              </Button>
+            </Box>
+          </Form>
+        )}
+      </Formik>
+    </MuiPickersUtilsProvider>
+  );
+}
+```
 
 ## Quick Start (Picker)
 
