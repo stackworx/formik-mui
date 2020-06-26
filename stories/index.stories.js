@@ -13,6 +13,8 @@ import RadioGroupStory from './RadioGroup.story.tsx';
 import DatePickerStory from './DatePicker.story.tsx';
 import TimePickerStory from './TimePicker.story.tsx';
 import DateTimePickerStory from './DateTimePicker.story.tsx';
+import ToggleButtonGroupStory from './lab/ToggleButtonGroup.story';
+import AutocompleteStory from './lab/Autocomplete.story';
 
 storiesOf('Formik', module)
   .add('Text Field', () => <TextFieldStory />)
@@ -22,6 +24,8 @@ storiesOf('Formik', module)
   .add('Checkbox', () => <CheckboxStory />)
   .add('Switches', () => <SwitchesStory />)
   .add('Simple File Upload', () => <SimpleFileUploadStory />)
+  .add('Toggle Button Group', () => <ToggleButtonGroupStory />)
+  .add('Autocomplete', () => <AutocompleteStory />)
   .add('Kitchen Sink', () => <KitchenSinkStory />)
   .add('Date Picker', () => <DatePickerStory />)
   .add('Time Picker', () => <TimePickerStory />)

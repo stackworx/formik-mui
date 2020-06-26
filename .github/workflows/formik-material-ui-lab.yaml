@@ -1,0 +1,27 @@
+name: Build formik-material-ui-lab
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: build
+        run: |
+          yarn install --frozen-lockfile
+          yarn typecheck
+          yarn lint
+          yarn test
+          yarn build
+        working-directory: packages/formik-material-ui-lab
+        env:
+          CI: true
