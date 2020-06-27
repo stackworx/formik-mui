@@ -1,0 +1,13 @@
+name: Release
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Semantic Release
+        uses: go-semantic-release/action@v1
+        with:
+          dry: true
+          allow-initial-development-versions: true
