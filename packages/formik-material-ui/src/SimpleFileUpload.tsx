@@ -35,7 +35,7 @@ export const SimpleFileUpload = ({
         error={!!error}
         inputProps={{
           type: 'file',
-          disabled: disabled || isSubmitting,
+          disabled: disabled ?? isSubmitting,
           name: field.name,
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onChange: (event: React.ChangeEvent<any>) => {

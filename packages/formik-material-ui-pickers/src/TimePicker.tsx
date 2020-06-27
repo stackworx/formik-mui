@@ -23,7 +23,7 @@ export function fieldToTimePicker({
     ...field,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
     onChange(date) {
       props.onChange ? props.onChange(date) : setFieldValue(field.name, date);
     },
