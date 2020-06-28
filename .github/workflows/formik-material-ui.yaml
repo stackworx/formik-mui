@@ -1,4 +1,5 @@
 name: Build formik-material-ui-pickers
+on:
   push:
     branches:
       - master

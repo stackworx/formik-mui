@@ -1,4 +1,5 @@
 name: Linting
+on:
   push:
     branches:
       - master

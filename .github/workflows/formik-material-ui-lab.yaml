@@ -1,4 +1,5 @@
 name: Build formik-material-ui-lab
+on:
   push:
     branches:
       - master
