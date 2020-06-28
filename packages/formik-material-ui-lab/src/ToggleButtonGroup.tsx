@@ -12,7 +12,7 @@ export interface ToggleButtonGroupProps
   type?: string;
 }
 
-export function fieldToCheckbox({
+export function fieldToToggleButtonGroup({
   field,
   type,
   onChange,
@@ -53,7 +53,7 @@ export function fieldToCheckbox({
 }
 
 export function ToggleButtonGroup(props: ToggleButtonGroupProps) {
-  return <MuiToggleButtonGroup {...fieldToCheckbox(props)} />;
+  return <MuiToggleButtonGroup {...fieldToToggleButtonGroup(props)} />;
 }
 
 ToggleButtonGroup.displayName = 'FormikMaterialUIToggleButtonGroup';
