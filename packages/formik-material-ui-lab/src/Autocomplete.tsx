@@ -32,7 +32,7 @@ export function fieldToAutocomplete<
 >({
   disabled,
   field,
-  form,
+  form: { isSubmitting, setFieldValue },
   type,
   onChange,
   onBlur,
@@ -73,9 +73,10 @@ export function fieldToAutocomplete<
           _reason: AutocompleteChangeReason,
           _details?: AutocompleteChangeDetails<T>
         ) => {
-          form.setFieldValue(field.name, value);
+          setFieldValue(field.name, value);
         },
-    loading: form.isSubmitting,
+    disabled: disabled ?? isSubmitting,
+    loading: isSubmitting,
     ...fieldSubselection,
     ...props,
   };
