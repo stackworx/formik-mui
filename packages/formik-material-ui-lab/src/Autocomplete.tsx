@@ -75,7 +75,7 @@ export function fieldToAutocomplete<
         ) => {
           setFieldValue(field.name, value);
         },
-    disabled: disabled || isSubmitting,
+    disabled: disabled ?? isSubmitting,
     loading: isSubmitting,
     ...fieldSubselection,
     ...props,
