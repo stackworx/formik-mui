@@ -1,5 +1,10 @@
 name: Linting
-on: [push]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
   build:

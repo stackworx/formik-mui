@@ -1,5 +1,10 @@
 name: Build formik-material-ui
-on: [push]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
   build:
