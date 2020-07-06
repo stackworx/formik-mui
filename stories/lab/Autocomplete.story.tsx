@@ -21,7 +21,8 @@ interface Movie {
 
 const schema = Yup.object().shape({
   single: Yup.mixed().required('Required'),
-  multiple: Yup.array().min(3),
+  freeSolo: Yup.mixed().required('Required'),
+  multiple: Yup.array().min(2),
 });
 
 const top100Films: Movie[] = [
@@ -145,6 +146,7 @@ export default () => (
       validationSchema={schema}
       initialValues={{
         single: null,
+        freeSolo: null,
         grouped: null,
         multiple: [],
       }}
@@ -154,7 +156,7 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values, errors }) => (
+      render={({ submitForm, values, errors, touched }) => (
         <Form>
           <Box margin={1}>
             <Field
@@ -166,9 +168,29 @@ export default () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
-                  error={!!errors['single']}
-                  helperText={errors['single']}
+                  error={touched['single'] && !!errors['single']}
+                  helperText={touched['single'] && errors['single']}
                   label="Single"
+                  variant="outlined"
+                />
+              )}
+            />
+          </Box>
+          <Box margin={1}>
+            <Field
+              name="freeSolo"
+              component={Autocomplete}
+              freeSolo
+              disableClearable
+              options={top100Films}
+              getOptionLabel={(option: Movie) => option.title}
+              style={{ width: 300 }}
+              renderInput={(params: AutocompleteRenderInputParams) => (
+                <TextField
+                  {...params}
+                  error={touched['single'] && !!errors['freeSolo']}
+                  helperText={touched['single'] && errors['freeSolo']}
+                  label="Free Solo"
                   variant="outlined"
                 />
               )}
@@ -185,8 +207,8 @@ export default () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
-                  error={!!errors['multiple']}
-                  helperText={errors['multiple']}
+                  error={touched['single'] && !!errors['multiple']}
+                  helperText={touched['single'] && errors['multiple']}
                   label="Multiple"
                   variant="outlined"
                 />
@@ -206,8 +228,8 @@ export default () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
-                  error={!!errors['grouped']}
-                  helperText={errors['grouped']}
+                  error={touched['single'] && !!errors['grouped']}
+                  helperText={touched['single'] && errors['grouped']}
                   label="Grouped"
                   variant="outlined"
                 />
