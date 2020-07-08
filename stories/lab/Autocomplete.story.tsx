@@ -145,10 +145,10 @@ export default () => (
     <Formik
       validationSchema={schema}
       initialValues={{
-        single: null,
-        freeSolo: null,
+        single: top100Films[0],
+        freeSolo: 'free!',
         grouped: null,
-        multiple: [],
+        multiple: [top100Films[0]],
       }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -181,9 +181,8 @@ export default () => (
               name="freeSolo"
               component={Autocomplete}
               freeSolo
-              disableClearable
-              options={top100Films}
-              getOptionLabel={(option: Movie) => option.title}
+              // Free solo expects text options
+              options={top100Films.map((option) => option.title)}
               style={{ width: 300 }}
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
