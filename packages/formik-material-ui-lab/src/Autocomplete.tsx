@@ -59,8 +59,6 @@ export function fieldToAutocomplete<
     onChange: _onChange,
     onBlur: _onBlur,
     multiple: _multiple,
-    // Remove value to make Autocomplete uncontrolled
-    value: _value,
     ...fieldSubselection
   } = field;
 
