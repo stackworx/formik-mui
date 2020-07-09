@@ -132,7 +132,6 @@ import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
 import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
 import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
 
-
 function App() {
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
