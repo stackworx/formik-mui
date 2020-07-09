@@ -184,11 +184,7 @@ function App() {
                     helperText={
                       touched['autocomplete'] && errors['autocomplete']
                     }
-                    label="
-                    
-                    
-                    
-                    "
+                    label="Autocomplete"
                     variant="outlined"
                   />
                 )}
