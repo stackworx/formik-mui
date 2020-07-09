@@ -123,7 +123,7 @@ See [Material-UI Lab Info](https://material-ui.com/components/about-the-lab/) fo
 ```jsx {4,31,52}
 import * as React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
+import { Button, LinearProgress, TextField } from '@material-ui/core';
 import { Autocomplete, ToggleButtonGroup } from 'formik-material-ui-lab';
 import Box from '@material-ui/core/Box';
 import ToggleButton from '@material-ui/lab/ToggleButton';
@@ -131,7 +131,7 @@ import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
 import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
 import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
-import TextField from '@material-ui/core/TextField';
+
 
 function App() {
   return (
@@ -184,7 +184,11 @@ function App() {
                     helperText={
                       touched['autocomplete'] && errors['autocomplete']
                     }
-                    label="Autocomplete"
+                    label="
+                    
+                    
+                    
+                    "
                     variant="outlined"
                   />
                 )}
