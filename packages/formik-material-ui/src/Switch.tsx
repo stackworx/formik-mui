@@ -22,9 +22,10 @@ export interface SwitchProps
 
 export function fieldToSwitch({
   disabled,
-  field,
+  field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting },
   type,
+  onBlur,
   ...props
 }: SwitchProps): MuiSwitchProps {
   if (process.env.NODE_ENV !== 'production') {
@@ -36,8 +37,13 @@ export function fieldToSwitch({
 
   return {
     disabled: disabled ?? isSubmitting,
-    ...props,
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
     ...field,
+    ...props,
   };
 }
 

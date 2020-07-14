@@ -13,7 +13,7 @@ export interface ToggleButtonGroupProps
 }
 
 export function fieldToToggleButtonGroup({
-  field,
+  field: { onChange: _onChange, onBlur: fieldOnBlur, ...field },
   type,
   onChange,
   onBlur,
@@ -34,20 +34,18 @@ export function fieldToToggleButtonGroup({
     }
   }
 
-  const { onChange: _onChange, onBlur: _onBlur, ...fieldSubselection } = field;
-
   return {
-    onBlur: onBlur
-      ? onBlur
-      : (event: React.FocusEvent<unknown>) => {
-          field.onBlur(event ?? field.name);
-        },
-    onChange: onChange
-      ? onChange
-      : (_event: React.MouseEvent<HTMLElement>, newValue: unknown) => {
-          form.setFieldValue(field.name, newValue);
-        },
-    ...fieldSubselection,
+    onBlur:
+      onBlur ??
+      function () {
+        fieldOnBlur(field.name);
+      },
+    onChange:
+      onChange ??
+      function (_event, newValue) {
+        form.setFieldValue(field.name, newValue);
+      },
+    ...field,
     ...props,
   };
 }

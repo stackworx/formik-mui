@@ -10,14 +10,20 @@ export interface InputBaseProps
 
 export function fieldToInputBase({
   disabled,
-  field,
+  field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting },
+  onBlur,
   ...props
 }: InputBaseProps): MuiInputBaseProps {
   return {
     disabled: disabled ?? isSubmitting,
-    ...props,
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
     ...field,
+    ...props,
   };
 }
 

@@ -1,13 +1,9 @@
 import * as React from 'react';
 import MuiAutocomplete, {
   AutocompleteProps as MuiAutocompleteProps,
-  AutocompleteChangeReason,
-  AutocompleteChangeDetails,
-  AutocompleteInputChangeReason,
 } from '@material-ui/lab/Autocomplete';
 import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
-import type { Value } from '@material-ui/lab/useAutocomplete';
 
 export { AutocompleteRenderInputParams } from '@material-ui/lab/Autocomplete';
 
@@ -64,31 +60,22 @@ export function fieldToAutocomplete<
 
   return {
     freeSolo,
-    onBlur: onBlur
-      ? onBlur
-      : (event: React.FocusEvent<unknown>) => {
-          field.onBlur(event ?? field.name);
-        },
+    onBlur:
+      onBlur ??
+      function (event) {
+        field.onBlur(event ?? field.name);
+      },
     onInputChange: onInputChange
       ? onInputChange
       : freeSolo
-      ? (
-          _event: React.ChangeEvent<{}>,
-          value: string,
-          _reason: AutocompleteInputChangeReason
-        ) => {
+      ? function (_event, value) {
           setFieldValue(field.name, value);
         }
       : undefined,
     onChange: onChange
       ? onChange
       : !freeSolo
-      ? (
-          _event: React.ChangeEvent<{}>,
-          value: Value<T, Multiple, DisableClearable, FreeSolo>,
-          _reason: AutocompleteChangeReason,
-          _details?: AutocompleteChangeDetails<T>
-        ) => {
+      ? function (_event, value) {
           setFieldValue(field.name, value);
         }
       : undefined,
