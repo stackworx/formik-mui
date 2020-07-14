@@ -10,20 +10,26 @@ export interface TextFieldProps
 
 export function fieldToTextField({
   disabled,
-  field,
+  field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting, touched, errors },
+  onBlur,
   ...props
 }: TextFieldProps): MuiTextFieldProps {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
-    ...props,
-    ...field,
+    variant: props.variant,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
     disabled: disabled ?? isSubmitting,
-    variant: props.variant,
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
+    ...field,
+    ...props,
   };
 }
 

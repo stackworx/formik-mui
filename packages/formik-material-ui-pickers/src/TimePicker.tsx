@@ -4,6 +4,7 @@ import {
   TimePickerProps as MuiTimePickerProps,
 } from '@material-ui/pickers';
 import { FieldProps, getIn } from 'formik';
+import { createErrorHandler } from './errorHandler';
 
 export interface TimePickerProps
   extends FieldProps,
@@ -11,29 +12,34 @@ export interface TimePickerProps
 
 export function fieldToTimePicker({
   disabled,
-  field,
+  field: { onChange: _onChange, onBlur: fieldOnBlur, ...field },
   form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  onChange,
+  onBlur,
+  onError,
   ...props
 }: TimePickerProps): MuiTimePickerProps {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
-    ...props,
-    ...field,
     error: showError,
     helperText: showError ? fieldError : props.helperText,
-    disabled: disabled != undefined ? disabled : isSubmitting,
-    onChange(date) {
-      props.onChange ? props.onChange(date) : setFieldValue(field.name, date);
-    },
-    onError(error) {
-      if (error !== fieldError && !(error == '' && !fieldError)) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-        // @ts-ignore - https://github.com/jaredpalmer/formik/pull/2286
-        setFieldError(field.name, error ? String(error) : undefined);
-      }
-    },
+    disabled: disabled ?? isSubmitting,
+    onChange:
+      onChange ??
+      function (date) {
+        setFieldValue(field.name, date);
+      },
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
+    onError:
+      onError ?? createErrorHandler(fieldError, field.name, setFieldError),
+    ...field,
+    ...props,
   };
 }
 

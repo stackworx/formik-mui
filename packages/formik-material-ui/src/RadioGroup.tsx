@@ -9,14 +9,19 @@ export interface RadioGroupProps
     Omit<MuiRadioGroupProps, 'name' | 'value'> {}
 
 export function fieldToRadioGroup({
-  field,
-  // Exclude Form
+  field: { onBlur: fieldOnBlur, ...field },
   form,
+  onBlur,
   ...props
 }: RadioGroupProps): MuiRadioGroupProps {
   return {
-    ...props,
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
     ...field,
+    ...props,
   };
 }
 

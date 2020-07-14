@@ -10,14 +10,20 @@ export interface SelectProps
 
 export function fieldToSelect({
   disabled,
-  field,
+  field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting },
+  onBlur,
   ...props
 }: SelectProps): MuiSelectProps {
   return {
     disabled: disabled ?? isSubmitting,
-    ...props,
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
     ...field,
+    ...props,
   };
 }
 

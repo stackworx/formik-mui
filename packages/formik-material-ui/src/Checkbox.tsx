@@ -23,9 +23,10 @@ export interface CheckboxProps
 
 export function fieldToCheckbox({
   disabled,
-  field,
+  field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting },
   type,
+  onBlur,
   ...props
 }: CheckboxProps): MuiCheckboxProps {
   const indeterminate = !Array.isArray(field.value) && field.value == null;
@@ -40,8 +41,13 @@ export function fieldToCheckbox({
   return {
     disabled: disabled ?? isSubmitting,
     indeterminate,
-    ...props,
+    onBlur:
+      onBlur ??
+      function (e) {
+        fieldOnBlur(e ?? field.name);
+      },
     ...field,
+    ...props,
   };
 }
 
