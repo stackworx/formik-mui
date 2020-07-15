@@ -44,7 +44,8 @@ export default withStyles(styles)(() => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values }) => (
+    >
+      {({ submitForm, values }) => (
         <Form>
           <Field
             component={SimpleFileUpload}
@@ -59,6 +60,6 @@ export default withStyles(styles)(() => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 ));
