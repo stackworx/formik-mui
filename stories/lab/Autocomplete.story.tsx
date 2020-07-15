@@ -156,7 +156,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values, errors, touched }) => (
+    >
+      {({ submitForm, values, errors, touched }) => (
         <Form>
           <Box margin={1}>
             <Field
@@ -243,6 +244,6 @@ export default () => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 );

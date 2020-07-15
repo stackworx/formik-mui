@@ -29,7 +29,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values }) => (
+    >
+      {({ submitForm, values }) => (
         <Form>
           <Typography>
             On
@@ -77,6 +78,6 @@ export default () => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 );
