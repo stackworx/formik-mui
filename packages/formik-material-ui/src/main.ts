@@ -3,6 +3,7 @@ export * from './Switch';
 export * from './Checkbox';
 export * from './CheckboxWithLabel';
 export * from './Select';
+export * from './NativeSelect';
 export * from './SimpleFileUpload';
 export * from './RadioGroup';
 export * from './InputBase';

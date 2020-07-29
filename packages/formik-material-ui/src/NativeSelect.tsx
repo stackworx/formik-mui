@@ -8,7 +8,7 @@ export interface NativeSelectProps
   extends FieldProps,
     Omit<MuiNativeSelectProps, 'name' | 'value'> {}
 
-export function fieldToSelect({
+export function fieldToNativeSelect({
   disabled,
   field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting },
@@ -27,8 +27,8 @@ export function fieldToSelect({
   };
 }
 
-export function Select(props: NativeSelectProps) {
-  return <MuiNativeSelect {...fieldToSelect(props)} />;
+export function NativeSelect(props: NativeSelectProps) {
+  return <MuiNativeSelect {...fieldToNativeSelect(props)} />;
 }
 
-Select.displayName = 'FormikMaterialUISelect';
+NativeSelect.displayName = 'FormikMaterialUINativeSelect';
