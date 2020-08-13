@@ -143,7 +143,7 @@ interface SimpleFileUploadProps {
 ```jsx
 import { Switch } from 'formik-material-ui';
 
-<Field component={Switch} name="switch" />;
+<Field component={Switch} type="checkbox" name="switch" />;
 ```
 
 #### [Material-UI Documentation](https://material-ui.com/api/switch/)
