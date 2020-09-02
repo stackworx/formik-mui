@@ -12,7 +12,7 @@ The following props are always excluded: `name, value, error`, and additional on
 ```jsx
 import { Checkbox } from 'formik-material-ui';
 
-<Field component={Checkbox} name="checked" />;
+<Field component={Checkbox} type="checkbox" name="checked" />;
 ```
 
 #### [Material-UI Documentation](https://material-ui.com/api/checkbox/)
@@ -28,6 +28,7 @@ import { CheckboxWithLabel } from 'formik-material-ui';
 
 <Field
   component={CheckboxWithLabel}
+  type="checkbox"
   name="checked"
   Label={{ label: 'Checkbox' }}
 />;
