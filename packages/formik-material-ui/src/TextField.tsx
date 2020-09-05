@@ -13,15 +13,15 @@ export function fieldToTextField({
   field: { onBlur: fieldOnBlur, ...field },
   form: { isSubmitting, touched, errors },
   onBlur,
+  helperText,
   ...props
 }: TextFieldProps): MuiTextFieldProps {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
-    variant: props.variant,
     error: showError,
-    helperText: showError ? fieldError : props.helperText,
+    helperText: showError ? fieldError : helperText,
     disabled: disabled ?? isSubmitting,
     onBlur:
       onBlur ??
