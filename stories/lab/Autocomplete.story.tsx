@@ -146,7 +146,7 @@ export default () => (
       validationSchema={schema}
       initialValues={{
         single: top100Films[0],
-        freeSolo: 'free!',
+        freeSolo: 'Godfather',
         grouped: null,
         multiple: [top100Films[0]],
       }}
@@ -191,6 +191,7 @@ export default () => (
                   error={touched['single'] && !!errors['freeSolo']}
                   helperText={touched['single'] && errors['freeSolo']}
                   label="Free Solo"
+                  InputProps={{ ...params.InputProps, type: 'search' }}
                   variant="outlined"
                 />
               )}
