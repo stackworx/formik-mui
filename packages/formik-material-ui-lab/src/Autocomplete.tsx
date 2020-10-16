@@ -64,13 +64,11 @@ export function fieldToAutocomplete<
       function (event) {
         field.onBlur(event ?? field.name);
       },
-    onChange: onChange
-      ? onChange
-      : !freeSolo
-      ? function (_event, value) {
-          setFieldValue(field.name, value);
-        }
-      : undefined,
+    onChange:
+      onChange ??
+      function (_event, value) {
+        setFieldValue(field.name, value);
+      },
     disabled: disabled ?? isSubmitting,
     loading: isSubmitting,
     ...fieldSubselection,
