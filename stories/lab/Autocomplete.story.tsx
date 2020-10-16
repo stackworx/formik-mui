@@ -147,6 +147,7 @@ export default () => (
       initialValues={{
         single: top100Films[0],
         freeSolo: 'Godfather',
+        freeSoloMultiple: [],
         grouped: null,
         multiple: [top100Films[0]],
       }}
@@ -188,9 +189,34 @@ export default () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
-                  error={touched['single'] && !!errors['freeSolo']}
-                  helperText={touched['single'] && errors['freeSolo']}
+                  error={touched['freeSolo'] && !!errors['freeSolo']}
+                  helperText={touched['freeSolo'] && errors['freeSolo']}
                   label="Free Solo"
+                  InputProps={{ ...params.InputProps, type: 'search' }}
+                  variant="outlined"
+                />
+              )}
+            />
+          </Box>
+          <Box margin={1}>
+            <Field
+              name="freeSoloMultiple"
+              component={Autocomplete}
+              freeSolo
+              multiple
+              // Free solo expects text options
+              options={top100Films.map((option) => option.title)}
+              style={{ width: 300 }}
+              renderInput={(params: AutocompleteRenderInputParams) => (
+                <TextField
+                  {...params}
+                  error={
+                    touched['freeSoloMultiple'] && !!errors['freeSoloMultiple']
+                  }
+                  helperText={
+                    touched['freeSoloMultiple'] && errors['freeSoloMultiple']
+                  }
+                  label="Free Solo Multiple"
                   InputProps={{ ...params.InputProps, type: 'search' }}
                   variant="outlined"
                 />
@@ -208,8 +234,8 @@ export default () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
-                  error={touched['single'] && !!errors['multiple']}
-                  helperText={touched['single'] && errors['multiple']}
+                  error={touched['multiple'] && !!errors['multiple']}
+                  helperText={touched['multiple'] && errors['multiple']}
                   label="Multiple"
                   variant="outlined"
                 />
@@ -229,8 +255,8 @@ export default () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
-                  error={touched['single'] && !!errors['grouped']}
-                  helperText={touched['single'] && errors['grouped']}
+                  error={touched['grouped'] && !!errors['grouped']}
+                  helperText={touched['grouped'] && errors['grouped']}
                   label="Grouped"
                   variant="outlined"
                 />
