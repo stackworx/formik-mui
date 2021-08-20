@@ -27,6 +27,7 @@
     "globals": {
       "__DEV__": "boolean"
     },
+    "testEnvironment": "jsdom",
     "testURL": "http://localhost/",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"

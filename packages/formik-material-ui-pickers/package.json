@@ -26,6 +26,7 @@
   },
   "jest": {
     "testURL": "http://localhost/",
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
@@ -59,7 +60,7 @@
     "prepublishOnly": "yarn test && yarn build && yarn package"
   },
   "devDependencies": {
-    "@material-ui/pickers": "^3.2.8"
+    "@material-ui/pickers": "^3.3.10"
   },
   "gitHead": "409cd27bdca327979c0dd7e20edd3ab773620396"
 }

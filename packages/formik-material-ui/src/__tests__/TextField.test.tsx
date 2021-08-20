@@ -2,7 +2,7 @@ import * as React from 'react';
 import { test, expect } from '@jest/globals';
 import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import { TextField } from '../TextField';
 
@@ -36,7 +36,7 @@ test('Outlined TextField', () => {
 });
 
 test('Override TextField Theme Variant', () => {
-  const theme = createMuiTheme({
+  const theme = createTheme({
     props: {
       MuiTextField: {
         variant: 'outlined',

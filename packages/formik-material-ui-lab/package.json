@@ -5,7 +5,7 @@
   "typings": "dist/main.d.ts",
   "peerDependencies": {
     "@material-ui/core": ">=4.0.0",
-    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "formik": ">=2.0.0",
     "react": ">=16.8.0",
     "tiny-warning": ">=1.0.2"
@@ -28,6 +28,7 @@
     "globals": {
       "__DEV__": "boolean"
     },
+    "testEnvironment": "jsdom",
     "testURL": "http://localhost/",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
