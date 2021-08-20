@@ -25,7 +25,7 @@ export function fieldToKeyboardTimePicker({
   return {
     error: showError,
     helperText: showError ? fieldError : props.helperText,
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
     onChange:
       onChange ??
       function (date) {

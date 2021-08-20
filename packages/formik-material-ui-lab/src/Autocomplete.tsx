@@ -12,8 +12,7 @@ export interface AutocompleteProps<
   Multiple extends boolean | undefined,
   DisableClearable extends boolean | undefined,
   FreeSolo extends boolean | undefined
->
-  extends FieldProps,
+> extends FieldProps,
     Omit<
       MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
       'name' | 'value' | 'defaultValue'
