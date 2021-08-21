@@ -1,8 +1,9 @@
 {
   "name": "formik-material-ui-lab",
-  "version": "0.0.8",
+  "version": "1.0.0-alpha.1",
   "license": "MIT",
   "typings": "dist/main.d.ts",
+  "sideEffects": false,
   "peerDependencies": {
     "@emotion/react": ">=11.4.1",
     "@emotion/styled": ">=11.3.0",
@@ -52,8 +53,8 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "module": "dist/formik-material-ui-lab.es6.js",
+  "main": "./dist/main.js",
+  "module": "./dist/esm/main.js",
   "scripts": {
     "typecheck": "tsc",
     "build": "cross-env NODE_ENV=production tsc --noEmit --project ./tsconfig.package.json",
@@ -64,5 +65,5 @@
     "lint:fix": "eslint --fix \"./{src,stories}/**/*.{tsx,ts,js}\"",
     "prepublishOnly": "yarn test && yarn build && yarn package"
   },
-  "gitHead": "409cd27bdca327979c0dd7e20edd3ab773620396"
+  "gitHead": "014c524940fd5c07f1492dab6147d2e7261229e7"
 }
