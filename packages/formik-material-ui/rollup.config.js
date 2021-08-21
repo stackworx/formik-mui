@@ -30,8 +30,8 @@ export default [
     ],
     external: external.concat(Object.keys(pkg.dependencies || [])),
     output: [
-      { dir: './', format: 'cjs', sourcemap: true, preserveModules: true },
-      { dir: './esm', format: 'es', sourcemap: true, preserveModules: true, },
+      { dir: './dist', format: 'cjs', sourcemap: true },
+      { dir: './dist/esm', format: 'es', sourcemap: true, preserveModules: true, },
     ],
   },
 ];
