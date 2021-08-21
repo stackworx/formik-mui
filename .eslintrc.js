@@ -16,6 +16,9 @@ module.exports = {
     "plugin:prettier/recommended"
   ],
   plugins: ['react-hooks'],
+  rules: {
+    "no-restricted-imports": ["error", "@material-ui/core", "@material-ui/lab", "@material-ui/pickers"],
+  },
   overrides: [
     {
       files: ['**/*.test.tsx', '**/*.test.ts'],
@@ -33,7 +36,7 @@ module.exports = {
         'jest/valid-expect': 'error',
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/no-empty-function': 'off',
-        "no-restricted-imports": ["error", "@material-ui/core", "@material-ui/lab", "@material-ui/pickers"],
+        "no-restricted-imports": "off",
       },
     },
     {
