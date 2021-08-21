@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui-lab",
-  "version": "0.0.8",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,

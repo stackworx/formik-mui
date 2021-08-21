@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui-pickers",
-  "version": "0.0.12",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,
