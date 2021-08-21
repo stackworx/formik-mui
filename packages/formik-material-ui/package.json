@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui",
-  "version": "3.0.1",
+  "version": "4.0.0-alpha.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,
@@ -61,5 +61,5 @@
     "lint:fix": "eslint --fix \"./{src,stories}/**/*.{tsx,ts,js}\"",
     "prepublishOnly": "yarn test && yarn build && yarn package"
   },
-  "gitHead": "409cd27bdca327979c0dd7e20edd3ab773620396"
+  "gitHead": "014c524940fd5c07f1492dab6147d2e7261229e7"
 }

@@ -1,6 +1,6 @@
 {
   "name": "formik-material-ui-pickers",
-  "version": "0.0.12",
+  "version": "1.0.0-alpha.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,
@@ -63,5 +63,5 @@
   "devDependencies": {
     "@material-ui/pickers": "^3.3.10"
   },
-  "gitHead": "409cd27bdca327979c0dd7e20edd3ab773620396"
+  "gitHead": "014c524940fd5c07f1492dab6147d2e7261229e7"
 }
