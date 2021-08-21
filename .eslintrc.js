@@ -33,6 +33,7 @@ module.exports = {
         'jest/valid-expect': 'error',
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/no-empty-function': 'off',
+        "no-restricted-imports": ["error", "@material-ui/core", "@material-ui/lab", "@material-ui/pickers"],
       },
     },
     {

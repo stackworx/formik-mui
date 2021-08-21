@@ -2,7 +2,7 @@ import * as React from 'react';
 import { test, expect } from '@jest/globals';
 import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MuiPickersUtilsProvider from '@material-ui/pickers/MuiPickersUtilsProvider';
 import DateFnsUtils from '@date-io/date-fns';
 
 import { DateTimePicker } from '../DateTimePicker';
