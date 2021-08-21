@@ -48,8 +48,8 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "module": "dist/formik-material-ui-pickers.es6.js",
+  "main": "./dist/main.js",
+  "module": "./dist/esm/main.js",
   "scripts": {
     "typecheck": "tsc",
     "build": "cross-env NODE_ENV=production tsc --noEmit --project ./tsconfig.package.json",
