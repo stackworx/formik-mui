@@ -13,7 +13,7 @@ module.exports = {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
-      links: [
+      items: [
         { to: 'docs/guide/getting-started', label: 'Guide', position: 'left' },
         { to: 'docs/api/material-ui', label: 'API', position: 'left' },
         // { to: 'blog', label: 'Blog', position: 'left' },
