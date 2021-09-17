@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { FieldProps, getIn } from 'formik';
-import FormControl, { FormControlProps } from '@material-ui/core/FormControl';
-import InputLabel, { InputLabelProps } from '@material-ui/core/InputLabel';
-import Input, { InputProps } from '@material-ui/core/Input';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl, { FormControlProps } from '@mui/material/FormControl';
+import InputLabel, { InputLabelProps } from '@mui/material/InputLabel';
+import Input, { InputProps } from '@mui/material/Input';
+import FormHelperText from '@mui/material/FormHelperText';
 
 export interface SimpleFileUploadProps extends FieldProps {
   label: string;

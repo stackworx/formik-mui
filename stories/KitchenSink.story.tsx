@@ -1,11 +1,13 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { Formik, Form, Field } from 'formik';
-import { LinearProgress, FormControlLabel, Radio } from '@material-ui/core';
+import LinearProgress from '@mui/material/LinearProgress';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Radio from '@mui/material/Radio';
 import { action } from '@storybook/addon-actions';
-import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';

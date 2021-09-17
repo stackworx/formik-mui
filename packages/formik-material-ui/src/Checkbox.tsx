@@ -1,7 +1,7 @@
 import * as React from 'react';
 import MuiCheckbox, {
   CheckboxProps as MuiCheckboxProps,
-} from '@material-ui/core/Checkbox';
+} from '@mui/material/Checkbox';
 import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
 

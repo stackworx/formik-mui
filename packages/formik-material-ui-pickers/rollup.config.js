@@ -3,7 +3,7 @@ import pkg from './package.json';
 
 const external = ['react', 'react-native', 'formik', '@material-ui/pickers'];
 
-export default [
+const config = [
   {
     input: 'src/main.ts',
     plugins: [
@@ -19,3 +19,5 @@ export default [
     ],
   },
 ];
+
+export default config;

@@ -1,7 +1,5 @@
 import * as React from 'react';
-import MuiSelect, {
-  SelectProps as MuiSelectProps,
-} from '@material-ui/core/Select';
+import MuiSelect, { SelectProps as MuiSelectProps } from '@mui/material/Select';
 import { FieldProps } from 'formik';
 
 export interface SelectProps

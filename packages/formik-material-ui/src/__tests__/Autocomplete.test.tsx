@@ -1,7 +1,7 @@
 import React from 'react';
 import { test, expect } from '@jest/globals';
 import { Field } from 'formik';
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 
 import { render } from './utils';
 

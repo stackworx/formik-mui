@@ -1,16 +1,9 @@
 import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
 
-const external = [
-  'react',
-  'react-native',
-  'formik',
-  '@material-ui/core/TextField',
-  '@material-ui/lab/ToggleButtonGroup',
-  '@material-ui/lab/Autocomplete',
-];
+const external = ['react', 'react-native', 'formik'];
 
-export default [
+const config = [
   {
     input: 'src/main.ts',
     plugins: [
@@ -26,3 +19,5 @@ export default [
     ],
   },
 ];
+
+export default config;

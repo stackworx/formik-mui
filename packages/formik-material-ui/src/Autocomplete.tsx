@@ -1,11 +1,11 @@
 import * as React from 'react';
 import MuiAutocomplete, {
   AutocompleteProps as MuiAutocompleteProps,
-} from '@material-ui/lab/Autocomplete';
+} from '@mui/material/Autocomplete';
 import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
 
-export { AutocompleteRenderInputParams } from '@material-ui/lab/Autocomplete';
+export { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 
 export interface AutocompleteProps<
   T,

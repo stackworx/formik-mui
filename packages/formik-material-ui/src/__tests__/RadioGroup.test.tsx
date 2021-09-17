@@ -2,8 +2,8 @@ import * as React from 'react';
 import { test, expect } from '@jest/globals';
 import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
-import Radio from '@material-ui/core/Radio';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@mui/material/Radio';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { RadioGroup } from '../RadioGroup';
 

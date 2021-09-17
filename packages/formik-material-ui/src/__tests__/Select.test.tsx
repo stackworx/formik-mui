@@ -2,7 +2,7 @@ import * as React from 'react';
 import { test, expect } from '@jest/globals';
 import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 
 import { Select } from '../Select';
 

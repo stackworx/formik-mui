@@ -4,10 +4,12 @@
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
-    "@material-ui/core": ">=4.0.0",
-    "formik": ">=2.0.0",
-    "react": ">=16.8.0",
-    "tiny-warning": ">=1.0.2"
+    "@mui/material": ">=5.0.0",
+    "@emotion/react": ">=11.4.1",
+    "@emotion/styled": ">=11.3.0",
+    "formik": ">=2.2.9",
+    "react": ">=17.0.2",
+    "tiny-warning": ">=1.0.3"
   },
   "keywords": [
     "react",

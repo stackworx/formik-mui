@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import { Formik, Form, Field } from 'formik';
 import { action } from '@storybook/addon-actions';
 
@@ -8,7 +8,7 @@ import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
 import { Switch } from '../packages/formik-material-ui/src/main';
-import { Box } from '@material-ui/core';
+import Box from '@mui/material/Box';
 
 export default () => (
   <Wrapper title="Switches">
