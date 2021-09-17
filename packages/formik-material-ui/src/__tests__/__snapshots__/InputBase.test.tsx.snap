@@ -6,10 +6,10 @@ exports[`InputBase Renders Correctly 1`] = `
     action="#"
   >
     <div
-      class="MuiInputBase-root"
+      class="MuiInputBase-root MuiInputBase-colorPrimary css-1le28he-MuiInputBase-root"
     >
       <input
-        class="MuiInputBase-input"
+        class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
         name="test"
         type="text"
         value="Input"
@@ -25,10 +25,10 @@ exports[`InputBase Renders Correctly disabled 1`] = `
     action="#"
   >
     <div
-      class="MuiInputBase-root"
+      class="MuiInputBase-root MuiInputBase-colorPrimary css-1le28he-MuiInputBase-root"
     >
       <input
-        class="MuiInputBase-input"
+        class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
         data-testid="input"
         name="test"
         type="text"
