@@ -1,24 +1,28 @@
+import { expect, test } from '@jest/globals';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
-import { test, expect } from '@jest/globals';
-import { Formik, Form, Field } from 'formik';
 import renderer from 'react-test-renderer';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
-
 import { TimePicker } from '../TimePicker';
 
 test('TimePicker Renders Correctly', () => {
   const component = renderer.create(
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Formik
         initialValues={{ test: new Date('2020-01-01') }}
         onSubmit={() => {}}
       >
         <Form>
-          <Field component={TimePicker} name="test" label="Time" />
+          <Field
+            component={TimePicker}
+            name="test"
+            label="Time"
+            textField={{ helperText: 'Helper text' }}
+          />
         </Form>
       </Formik>
-    </MuiPickersUtilsProvider>
+    </LocalizationProvider>
   );
 
   expect(component.toJSON()).toMatchSnapshot();

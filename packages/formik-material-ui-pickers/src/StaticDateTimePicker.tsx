@@ -1,18 +1,18 @@
-import MuiDateTimePicker, {
-  DateTimePickerProps as MuiDateTimePickerProps,
-} from '@mui/lab/DateTimePicker';
+import MuiStaticDateTimePicker, {
+  StaticDateTimePickerProps as MuiStaticDateTimePickerProps,
+} from '@mui/lab/StaticDateTimePicker';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
-export interface DateTimePickerProps
+export interface StaticDateTimePickerProps
   extends FieldProps,
-    Omit<MuiDateTimePickerProps, 'name' | 'value' | 'error'> {
+    Omit<MuiStaticDateTimePickerProps, 'name' | 'value' | 'error'> {
   textField: TextFieldProps;
 }
 
-export function fieldToDateTimePicker({
+export function fieldToStaticDateTimePicker({
   field: { onChange: _onChange, ...field },
   form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
   textField: { helperText, ...textField } = {},
@@ -22,7 +22,7 @@ export function fieldToDateTimePicker({
   onError,
   renderInput,
   ...props
-}: DateTimePickerProps): MuiDateTimePickerProps {
+}: StaticDateTimePickerProps): MuiStaticDateTimePickerProps {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
@@ -51,12 +51,8 @@ export function fieldToDateTimePicker({
   };
 }
 
-export function DateTimePicker({ children, ...props }: DateTimePickerProps) {
-  return (
-    <MuiDateTimePicker {...fieldToDateTimePicker(props)}>
-      {children}
-    </MuiDateTimePicker>
-  );
+export function StaticDateTimePicker(props: StaticDateTimePickerProps) {
+  return <MuiStaticDateTimePicker {...fieldToStaticDateTimePicker(props)} />;
 }
 
-DateTimePicker.displayName = 'FormikMUIDateTimePicker';
+StaticDateTimePicker.displayName = 'FormikMUIStaticDateTimePicker';

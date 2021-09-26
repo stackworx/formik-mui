@@ -1,15 +1,15 @@
-import * as React from 'react';
 import Button from '@mui/material/Button';
-import { Formik, Form, Field } from 'formik';
 import LinearProgress from '@mui/material/LinearProgress';
 import { action } from '@storybook/addon-actions';
+import { Field, Form, Formik } from 'formik';
+import * as React from 'react';
 import * as yup from 'yup';
-
-import Wrapper from './Wrapper';
-
+import { DesktopTimePicker } from '../packages/formik-material-ui-pickers/src/DesktopTimePicker';
+import { MobileTimePicker } from '../packages/formik-material-ui-pickers/src/MobileTimePicker';
+import { StaticTimePicker } from '../packages/formik-material-ui-pickers/src/StaticTimePicker';
 import { TimePicker } from '../packages/formik-material-ui-pickers/src/TimePicker';
-import { KeyboardTimePicker } from '../packages/formik-material-ui-pickers/src/KeyboardTimePicker';
 import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 interface Values {
   time: Date | null;
@@ -19,7 +19,7 @@ const schema = yup.object().shape({
   time: yup.date().required(),
 });
 
-export default () => (
+const TimePickerStory = () => (
   <Wrapper title="Time Picker">
     <Formik<Values>
       initialValues={{
@@ -35,13 +35,33 @@ export default () => (
     >
       {({ submitForm, isSubmitting, values }) => (
         <Form>
-          <Field component={TimePicker} label="Time" name="time" />
+          <Field
+            component={TimePicker}
+            label="Time"
+            name="time"
+            textField={{ helperText: 'Helper text' }}
+          />
+          <br />
           <br />
           <Field
-            component={KeyboardTimePicker}
-            label="Keyboard time picker"
-            name="time"
+            component={DesktopTimePicker}
+            label="Desktop time picker"
+            name="desktopTime"
             mask="__:__ _M"
+          />
+          <br />
+          <br />
+          <Field
+            component={MobileTimePicker}
+            label="Mobile time picker"
+            name="mobileTime"
+          />
+          <br />
+          <br />
+          <Field
+            component={StaticTimePicker}
+            label="Static time picker"
+            name="staticTime"
           />
           {isSubmitting && <LinearProgress />}
           <br />
@@ -60,3 +80,5 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export default TimePickerStory;

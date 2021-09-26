@@ -4,9 +4,9 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-import { DatePicker } from '../DatePicker';
+import { DesktopDatePicker } from '../DesktopDatePicker';
 
-test('DatePicker Renders Correctly', () => {
+test('DesktopDatePicker Renders Correctly', () => {
   const component = renderer.create(
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Formik
@@ -15,7 +15,7 @@ test('DatePicker Renders Correctly', () => {
       >
         <Form>
           <Field
-            component={DatePicker}
+            component={DesktopDatePicker}
             name="test"
             label="Date"
             textField={{ helperText: 'Helper text' }}

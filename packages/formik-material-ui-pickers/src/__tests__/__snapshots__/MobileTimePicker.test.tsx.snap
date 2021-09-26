@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateTimePicker Renders Correctly 1`] = `
+exports[`MobileTimePicker Renders Correctly 1`] = `
 <form
   action="#"
   onReset={[Function]}
@@ -13,7 +13,7 @@ exports[`DateTimePicker Renders Correctly 1`] = `
       className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink={false}
     >
-      Datetime
+      Time
     </label>
     <div
       className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
@@ -21,7 +21,7 @@ exports[`DateTimePicker Renders Correctly 1`] = `
     >
       <input
         aria-invalid={false}
-        aria-label="Choose date, selected date is Jan 1, 2020"
+        aria-label="Choose time, selected time is 12:00 AM"
         aria-readonly={true}
         autoFocus={false}
         className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
@@ -35,7 +35,7 @@ exports[`DateTimePicker Renders Correctly 1`] = `
         readOnly={true}
         required={false}
         type="text"
-        value="01/01/2020 12:00 am"
+        value="12:00 am"
       />
       <fieldset
         aria-hidden={true}
@@ -45,7 +45,7 @@ exports[`DateTimePicker Renders Correctly 1`] = `
           className="css-dhh0px"
         >
           <span>
-            Datetime
+            Time
           </span>
         </legend>
       </fieldset>

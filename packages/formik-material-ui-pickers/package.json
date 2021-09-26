@@ -4,8 +4,10 @@
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
-    "@material-ui/core": ">=4.0.0",
-    "@material-ui/pickers": ">=3.2.8",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/lab": "^5.0.0-alpha.48",
+    "@mui/material": "^5.0.1",
     "formik": ">=2.0.0",
     "react": ">=16.8.0"
   },
@@ -58,9 +60,6 @@
     "lint": "eslint \"./{src,stories}/**/*.{tsx,ts,js}\"",
     "lint:fix": "eslint --fix \"./{src,stories}/**/*.{tsx,ts,js}\"",
     "prepublishOnly": "yarn test && yarn build && yarn package"
-  },
-  "devDependencies": {
-    "@material-ui/pickers": "^3.3.10"
   },
   "gitHead": "409cd27bdca327979c0dd7e20edd3ab773620396"
 }

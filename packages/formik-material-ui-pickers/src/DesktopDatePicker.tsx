@@ -1,18 +1,18 @@
-import MuiDateTimePicker, {
-  DateTimePickerProps as MuiDateTimePickerProps,
-} from '@mui/lab/DateTimePicker';
+import MuiDesktopDatePicker, {
+  DesktopDatePickerProps as MuiDesktopDatePickerProps,
+} from '@mui/lab/DesktopDatePicker';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
-export interface DateTimePickerProps
+export interface DesktopDatePickerProps
   extends FieldProps,
-    Omit<MuiDateTimePickerProps, 'name' | 'value' | 'error'> {
+    Omit<MuiDesktopDatePickerProps, 'name' | 'value' | 'error'> {
   textField: TextFieldProps;
 }
 
-export function fieldToDateTimePicker({
+export function fieldToDesktopDatePicker({
   field: { onChange: _onChange, ...field },
   form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
   textField: { helperText, ...textField } = {},
@@ -22,7 +22,7 @@ export function fieldToDateTimePicker({
   onError,
   renderInput,
   ...props
-}: DateTimePickerProps): MuiDateTimePickerProps {
+}: DesktopDatePickerProps): MuiDesktopDatePickerProps {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
@@ -51,12 +51,15 @@ export function fieldToDateTimePicker({
   };
 }
 
-export function DateTimePicker({ children, ...props }: DateTimePickerProps) {
+export function DesktopDatePicker({
+  children,
+  ...props
+}: DesktopDatePickerProps) {
   return (
-    <MuiDateTimePicker {...fieldToDateTimePicker(props)}>
+    <MuiDesktopDatePicker {...fieldToDesktopDatePicker(props)}>
       {children}
-    </MuiDateTimePicker>
+    </MuiDesktopDatePicker>
   );
 }
 
-DateTimePicker.displayName = 'FormikMUIDateTimePicker';
+DesktopDatePicker.displayName = 'FormikMUIDesktopDatePicker';

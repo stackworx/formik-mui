@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import type { WithStyles } from '@mui/styles';
-import withStyles from '@mui/styles/withStyles';
 import createStyles from '@mui/styles/createStyles';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+import withStyles from '@mui/styles/withStyles';
+import React, { ReactNode } from 'react';
 
 const styles = () =>
   createStyles({
@@ -33,9 +33,9 @@ const Wrapper = ({ title, children }: Props) => (
     <Typography variant="h4" component="h3">
       {title}
     </Typography>
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
       {children}
-    </MuiPickersUtilsProvider>
+    </LocalizationProvider>
   </Paper>
 );
 

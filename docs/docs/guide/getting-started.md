@@ -18,7 +18,7 @@ yarn add formik-material-ui-lab @material-ui/lab
 ### Material-UI Pickers (Optional)
 
 ```
-yarn add formik-material-ui-pickers @date-io/date-fns@1.x date-fns
+yarn add @date-io/date-fns @mui/lab formik-material-ui-pickers
 ```
 
 ## Quick Start
@@ -209,25 +209,25 @@ function App() {
 
 ## Quick Start (Picker)
 
-See [Material-UI Pickers getting started](https://material-ui-pickers.dev/getting-started/installation) for more information
+See [Material-UI Pickers getting started](https://mui.com/components/pickers/) for more information
 
 ```jsx {4-8,9,12,16,32,34,36}
-import * as React from 'react';
+// Depending on the library you picked
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import Button from '@mui/material/Button';
+import LinearProgress from '@mui/material/LinearProgress';
 import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
 import {
-  TimePicker,
   DatePicker,
   DateTimePicker,
+  TimePicker,
 } from 'formik-material-ui-pickers';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-
-// Depending on the library you picked
-import DateFnsUtils from '@date-io/date-fns';
+import * as React from 'react';
 
 function App() {
   return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Formik
         initialValues={{
           date: new Date(),
@@ -243,15 +243,20 @@ function App() {
       >
         {({ submitForm, isSubmitting }) => (
           <Form>
-            <Field component={TimePicker} name="time" label="Time" />
-            <br />
-            <Field component={DatePicker} name="date" label="Date" />
+            <Field
+              component={DatePicker}
+              name="date"
+              label="Date"
+              textField={{ helperText: 'Helper text', variant: 'filled' }}
+            />
             <br />
             <Field
               component={DateTimePicker}
               name="dateTime"
               label="Date Time"
             />
+            <Field component={TimePicker} name="time" label="Time" />
+            <br />
             {isSubmitting && <LinearProgress />}
             <br />
             <Button
@@ -265,7 +270,7 @@ function App() {
           </Form>
         )}
       </Formik>
-    </MuiPickersUtilsProvider>
+    </LocalizationProvider>
   );
 }
 ```

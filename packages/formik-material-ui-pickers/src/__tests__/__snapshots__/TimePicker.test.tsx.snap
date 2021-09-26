@@ -7,38 +7,54 @@ exports[`TimePicker Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiFormControl-root MuiTextField-root"
-    format="hh:mm a"
-    onClick={[Function]}
-    onError={[Function]}
-    onKeyDown={[Function]}
+    className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-      data-shrink={true}
+      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink={false}
     >
       Time
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
       onClick={[Function]}
     >
       <input
         aria-invalid={false}
+        aria-label="Choose time, selected time is 12:00 AM"
+        aria-readonly={true}
         autoFocus={false}
-        className="MuiInputBase-input MuiInput-input"
+        className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
         disabled={false}
-        name="test"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
         readOnly={true}
         required={false}
         type="text"
-        value="12:00 AM"
+        value="12:00 am"
       />
+      <fieldset
+        aria-hidden={true}
+        className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="css-dhh0px"
+        >
+          <span>
+            Time
+          </span>
+        </legend>
+      </fieldset>
     </div>
+    <p
+      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+    >
+      Helper text
+    </p>
   </div>
 </form>
 `;

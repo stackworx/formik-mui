@@ -4,9 +4,9 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-import { DatePicker } from '../DatePicker';
+import { MobileTimePicker } from '../MobileTimePicker';
 
-test('DatePicker Renders Correctly', () => {
+test('MobileTimePicker Renders Correctly', () => {
   const component = renderer.create(
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Formik
@@ -15,9 +15,9 @@ test('DatePicker Renders Correctly', () => {
       >
         <Form>
           <Field
-            component={DatePicker}
+            component={MobileTimePicker}
             name="test"
-            label="Date"
+            label="Time"
             textField={{ helperText: 'Helper text' }}
           />
         </Form>

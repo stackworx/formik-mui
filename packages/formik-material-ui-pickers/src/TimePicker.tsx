@@ -1,40 +1,48 @@
-import * as React from 'react';
-import {
-  TimePicker as MuiTimePicker,
+import MuiTimePicker, {
   TimePickerProps as MuiTimePickerProps,
-} from '@material-ui/pickers';
+} from '@mui/lab/TimePicker';
+import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
+import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
 export interface TimePickerProps
   extends FieldProps,
-    Omit<MuiTimePickerProps, 'name' | 'value' | 'error'> {}
+    Omit<MuiTimePickerProps, 'name' | 'value' | 'error'> {
+  textField: TextFieldProps;
+}
 
 export function fieldToTimePicker({
-  disabled,
   field: { onChange: _onChange, onBlur: fieldOnBlur, ...field },
   form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
+  textField: { helperText, ...textField } = {},
+  disabled,
+  label,
   onChange,
-  onBlur,
   onError,
+  renderInput,
   ...props
 }: TimePickerProps): MuiTimePickerProps {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
-    error: showError,
-    helperText: showError ? fieldError : props.helperText,
+    renderInput:
+      renderInput ??
+      ((params) => (
+        <TextField
+          {...params}
+          error={showError}
+          helperText={showError ? fieldError : helperText}
+          label={label}
+          {...textField}
+        />
+      )),
     disabled: disabled ?? isSubmitting,
     onChange:
       onChange ??
       function (date) {
         setFieldValue(field.name, date);
-      },
-    onBlur:
-      onBlur ??
-      function (e) {
-        fieldOnBlur(e ?? field.name);
       },
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
@@ -49,4 +57,4 @@ export function TimePicker({ children, ...props }: TimePickerProps) {
   );
 }
 
-TimePicker.displayName = 'FormikMaterialUITimePicker';
+TimePicker.displayName = 'FormikMUITimePicker';
