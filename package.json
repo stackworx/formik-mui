@@ -43,7 +43,6 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-flowtype": "^6.0.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -73,6 +72,5 @@
     "build-storybook": "build-storybook",
     "prettier": "prettier --write \"{packages,stories}/**/*.{js,tsx,ts}\"",
     "prettier:list": "prettier --list-different \"{src,stories}/**/*.{js,tsx,ts}\""
-  },
-  "dependencies": {}
+  }
 }
