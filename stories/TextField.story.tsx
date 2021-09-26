@@ -1,23 +1,18 @@
-import * as React from 'react';
 import Button from '@mui/material/Button';
-import { Formik, Form, Field } from 'formik';
 import LinearProgress from '@mui/material/LinearProgress';
 import MenuItem from '@mui/material/MenuItem';
 import MuiTextField from '@mui/material/TextField';
-import type { WithStyles } from '@mui/styles';
-import withStyles from '@mui/styles/withStyles';
-import createStyles from '@mui/styles/createStyles';
 import { action } from '@storybook/addon-actions';
+import { Field, Form, Formik } from 'formik';
+import * as React from 'react';
 import * as yup from 'yup';
-
-import Wrapper from './Wrapper';
-
 import {
+  fieldToTextField,
   TextField,
   TextFieldProps,
-  fieldToTextField,
 } from '../packages/formik-material-ui/src/TextField';
 import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 interface Values {
   user: { email: string };
@@ -50,25 +45,6 @@ const ranges = [
   },
 ];
 
-const styles = () =>
-  createStyles({
-    container: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    },
-    textField: {
-      marginLeft: 8,
-      marginRight: 8,
-      width: 200,
-    },
-    dense: {
-      marginTop: 19,
-    },
-    menu: {
-      width: 200,
-    },
-  });
-
 const UpperCasingTextField = (props: TextFieldProps) => {
   return (
     <MuiTextField
@@ -83,7 +59,7 @@ const UpperCasingTextField = (props: TextFieldProps) => {
   );
 };
 
-export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
+const TextFieldStory = () => (
   <Wrapper title="Text Field">
     <Formik<Values>
       initialValues={{
@@ -148,11 +124,6 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
             name="select"
             label="With Select"
             select
-            SelectProps={{
-              MenuProps: {
-                className: classes.menu,
-              },
-            }}
             helperText="Please select Range"
             margin="normal"
           >
@@ -179,4 +150,6 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
       )}
     </Formik>
   </Wrapper>
-));
+);
+
+export default TextFieldStory;
