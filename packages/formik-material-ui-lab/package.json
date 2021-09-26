@@ -16,6 +16,7 @@
     "react",
     "formik",
     "material-ui",
+    "mui",
     "form"
   ],
   "prettier": {
