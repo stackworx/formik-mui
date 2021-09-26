@@ -1,21 +1,19 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import { Formik, Form, Field } from 'formik';
-import { action } from '@storybook/addon-actions';
-import ToggleButton from '@mui/material/ToggleButton';
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
-
-import Wrapper from '../Wrapper';
-import FormValues from '../FormValues';
-
-import { ToggleButtonGroup } from '../../packages/formik-material-ui-lab/src/main';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import ToggleButton from '@mui/material/ToggleButton';
 import Typography from '@mui/material/Typography';
+import { action } from '@storybook/addon-actions';
+import { Field, Form, Formik } from 'formik';
+import * as React from 'react';
+import { ToggleButtonGroup } from '../../packages/formik-material-ui/src/main';
+import FormValues from '../FormValues';
+import Wrapper from '../Wrapper';
 
-export default () => (
+const ToggleButtonGroupStory = () => (
   <Wrapper title="Toggle Button Group">
     <Formik
       initialValues={{
@@ -85,3 +83,5 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export default ToggleButtonGroupStory;
