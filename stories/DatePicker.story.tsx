@@ -5,10 +5,10 @@ import { subDays } from 'date-fns';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
 import * as yup from 'yup';
-import { DatePicker } from '../packages/formik-material-ui-pickers/src/DatePicker';
-import { DesktopDatePicker } from '../packages/formik-material-ui-pickers/src/DesktopDatePicker';
-import { MobileDatePicker } from '../packages/formik-material-ui-pickers/src/MobileDatePicker';
-import { StaticDatePicker } from '../packages/formik-material-ui-pickers/src/StaticDatePicker';
+import { DatePicker } from '../packages/formik-material-ui-lab/src/DatePicker';
+import { DesktopDatePicker } from '../packages/formik-material-ui-lab/src/DesktopDatePicker';
+import { MobileDatePicker } from '../packages/formik-material-ui-lab/src/MobileDatePicker';
+import { StaticDatePicker } from '../packages/formik-material-ui-lab/src/StaticDatePicker';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 

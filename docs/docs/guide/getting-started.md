@@ -12,13 +12,7 @@ yarn add formik formik-material-ui @mui/material @emotion/react @emotion/styled
 ### Material-UI Lab (Optional)
 
 ```
-yarn add formik-material-ui-lab @mui/lab
-```
-
-### Material-UI Pickers (Optional)
-
-```
-yarn add @date-io/date-fns @mui/lab formik-material-ui-pickers
+yarn add @date-io/date-fns @mui/lab formik-material-ui-lab
 ```
 
 ## Quick Start
@@ -213,17 +207,12 @@ function App() {
 See [Material-UI Pickers getting started](https://mui.com/components/pickers/) for more information
 
 ```jsx {4-8,9,12,16,32,34,36}
-// Depending on the library you picked
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import AdapterDateFns from '@mui/lab/AdapterDateFns'; // Depending on the library you picked
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import Button from '@mui/material/Button';
 import LinearProgress from '@mui/material/LinearProgress';
 import { Formik, Form, Field } from 'formik';
-import {
-  DatePicker,
-  DateTimePicker,
-  TimePicker,
-} from 'formik-material-ui-pickers';
+import { DatePicker, DateTimePicker, TimePicker } from 'formik-material-ui-lab';
 import * as React from 'react';
 
 function App() {

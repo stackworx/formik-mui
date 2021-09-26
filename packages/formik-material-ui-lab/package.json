@@ -4,20 +4,21 @@
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
-    "@mui/material": ">=5.0.0",
-    "@emotion/react": ">=11.4.1",
-    "@emotion/styled": ">=11.3.0",
-    "@mui/lab": ">=5.0.0-alpha.47",
-    "formik": ">=2.0.9",
-    "react": ">=17.0.2",
-    "tiny-warning": ">=1.0.3"
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/lab": "^5.0.0-alpha.48",
+    "@mui/material": "^5.0.1",
+    "formik": ">=2.0.0",
+    "react": ">=16.8.0"
   },
   "keywords": [
     "react",
     "formik",
     "material-ui",
     "mui",
-    "form"
+    "lab",
+    "form",
+    "pickers"
   ],
   "prettier": {
     "singleQuote": true,
@@ -28,11 +29,8 @@
     "url": "https://github.com/stackworx/formik-material-ui"
   },
   "jest": {
-    "globals": {
-      "__DEV__": "boolean"
-    },
-    "testEnvironment": "jsdom",
     "testURL": "http://localhost/",
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
@@ -47,13 +45,14 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "globalSetup": "./global-setup.js"
   },
   "files": [
     "dist"
   ],
   "main": "dist/index.js",
-  "module": "dist/formik-material-ui.es6.js",
+  "module": "dist/formik-material-ui-lab.es6.js",
   "scripts": {
     "typecheck": "tsc",
     "build": "cross-env NODE_ENV=production tsc --noEmit --project ./tsconfig.package.json",
