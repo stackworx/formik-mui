@@ -33,7 +33,7 @@ From this code is not at all obvious who is in control of the state. Therefore w
 But you can do this a custom field
 
 ```jsx
-import MuiTextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import { Field } from 'formik';
 import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 
@@ -43,13 +43,13 @@ function UpperCasingTextField(props: TextFieldProps) {
     field: { name },
   } = props;
   const onChange = React.useCallback(
-    event => {
+    (event) => {
       const { value } = event.target;
       setFieldValue(name, value ? value.toUpperCase() : '');
     },
     [setFieldValue, name]
   );
-  return <MuiTextField {...fieldToTextField(props)} onChange={onChange} />;
+  return <TextField {...fieldToTextField(props)} onChange={onChange} />;
 }
 ```
 
@@ -104,7 +104,7 @@ The following code will not render any validation errors
 </Field>
 ```
 
-This is because the [Select](https://material-ui.com/api/select/) does not actually have a `error` prop.
+This is because the [Select](https://mui.com/api/select/) does not actually have a `error` prop.
 
 There are 2 ways to fix this
 

@@ -15,7 +15,7 @@ import { Checkbox } from 'formik-material-ui';
 <Field component={Checkbox} type="checkbox" name="checked" />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/checkbox/)
+#### [Material-UI Documentation](https://mui.com/api/checkbox/)
 
 ## CheckboxWithLabel
 
@@ -34,7 +34,7 @@ import { CheckboxWithLabel } from 'formik-material-ui';
 />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/form-control-label/)
+#### [Material-UI Documentation](https://mui.com/api/form-control-label/)
 
 ## InputBase
 
@@ -46,14 +46,14 @@ import { InputBase } from 'formik-material-ui';
 <Field component={InputBase} name="inputBase" />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/input-base/)
+#### [Material-UI Documentation](https://mui.com/api/input-base/)
 
 ## RadioGroup
 
 #### Example
 
 ```jsx
-import { FormControlLabel, Radio, LinearProgress } from '@material-ui/core';
+import { FormControlLabel, Radio, LinearProgress } from '@mui/material/core';
 import { Formik, Field } from 'formik';
 import { RadioGroup } from 'formik-material-ui';
 
@@ -83,7 +83,7 @@ import { RadioGroup } from 'formik-material-ui';
 </Formik>;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/radio-group/#radiogroup-api)
+#### [Material-UI Documentation](https://mui.com/api/radio-group/)
 
 ## Select
 
@@ -91,10 +91,9 @@ import { RadioGroup } from 'formik-material-ui';
 
 ```jsx
 import { Field } from 'formik';
-import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
-
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
 import { Select } from 'formik-material-ui';
 
 <FormControl>
@@ -113,7 +112,7 @@ import { Select } from 'formik-material-ui';
 </FormControl>;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/select/)
+#### [Material-UI Documentation](https://mui.com/api/select/)
 
 ## SimpleFileUpload
 
@@ -147,7 +146,7 @@ import { Switch } from 'formik-material-ui';
 <Field component={Switch} type="checkbox" name="switch" />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/switch/)
+#### [Material-UI Documentation](https://mui.com/api/switch/)
 
 ## TextField
 
@@ -165,4 +164,4 @@ import { TextField } from 'formik-material-ui';
 />;
 ```
 
-#### [Material-UI Documentation](https://material-ui.com/api/text-field/#textfield-api)
+#### [Material-UI Documentation](https://mui.com/api/text-field/)

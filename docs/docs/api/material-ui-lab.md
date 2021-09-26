@@ -34,7 +34,7 @@ const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
 
 _Note the manual inclusion of the error_
 
-#### [Material-UI Lab Documentation](https://material-ui.com/api/autocomplete/)
+#### [Material-UI Lab Documentation](https://mui.com/api/autocomplete/)
 
 ## ToggleButtonGroup
 
@@ -42,11 +42,11 @@ _Note the manual inclusion of the error_
 
 ```tsx
 import { ToggleButtonGroup } from 'formik-material-ui-lab';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
-import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
-import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
-import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
+import ToggleButton from '@mui/material/ToggleButton';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 
 <Field component={ToggleButtonGroup} name="name" type="checkbox">
   <ToggleButton value="left" aria-label="left aligned">
@@ -66,4 +66,4 @@ import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
 
 _Note the `type=checkbox` attribute_
 
-#### [Material-UI Lab Documentation](https://material-ui.com/api/toggle-button-group/)
+#### [Material-UI Lab Documentation](https://mui.com/api/toggle-button-group/)

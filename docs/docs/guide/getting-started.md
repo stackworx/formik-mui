@@ -6,13 +6,13 @@ title: Getting Started
 ## Installation
 
 ```
-yarn add formik formik-material-ui @material-ui/core
+yarn add formik formik-material-ui @mui/material @emotion/react @emotion/styled
 ```
 
 ### Material-UI Lab (Optional)
 
 ```
-yarn add formik-material-ui-lab @material-ui/lab
+yarn add formik-material-ui-lab @mui/lab
 ```
 
 ### Material-UI Pickers (Optional)
@@ -24,10 +24,10 @@ yarn add @date-io/date-fns @mui/lab formik-material-ui-pickers
 ## Quick Start
 
 ```jsx {4,39,46}
-import * as React from 'react';
+import { Button, LinearProgress } from '@mui/material';
 import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
+import * as React from 'react';
 
 interface Values {
   email: string;
@@ -41,7 +41,7 @@ function App() {
         email: '',
         password: '',
       }}
-      validate={values => {
+      validate={(values) => {
         const errors: Partial<Values> = {};
         if (!values.email) {
           errors.email = 'Required';
@@ -98,9 +98,9 @@ Note: that the `Field` wrapper is not used, for more details on why see the [FAQ
 Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
 
 ```jsx
+import InputAdornment from '@mui/material/InputAdornment';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import { TextField } from 'formik-material-ui';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 
 <TextField
   name="customized"
@@ -118,19 +118,20 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 
 ## Quick Start (Lab)
 
-See [Material-UI Lab Info](https://material-ui.com/components/about-the-lab/) for more information
+See [Material-UI Lab Info](https://mui.com/components/about-the-lab/) for more information
 
 ```jsx {4,31,52}
-import * as React from 'react';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import LinearProgress from '@mui/material/LinearProgress';
+import ToggleButton from '@mui/material/ToggleButton;
 import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
 import { Autocomplete, ToggleButtonGroup } from 'formik-material-ui-lab';
-import Box from '@material-ui/core/Box';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
-import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
-import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
-import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
+import * as React from 'react';
 
 function App() {
   return (
@@ -281,8 +282,8 @@ Several properties are purposefully excluded, please see the [FAQ](guide/faq.md)
 
 ```jsx
 import { TextField } from 'formik-material-ui';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+import InputAdornment from '@mui/material/InputAdornment';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 
 <TextField
   name="customized"

@@ -3,7 +3,7 @@
 ![](https://github.com/stackworx/formik-material-ui/workflows/Build%20formik-material-ui/badge.svg)
 ![](https://github.com/stackworx/formik-material-ui/workflows/Build%20formik-material-ui-pickers/badge.svg)[![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
-Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Material-UI](https://material-ui.com/).
+Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Material-UI](https://mui.com/).
 
 - [Documentation](https://stackworx.github.io/formik-material-ui)
 - [Code Sandbox](https://codesandbox.io/s/915qlr56rp)
