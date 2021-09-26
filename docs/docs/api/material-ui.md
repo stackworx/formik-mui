@@ -34,7 +34,7 @@ const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
 
 _Note the manual inclusion of the error_
 
-#### [Material-UI Autocomplete Documentation](https://mui.com/api/autocomplete/)
+#### [MUI Autocomplete Documentation](https://mui.com/api/autocomplete/)
 
 ## Checkbox
 
@@ -46,7 +46,7 @@ import { Checkbox } from 'formik-material-ui';
 <Field component={Checkbox} type="checkbox" name="checked" />;
 ```
 
-#### [Material-UI Checkbox Documentation](https://mui.com/api/checkbox/)
+#### [MUI Checkbox Documentation](https://mui.com/api/checkbox/)
 
 ## CheckboxWithLabel
 
@@ -65,7 +65,7 @@ import { CheckboxWithLabel } from 'formik-material-ui';
 />;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/form-control-label/)
+#### [MUI Documentation](https://mui.com/api/form-control-label/)
 
 ## InputBase
 
@@ -77,7 +77,7 @@ import { InputBase } from 'formik-material-ui';
 <Field component={InputBase} name="inputBase" />;
 ```
 
-#### [Material-UI InputBase Documentation](https://mui.com/api/input-base/)
+#### [MUI InputBase Documentation](https://mui.com/api/input-base/)
 
 ## RadioGroup
 
@@ -114,7 +114,7 @@ import { RadioGroup } from 'formik-material-ui';
 </Formik>;
 ```
 
-#### [Material-UI RadioGroup Documentation](https://mui.com/api/radio-group/)
+#### [MUI RadioGroup Documentation](https://mui.com/api/radio-group/)
 
 ## Select
 
@@ -143,7 +143,7 @@ import { Select } from 'formik-material-ui';
 </FormControl>;
 ```
 
-#### [Material-UI Select Documentation](https://mui.com/api/select/)
+#### [MUI Select Documentation](https://mui.com/api/select/)
 
 ## SimpleFileUpload
 
@@ -177,7 +177,7 @@ import { Switch } from 'formik-material-ui';
 <Field component={Switch} type="checkbox" name="switch" />;
 ```
 
-#### [Material-UI Switch Documentation](https://mui.com/api/switch/)
+#### [MUI Switch Documentation](https://mui.com/api/switch/)
 
 ## TextField
 
@@ -195,7 +195,7 @@ import { TextField } from 'formik-material-ui';
 />;
 ```
 
-#### [Material-UI TextField Documentation](https://mui.com/api/text-field/)
+#### [MUI TextField Documentation](https://mui.com/api/text-field/)
 
 ## ToggleButtonGroup
 
@@ -227,4 +227,4 @@ import { ToggleButtonGroup } from 'formik-material-ui';
 
 _Note the `type=checkbox` attribute_
 
-#### [Material-UI ToggleButtonGroup Documentation](https://mui.com/api/toggle-button-group/)
+#### [MUI ToggleButtonGroup Documentation](https://mui.com/api/toggle-button-group/)

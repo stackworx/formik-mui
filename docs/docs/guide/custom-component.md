@@ -5,7 +5,7 @@ title: Creating Custom Components
 
 # Notes
 
-Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulate the logic used to map formik props into the Material-UI shapes
+Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulate the logic used to map formik props into the MUI shapes
 
 # Examples
 

@@ -112,7 +112,7 @@ import { TextField } from 'formik-material-ui';
 
 ## Quick Start (Lab)
 
-See [Material-UI _About the lab_](https://mui.com/components/about-the-lab/) for more information
+See [MUI _About the lab_](https://mui.com/components/about-the-lab/) for more information
 
 ```jsx {4-8,9,12,16,32,34,36}
 import AdapterDateFns from '@mui/lab/AdapterDateFns'; // Depending on the library you picked

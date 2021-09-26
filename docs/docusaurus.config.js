@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Formik Material-UI',
-  tagline: 'Easily combine formik with Material-UI',
+  tagline: 'Easily combine formik with MUI',
   url: 'https://stackworx.github.io/',
   baseUrl: '/formik-material-ui/',
   favicon: 'img/favicon.ico',

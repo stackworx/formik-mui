@@ -10,10 +10,10 @@ const features = [
   {
     title: <>Easy to Use</>,
     // imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: <>Get going quickly with Formik and Material-UI</>,
+    description: <>Get going quickly with Formik and MUI</>,
   },
   {
-    title: <a href="https://mui.com/">Material-UI</a>,
+    title: <a href="https://mui.com/">MUI</a>,
     // imageUrl: 'img/mui-logo.svg',
     description: (
       <>
