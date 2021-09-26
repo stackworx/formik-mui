@@ -92,8 +92,8 @@ Note: that the `Field` wrapper is not used, for more details on why see the [FAQ
 Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
 
 ```jsx
-import InputAdornment from '@mui/material/InputAdornment';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import InputAdornment from '@mui/material/InputAdornment';
 import { TextField } from 'formik-material-ui';
 
 <TextField
@@ -112,99 +112,7 @@ import { TextField } from 'formik-material-ui';
 
 ## Quick Start (Lab)
 
-See [Material-UI Lab Info](https://mui.com/components/about-the-lab/) for more information
-
-```jsx {4,31,52}
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
-import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
-import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import LinearProgress from '@mui/material/LinearProgress';
-import ToggleButton from '@mui/material/ToggleButton;
-import { Formik, Form, Field } from 'formik';
-import { Autocomplete, ToggleButtonGroup } from 'formik-material-ui-lab';
-import * as React from 'react';
-
-function App() {
-  return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Formik
-        initialValues={{
-          toggle: null,
-          autocomplete: null,
-        }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            setSubmitting(false);
-            alert(JSON.stringify(values, null, 2));
-          }, 500);
-        }}
-      >
-        {({ submitForm, isSubmitting, errors, touched }) => (
-          <Form>
-            <Box margin={1}>
-              <Field
-                component={ToggleButtonGroup}
-                name="toggle"
-                type="checkbox"
-              >
-                <ToggleButton value="left" aria-label="left aligned">
-                  <FormatAlignLeftIcon />
-                </ToggleButton>
-                <ToggleButton value="center" aria-label="centered">
-                  <FormatAlignCenterIcon />
-                </ToggleButton>
-                <ToggleButton value="right" aria-label="right aligned">
-                  <FormatAlignRightIcon />
-                </ToggleButton>
-                <ToggleButton value="justify" aria-label="justified" disabled>
-                  <FormatAlignJustifyIcon />
-                </ToggleButton>
-              </Field>
-            </Box>
-            <Box margin={1}>
-              <Field
-                name="autocomplete"
-                component={Autocomplete}
-                options={top100Films}
-                getOptionLabel={(option: Movie) => option.title}
-                style={{ width: 300 }}
-                renderInput={(params: AutocompleteRenderInputParams) => (
-                  <TextField
-                    {...params}
-                    error={touched['autocomplete'] && !!errors['autocomplete']}
-                    helperText={
-                      touched['autocomplete'] && errors['autocomplete']
-                    }
-                    label="Autocomplete"
-                    variant="outlined"
-                  />
-                )}
-              />
-            </Box>
-            <Box margin={1}>
-              <Button
-                variant="contained"
-                color="primary"
-                disabled={isSubmitting}
-                onClick={submitForm}
-              >
-                Submit
-              </Button>
-            </Box>
-          </Form>
-        )}
-      </Formik>
-    </MuiPickersUtilsProvider>
-  );
-}
-```
-
-## Quick Start (Picker)
-
-See [Material-UI Pickers getting started](https://mui.com/components/pickers/) for more information
+See [Material-UI _About the lab_](https://mui.com/components/about-the-lab/) for more information
 
 ```jsx {4-8,9,12,16,32,34,36}
 import AdapterDateFns from '@mui/lab/AdapterDateFns'; // Depending on the library you picked
@@ -270,9 +178,9 @@ function App() {
 Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
 
 ```jsx
-import { TextField } from 'formik-material-ui';
-import InputAdornment from '@mui/material/InputAdornment';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import InputAdornment from '@mui/material/InputAdornment';
+import { TextField } from 'formik-material-ui';
 
 <TextField
   name="customized"

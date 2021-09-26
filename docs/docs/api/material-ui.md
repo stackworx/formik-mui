@@ -10,7 +10,7 @@ The following props are always excluded: `name, value, error`, and additional on
 #### Example
 
 ```jsx
-import { Autocomplete } from 'formik-material-ui-lab';
+import { Autocomplete } from 'formik-material-ui';
 
 const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
 
@@ -34,7 +34,7 @@ const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
 
 _Note the manual inclusion of the error_
 
-#### [Material-UI Lab Documentation](https://mui.com/api/autocomplete/)
+#### [Material-UI Autocomplete Documentation](https://mui.com/api/autocomplete/)
 
 ## Checkbox
 
@@ -46,7 +46,7 @@ import { Checkbox } from 'formik-material-ui';
 <Field component={Checkbox} type="checkbox" name="checked" />;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/checkbox/)
+#### [Material-UI Checkbox Documentation](https://mui.com/api/checkbox/)
 
 ## CheckboxWithLabel
 
@@ -77,7 +77,7 @@ import { InputBase } from 'formik-material-ui';
 <Field component={InputBase} name="inputBase" />;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/input-base/)
+#### [Material-UI InputBase Documentation](https://mui.com/api/input-base/)
 
 ## RadioGroup
 
@@ -114,7 +114,7 @@ import { RadioGroup } from 'formik-material-ui';
 </Formik>;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/radio-group/)
+#### [Material-UI RadioGroup Documentation](https://mui.com/api/radio-group/)
 
 ## Select
 
@@ -143,7 +143,7 @@ import { Select } from 'formik-material-ui';
 </FormControl>;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/select/)
+#### [Material-UI Select Documentation](https://mui.com/api/select/)
 
 ## SimpleFileUpload
 
@@ -177,7 +177,7 @@ import { Switch } from 'formik-material-ui';
 <Field component={Switch} type="checkbox" name="switch" />;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/switch/)
+#### [Material-UI Switch Documentation](https://mui.com/api/switch/)
 
 ## TextField
 
@@ -195,19 +195,19 @@ import { TextField } from 'formik-material-ui';
 />;
 ```
 
-#### [Material-UI Documentation](https://mui.com/api/text-field/)
+#### [Material-UI TextField Documentation](https://mui.com/api/text-field/)
 
 ## ToggleButtonGroup
 
 #### Example
 
 ```tsx
-import { ToggleButtonGroup } from 'formik-material-ui-lab';
-import ToggleButton from '@mui/material/ToggleButton';
-import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
-import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+import ToggleButton from '@mui/material/ToggleButton';
+import { ToggleButtonGroup } from 'formik-material-ui';
 
 <Field component={ToggleButtonGroup} name="name" type="checkbox">
   <ToggleButton value="left" aria-label="left aligned">
@@ -227,4 +227,4 @@ import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 
 _Note the `type=checkbox` attribute_
 
-#### [Material-UI Lab Documentation](https://mui.com/api/toggle-button-group/)
+#### [Material-UI ToggleButtonGroup Documentation](https://mui.com/api/toggle-button-group/)
