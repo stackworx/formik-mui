@@ -1,15 +1,16 @@
 {
   "name": "formik-material-ui-lab",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": ">=11.4.1",
+    "@emotion/styled": ">=11.3.0",
     "@mui/lab": "^5.0.0-alpha.48",
-    "@mui/material": "^5.0.1",
-    "formik": ">=2.0.0",
-    "react": ">=16.8.0"
+    "@mui/material": ">=5.0.0",
+    "formik": ">=2.2.9",
+    "react": ">=17.0.2",
+    "tiny-warning": ">=1.0.3"
   },
   "keywords": [
     "react",

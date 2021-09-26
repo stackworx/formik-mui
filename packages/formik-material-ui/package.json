@@ -1,12 +1,12 @@
 {
   "name": "formik-material-ui",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
-    "@mui/material": ">=5.0.0",
     "@emotion/react": ">=11.4.1",
     "@emotion/styled": ">=11.3.0",
+    "@mui/material": ">=5.0.0",
     "formik": ">=2.2.9",
     "react": ">=17.0.2",
     "tiny-warning": ">=1.0.3"
