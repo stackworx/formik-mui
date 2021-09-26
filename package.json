@@ -14,8 +14,6 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/eslint-parser": "^7.15.4",
     "@date-io/date-fns": "^2.11.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -39,9 +37,6 @@
     "@types/yup": "^0.29.13",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^27.2.0",
-    "babel-loader": "^8.2.2",
     "coveralls": "^3.1.1",
     "cross-env": "^7.0.3",
     "date-fns": "^2.23.0",
