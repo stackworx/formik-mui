@@ -10,14 +10,3 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [MUI](ht
 - [Code Sandbox](https://codesandbox.io/s/915qlr56rp)
 
 This project requires Formik>= 2.0.0. For Formik one please use formik-material-ui@1.0.x
-
-## Testing builds locally
-
-```bash
-# from the root of this workspace
-npm pack --workspace ./packages
-
-# in your project's folder
-npm i ../formik-material-ui/formik-material-ui-4.0.0.tgz
-npm i ../formik-material-ui/formik-material-ui-lab-1.0.0.tgz
-```
