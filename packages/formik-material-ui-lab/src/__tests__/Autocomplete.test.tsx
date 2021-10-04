@@ -15,7 +15,6 @@ const options = [
 ];
 
 test('renders', async () => {
-  // @ts-ignore
   const onSubmit = jest.fn();
   const { asFragment } = render(
     <Field

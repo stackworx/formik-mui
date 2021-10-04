@@ -35,7 +35,8 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
             action('submit')(values);
           }, 2000);
         }}
-        render={({ submitForm, values }) => (
+      >
+        {({ submitForm, values }) => (
           <Form>
             <FormControl className={classes.formControl}>
               <InputLabel htmlFor="age-simple">Age</InputLabel>
@@ -137,7 +138,7 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
             <FormValues values={values} />
           </Form>
         )}
-      />
+      </Formik>
     </Wrapper>
   );
 });

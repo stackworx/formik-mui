@@ -28,7 +28,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values }) => (
+    >
+      {({ submitForm, values }) => (
         <Form>
           <Typography>Multiple</Typography>
           <Box margin={1}>
@@ -81,6 +82,6 @@ export default () => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 );

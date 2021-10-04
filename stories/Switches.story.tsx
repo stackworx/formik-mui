@@ -25,7 +25,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values }) => (
+    >
+      {({ submitForm, values }) => (
         <Form>
           <Field component={Switch} name="on" type="checkbox" />
           <br />
@@ -80,6 +81,6 @@ export default () => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 );

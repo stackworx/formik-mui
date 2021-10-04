@@ -34,7 +34,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, isSubmitting, values }) => (
+    >
+      {({ submitForm, isSubmitting, values }) => (
         <Form>
           <Field component={DatePicker} label="Date" name="date" />
           <br />
@@ -73,6 +74,6 @@ export default () => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 );

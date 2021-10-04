@@ -55,7 +55,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, isSubmitting, values }) => (
+    >
+      {({ submitForm, isSubmitting, values }) => (
         <Form>
           <Field
             component={TextField}
@@ -140,6 +141,6 @@ export default () => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 );

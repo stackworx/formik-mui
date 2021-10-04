@@ -26,7 +26,7 @@ export function fieldToKeyboardTimePicker({
   return {
     error: showError,
     helperText: showError ? fieldError : helperText,
-    disabled: disabled != undefined ? disabled : isSubmitting,
+    disabled: disabled ?? isSubmitting,
     onChange:
       onChange ??
       function (date) {

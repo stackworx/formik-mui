@@ -24,7 +24,8 @@ export default () => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, values, isSubmitting, isValid }) => {
+    >
+      {({ submitForm, values, isSubmitting, isValid }) => {
         return (
           <Form>
             <Field component={RadioGroup} name="activity">
@@ -62,6 +63,6 @@ export default () => (
           </Form>
         );
       }}
-    />
+    </Formik>
   </Wrapper>
 );

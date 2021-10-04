@@ -12,7 +12,7 @@ For Example
 ```jsx
 function App() {
   const [email, setEmail] = useState('');
-  const [error, setError] = useState(null');
+  const [error, setError] = useState(null);
 
   return (
     <Field

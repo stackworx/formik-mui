@@ -7,7 +7,6 @@ import { render } from './utils';
 import { ToggleButtonGroup } from '../ToggleButtonGroup';
 
 test('renders', async () => {
-  // @ts-ignore
   const onSubmit = jest.fn();
   const { asFragment } = render(
     <Field component={ToggleButtonGroup} name="toggle" type="checkbox" />,

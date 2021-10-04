@@ -1,13 +1,13 @@
 {
   "name": "formik-material-ui-pickers",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "peerDependencies": {
     "@material-ui/core": ">=4.0.0",
     "@material-ui/pickers": ">=3.2.8",
     "formik": ">=2.0.0",
-    "react": "^16.8.0"
+    "react": ">=16.8.0"
   },
   "keywords": [
     "react",
@@ -26,6 +26,7 @@
   },
   "jest": {
     "testURL": "http://localhost/",
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
@@ -59,7 +60,7 @@
     "prepublishOnly": "yarn test && yarn build && yarn package"
   },
   "devDependencies": {
-    "@material-ui/pickers": "^3.2.8"
+    "@material-ui/pickers": "^3.3.10"
   },
   "gitHead": "409cd27bdca327979c0dd7e20edd3ab773620396"
 }

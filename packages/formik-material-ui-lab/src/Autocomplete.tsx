@@ -12,8 +12,7 @@ export interface AutocompleteProps<
   Multiple extends boolean | undefined,
   DisableClearable extends boolean | undefined,
   FreeSolo extends boolean | undefined
->
-  extends FieldProps,
+> extends FieldProps,
     Omit<
       MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
       'name' | 'value' | 'defaultValue'
@@ -34,7 +33,6 @@ export function fieldToAutocomplete<
   onChange,
   onBlur,
   freeSolo,
-  onInputChange,
   ...props
 }: AutocompleteProps<
   T,
@@ -65,20 +63,11 @@ export function fieldToAutocomplete<
       function (event) {
         field.onBlur(event ?? field.name);
       },
-    onInputChange: onInputChange
-      ? onInputChange
-      : freeSolo
-      ? function (_event, value) {
-          setFieldValue(field.name, value);
-        }
-      : undefined,
-    onChange: onChange
-      ? onChange
-      : !freeSolo
-      ? function (_event, value) {
-          setFieldValue(field.name, value);
-        }
-      : undefined,
+    onChange:
+      onChange ??
+      function (_event, value) {
+        setFieldValue(field.name, value);
+      },
     disabled: disabled ?? isSubmitting,
     loading: isSubmitting,
     ...fieldSubselection,

@@ -5,6 +5,7 @@ const external = [
   'react',
   'react-native',
   'formik',
+  'tiny-warning',
   '@material-ui/core/TextField',
   '@material-ui/core/Switch',
   '@material-ui/core/Checkbox',

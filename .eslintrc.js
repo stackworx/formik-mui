@@ -13,9 +13,12 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'prettier/@typescript-eslint',
+    "plugin:prettier/recommended"
   ],
   plugins: ['react-hooks'],
+  rules: {
+    "no-restricted-imports": ["error", "@material-ui/core", "@material-ui/lab", "@material-ui/pickers"],
+  },
   overrides: [
     {
       files: ['**/*.test.tsx', '**/*.test.ts'],
@@ -33,6 +36,7 @@ module.exports = {
         'jest/valid-expect': 'error',
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/no-empty-function': 'off',
+        "no-restricted-imports": "off",
       },
     },
     {
@@ -47,7 +51,7 @@ module.exports = {
     },
   ],
   rules: {
-    '@typescript-eslint/explicit-function-return-type': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/no-unused-vars': [
       'error',
       { ignoreRestSiblings: true },

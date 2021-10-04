@@ -106,13 +106,15 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
           action('submit')(values);
         }, 2000);
       }}
-      render={({ submitForm, isSubmitting, values }) => (
+    >
+      {({ submitForm, isSubmitting, values }) => (
         <Form>
           <Field
             component={TextField}
             type="email"
             label="Email"
             name="user.email"
+            helperText="Please Enter Email"
           />
           <br />
           <Field
@@ -189,6 +191,6 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
           <FormValues values={values} />
         </Form>
       )}
-    />
+    </Formik>
   </Wrapper>
 ));
