@@ -14,8 +14,15 @@ export interface StaticDateTimePickerProps
 
 export function fieldToStaticDateTimePicker({
   field: { onChange: _onChange, ...field },
-  form: { isSubmitting, touched, errors, setFieldValue, setFieldError },
-  textField: { helperText, ...textField } = {},
+  form: {
+    isSubmitting,
+    touched,
+    errors,
+    setFieldValue,
+    setFieldError,
+    setFieldTouched,
+  },
+  textField: { helperText, onBlur, ...textField } = {},
   disabled,
   label,
   onChange,
@@ -35,6 +42,12 @@ export function fieldToStaticDateTimePicker({
           error={showError}
           helperText={showError ? fieldError : helperText}
           label={label}
+          onBlur={
+            onBlur ??
+            function () {
+              setFieldTouched(field.name, true, true);
+            }
+          }
           {...textField}
         />
       )),
@@ -42,7 +55,10 @@ export function fieldToStaticDateTimePicker({
     onChange:
       onChange ??
       function (date) {
-        setFieldValue(field.name, date);
+        // Do not switch this order, otherwise you might cause a race condition
+        // See https://github.com/formium/formik/issues/2083#issuecomment-884831583
+        setFieldTouched(field.name, true, false);
+        setFieldValue(field.name, date, true);
       },
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
