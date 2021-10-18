@@ -9,7 +9,7 @@ import { createErrorHandler } from './errorHandler';
 export interface DesktopDatePickerProps
   extends FieldProps,
     Omit<MuiDesktopDatePickerProps, 'name' | 'value' | 'error'> {
-  textField: TextFieldProps;
+  textField?: TextFieldProps;
 }
 
 export function fieldToDesktopDatePicker({

@@ -9,7 +9,7 @@ import { createErrorHandler } from './errorHandler';
 export interface DateTimePickerProps
   extends FieldProps,
     Omit<MuiDateTimePickerProps, 'name' | 'value' | 'error'> {
-  textField: TextFieldProps;
+  textField?: TextFieldProps;
 }
 
 export function fieldToDateTimePicker({

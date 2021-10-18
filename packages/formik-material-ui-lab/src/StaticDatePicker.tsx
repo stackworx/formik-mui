@@ -9,7 +9,7 @@ import { createErrorHandler } from './errorHandler';
 export interface StaticDatePickerProps
   extends FieldProps,
     Omit<MuiStaticDatePickerProps, 'name' | 'value' | 'error'> {
-  textField: TextFieldProps;
+  textField?: TextFieldProps;
 }
 
 export function fieldToStaticDatePicker({

@@ -9,7 +9,7 @@ import { createErrorHandler } from './errorHandler';
 export interface MobileDatePickerProps
   extends FieldProps,
     Omit<MuiMobileDatePickerProps, 'name' | 'value' | 'error'> {
-  textField: TextFieldProps;
+  textField?: TextFieldProps;
 }
 
 export function fieldToMobileDatePicker({

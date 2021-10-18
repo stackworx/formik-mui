@@ -9,7 +9,7 @@ import { createErrorHandler } from './errorHandler';
 export interface DesktopTimePickerProps
   extends FieldProps,
     Omit<MuiDesktopTimePickerProps, 'name' | 'value' | 'error'> {
-  textField: TextFieldProps;
+  textField?: TextFieldProps;
 }
 
 export function fieldToDesktopTimePicker({

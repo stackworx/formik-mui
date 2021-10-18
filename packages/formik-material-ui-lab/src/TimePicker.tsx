@@ -9,7 +9,7 @@ import { createErrorHandler } from './errorHandler';
 export interface TimePickerProps
   extends FieldProps,
     Omit<MuiTimePickerProps, 'name' | 'value' | 'error'> {
-  textField: TextFieldProps;
+  textField?: TextFieldProps;
 }
 
 export function fieldToTimePicker({
