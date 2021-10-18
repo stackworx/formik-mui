@@ -127,20 +127,26 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import { Select } from 'formik-material-ui';
 
-<FormControl>
-  <InputLabel htmlFor="age-simple">Age</InputLabel>
-  <Field
-    component={Select}
-    name="age"
-    inputProps={{
-      id: 'age-simple',
-    }}
-  >
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-  </Field>
-</FormControl>;
+<Field
+  component={Select}
+  formControl={{ sx: sxFormControl }}
+  formHelperText={{ children: 'How old are you?' }}
+  id="age"
+  name="age"
+  labelId="age-simple"
+  label="Age"
+  validate={(age: number) =>
+    !age
+      ? 'Please enter your age'
+      : age < 21
+      ? 'You must be 21 or older'
+      : undefined
+  }
+>
+  <MenuItem value={10}>Ten</MenuItem>
+  <MenuItem value={20}>Twenty</MenuItem>
+  <MenuItem value={30}>Thirty</MenuItem>
+</Field>;
 ```
 
 #### [MUI Select Documentation](https://mui.com/api/select/)
