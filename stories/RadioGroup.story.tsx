@@ -4,7 +4,7 @@ import { Formik, Form, Field } from 'formik';
 import Wrapper from './Wrapper';
 import { action } from '@storybook/addon-actions';
 
-import { RadioGroup } from '../packages/formik-material-ui/src/RadioGroup';
+import { RadioGroup } from '../packages/formik-mui/src/RadioGroup';
 import LinearProgress from '@mui/material/LinearProgress';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';

@@ -10,7 +10,7 @@ import {
   fieldToTextField,
   TextField,
   TextFieldProps,
-} from '../packages/formik-material-ui/src/TextField';
+} from '../packages/formik-mui/src/TextField';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 

@@ -1,4 +1,4 @@
-name: Build formik-material-ui-lab
+name: Build formik-mui-lab
 on:
   push:
     branches:
@@ -28,6 +28,6 @@ jobs:
           yarn lint
           yarn test
           yarn build
-        working-directory: packages/formik-material-ui-lab
+        working-directory: packages/formik-mui-lab
         env:
           CI: true

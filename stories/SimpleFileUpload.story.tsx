@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
-import { SimpleFileUpload } from '../packages/formik-material-ui/src/main';
+import { SimpleFileUpload } from '../packages/formik-mui/src/main';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 

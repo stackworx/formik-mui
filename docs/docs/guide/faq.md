@@ -35,7 +35,7 @@ But you can do this a custom field
 ```jsx
 import TextField from '@mui/material/TextField';
 import { Field } from 'formik';
-import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
+import { fieldToTextField, TextFieldProps } from 'formik-mui';
 
 function UpperCasingTextField(props: TextFieldProps) {
   const {
