@@ -13,6 +13,6 @@ module.exports = {
       'guide/migrating',
       'guide/faq',
     ],
-    API: ['api/material-ui', 'api/material-ui-pickers', 'api/material-ui-lab'],
+    API: ['api/material-ui', 'api/material-ui-lab'],
   },
 };

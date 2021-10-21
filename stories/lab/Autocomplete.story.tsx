@@ -1,18 +1,16 @@
-import * as React from 'react';
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
-import { Formik, Form, Field } from 'formik';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import { action } from '@storybook/addon-actions';
-import TextField from '@material-ui/core/TextField';
+import { Field, Form, Formik } from 'formik';
+import * as React from 'react';
 import * as Yup from 'yup';
-
-import Wrapper from '../Wrapper';
-import FormValues from '../FormValues';
-
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
-} from '../../packages/formik-material-ui-lab/src/main';
+} from '../../packages/formik-material-ui/src/main';
+import FormValues from '../FormValues';
+import Wrapper from '../Wrapper';
 
 interface Movie {
   title: string;
@@ -132,15 +130,17 @@ const top100Films: Movie[] = [
   { title: 'Monty Python and the Holy Grail', year: 1975 },
 ];
 
-const groupedOptions = top100Films.map((option) => {
-  const firstLetter = option.title[0].toUpperCase();
-  return {
-    firstLetter: /[0-9]/.test(firstLetter) ? '0-9' : firstLetter,
-    ...option,
-  };
-});
+const groupedOptions = top100Films
+  .map((option) => {
+    const firstLetter = option.title[0].toUpperCase();
+    return {
+      firstLetter: /[0-9]/.test(firstLetter) ? '0-9' : firstLetter,
+      ...option,
+    };
+  })
+  .sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter));
 
-export default () => (
+const AutocompleteStory = () => (
   <Wrapper title="Autocomplete">
     <Formik
       validationSchema={schema}
@@ -274,3 +274,5 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export default AutocompleteStory;

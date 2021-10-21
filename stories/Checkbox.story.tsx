@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import { Formik, Form, Field } from 'formik';
 import { action } from '@storybook/addon-actions';
 
@@ -11,7 +11,7 @@ import {
   Checkbox,
   CheckboxWithLabel,
 } from '../packages/formik-material-ui/src/main';
-import { Typography } from '@material-ui/core';
+import Typography from '@mui/material/Typography';
 
 export default () => (
   <Wrapper title="Checkboxes">

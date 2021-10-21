@@ -1,15 +1,14 @@
-import * as React from 'react';
-import Button from '@material-ui/core/Button';
-import { Formik, Form, Field } from 'formik';
-import { LinearProgress } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import LinearProgress from '@mui/material/LinearProgress';
 import { action } from '@storybook/addon-actions';
+import { Field, Form, Formik } from 'formik';
+import * as React from 'react';
 import * as yup from 'yup';
-
-import Wrapper from './Wrapper';
-
-import { DateTimePicker } from '../packages/formik-material-ui-pickers/src/DateTimePicker';
-import { KeyboardDateTimePicker } from '../packages/formik-material-ui-pickers/src/KeyboardDateTimePicker';
+import { DateTimePicker } from '../packages/formik-material-ui-lab/src/DateTimePicker';
+import { DesktopDateTimePicker } from '../packages/formik-material-ui-lab/src/DesktopDateTimePicker';
+import { MobileDateTimePicker } from '../packages/formik-material-ui-lab/src/MobileDateTimePicker';
 import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 interface Values {
   date: Date | null;
@@ -19,7 +18,7 @@ const schema = yup.object().shape({
   date: yup.date().required(),
 });
 
-export default () => (
+const DateTimePickerStory = () => (
   <Wrapper title="Date &amp; Time Picker">
     <Formik<Values>
       initialValues={{
@@ -39,21 +38,43 @@ export default () => (
             component={DateTimePicker}
             label="Date &amp; time"
             name="date"
+            textField={{ helperText: 'Helper text' }}
           />
+          <br />
           <br />
           <Field
             component={DateTimePicker}
-            label="Date &amp; time inline"
-            name="date"
-            variant="inline"
+            label="Date &amp; time standard"
+            name="dateStandard"
+            textField={{ variant: 'standard' }}
           />
           <br />
+          <br />
           <Field
-            component={KeyboardDateTimePicker}
-            label="Keyboard date &amp; time picker"
-            name="date"
-            format="yyyy/MM/dd HH:mm"
+            component={DesktopDateTimePicker}
+            label="Desktop date &amp; time picker"
+            name="desktopDate"
+            inputFormat="yyyy/MM/dd HH:mm"
           />
+          <br />
+          <br />
+          <Field
+            component={MobileDateTimePicker}
+            label="Mobile date &amp; time picker"
+            name="mobileDate"
+            inputFormat="yyyy/MM/dd HH:mm"
+          />
+          {/* TODO: This static date-time picker is not contained within its section like the other pickers.
+              The "edit" pen icon appears at the very top right of the wrapper.
+              The `StaticDatePicker` and `StaticTimePicker` both do not have this issue.
+          <br />
+          <br />
+          <Field
+            component={StaticDateTimePicker}
+            label="Static date &amp; time picker"
+            name="date"
+            inputFormat="yyyy/MM/dd HH:mm"
+          /> */}
           <br />
           {isSubmitting && <LinearProgress />}
           <br />
@@ -72,3 +93,5 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export default DateTimePickerStory;

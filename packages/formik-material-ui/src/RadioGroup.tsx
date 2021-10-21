@@ -1,7 +1,7 @@
 import * as React from 'react';
 import MuiRadioGroup, {
   RadioGroupProps as MuiRadioGroupProps,
-} from '@material-ui/core/RadioGroup';
+} from '@mui/material/RadioGroup';
 import { FieldProps } from 'formik';
 
 export interface RadioGroupProps

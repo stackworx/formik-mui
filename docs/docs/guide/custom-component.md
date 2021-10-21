@@ -5,7 +5,7 @@ title: Creating Custom Components
 
 # Notes
 
-Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulate the logic used to map formik props into the Material-UI shapes
+Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulate the logic used to map formik props into the MUI shapes
 
 # Examples
 
@@ -14,7 +14,7 @@ Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToC
 A simple test input that always uppercases the input
 
 ```jsx
-import MuiTextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 
 function UpperCasingTextField(props: TextFieldProps) {
@@ -23,12 +23,12 @@ function UpperCasingTextField(props: TextFieldProps) {
     field: { name },
   } = props;
   const onChange = React.useCallback(
-    event => {
+    (event) => {
       const { value } = event.target;
       setFieldValue(name, value ? value.toUpperCase() : '');
     },
     [setFieldValue, name]
   );
-  return <MuiTextField {...fieldToTextField(props)} onChange={onChange} />;
+  return <TextField {...fieldToTextField(props)} onChange={onChange} />;
 }
 ```

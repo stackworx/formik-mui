@@ -1,7 +1,7 @@
 import * as React from 'react';
 import MuiInputBase, {
   InputBaseProps as MuiInputBaseProps,
-} from '@material-ui/core/InputBase';
+} from '@mui/material/InputBase';
 import { FieldProps } from 'formik';
 
 export interface InputBaseProps

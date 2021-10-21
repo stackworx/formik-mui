@@ -1,19 +1,19 @@
-import React from 'react';
-import classnames from 'classnames';
-import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import classnames from 'classnames';
+import React from 'react';
 import styles from './styles.module.css';
 
 const features = [
   {
     title: <>Easy to Use</>,
     // imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: <>Get going quickly with Formik and Material-UI</>,
+    description: <>Get going quickly with Formik and MUI</>,
   },
   {
-    title: <a href="https://material-ui.com/">Material-UI</a>,
+    title: <a href="https://mui.com/">MUI</a>,
     // imageUrl: 'img/mui-logo.svg',
     description: (
       <>

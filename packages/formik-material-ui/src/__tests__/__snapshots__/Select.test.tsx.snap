@@ -7,48 +7,78 @@ exports[`Select Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiInputBase-root MuiInput-root MuiInput-underline"
-    onClick={[Function]}
+    className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
   >
-    <div
-      aria-haspopup="listbox"
-      aria-labelledby="mui-component-select-test"
-      className="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
-      id="mui-component-select-test"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      role="button"
-      tabIndex={0}
-    >
-      <span
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "&#8203;",
-          }
-        }
-      />
-    </div>
-    <input
-      aria-hidden={true}
-      className="MuiSelect-nativeInput"
-      name="test"
-      onAnimationStart={[Function]}
-      onChange={[Function]}
-      tabIndex={-1}
-      value=""
+    <label
+      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink={false}
     />
-    <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root MuiSelect-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
+    <div
+      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      onClick={[Function]}
     >
-      <path
-        d="M7 10l5 5 5-5z"
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="mui-component-select-test"
+        className="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+        id="mui-component-select-test"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        <span
+          className="notranslate"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </div>
+      <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+        disabled={false}
+        name="test"
+        onAnimationStart={[Function]}
+        onChange={[Function]}
+        required={false}
+        tabIndex={-1}
+        value=""
       />
-    </svg>
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+        data-testid="ArrowDropDownIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+      <fieldset
+        aria-hidden={true}
+        className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+      >
+        <legend
+          className="css-1a1ihhj"
+        >
+          <span
+            className="notranslate"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+    </div>
   </div>
 </form>
 `;

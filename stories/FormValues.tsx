@@ -1,14 +1,6 @@
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import React from 'react';
-import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-
-const styles = () =>
-  createStyles({
-    root: {
-      padding: 5,
-      marginTop: 20,
-    },
-  });
 
 function replacer(_: string, value: unknown) {
   // Filtering out properties
@@ -22,19 +14,19 @@ function replacer(_: string, value: unknown) {
   return value;
 }
 
-interface Props extends WithStyles<typeof styles> {
+interface Props {
   values: unknown;
 }
 
-const FormValues = ({ values, classes }: Props) => (
-  <div className={classes.root}>
+const FormValues = ({ values }: Props) => (
+  <Box sx={{ p: '5px', mt: 2.5 }}>
     <Typography variant="h4" component="h5">
       State
     </Typography>
     <Typography component="pre">
       {JSON.stringify(values, replacer, 2)}
     </Typography>
-  </div>
+  </Box>
 );
 
-export default withStyles(styles)(FormValues);
+export default FormValues;

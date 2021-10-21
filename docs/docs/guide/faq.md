@@ -33,7 +33,7 @@ From this code is not at all obvious who is in control of the state. Therefore w
 But you can do this a custom field
 
 ```jsx
-import MuiTextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import { Field } from 'formik';
 import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
 
@@ -43,13 +43,13 @@ function UpperCasingTextField(props: TextFieldProps) {
     field: { name },
   } = props;
   const onChange = React.useCallback(
-    event => {
+    (event) => {
       const { value } = event.target;
       setFieldValue(name, value ? value.toUpperCase() : '');
     },
     [setFieldValue, name]
   );
-  return <MuiTextField {...fieldToTextField(props)} onChange={onChange} />;
+  return <TextField {...fieldToTextField(props)} onChange={onChange} />;
 }
 ```
 
@@ -89,54 +89,4 @@ A common scenario where this is problematic is where using Formik for search. He
     </Form>
   )}
 </Formik>
-```
-
-## Validation Errors Missing from Select
-
-The following code will not render any validation errors
-
-```jsx
-<Field component={Select} type="text" name="tags" multiple={true}>
-  <MenuItem value="dogs">Dogs</MenuItem>
-  <MenuItem value="cats">Cats</MenuItem>
-  <MenuItem value="rats">Rats</MenuItem>
-  <MenuItem value="snakes">Snakes</MenuItem>
-</Field>
-```
-
-This is because the [Select](https://material-ui.com/api/select/) does not actually have a `error` prop.
-
-There are 2 ways to fix this
-
-### Use a Text field of type Select
-
-```jsx
-<Field
-  component={Text}
-  type="text"
-  name="tags"
-  select={true}
-  SelectProps={{
-    multiple: true,
-  }}
->
-  <MenuItem value="dogs">Dogs</MenuItem>
-  <MenuItem value="cats">Cats</MenuItem>
-  <MenuItem value="rats">Rats</MenuItem>
-  <MenuItem value="snakes">Snakes</MenuItem>
-</Field>
-```
-
-### Manually bind the error
-
-```jsx
-import { ErrorMessage } from 'formik';
-
-<Field component={Select} type="text" name="tags" multiple={true}>
-  <MenuItem value="dogs">Dogs</MenuItem>
-  <MenuItem value="cats">Cats</MenuItem>
-  <MenuItem value="rats">Rats</MenuItem>
-  <MenuItem value="snakes">Snakes</MenuItem>
-</Field>
-<ErrorMessage name="tags" />
 ```

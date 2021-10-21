@@ -1,30 +1,24 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { Formik, Form, Field } from 'formik';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import { SxProps } from '@mui/system';
 import { action } from '@storybook/addon-actions';
-import { createStyles, withStyles, Theme, WithStyles } from '@material-ui/core';
-import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
-
-import Wrapper from './Wrapper';
-import FormValues from './FormValues';
+import { Field, Form, Formik } from 'formik';
+import React from 'react';
 import { Select } from '../packages/formik-material-ui/src/main';
-
-const styles = ({ spacing }: Theme) =>
-  createStyles({
-    formControl: {
-      margin: spacing(1),
-      minWidth: 120,
-    },
-  });
+import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 interface Values {
   age: string;
   pets: string[];
 }
 
-export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
+const sxFormControl: SxProps = {
+  m: 1,
+  minWidth: 140,
+};
+
+const SelectStory = () => {
   return (
     <Wrapper title="Select">
       <Formik<Values>
@@ -38,98 +32,129 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
       >
         {({ submitForm, values }) => (
           <Form>
-            <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="age-simple">Age</InputLabel>
-              <Field
-                component={Select}
-                name="age"
-                inputProps={{
-                  id: 'age-simple',
-                }}
-              >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Field>
-            </FormControl>
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl }}
+              id="age"
+              name="age"
+              labelId="age-simple"
+              label="Age"
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
             <br />
-            <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="age-simple-empty" shrink>
-                Age (Empty)
-              </InputLabel>
-              <Field
-                component={Select}
-                name="age"
-                displayEmpty
-                inputProps={{
-                  id: 'age-simple-empty',
-                }}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Field>
-            </FormControl>
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl }}
+              formHelperText={{ children: 'How old are you?' }}
+              id="age"
+              name="age"
+              labelId="age-simple"
+              label="Age helper"
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
             <br />
-            <FormControl className={classes.formControl}>
-              <InputLabel shrink htmlFor="age-native">
-                Native Age
-              </InputLabel>
-              <Field
-                component={Select}
-                name="age"
-                native
-                inputProps={{
-                  id: 'age-native',
-                }}
-              >
-                <option value="">None</option>
-                <option value={10}>Ten</option>
-                <option value={20}>Twenty</option>
-                <option value={30}>Thirty</option>
-              </Field>
-            </FormControl>
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl }}
+              formHelperText={{ children: 'How old are you?' }}
+              id="age-validator"
+              name="age-validator"
+              labelId="age-validator"
+              label="Age validator"
+              validate={(age: number) =>
+                !age
+                  ? 'Please enter your age'
+                  : age < 21
+                  ? 'You must be 21 or older'
+                  : undefined
+              }
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
             <br />
-            <FormControl className={classes.formControl}>
-              <InputLabel htmlFor="pets">Pets</InputLabel>
-              <Field
-                component={Select}
-                name="pets"
-                multiple={true}
-                inputProps={{
-                  name: 'pets',
-                  id: 'pets',
-                }}
-              >
-                <MenuItem value="dogs">Dogs</MenuItem>
-                <MenuItem value="cats">Cats</MenuItem>
-                <MenuItem value="rats">Rats</MenuItem>
-                <MenuItem value="snakes">Snakes</MenuItem>
-              </Field>
-            </FormControl>
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl }}
+              id="age"
+              name="age"
+              labelId="age-simple-empty"
+              label="Age (Empty)"
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Field>
             <br />
-            <FormControl className={classes.formControl}>
-              <InputLabel shrink htmlFor="pets-native">
-                Native Pets
-              </InputLabel>
-              <Field
-                component={Select}
-                name="pets"
-                native={true}
-                multiple={true}
-                inputProps={{
-                  id: 'pets-native',
-                }}
-              >
-                <option value="dogs">Dogs</option>
-                <option value="cats">Cats</option>
-                <option value="rats">Rats</option>
-                <option value="snakes">Snakes</option>
-              </Field>
-            </FormControl>
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl, variant: 'standard' }}
+              inputLabel={{
+                shrink: true,
+                variant: 'standard',
+                htmlFor: 'age-native',
+              }}
+              id="age"
+              name="age"
+              native
+              labelId="age-native"
+              label="Native Age"
+              inputProps={{
+                name: 'age',
+                id: 'age-native',
+              }}
+            >
+              <option value="">None</option>
+              <option value={10}>Ten</option>
+              <option value={20}>Twenty</option>
+              <option value={30}>Thirty</option>
+            </Field>
+            <br />
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl }}
+              id="pets"
+              name="pets"
+              multiple
+              labelId="pets"
+              label="Pets"
+            >
+              <MenuItem value="dogs">Dogs</MenuItem>
+              <MenuItem value="cats">Cats</MenuItem>
+              <MenuItem value="rats">Rats</MenuItem>
+              <MenuItem value="snakes">Snakes</MenuItem>
+            </Field>
+            <br />
+
+            <Field
+              component={Select}
+              formControl={{ sx: sxFormControl }}
+              inputLabel={{ shrink: true }}
+              id="pets"
+              name="pets"
+              native
+              multiple
+              labelId="native-pets"
+              label="Native Pets"
+              inputProps={{
+                id: 'native-pets',
+              }}
+            >
+              <option value="dogs">Dogs</option>
+              <option value="cats">Cats</option>
+              <option value="rats">Rats</option>
+              <option value="snakes">Snakes</option>
+            </Field>
             <br />
             <Button variant="contained" color="primary" onClick={submitForm}>
               Submit
@@ -141,4 +166,6 @@ export default withStyles(styles)(({ classes }: WithStyles<typeof styles>) => {
       </Formik>
     </Wrapper>
   );
-});
+};
+
+export default SelectStory;

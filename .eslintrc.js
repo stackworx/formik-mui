@@ -13,12 +13,9 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    "plugin:prettier/recommended"
+    'plugin:prettier/recommended',
   ],
   plugins: ['react-hooks'],
-  rules: {
-    "no-restricted-imports": ["error", "@material-ui/core", "@material-ui/lab", "@material-ui/pickers"],
-  },
   overrides: [
     {
       files: ['**/*.test.tsx', '**/*.test.ts'],
@@ -26,7 +23,7 @@ module.exports = {
         jest: true, // now **/*.test.js files' env has both es6 *and* jest
       },
       // Can't extend in overrides: https://github.com/eslint/eslint/issues/8813
-      // "extends": ["plugin:jest/recommended"]
+      // 'extends': ['plugin:jest/recommended']
       plugins: ['jest'],
       rules: {
         'jest/no-disabled-tests': 'warn',
@@ -36,7 +33,7 @@ module.exports = {
         'jest/valid-expect': 'error',
         '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/no-empty-function': 'off',
-        "no-restricted-imports": "off",
+        'no-restricted-imports': 'off',
       },
     },
     {
@@ -57,5 +54,6 @@ module.exports = {
       { ignoreRestSiblings: true },
     ],
     'react/prop-types': 0,
+    'no-restricted-imports': ['error', '@mui/material', '@mui/lab'],
   },
 };

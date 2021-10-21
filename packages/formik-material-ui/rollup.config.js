@@ -6,20 +6,22 @@ const external = [
   'react-native',
   'formik',
   'tiny-warning',
-  '@material-ui/core/TextField',
-  '@material-ui/core/Switch',
-  '@material-ui/core/Checkbox',
-  '@material-ui/core/FormControlLabel',
-  '@material-ui/core/Select',
-  '@material-ui/core/FormControl',
-  '@material-ui/core/InputLabel',
-  '@material-ui/core/Input',
-  '@material-ui/core/FormHelperText',
-  '@material-ui/core/RadioGroup',
-  '@material-ui/core/InputBase',
+  '@mui/material/Autocomplete',
+  '@mui/material/Checkbox',
+  '@mui/material/FormControl',
+  '@mui/material/FormControlLabel',
+  '@mui/material/FormHelperText',
+  '@mui/material/Input',
+  '@mui/material/InputBase',
+  '@mui/material/InputLabel',
+  '@mui/material/RadioGroup',
+  '@mui/material/Select',
+  '@mui/material/Switch',
+  '@mui/material/TextField',
+  '@mui/material/ToggleButtonGroup',
 ];
 
-export default [
+const config = [
   {
     input: 'src/main.ts',
     plugins: [
@@ -35,3 +37,5 @@ export default [
     ],
   },
 ];
+
+export default config;

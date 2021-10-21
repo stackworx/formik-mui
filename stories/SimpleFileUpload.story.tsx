@@ -1,13 +1,11 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { Formik, Form, Field } from 'formik';
+import Button from '@mui/material/Button';
 import { action } from '@storybook/addon-actions';
-import { withStyles, Theme } from '@material-ui/core';
+import { Field, Form, Formik } from 'formik';
+import React from 'react';
 import * as Yup from 'yup';
-
-import Wrapper from './Wrapper';
-import FormValues from './FormValues';
 import { SimpleFileUpload } from '../packages/formik-material-ui/src/main';
+import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 // 10 Megs
 const MAX_FILE_SIZE = 10485760;
@@ -22,18 +20,11 @@ const schema = Yup.object().shape({
     ),
 });
 
-const styles = (theme: Theme) => ({
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-});
-
 interface Values {
   file: '' | File;
 }
 
-export default withStyles(styles)(() => (
+const SimpleFileUploadStory = () => (
   <Wrapper title="File Upload">
     <Formik<Values>
       validationSchema={schema}
@@ -62,4 +53,6 @@ export default withStyles(styles)(() => (
       )}
     </Formik>
   </Wrapper>
-));
+);
+
+export default SimpleFileUploadStory;

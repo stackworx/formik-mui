@@ -1,8 +1,8 @@
 import * as React from 'react';
-import MuiCheckbox from '@material-ui/core/Checkbox';
+import MuiCheckbox from '@mui/material/Checkbox';
 import FormControlLabel, {
   FormControlLabelProps as MuiFormControlLabelProps,
-} from '@material-ui/core/FormControlLabel';
+} from '@mui/material/FormControlLabel';
 import { FieldProps } from 'formik';
 
 import { CheckboxProps, fieldToCheckbox } from './Checkbox';

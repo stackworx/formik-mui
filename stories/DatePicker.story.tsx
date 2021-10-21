@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { subDays } from 'date-fns';
-import Button from '@material-ui/core/Button';
-import { Formik, Form, Field } from 'formik';
-import { LinearProgress } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import LinearProgress from '@mui/material/LinearProgress';
 import { action } from '@storybook/addon-actions';
+import { subDays } from 'date-fns';
+import { Field, Form, Formik } from 'formik';
+import * as React from 'react';
 import * as yup from 'yup';
-
-import Wrapper from './Wrapper';
-
-import { DatePicker } from '../packages/formik-material-ui-pickers/src/DatePicker';
-import { KeyboardDatePicker } from '../packages/formik-material-ui-pickers/src/KeyboardDatePicker';
+import { DatePicker } from '../packages/formik-material-ui-lab/src/DatePicker';
+import { DesktopDatePicker } from '../packages/formik-material-ui-lab/src/DesktopDatePicker';
+import { MobileDatePicker } from '../packages/formik-material-ui-lab/src/MobileDatePicker';
+import { StaticDatePicker } from '../packages/formik-material-ui-lab/src/StaticDatePicker';
 import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 interface Values {
   date: Date | null;
@@ -21,7 +21,7 @@ const schema = yup.object().shape({
   futureDate: yup.date().required().min(subDays(new Date(), 1)),
 });
 
-export default () => (
+const DatePickerStory = () => (
   <Wrapper title="Date Picker">
     <Formik<Values>
       initialValues={{
@@ -37,27 +37,51 @@ export default () => (
     >
       {({ submitForm, isSubmitting, values }) => (
         <Form>
-          <Field component={DatePicker} label="Date" name="date" />
+          <Field
+            component={DatePicker}
+            label="Date"
+            name="date"
+            textField={{ helperText: 'Helper text' }}
+          />
+          <br />
           <br />
           <Field
             component={DatePicker}
-            label="Date inline"
-            name="date"
-            variant="inline"
+            label="Date filled"
+            name="dateFilled"
+            textField={{ variant: 'filled' }}
           />
           <br />
-          <Field
-            component={KeyboardDatePicker}
-            label="Keyboard date picker"
-            name="date"
-            format="MM/dd/yyyy"
-          />
           <br />
           <Field
-            component={KeyboardDatePicker}
-            label="Keyboard date picker"
+            component={DesktopDatePicker}
+            label="Desktop date picker"
+            name="desktopDate"
+            inputFormat="MM/dd/yyyy"
+          />
+          <br />
+          <br />
+          <Field
+            component={DesktopDatePicker}
+            label="Future Desktop date picker"
             name="futureDate"
-            format="MM/dd/yyyy"
+            inputFormat="MM/dd/yyyy"
+          />
+          <br />
+          <br />
+          <Field
+            component={MobileDatePicker}
+            label="Mobile date picker"
+            name="mobileDate"
+            inputFormat="MM/dd/yyyy"
+          />
+          <br />
+          <br />
+          <Field
+            component={StaticDatePicker}
+            label="Static date picker"
+            name="staticDate"
+            inputFormat="MM/dd/yyyy"
           />
           <br />
           {isSubmitting && <LinearProgress />}
@@ -77,3 +101,5 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export default DatePickerStory;

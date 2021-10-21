@@ -6,28 +6,22 @@ title: Getting Started
 ## Installation
 
 ```
-yarn add formik formik-material-ui @material-ui/core
+yarn add formik formik-material-ui @mui/material @emotion/react @emotion/styled
 ```
 
 ### Material-UI Lab (Optional)
 
 ```
-yarn add formik-material-ui-lab @material-ui/lab
-```
-
-### Material-UI Pickers (Optional)
-
-```
-yarn add formik-material-ui-pickers @date-io/date-fns@1.x date-fns
+yarn add @date-io/date-fns @mui/lab formik-material-ui-lab
 ```
 
 ## Quick Start
 
 ```jsx {4,39,46}
-import * as React from 'react';
+import { Button, LinearProgress } from '@mui/material';
 import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
+import * as React from 'react';
 
 interface Values {
   email: string;
@@ -41,7 +35,7 @@ function App() {
         email: '',
         password: '',
       }}
-      validate={values => {
+      validate={(values) => {
         const errors: Partial<Values> = {};
         if (!values.email) {
           errors.email = 'Required';
@@ -98,9 +92,9 @@ Note: that the `Field` wrapper is not used, for more details on why see the [FAQ
 Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
 
 ```jsx
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import InputAdornment from '@mui/material/InputAdornment';
 import { TextField } from 'formik-material-ui';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 
 <TextField
   name="customized"
@@ -118,116 +112,20 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 
 ## Quick Start (Lab)
 
-See [Material-UI Lab Info](https://material-ui.com/components/about-the-lab/) for more information
-
-```jsx {4,31,52}
-import * as React from 'react';
-import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
-import { Autocomplete, ToggleButtonGroup } from 'formik-material-ui-lab';
-import Box from '@material-ui/core/Box';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
-import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
-import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
-import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
-
-function App() {
-  return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Formik
-        initialValues={{
-          toggle: null,
-          autocomplete: null,
-        }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            setSubmitting(false);
-            alert(JSON.stringify(values, null, 2));
-          }, 500);
-        }}
-      >
-        {({ submitForm, isSubmitting, errors, touched }) => (
-          <Form>
-            <Box margin={1}>
-              <Field
-                component={ToggleButtonGroup}
-                name="toggle"
-                type="checkbox"
-              >
-                <ToggleButton value="left" aria-label="left aligned">
-                  <FormatAlignLeftIcon />
-                </ToggleButton>
-                <ToggleButton value="center" aria-label="centered">
-                  <FormatAlignCenterIcon />
-                </ToggleButton>
-                <ToggleButton value="right" aria-label="right aligned">
-                  <FormatAlignRightIcon />
-                </ToggleButton>
-                <ToggleButton value="justify" aria-label="justified" disabled>
-                  <FormatAlignJustifyIcon />
-                </ToggleButton>
-              </Field>
-            </Box>
-            <Box margin={1}>
-              <Field
-                name="autocomplete"
-                component={Autocomplete}
-                options={top100Films}
-                getOptionLabel={(option: Movie) => option.title}
-                style={{ width: 300 }}
-                renderInput={(params: AutocompleteRenderInputParams) => (
-                  <TextField
-                    {...params}
-                    error={touched['autocomplete'] && !!errors['autocomplete']}
-                    helperText={
-                      touched['autocomplete'] && errors['autocomplete']
-                    }
-                    label="Autocomplete"
-                    variant="outlined"
-                  />
-                )}
-              />
-            </Box>
-            <Box margin={1}>
-              <Button
-                variant="contained"
-                color="primary"
-                disabled={isSubmitting}
-                onClick={submitForm}
-              >
-                Submit
-              </Button>
-            </Box>
-          </Form>
-        )}
-      </Formik>
-    </MuiPickersUtilsProvider>
-  );
-}
-```
-
-## Quick Start (Picker)
-
-See [Material-UI Pickers getting started](https://material-ui-pickers.dev/getting-started/installation) for more information
+See [MUI _About the lab_](https://mui.com/components/about-the-lab/) for more information
 
 ```jsx {4-8,9,12,16,32,34,36}
-import * as React from 'react';
+import AdapterDateFns from '@mui/lab/AdapterDateFns'; // Depending on the library you picked
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import Button from '@mui/material/Button';
+import LinearProgress from '@mui/material/LinearProgress';
 import { Formik, Form, Field } from 'formik';
-import { Button, LinearProgress } from '@material-ui/core';
-import {
-  TimePicker,
-  DatePicker,
-  DateTimePicker,
-} from 'formik-material-ui-pickers';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-
-// Depending on the library you picked
-import DateFnsUtils from '@date-io/date-fns';
+import { DatePicker, DateTimePicker, TimePicker } from 'formik-material-ui-lab';
+import * as React from 'react';
 
 function App() {
   return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Formik
         initialValues={{
           date: new Date(),
@@ -243,15 +141,20 @@ function App() {
       >
         {({ submitForm, isSubmitting }) => (
           <Form>
-            <Field component={TimePicker} name="time" label="Time" />
-            <br />
-            <Field component={DatePicker} name="date" label="Date" />
+            <Field
+              component={DatePicker}
+              name="date"
+              label="Date"
+              textField={{ helperText: 'Helper text', variant: 'filled' }}
+            />
             <br />
             <Field
               component={DateTimePicker}
               name="dateTime"
               label="Date Time"
             />
+            <Field component={TimePicker} name="time" label="Time" />
+            <br />
             {isSubmitting && <LinearProgress />}
             <br />
             <Button
@@ -265,7 +168,7 @@ function App() {
           </Form>
         )}
       </Formik>
-    </MuiPickersUtilsProvider>
+    </LocalizationProvider>
   );
 }
 ```
@@ -275,9 +178,9 @@ function App() {
 Several properties are purposefully excluded, please see the [FAQ](guide/faq.md) for details.
 
 ```jsx
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import InputAdornment from '@mui/material/InputAdornment';
 import { TextField } from 'formik-material-ui';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 
 <TextField
   name="customized"
