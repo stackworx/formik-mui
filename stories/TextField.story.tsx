@@ -17,6 +17,7 @@ import Wrapper from './Wrapper';
 interface Values {
   user: { email: string };
   password: string;
+  helperText: string;
   uppercasing: string;
   select: string;
   outlined: string;
@@ -27,6 +28,7 @@ const schema = yup.object().shape({
     email: yup.string().email().required(),
   }),
   password: yup.string().required(),
+  helperText: yup.string().required(),
   select: yup.mixed().required(),
 });
 
@@ -65,6 +67,7 @@ const TextFieldStory = () => (
       initialValues={{
         user: { email: '' },
         password: '',
+        helperText: '',
         uppercasing: '',
         select: '',
         outlined: '',
@@ -92,6 +95,14 @@ const TextFieldStory = () => (
             type="password"
             label="Password"
             name="password"
+          />
+          <br />
+          <Field
+            component={TextField}
+            type="text"
+            label="Field with helper text"
+            name="helperText"
+            helperText="Helper text goes here"
           />
           <br />
           <Field
