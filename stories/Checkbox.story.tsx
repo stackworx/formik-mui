@@ -7,10 +7,7 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
-import {
-  Checkbox,
-  CheckboxWithLabel,
-} from '../packages/formik-material-ui/src/main';
+import { Checkbox, CheckboxWithLabel } from '../packages/formik-mui/src/main';
 import Typography from '@mui/material/Typography';
 
 export default () => (

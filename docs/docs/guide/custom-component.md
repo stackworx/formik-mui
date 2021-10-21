@@ -15,7 +15,7 @@ A simple test input that always uppercases the input
 
 ```jsx
 import TextField from '@mui/material/TextField';
-import { fieldToTextField, TextFieldProps } from 'formik-material-ui';
+import { fieldToTextField, TextFieldProps } from 'formik-mui';
 
 function UpperCasingTextField(props: TextFieldProps) {
   const {

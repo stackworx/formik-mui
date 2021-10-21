@@ -2,10 +2,10 @@ module.exports = {
   title: 'Formik Material-UI',
   tagline: 'Easily combine formik with MUI',
   url: 'https://stackworx.github.io/',
-  baseUrl: '/formik-material-ui/',
+  baseUrl: '/formik-mui/',
   favicon: 'img/favicon.ico',
   organizationName: 'stackworx',
-  projectName: 'formik-material-ui',
+  projectName: 'formik-mui',
   themeConfig: {
     navbar: {
       title: 'Formik Material-UI',
@@ -18,7 +18,7 @@ module.exports = {
         { to: 'docs/api/material-ui', label: 'API', position: 'left' },
         // { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/stackworx/formik-material-ui',
+          href: 'https://github.com/stackworx/formik-mui',
           label: 'GitHub',
           position: 'right',
         },
@@ -36,7 +36,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/stackworx/formik-material-ui/edit/master/',
+            'https://github.com/stackworx/formik-mui/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

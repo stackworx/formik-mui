@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
-import { Switch } from '../packages/formik-material-ui/src/main';
+import { Switch } from '../packages/formik-mui/src/main';
 import Box from '@mui/material/Box';
 
 export default () => (

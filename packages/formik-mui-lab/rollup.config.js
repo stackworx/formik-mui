@@ -1,5 +1,5 @@
 import typescript from 'rollup-plugin-typescript2';
-import pkg from '../formik-material-ui-lab/package.json';
+import pkg from '../formik-mui-lab/package.json';
 
 const external = [
   'react',

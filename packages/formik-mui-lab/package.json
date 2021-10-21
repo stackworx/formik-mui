@@ -1,12 +1,13 @@
 {
-  "name": "formik-material-ui",
-  "version": "4.0.0-alpha.2",
+  "name": "formik-mui-lab",
+  "version": "1.0.0-alpha.2",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,
   "peerDependencies": {
     "@emotion/react": ">=11.4.1",
     "@emotion/styled": ">=11.3.0",
+    "@mui/lab": "^5.0.0-alpha.48",
     "@mui/material": ">=5.0.0",
     "formik": ">=2.2.9",
     "react": ">=17.0.2",
@@ -17,7 +18,9 @@
     "formik",
     "material-ui",
     "mui",
-    "form"
+    "lab",
+    "form",
+    "pickers"
   ],
   "prettier": {
     "singleQuote": true,
@@ -25,14 +28,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stackworx/formik-material-ui"
+    "url": "https://github.com/stackworx/formik-mui"
   },
   "jest": {
-    "globals": {
-      "__DEV__": "boolean"
-    },
-    "testEnvironment": "jsdom",
     "testURL": "http://localhost/",
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
@@ -47,7 +47,8 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "globalSetup": "./global-setup.js"
   },
   "files": [
     "dist"

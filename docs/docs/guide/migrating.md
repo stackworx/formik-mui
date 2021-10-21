@@ -3,7 +3,7 @@ id: migrating
 title: Migrating
 ---
 
-## Migrating from formik-material-ui 1.0.0
+## Migrating from formik-mui 1.0.0
 
 ### Standard Components
 
@@ -15,7 +15,7 @@ title: Migrating
 
 ```jsx
 import { Field } from 'formik';
-import { Checkbox, Switch } from 'formik-material-ui';
+import { Checkbox, Switch } from 'formik-mui';
 
 <Field name="checkbox" component={Checkbox} />;
 <Field name="switch" component={Switch} />;
@@ -27,7 +27,7 @@ import { Checkbox, Switch } from 'formik-material-ui';
 
 ```jsx
 import { Field } from 'formik';
-import { Checkbox, Switch } from 'formik-material-ui';
+import { Checkbox, Switch } from 'formik-mui';
 
 import {
   // Field Helpers

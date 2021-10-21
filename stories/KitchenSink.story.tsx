@@ -16,7 +16,7 @@ import {
   TextField,
   Select,
   RadioGroup,
-} from '../packages/formik-material-ui/src/main';
+} from '../packages/formik-mui/src/main';
 
 interface Values {
   email: string;

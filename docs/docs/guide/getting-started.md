@@ -6,13 +6,13 @@ title: Getting Started
 ## Installation
 
 ```
-yarn add formik formik-material-ui @mui/material @emotion/react @emotion/styled
+yarn add formik formik-mui @mui/material @emotion/react @emotion/styled
 ```
 
 ### Material-UI Lab (Optional)
 
 ```
-yarn add @date-io/date-fns @mui/lab formik-material-ui-lab
+yarn add @date-io/date-fns @mui/lab formik-mui-lab
 ```
 
 ## Quick Start
@@ -20,7 +20,7 @@ yarn add @date-io/date-fns @mui/lab formik-material-ui-lab
 ```jsx {4,39,46}
 import { Button, LinearProgress } from '@mui/material';
 import { Formik, Form, Field } from 'formik';
-import { TextField } from 'formik-material-ui';
+import { TextField } from 'formik-mui';
 import * as React from 'react';
 
 interface Values {
@@ -94,7 +94,7 @@ Several properties are purposefully excluded, please see the [FAQ](guide/faq.md)
 ```jsx
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import InputAdornment from '@mui/material/InputAdornment';
-import { TextField } from 'formik-material-ui';
+import { TextField } from 'formik-mui';
 
 <TextField
   name="customized"
@@ -120,7 +120,7 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import Button from '@mui/material/Button';
 import LinearProgress from '@mui/material/LinearProgress';
 import { Formik, Form, Field } from 'formik';
-import { DatePicker, DateTimePicker, TimePicker } from 'formik-material-ui-lab';
+import { DatePicker, DateTimePicker, TimePicker } from 'formik-mui-lab';
 import * as React from 'react';
 
 function App() {
@@ -180,7 +180,7 @@ Several properties are purposefully excluded, please see the [FAQ](guide/faq.md)
 ```jsx
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import InputAdornment from '@mui/material/InputAdornment';
-import { TextField } from 'formik-material-ui';
+import { TextField } from 'formik-mui';
 
 <TextField
   name="customized"
