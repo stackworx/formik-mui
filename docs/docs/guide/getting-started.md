@@ -12,7 +12,7 @@ yarn add formik formik-mui @mui/material @emotion/react @emotion/styled
 ### MUI Lab (Optional)
 
 ```
-yarn add @date-io/date-fns @mui/lab formik-mui-lab
+yarn add @mui/lab formik-mui-lab
 ```
 
 ## Quick Start

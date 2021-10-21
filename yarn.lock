@@ -1127,7 +1127,7 @@
   resolved "https://registry.npmjs.org/@date-io/core/-/core-2.11.0.tgz"
   integrity sha512-DvPBnNoeuLaoSJZaxgpu54qzRhRKjSYVyQjhznTFrllKuDpm0sDFjHo6lvNLCM/cfMx2gb2PM2zY2kc9C8nmuw==
 
-"@date-io/date-fns@^2.10.6", "@date-io/date-fns@^2.11.0":
+"@date-io/date-fns@^2.10.6":
   version "2.11.0"
   resolved "https://registry.npmjs.org/@date-io/date-fns/-/date-fns-2.11.0.tgz"
   integrity sha512-mPQ71plBeFrArvBSHtjWMHXA89IUbZ6kuo2dsjlRC/1uNOybo91spIb+wTu03NxKTl8ut07s0jJ9svF71afpRg==
