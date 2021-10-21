@@ -1,4 +1,4 @@
-# Formik Mui
+# Formik MUI
 
 ![](https://github.com/stackworx/formik-mui/workflows/Build%20formik-mui/badge.svg)
 ![](https://github.com/stackworx/formik-mui/workflows/Build%20formik-mui-lab/badge.svg)
@@ -9,4 +9,18 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [MUI](ht
 - [Documentation](https://stackworx.github.io/formik-mui)
 - [Code Sandbox](https://codesandbox.io/s/915qlr56rp)
 
-This project requires Formik>= 2.0.0. For Formik one please use formik-mui@1.0.x
+## Versions
+
+Mui >=5
+
+```bash
+yarn add formik-mui formik-mui-lab
+```
+
+Mui >=3
+
+```bash
+yarn add formik-material-ui formik-material-ui-lab
+```
+
+This project requires Formik>= 2.0.0. For Formik one please use formik-material-ui@1.0.x
