@@ -11,13 +11,13 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [MUI](ht
 
 ## Versions
 
-Mui >=5
+MUI >=5
 
 ```bash
 yarn add formik-mui formik-mui-lab
 ```
 
-Mui >=3
+MUI >=3
 
 ```bash
 yarn add formik-material-ui formik-material-ui-lab

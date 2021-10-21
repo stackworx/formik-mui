@@ -1,4 +1,4 @@
-# Formik Mui
+# Formik MUI
 
 ![](https://github.com/stackworx/formik-mui/workflows/Build%20formik-mui/badge.svg)
 ![](https://github.com/stackworx/formik-mui/workflows/Build%20formik-mui-lab/badge.svg)[![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)

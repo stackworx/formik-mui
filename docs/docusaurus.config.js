@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Formik Material-UI',
+  title: 'Formik MUI',
   tagline: 'Easily combine formik with MUI',
   url: 'https://stackworx.github.io/',
   baseUrl: '/formik-mui/',
@@ -8,14 +8,14 @@ module.exports = {
   projectName: 'formik-mui',
   themeConfig: {
     navbar: {
-      title: 'Formik Material-UI',
+      title: 'Formik MUI',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
         { to: 'docs/guide/getting-started', label: 'Guide', position: 'left' },
-        { to: 'docs/api/material-ui', label: 'API', position: 'left' },
+        { to: 'docs/api/mui', label: 'API', position: 'left' },
         // { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/stackworx/formik-mui',

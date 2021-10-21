@@ -9,7 +9,7 @@ title: Getting Started
 yarn add formik formik-mui @mui/material @emotion/react @emotion/styled
 ```
 
-### Material-UI Lab (Optional)
+### MUI Lab (Optional)
 
 ```
 yarn add @date-io/date-fns @mui/lab formik-mui-lab
