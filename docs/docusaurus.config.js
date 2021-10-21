@@ -36,7 +36,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/stackworx/formik-mui/edit/master/',
+            'https://github.com/stackworx/formik-mui/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
