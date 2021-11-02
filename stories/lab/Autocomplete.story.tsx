@@ -158,7 +158,7 @@ const AutocompleteStory = () => (
         }, 2000);
       }}
     >
-      {({ submitForm, values, errors, touched }) => (
+      {({ submitForm, resetForm, values, errors, touched }) => (
         <Form>
           <Box margin={1}>
             <Field
@@ -170,6 +170,7 @@ const AutocompleteStory = () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
+                  name="single"
                   error={touched['single'] && !!errors['single']}
                   helperText={touched['single'] && errors['single']}
                   label="Single"
@@ -189,6 +190,7 @@ const AutocompleteStory = () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
+                  name="freeSolo"
                   error={touched['freeSolo'] && !!errors['freeSolo']}
                   helperText={touched['freeSolo'] && errors['freeSolo']}
                   label="Free Solo"
@@ -210,6 +212,7 @@ const AutocompleteStory = () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
+                  name="freeSoloMultiple"
                   error={
                     touched['freeSoloMultiple'] && !!errors['freeSoloMultiple']
                   }
@@ -234,6 +237,7 @@ const AutocompleteStory = () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
+                  name="multiple"
                   error={touched['multiple'] && !!errors['multiple']}
                   helperText={touched['multiple'] && errors['multiple']}
                   label="Multiple"
@@ -255,6 +259,7 @@ const AutocompleteStory = () => (
               renderInput={(params: AutocompleteRenderInputParams) => (
                 <TextField
                   {...params}
+                  name="grouped"
                   error={touched['grouped'] && !!errors['grouped']}
                   helperText={touched['grouped'] && errors['grouped']}
                   label="Grouped"
@@ -264,8 +269,23 @@ const AutocompleteStory = () => (
             />
           </Box>
           <Box margin={1}>
-            <Button variant="contained" color="primary" onClick={submitForm}>
+            <Button
+              sx={{ margin: 1 }}
+              variant="contained"
+              color="primary"
+              onClick={submitForm}
+            >
               Submit
+            </Button>
+            <Button
+              sx={{ margin: 1 }}
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                resetForm();
+              }}
+            >
+              Reset
             </Button>
           </Box>
           <FormValues values={values} />
