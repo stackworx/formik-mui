@@ -23,6 +23,8 @@ const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
   renderInput={(params: AutocompleteRenderInputParams) => (
     <TextField
       {...params}
+      // We have to manually set the corresponding fields on the input component
+      name="name"
       error={touched['name'] && !!errors['name']}
       helperText={errors['name']}
       label="Autocomplete"
