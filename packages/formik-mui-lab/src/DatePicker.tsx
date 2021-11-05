@@ -22,7 +22,7 @@ export function fieldToDatePicker({
     setFieldError,
     setFieldTouched,
   },
-  textField: { helperText, onBlur, ...textField } = {},
+  textField: { helperText, onBlur, inputProps, ...textField } = {},
   disabled,
   label,
   onChange,
@@ -48,6 +48,7 @@ export function fieldToDatePicker({
               setFieldTouched(field.name, true, true);
             }
           }
+          inputProps={{...inputProps, ...params.inputProps}}
           {...textField}
         />
       )),
