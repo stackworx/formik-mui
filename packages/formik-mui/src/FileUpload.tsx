@@ -17,7 +17,7 @@ export interface FileUploadProps extends FieldProps {
   noFileChosenText?: string;
   InputProps?: Omit<
     InputProps,
-    'name' | 'type' | 'label' | 'readOnly' | 'endAdornment'
+    'name' | 'type' | 'label' | 'readOnly' | 'endAdornment' | 'onClick'
   >;
   ButtonProps?: Omit<ButtonProps, 'onClick'>;
 }
@@ -71,6 +71,7 @@ export const FileUpload = ({
         InputProps={{
           disabled: disabled || isSubmitting,
           ...inputProps,
+          onClick: handleUploadClick,
           readOnly: true,
           endAdornment: (
             <InputAdornment position="end">
