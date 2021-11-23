@@ -8,6 +8,7 @@ import InputBaseStory from './InputBase.story';
 import KitchenSinkStory from './KitchenSink.story';
 import SelectStory from './Select.story';
 import SwitchesStory from './Switches.story';
+import FileUploadStory from './FileUpload.story';
 import SimpleFileUploadStory from './SimpleFileUpload.story';
 import RadioGroupStory from './RadioGroup.story.tsx';
 import DatePickerStory from './DatePicker.story.tsx';
@@ -23,6 +24,7 @@ storiesOf('Formik', module)
   .add('Select', () => <SelectStory />)
   .add('Checkbox', () => <CheckboxStory />)
   .add('Switches', () => <SwitchesStory />)
+  .add('File Upload', () => <FileUploadStory />)
   .add('Simple File Upload', () => <SimpleFileUploadStory />)
   .add('Toggle Button Group', () => <ToggleButtonGroupStory />)
   .add('Autocomplete', () => <AutocompleteStory />)
