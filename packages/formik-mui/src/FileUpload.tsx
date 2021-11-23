@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { FieldProps, getIn } from 'formik';
+import { ErrorMessage, FieldProps, getIn } from 'formik';
 import Button, { ButtonProps } from '@mui/material/Button';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { InputProps } from '@mui/material/Input';
@@ -9,6 +11,8 @@ export interface FileUploadProps extends FieldProps {
   label: string;
   accept: string;
   disabled?: boolean;
+  fullWidth?: boolean;
+  margin?: 'dense' | 'normal' | 'none';
   uploadButtonText?: string;
   noFileChosenText?: string;
   InputProps?: Omit<
@@ -24,6 +28,8 @@ export const FileUpload = ({
   label,
   accept,
   disabled = false,
+  fullWidth,
+  margin = 'none',
   uploadButtonText = 'Choose file',
   noFileChosenText = 'No file chosen',
   InputProps: inputProps,
@@ -49,7 +55,7 @@ export const FileUpload = ({
   };
 
   return (
-    <>
+    <FormControl fullWidth={fullWidth} margin={margin}>
       <input
         ref={hiddenFileInputRef}
         style={{ display: 'none' }}
@@ -82,6 +88,10 @@ export const FileUpload = ({
         }}
         {...props}
       />
-    </>
+      <ErrorMessage
+        name={field.name}
+        render={(error) => <FormHelperText error>{error}</FormHelperText>}
+      />
+    </FormControl>
   );
 };
