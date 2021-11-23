@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FieldProps, getIn } from 'formik';
-import Button from '@mui/material/Button';
+import Button, { ButtonProps } from '@mui/material/Button';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { InputProps } from '@mui/material/Input';
@@ -11,7 +11,11 @@ export interface FileUploadProps extends FieldProps {
   disabled?: boolean;
   uploadButtonText?: string;
   noFileChosenText?: string;
-  InputProps?: Omit<InputProps, 'name' | 'type' | 'label'>;
+  InputProps?: Omit<
+    InputProps,
+    'name' | 'type' | 'label' | 'readOnly' | 'endAdornment'
+  >;
+  ButtonProps?: Omit<ButtonProps, 'onClick'>;
 }
 
 export const FileUpload = ({
@@ -23,6 +27,7 @@ export const FileUpload = ({
   uploadButtonText = 'Choose file',
   noFileChosenText = 'No file chosen',
   InputProps: inputProps,
+  ButtonProps: buttonProps,
   ...props
 }: FileUploadProps) => {
   const hiddenFileInputRef = React.useRef<HTMLInputElement>(null);
@@ -58,20 +63,22 @@ export const FileUpload = ({
         value={field.value ? field.value.name : noFileChosenText}
         label={label}
         InputProps={{
-          readOnly: true,
           disabled: disabled || isSubmitting,
+          ...inputProps,
+          readOnly: true,
           endAdornment: (
             <InputAdornment position="end">
               <Button
+                disabled={disabled || isSubmitting}
                 color="secondary"
                 disableElevation
+                {...buttonProps}
                 onClick={handleUploadClick}
               >
                 {uploadButtonText}
               </Button>
             </InputAdornment>
           ),
-          ...inputProps,
         }}
         {...props}
       />
