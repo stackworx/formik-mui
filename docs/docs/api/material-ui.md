@@ -33,6 +33,7 @@ const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
   )}
 />;
 ```
+Note that, when overriding Autocomplete's `onChange`, you'll need to destructure Formik's params and then include a call to `setFieldValue`.
 
 _Note the manual inclusion of the error_
 
