@@ -1,6 +1,7 @@
-import MuiStaticDatePicker, {
+import {
+  StaticDatePicker as MuiStaticDatePicker,
   StaticDatePickerProps as MuiStaticDatePickerProps,
-} from '@mui/lab/StaticDatePicker';
+} from '@mui/x-date-pickers/StaticDatePicker';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';

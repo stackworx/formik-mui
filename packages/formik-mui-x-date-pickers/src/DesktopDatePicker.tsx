@@ -1,6 +1,7 @@
-import MuiDesktopDatePicker, {
+import {
+  DesktopDatePicker as MuiDesktopDatePicker,
   DesktopDatePickerProps as MuiDesktopDatePickerProps,
-} from '@mui/lab/DesktopDatePicker';
+} from '@mui/x-date-pickers/DesktopDatePicker';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';

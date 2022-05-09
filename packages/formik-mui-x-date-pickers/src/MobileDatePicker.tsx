@@ -1,6 +1,7 @@
-import MuiMobileDatePicker, {
+import {
+  MobileDatePicker as MuiMobileDatePicker,
   MobileDatePickerProps as MuiMobileDatePickerProps,
-} from '@mui/lab/MobileDatePicker';
+} from '@mui/x-date-pickers/MobileDatePicker';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
