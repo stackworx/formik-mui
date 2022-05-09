@@ -9,11 +9,13 @@ title: Getting Started
 yarn add formik formik-mui @mui/material @emotion/react @emotion/styled
 ```
 
-### MUI Lab (Optional)
+### MUI X Date and Time Pickers (Optional)
 
 ```
-yarn add @mui/lab formik-mui-lab
+yarn add formik-mui-x-date-pickers @mui/x-date-pickers
 ```
+
+Note: You also need to install a date-library of your choice. Visit [MUI documentation](https://mui.com/x/react-date-pickers/getting-started/) for more information.
 
 ## Quick Start
 
@@ -110,17 +112,21 @@ import { TextField } from 'formik-mui';
 />;
 ```
 
-## Quick Start (Lab)
+## Quick Start (MUI X Date and Time Pickers)
 
-See [MUI _About the lab_](https://mui.com/components/about-the-lab/) for more information
+See [MUI X Date and Time Pickers _Getting started_](https://mui.com/x/react-date-pickers/getting-started/) for more information.
 
-```jsx {4-8,9,12,16,32,34,36}
-import AdapterDateFns from '@mui/lab/AdapterDateFns'; // Depending on the library you picked
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+```jsx {1-2,6-10,15,32,39,43}
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'; // Depending on the library you picked
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import Button from '@mui/material/Button';
 import LinearProgress from '@mui/material/LinearProgress';
 import { Formik, Form, Field } from 'formik';
-import { DatePicker, DateTimePicker, TimePicker } from 'formik-mui-lab';
+import {
+  DatePicker,
+  DateTimePicker,
+  TimePicker,
+} from 'formik-mui-x-date-pickers';
 import * as React from 'react';
 
 function App() {
