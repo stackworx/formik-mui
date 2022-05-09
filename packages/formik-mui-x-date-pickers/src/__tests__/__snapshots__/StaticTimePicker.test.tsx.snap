@@ -7,7 +7,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="css-4l7j15"
+    className="MuiPickerStaticWrapper-root css-1snvurg-MuiPickerStaticWrapper-root"
   >
     <div
       className="css-j7qwjs"
@@ -175,185 +175,189 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
         className="css-epd502"
       >
         <div
-          className="css-fhpqww"
+          className="MuiClockPicker-root css-1jm66jt-MuiClockPicker-root"
         >
           <div
-            className="css-eziifo"
+            className="css-fhpqww"
           >
             <div
-              className="css-1umqo6f"
-              onMouseMove={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-            />
-            <div
-              className="css-12ha4i7"
-            />
-            <div
-              className="css-a1rc6s"
-              style={
-                Object {
-                  "height": 88,
-                  "transform": "rotateZ(0deg)",
-                }
-              }
+              className="css-eziifo"
             >
               <div
-                className="css-118whkv"
+                className="css-1umqo6f"
+                onMouseMove={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
               />
-            </div>
-            <div
-              aria-label="Select hours. Selected time is 12:00 AM"
-              onKeyDown={[Function]}
-              role="listbox"
-              tabIndex={0}
-            >
-              <span
-                aria-label="1 hours"
-                className=" css-h7tmkn"
-                role="option"
+              <div
+                className="css-12ha4i7"
+              />
+              <div
+                className="css-a1rc6s"
                 style={
                   Object {
-                    "transform": "translate(45px, 13px",
+                    "height": 88,
+                    "transform": "rotateZ(0deg)",
                   }
                 }
               >
-                1
-              </span>
-              <span
-                aria-label="2 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(79px, 47px",
-                  }
-                }
+                <div
+                  className="css-118whkv"
+                />
+              </div>
+              <div
+                aria-label="Select hours. Selected time is 12:00 AM"
+                onKeyDown={[Function]}
+                role="listbox"
+                tabIndex={0}
               >
-                2
-              </span>
-              <span
-                aria-label="3 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(91px, 92px",
+                <span
+                  aria-label="1 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(45px, 13px",
+                    }
                   }
-                }
-              >
-                3
-              </span>
-              <span
-                aria-label="4 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(79px, 137px",
+                >
+                  1
+                </span>
+                <span
+                  aria-label="2 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(79px, 47px",
+                    }
                   }
-                }
-              >
-                4
-              </span>
-              <span
-                aria-label="5 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(45px, 171px",
+                >
+                  2
+                </span>
+                <span
+                  aria-label="3 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(91px, 92px",
+                    }
                   }
-                }
-              >
-                5
-              </span>
-              <span
-                aria-label="6 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(0px, 183px",
+                >
+                  3
+                </span>
+                <span
+                  aria-label="4 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(79px, 137px",
+                    }
                   }
-                }
-              >
-                6
-              </span>
-              <span
-                aria-label="7 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(-46px, 171px",
+                >
+                  4
+                </span>
+                <span
+                  aria-label="5 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(45px, 171px",
+                    }
                   }
-                }
-              >
-                7
-              </span>
-              <span
-                aria-label="8 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(-79px, 138px",
+                >
+                  5
+                </span>
+                <span
+                  aria-label="6 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(0px, 183px",
+                    }
                   }
-                }
-              >
-                8
-              </span>
-              <span
-                aria-label="9 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(-91px, 92px",
+                >
+                  6
+                </span>
+                <span
+                  aria-label="7 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(-46px, 171px",
+                    }
                   }
-                }
-              >
-                9
-              </span>
-              <span
-                aria-label="10 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(-79px, 46px",
+                >
+                  7
+                </span>
+                <span
+                  aria-label="8 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(-79px, 138px",
+                    }
                   }
-                }
-              >
-                10
-              </span>
-              <span
-                aria-label="11 hours"
-                className=" css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(-46px, 13px",
+                >
+                  8
+                </span>
+                <span
+                  aria-label="9 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(-91px, 92px",
+                    }
                   }
-                }
-              >
-                11
-              </span>
-              <span
-                aria-label="12 hours"
-                aria-selected={true}
-                className="Mui-selected css-h7tmkn"
-                role="option"
-                style={
-                  Object {
-                    "transform": "translate(0px, 1px",
+                >
+                  9
+                </span>
+                <span
+                  aria-label="10 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(-79px, 46px",
+                    }
                   }
-                }
-              >
-                12
-              </span>
+                >
+                  10
+                </span>
+                <span
+                  aria-label="11 hours"
+                  className=" css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(-46px, 13px",
+                    }
+                  }
+                >
+                  11
+                </span>
+                <span
+                  aria-label="12 hours"
+                  aria-selected={true}
+                  className="Mui-selected css-1flhz3h"
+                  role="option"
+                  style={
+                    Object {
+                      "transform": "translate(0px, 1px",
+                    }
+                  }
+                >
+                  12
+                </span>
+              </div>
             </div>
           </div>
         </div>
