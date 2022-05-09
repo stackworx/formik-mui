@@ -54,6 +54,6 @@ module.exports = {
       { ignoreRestSiblings: true },
     ],
     'react/prop-types': 0,
-    'no-restricted-imports': ['error', '@mui/material', '@mui/lab'],
+    'no-restricted-imports': ['error', '@mui/material', '@mui/x-date-pickers'],
   },
 };

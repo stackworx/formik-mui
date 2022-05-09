@@ -7,8 +7,8 @@
   "peerDependencies": {
     "@emotion/react": ">=11.4.1",
     "@emotion/styled": ">=11.3.0",
-    "@mui/lab": "^5.0.0-alpha.48",
     "@mui/material": ">=5.0.0",
+    "@mui/x-date-pickers": "^5.0.0-alpha.2",
     "formik": ">=2.2.9",
     "react": ">=17.0.2",
     "tiny-warning": ">=1.0.3"
