@@ -9,12 +9,12 @@ import KitchenSinkStory from './KitchenSink.story';
 import SelectStory from './Select.story';
 import SwitchesStory from './Switches.story';
 import SimpleFileUploadStory from './SimpleFileUpload.story';
-import RadioGroupStory from './RadioGroup.story.tsx';
-import DatePickerStory from './DatePicker.story.tsx';
-import TimePickerStory from './TimePicker.story.tsx';
-import DateTimePickerStory from './DateTimePicker.story.tsx';
-import ToggleButtonGroupStory from './lab/ToggleButtonGroup.story';
-import AutocompleteStory from './lab/Autocomplete.story';
+import RadioGroupStory from './RadioGroup.story';
+import DatePickerStory from './DatePicker.story';
+import TimePickerStory from './TimePicker.story';
+import DateTimePickerStory from './DateTimePicker.story';
+import ToggleButtonGroupStory from './ToggleButtonGroup.story';
+import AutocompleteStory from './Autocomplete.story';
 
 storiesOf('Formik', module)
   .add('Text Field', () => <TextFieldStory />)

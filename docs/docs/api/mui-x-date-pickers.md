@@ -3,11 +3,11 @@ id: mui-x-date-pickers
 title: MUI X Date and Time Pickers
 ---
 
-The following props are always excluded: `name, value, error`, and additional ones where it makes sense.
+The following props are always excluded: `name`, `value`, `error`, and additional ones where it makes sense.
 
 `TextField` props may be specified inside the `textField` prop. If no `renderInput` function is provided, the `textField` props are forwarded to the `TextField` input.
 
-When using picker components initialize the starting value to `new Date()` and not the empty string
+When using picker components initialize the starting value to `new Date()` and not the empty string.
 
 ## DatePicker
 

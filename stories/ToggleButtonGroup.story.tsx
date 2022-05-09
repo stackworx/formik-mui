@@ -9,9 +9,9 @@ import Typography from '@mui/material/Typography';
 import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
-import { ToggleButtonGroup } from '../../packages/formik-mui/src/main';
-import FormValues from '../FormValues';
-import Wrapper from '../Wrapper';
+import { ToggleButtonGroup } from '../packages/formik-mui/src/main';
+import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 const ToggleButtonGroupStory = () => (
   <Wrapper title="Toggle Button Group">

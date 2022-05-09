@@ -3,7 +3,7 @@ id: mui
 title: MUI
 ---
 
-The following props are always excluded: `name, value, error`, and additional ones where it makes sense
+The following props are always excluded: `name`, `value`, `error`, and additional ones where it makes sense.
 
 ## Autocomplete
 
@@ -34,7 +34,7 @@ const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
 />;
 ```
 
-_Note the manual inclusion of the error_
+_Note the manual inclusion of the error._
 
 #### [MUI Autocomplete Documentation](https://mui.com/api/autocomplete/)
 
@@ -52,7 +52,7 @@ import { Checkbox } from 'formik-mui';
 
 ## CheckboxWithLabel
 
-A convenience wrapper that adds label to Checkbox using FormControlLabel. Supports all the same properties as Checkbox and accepts an additional `Label` prop, which are props applied to FormControlLabel.
+A convenience wrapper that adds label to `Checkbox` using `FormControlLabel`. Supports all the same properties as `Checkbox` and accepts an additional `Label` prop, which are props applied to `FormControlLabel`.
 
 #### Example
 
@@ -209,7 +209,7 @@ import { TextField } from 'formik-mui';
 
 #### Example
 
-```tsx
+```jsx
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
@@ -233,6 +233,6 @@ import { ToggleButtonGroup } from 'formik-mui';
 </Field>;
 ```
 
-_Note the `type=checkbox` attribute_
+_Note the `type=checkbox` attribute._
 
 #### [MUI ToggleButtonGroup Documentation](https://mui.com/api/toggle-button-group/)

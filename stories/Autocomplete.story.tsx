@@ -8,9 +8,9 @@ import * as Yup from 'yup';
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
-} from '../../packages/formik-mui/src/main';
-import FormValues from '../FormValues';
-import Wrapper from '../Wrapper';
+} from '../packages/formik-mui/src/main';
+import FormValues from './FormValues';
+import Wrapper from './Wrapper';
 
 interface Movie {
   title: string;

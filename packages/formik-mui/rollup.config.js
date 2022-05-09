@@ -33,7 +33,12 @@ const config = [
     external: external.concat(Object.keys(pkg.dependencies || [])),
     output: [
       { dir: './dist', format: 'cjs', sourcemap: true },
-      { dir: './dist/esm', format: 'es', sourcemap: true, preserveModules: true, },
+      {
+        dir: './dist/esm',
+        format: 'es',
+        sourcemap: true,
+        preserveModules: true,
+      },
     ],
   },
 ];

@@ -19,7 +19,7 @@ Note: You also need to install a date-library of your choice. Visit [MUI documen
 
 ## Quick Start
 
-```jsx {4,39,46}
+```jsx {3,39,46}
 import { Button, LinearProgress } from '@mui/material';
 import { Formik, Form, Field } from 'formik';
 import { TextField } from 'formik-mui';
