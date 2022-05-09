@@ -1,4 +1,4 @@
-name: Build formik-mui-lab
+name: Build formik-mui-x-date-pickers
 on:
   push:
     branches:
@@ -28,6 +28,6 @@ jobs:
           yarn lint
           yarn test
           yarn build
-        working-directory: packages/formik-mui-lab
+        working-directory: packages/formik-mui-x-date-pickers
         env:
           CI: true

@@ -1,5 +1,5 @@
 import typescript from 'rollup-plugin-typescript2';
-import pkg from '../formik-mui-lab/package.json';
+import pkg from '../formik-mui-x-date-pickers/package.json';
 
 const external = [
   'react',
@@ -32,7 +32,12 @@ const config = [
     external: external.concat(Object.keys(pkg.dependencies || [])),
     output: [
       { dir: './dist', format: 'cjs', sourcemap: true },
-      { dir: './dist/esm', format: 'es', sourcemap: true, preserveModules: true, },
+      {
+        dir: './dist/esm',
+        format: 'es',
+        sourcemap: true,
+        preserveModules: true,
+      },
     ],
   },
 ];

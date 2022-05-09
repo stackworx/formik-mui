@@ -1,5 +1,5 @@
 {
-  "name": "formik-mui-lab",
+  "name": "formik-mui-x-date-pickers",
   "version": "1.0.0-alpha.3",
   "license": "MIT",
   "typings": "dist/main.d.ts",
@@ -18,7 +18,7 @@
     "formik",
     "material-ui",
     "mui",
-    "lab",
+    "mui-x",
     "form",
     "pickers"
   ],
