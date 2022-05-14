@@ -21,7 +21,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
           Select time
         </span>
         <div
-          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined PrivatePickersToolbar-dateTitleContainer css-171rwdv-MuiGrid-root"
+          className="MuiGrid-root MuiGrid-container PrivatePickersToolbar-dateTitleContainer css-171rwdv-MuiGrid-root"
         >
           <div
             className="PrivateTimePickerToolbar-hourMinuteLabel css-1l4fxj8"
