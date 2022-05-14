@@ -12,6 +12,8 @@ exports[`DesktopDatePicker Renders Correctly 1`] = `
     <label
       className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink={false}
+      htmlFor="mui-1"
+      id="mui-1-label"
     >
       Date
     </label>
@@ -20,10 +22,12 @@ exports[`DesktopDatePicker Renders Correctly 1`] = `
       onClick={[Function]}
     >
       <input
+        aria-describedby="mui-1-helper-text"
         aria-invalid={false}
         autoFocus={false}
         className="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
         disabled={false}
+        id="mui-1"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
@@ -77,7 +81,7 @@ exports[`DesktopDatePicker Renders Correctly 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-dhh0px"
+          className="css-1ftyaf0"
         >
           <span>
             Date
@@ -87,6 +91,7 @@ exports[`DesktopDatePicker Renders Correctly 1`] = `
     </div>
     <p
       className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+      id="mui-1-helper-text"
     >
       Helper text
     </p>
