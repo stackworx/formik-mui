@@ -45,7 +45,7 @@ export function fieldToDateTimePicker({
           onBlur={
             onBlur ??
             function () {
-              setFieldTouched(field.name, true, true);
+              setFieldTouched(field.name, true);
             }
           }
           {...textField}
@@ -58,7 +58,7 @@ export function fieldToDateTimePicker({
         // Do not switch this order, otherwise you might cause a race condition
         // See https://github.com/formium/formik/issues/2083#issuecomment-884831583
         setFieldTouched(field.name, true, false);
-        setFieldValue(field.name, date, true);
+        setFieldValue(field.name, date);
       },
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
