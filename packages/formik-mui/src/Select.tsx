@@ -52,7 +52,7 @@ export function fieldToSelect({
           // without the await, formik validates with the former value
           await setFieldValue(field.name, dataset.value, false);
         }
-        setFieldTouched(field.name, true, true);
+        setFieldTouched(field.name, true);
       }),
     ...field,
     ...props,
