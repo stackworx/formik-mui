@@ -7,8 +7,10 @@ exports[`renders 1`] = `
     data-testid="form"
   >
     <div
-      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-16awh2u-MuiAutocomplete-root"
+      aria-expanded="false"
+      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1kpdewa-MuiAutocomplete-root"
       name="autocomplete"
+      role="combobox"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -26,13 +28,11 @@ exports[`renders 1`] = `
         >
           <input
             aria-autocomplete="list"
-            aria-expanded="false"
             aria-invalid="false"
             autocapitalize="none"
             autocomplete="off"
-            class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
             id="autocomplete"
-            role="combobox"
             spellcheck="false"
             type="text"
             value=""
@@ -68,7 +68,7 @@ exports[`renders 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-1ftyaf0"
+              class="css-dhh0px"
             >
               <span>
                 Single

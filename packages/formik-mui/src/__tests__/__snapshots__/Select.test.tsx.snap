@@ -14,7 +14,7 @@ exports[`Select Renders Correctly 1`] = `
       data-shrink={false}
     />
     <div
-      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
       onClick={[Function]}
     >
       <div
@@ -32,9 +32,12 @@ exports[`Select Renders Correctly 1`] = `
       >
         <span
           className="notranslate"
-        >
-          ​
-        </span>
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
       </div>
       <input
         aria-hidden={true}
@@ -63,13 +66,16 @@ exports[`Select Renders Correctly 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-hdw1oc"
+          className="css-1a1ihhj"
         >
           <span
             className="notranslate"
-          >
-            ​
-          </span>
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
         </legend>
       </fieldset>
     </div>
