@@ -12,6 +12,8 @@ exports[`Outlined TextField 1`] = `
     <label
       className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink={false}
+      htmlFor="mui-2"
+      id="mui-2-label"
     >
       Text
     </label>
@@ -24,6 +26,7 @@ exports[`Outlined TextField 1`] = `
         autoFocus={false}
         className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
         disabled={false}
+        id="mui-2"
         name="test"
         onAnimationStart={[Function]}
         onBlur={[Function]}
@@ -37,7 +40,7 @@ exports[`Outlined TextField 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-dhh0px"
+          className="css-1ftyaf0"
         >
           <span>
             Text
@@ -86,7 +89,7 @@ exports[`Override TextField Theme Variant 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-dhh0px"
+          className="css-1ftyaf0"
         >
           <span>
             Text
@@ -135,7 +138,7 @@ exports[`TextField Renders Correctly 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-dhh0px"
+          className="css-1ftyaf0"
         >
           <span>
             Text
