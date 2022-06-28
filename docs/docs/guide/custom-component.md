@@ -5,13 +5,13 @@ title: Creating Custom Components
 
 # Notes
 
-Add Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulate the logic used to map formik props into the MUI shapes
+Wrappers have a corresponding function export (`fieldToTextField`, `fieldToCheckbox` etc.) that encapsulates the logic used to map Formik props into the MUI shapes.
 
 # Examples
 
 ## Upper Casing Field
 
-A simple test input that always uppercases the input
+A simple test input that always uppercases the input:
 
 ```jsx
 import TextField from '@mui/material/TextField';

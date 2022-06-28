@@ -13,6 +13,6 @@ module.exports = {
       'guide/migrating',
       'guide/faq',
     ],
-    API: ['api/mui', 'api/mui-lab'],
+    API: ['api/mui', 'api/mui-x-date-pickers'],
   },
 };

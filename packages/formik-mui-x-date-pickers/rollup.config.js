@@ -1,24 +1,23 @@
 import typescript from 'rollup-plugin-typescript2';
-import pkg from './package.json';
+import pkg from '../formik-mui-x-date-pickers/package.json';
 
 const external = [
   'react',
   'react-native',
   'formik',
-  'tiny-warning',
-  '@mui/material/Autocomplete',
-  '@mui/material/Checkbox',
-  '@mui/material/FormControl',
-  '@mui/material/FormControlLabel',
-  '@mui/material/FormHelperText',
-  '@mui/material/Input',
-  '@mui/material/InputBase',
-  '@mui/material/InputLabel',
-  '@mui/material/RadioGroup',
-  '@mui/material/Select',
-  '@mui/material/Switch',
+  '@mui/x-date-pickers/DatePicker',
+  '@mui/x-date-pickers/DateTimePicker',
+  '@mui/x-date-pickers/DesktopDatePicker',
+  '@mui/x-date-pickers/DesktopDateTimePicker',
+  '@mui/x-date-pickers/DesktopTimePicker',
+  '@mui/x-date-pickers/MobileDatePicker',
+  '@mui/x-date-pickers/MobileDateTimePicker',
+  '@mui/x-date-pickers/MobileTimePicker',
+  '@mui/x-date-pickers/StaticDatePicker',
+  '@mui/x-date-pickers/StaticDateTimePicker',
+  '@mui/x-date-pickers/StaticTimePicker',
+  '@mui/x-date-pickers/TimePicker',
   '@mui/material/TextField',
-  '@mui/material/ToggleButtonGroup',
 ];
 
 const config = [

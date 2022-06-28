@@ -4,9 +4,9 @@ import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
 import * as yup from 'yup';
-import { DateTimePicker } from '../packages/formik-mui-lab/src/DateTimePicker';
-import { DesktopDateTimePicker } from '../packages/formik-mui-lab/src/DesktopDateTimePicker';
-import { MobileDateTimePicker } from '../packages/formik-mui-lab/src/MobileDateTimePicker';
+import { DateTimePicker } from '../packages/formik-mui-x-date-pickers/src/DateTimePicker';
+import { DesktopDateTimePicker } from '../packages/formik-mui-x-date-pickers/src/DesktopDateTimePicker';
+import { MobileDateTimePicker } from '../packages/formik-mui-x-date-pickers/src/MobileDateTimePicker';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 

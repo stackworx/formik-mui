@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Formik MUI',
-  tagline: 'Easily combine formik with MUI',
+  tagline: 'Easily combine Formik with MUI',
   url: 'https://stackworx.github.io/',
   baseUrl: '/formik-mui/',
   favicon: 'img/favicon.ico',
@@ -35,8 +35,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/stackworx/formik-mui/edit/main/',
+          editUrl: 'https://github.com/stackworx/formik-mui/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

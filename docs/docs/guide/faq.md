@@ -3,11 +3,9 @@ id: faq
 title: FAQ
 ---
 
-## Why can't I pass in `name`, `value`, `error` etc into my component?
+## Why can't I pass in `name`, `value`, `error` etc. into my component?
 
-This is to prevent there being 2 sources of truth for value
-
-For Example
+To prevent 2 sources of truth for values. For example:
 
 ```jsx
 function App() {
@@ -28,9 +26,7 @@ function App() {
 }
 ```
 
-From this code is not at all obvious who is in control of the state. Therefore we purposefully hand over all control (`name, value, onChange, onBlur`) to formik. This ensures that there is no confusion.
-
-But you can do this a custom field
+From this code it is not obvious at all who is in control of the state. Therefore, we purposefully hand over all control (`name`, `value`, `onChange`, `onBlur`) to Formik. This ensures there is no confusion. You can do this to a custom field:
 
 ```jsx
 import TextField from '@mui/material/TextField';
@@ -53,16 +49,14 @@ function UpperCasingTextField(props: TextFieldProps) {
 }
 ```
 
-## Why does a wrapper for component x not exist?
+## Why does a wrapper for a certain component not exist?
 
-Some components require many decisions to be made which would make then only work for some situations.
-A good example is the slider. Should the onChange event be fired while dragging or only when the thumb is dropped? This will depend on your use-case.
+Some components require many decisions to be made which would only make it work in some situations.
+A good example is the `slider`. Should the `onChange` event be fired while dragging or only when it's dropped? It depends on your use-case.
 
-## Why does the field auto disable during submission?
+## Why do the fields become disabled during submission?
 
-This is a convenience meant for the standard form. If this was omitted the isSubmitting property would have to be manually passed into every single field
-
-For Example:
+This is a convenience meant for the standard form. If this was omitted the `isSubmitting` property would have to be manually passed into every single field like this:
 
 ```jsx {8}
 <Formik>
@@ -79,9 +73,9 @@ For Example:
 </Formik>
 ```
 
-A common scenario where this is problematic is where using Formik for search. Here we never want the field to be disabled. This can be accomplished by setting disabled to always be false
+A common scenario where this is problematic is when we use Formik for search. Here we never want the field to be disabled. This can be accomplished by setting disabled to `false`.
 
-```jsx {8}
+```jsx {4}
 <Formik>
   {({ isSubmitting }) => (
     <Form>

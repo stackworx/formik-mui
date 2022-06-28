@@ -1,6 +1,6 @@
 {
-  "name": "formik-mui",
-  "version": "4.0.0",
+  "name": "formik-mui-x-date-pickers",
+  "version": "1.0.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,
@@ -8,6 +8,8 @@
     "@emotion/react": ">=11.5.0",
     "@emotion/styled": ">=11.3.0",
     "@mui/material": ">=5.2.3",
+    "@mui/system": ">=5.2.3",
+    "@mui/x-date-pickers": ">=5.0.0-alpha.2",
     "formik": ">=2.2.9",
     "react": ">=17.0.2",
     "tiny-warning": ">=1.0.3"
@@ -17,7 +19,9 @@
     "formik",
     "material-ui",
     "mui",
-    "form"
+    "mui-x",
+    "form",
+    "pickers"
   ],
   "prettier": {
     "singleQuote": true,
@@ -28,11 +32,8 @@
     "url": "https://github.com/stackworx/formik-mui"
   },
   "jest": {
-    "globals": {
-      "__DEV__": "boolean"
-    },
-    "testEnvironment": "jsdom",
     "testURL": "http://localhost/",
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
@@ -47,7 +48,8 @@
       "jsx",
       "json",
       "node"
-    ]
+    ],
+    "globalSetup": "./global-setup.js"
   },
   "files": [
     "dist"

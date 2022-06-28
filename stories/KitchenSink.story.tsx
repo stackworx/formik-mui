@@ -6,13 +6,12 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import { action } from '@storybook/addon-actions';
 import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
+import { SxProps } from '@mui/system';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 import {
-  // CheckboxWithLabel,
+  CheckboxWithLabel,
   TextField,
   Select,
   RadioGroup,
@@ -34,6 +33,10 @@ const initialValues: Values = {
   date: '',
   rememberMe: false,
   age: '',
+};
+
+const sxFormControl: SxProps = {
+  minWidth: 140,
 };
 
 export default () => (
@@ -73,30 +76,26 @@ export default () => (
             label="Password"
             name="password"
           />
-          {/* <br />
-          <CheckboxWithLabel
-            Label={{ label: 'Remember Me' }}
-            name="rememberMe"
-          /> */}
           <br />
-          <FormControl>
-            <InputLabel htmlFor="age-simple">Age</InputLabel>
-            <Field
-              component={Select}
-              name="age"
-              inputProps={{
-                name: 'age',
-                id: 'age-simple',
-              }}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Field>
-          </FormControl>
+          <Field
+            component={CheckboxWithLabel}
+            Label={{ label: 'Remember me' }}
+            name="rememberMe"
+            type="checkbox"
+          />
+          <br />
+          <Field
+            component={Select}
+            formControl={{ sx: sxFormControl, margin: 'normal' }}
+            id="age"
+            name="age"
+            labelId="age-simple"
+            label="Age"
+          >
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Field>
           <br />
           <Field
             component={TextField}
