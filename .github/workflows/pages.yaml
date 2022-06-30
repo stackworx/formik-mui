@@ -1,21 +1,39 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
+    paths:
+      - '.github/workflows/pages.yaml'
+      - 'docs/**' 
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: docs
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Build
-        run: |
-          yarn install --frozen-lockfile
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Pages Action"
-          yarn deploy
-        working-directory: docs
-        env:
-          GIT_USER: ${{ secrets.ACCESS_TOKEN }}
+        uses: actions/checkout@v3
+        
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+          
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        
+      - name: Build website
+        run: yarn build
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/build
