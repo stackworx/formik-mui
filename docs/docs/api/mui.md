@@ -11,6 +11,7 @@ The following props are always excluded: `name`, `value`, `error`, and additiona
 
 ```jsx
 import { Autocomplete } from 'formik-mui';
+import { TextField } from '@mui/material';
 
 const options = [{ title: 'The Shawshank Redemption', year: 1994 }, ...]
 
