@@ -63,6 +63,7 @@ export function fieldToStaticDatePicker({
       },
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
+    label,
     ...field,
     ...props,
   };
