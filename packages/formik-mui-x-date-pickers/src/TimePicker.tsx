@@ -9,8 +9,9 @@ import { createErrorHandler } from './errorHandler';
 
 export interface TimePickerProps
   extends FieldProps,
-    Omit<MuiTimePickerProps, 'name' | 'value' | 'error'> {
+    Omit<MuiTimePickerProps<Date>, 'name' | 'value' | 'error'> {
   textField?: TextFieldProps;
+  children?: React.ReactNode;
 }
 
 export function fieldToTimePicker({
@@ -28,30 +29,32 @@ export function fieldToTimePicker({
   label,
   onChange,
   onError,
-  renderInput,
+  slots,
   ...props
-}: TimePickerProps): MuiTimePickerProps {
+}: TimePickerProps): MuiTimePickerProps<Date> {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
 
   return {
-    renderInput:
-      renderInput ??
-      ((params) => (
-        <TextField
-          {...params}
-          error={showError}
-          helperText={showError ? fieldError : helperText}
-          label={label}
-          onBlur={
-            onBlur ??
-            function () {
-              setFieldTouched(field.name, true, true);
+    slots: {
+      textField:
+        textField &&
+        ((params) => (
+          <TextField
+            {...params}
+            error={showError}
+            helperText={showError ? fieldError : helperText}
+            label={label}
+            onBlur={
+              onBlur ??
+              function () {
+                setFieldTouched(field.name, true, true);
+              }
             }
-          }
-          {...textField}
-        />
-      )),
+            {...textField}
+          />
+        )),
+    },
     disabled: disabled ?? isSubmitting,
     onChange:
       onChange ??
@@ -63,7 +66,6 @@ export function fieldToTimePicker({
       },
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
-    ...field,
     ...props,
   };
 }
