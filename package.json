@@ -21,7 +21,7 @@
     "@mui/icons-material": "^5.2.3",
     "@mui/material": "^5.2.3",
     "@mui/system": "^5.2.3",
-    "@mui/x-date-pickers": "^5.0.0-alpha.2",
+    "@mui/x-date-pickers": "^6.20.2",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",

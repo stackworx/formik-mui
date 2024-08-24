@@ -7,46 +7,47 @@ exports[`MobileDateTimePicker Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+    className="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
+    onClick={[Function]}
+    onMouseUp={[Function]}
   >
     <label
-      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink={false}
-      htmlFor="mui-1"
-      id="mui-1-label"
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink={true}
     >
       Datetime
     </label>
     <div
-      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
       onClick={[Function]}
     >
       <input
-        aria-describedby="mui-1-helper-text"
         aria-invalid={false}
         aria-label="Choose date, selected date is Jan 1, 2020"
-        aria-readonly={true}
+        autoComplete="off"
         autoFocus={false}
-        className="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+        className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
         disabled={false}
-        id="mui-1"
+        inputMode="text"
+        name="test"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
-        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onPaste={[Function]}
+        placeholder="MM/DD/YYYY hh:mm aa"
         readOnly={true}
         required={false}
         type="text"
-        value="01/01/2020 12:00 am"
+        value="01/01/2020 12:00 AM"
       />
       <fieldset
         aria-hidden={true}
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1ftyaf0"
+          className="css-14lo706"
         >
           <span>
             Datetime
@@ -55,8 +56,7 @@ exports[`MobileDateTimePicker Renders Correctly 1`] = `
       </fieldset>
     </div>
     <p
-      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-      id="mui-1-helper-text"
+      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
     >
       Helper text
     </p>

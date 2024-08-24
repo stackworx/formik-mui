@@ -14,11 +14,16 @@ test('StaticDateTimePicker Renders Correctly', () => {
         onSubmit={() => {}}
       >
         <Form>
-          <Field component={StaticDateTimePicker} name="test" label="Date" />
+          <Field
+            component={StaticDateTimePicker}
+            name="test"
+            textField={{ label: 'Date' }}
+          />
         </Form>
       </Formik>
     </LocalizationProvider>
   );
 
-  expect(getByText('January')).toBeInTheDocument();
+  expect(getByText('2020')).toBeInTheDocument();
+  expect(getByText('Jan 1')).toBeInTheDocument();
 });

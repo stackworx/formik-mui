@@ -2,14 +2,14 @@ import {
   MobileTimePicker as MuiMobileTimePicker,
   MobileTimePickerProps as MuiMobileTimePickerProps,
 } from '@mui/x-date-pickers/MobileTimePicker';
-import TextField, { TextFieldProps } from '@mui/material/TextField';
+import { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
 export interface MobileTimePickerProps
   extends FieldProps,
-    Omit<MuiMobileTimePickerProps, 'name' | 'value' | 'error'> {
+    Omit<MuiMobileTimePickerProps<Date>, 'name' | 'value' | 'error'> {
   textField?: TextFieldProps;
 }
 
@@ -28,55 +28,41 @@ export function fieldToMobileTimePicker({
   label,
   onChange,
   onError,
-  renderInput,
   ...props
-}: MobileTimePickerProps): MuiMobileTimePickerProps {
+}: MobileTimePickerProps): MuiMobileTimePickerProps<Date> {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
+  const onBlurDefault = () => {
+    setFieldTouched(field.name, true, true);
+  };
+  const onChangeDefault = (date: Date | null) => {
+    // Do not switch this order, otherwise you might cause a race condition
+    // See https://github.com/formium/formik/issues/2083#issuecomment-884831583
+    setFieldTouched(field.name, true, false);
+    setFieldValue(field.name, date, true);
+  };
 
   return {
-    renderInput:
-      renderInput ??
-      ((params) => (
-        <TextField
-          {...params}
-          error={showError}
-          helperText={showError ? fieldError : helperText}
-          label={label}
-          onBlur={
-            onBlur ??
-            function () {
-              setFieldTouched(field.name, true, true);
-            }
-          }
-          {...textField}
-        />
-      )),
     disabled: disabled ?? isSubmitting,
-    onChange:
-      onChange ??
-      function (date) {
-        // Do not switch this order, otherwise you might cause a race condition
-        // See https://github.com/formium/formik/issues/2083#issuecomment-884831583
-        setFieldTouched(field.name, true, false);
-        setFieldValue(field.name, date, true);
-      },
+    onChange: onChange ?? onChangeDefault,
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
+    slotProps: {
+      textField: {
+        error: showError,
+        helperText: showError ? fieldError : helperText,
+        label,
+        onBlur: onBlur ?? onBlurDefault,
+        ...textField,
+      },
+    },
     ...field,
     ...props,
   };
 }
 
-export function MobileTimePicker({
-  children,
-  ...props
-}: MobileTimePickerProps) {
-  return (
-    <MuiMobileTimePicker {...fieldToMobileTimePicker(props)}>
-      {children}
-    </MuiMobileTimePicker>
-  );
+export function MobileTimePicker(props: MobileTimePickerProps) {
+  return <MuiMobileTimePicker {...fieldToMobileTimePicker(props)} />;
 }
 
 MobileTimePicker.displayName = 'FormikMUIMobileTimePicker';

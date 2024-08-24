@@ -57,7 +57,7 @@ const DatePickerStory = () => (
             component={DesktopDatePicker}
             label="Desktop date picker"
             name="desktopDate"
-            inputFormat="MM/dd/yyyy"
+            format="MM/dd/yyyy"
           />
           <br />
           <br />
@@ -65,7 +65,7 @@ const DatePickerStory = () => (
             component={DesktopDatePicker}
             label="Future Desktop date picker"
             name="futureDate"
-            inputFormat="MM/dd/yyyy"
+            format="MM/dd/yyyy"
           />
           <br />
           <br />
@@ -73,7 +73,7 @@ const DatePickerStory = () => (
             component={MobileDatePicker}
             label="Mobile date picker"
             name="mobileDate"
-            inputFormat="MM/dd/yyyy"
+            format="MM/dd/yyyy"
           />
           <br />
           <br />
@@ -81,7 +81,7 @@ const DatePickerStory = () => (
             component={StaticDatePicker}
             label="Static date picker"
             name="staticDate"
-            inputFormat="MM/dd/yyyy"
+            format="MM/dd/yyyy"
           />
           <br />
           {isSubmitting && <LinearProgress />}

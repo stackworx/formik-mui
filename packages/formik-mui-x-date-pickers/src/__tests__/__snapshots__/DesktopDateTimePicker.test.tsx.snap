@@ -7,35 +7,39 @@ exports[`DesktopDateTimePicker Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+    className="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
+    onClick={[Function]}
+    onMouseUp={[Function]}
   >
     <label
-      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink={false}
-      htmlFor="mui-1"
-      id="mui-1-label"
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink={true}
     >
       Datetime
     </label>
     <div
-      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
+      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
       onClick={[Function]}
     >
       <input
-        aria-describedby="mui-1-helper-text"
         aria-invalid={false}
+        autoComplete="off"
         autoFocus={false}
-        className="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+        className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
         disabled={false}
-        id="mui-1"
+        inputMode="text"
+        name="test"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
-        placeholder="mm/dd/yyyy hh:mm (a|p)m"
+        onKeyDown={[Function]}
+        onPaste={[Function]}
+        placeholder="MM/DD/YYYY hh:mm aa"
+        readOnly={false}
         required={false}
         type="text"
-        value="01/01/2020 12:00 am"
+        value="01/01/2020 12:00 AM"
       />
       <div
         className="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -71,9 +75,6 @@ exports[`DesktopDateTimePicker Renders Correctly 1`] = `
               d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
             />
           </svg>
-          <span
-            className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
       <fieldset
@@ -81,7 +82,7 @@ exports[`DesktopDateTimePicker Renders Correctly 1`] = `
         className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          className="css-1ftyaf0"
+          className="css-14lo706"
         >
           <span>
             Datetime
@@ -90,8 +91,7 @@ exports[`DesktopDateTimePicker Renders Correctly 1`] = `
       </fieldset>
     </div>
     <p
-      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-      id="mui-1-helper-text"
+      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
     >
       Helper text
     </p>
