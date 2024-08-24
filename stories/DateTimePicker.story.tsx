@@ -54,7 +54,7 @@ const DateTimePickerStory = () => (
             component={DesktopDateTimePicker}
             label="Desktop date &amp; time picker"
             name="desktopDate"
-            inputFormat="yyyy/MM/dd HH:mm"
+            format="yyyy/MM/dd HH:mm"
           />
           <br />
           <br />
@@ -62,7 +62,7 @@ const DateTimePickerStory = () => (
             component={MobileDateTimePicker}
             label="Mobile date &amp; time picker"
             name="mobileDate"
-            inputFormat="yyyy/MM/dd HH:mm"
+            format="yyyy/MM/dd HH:mm"
           />
           {/* TODO: This static date-time picker is not contained within its section like the other pickers.
               The "edit" pen icon appears at the very top right of the wrapper.

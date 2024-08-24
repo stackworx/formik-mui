@@ -2,14 +2,14 @@ import {
   DesktopTimePicker as MuiDesktopTimePicker,
   DesktopTimePickerProps as MuiDesktopTimePickerProps,
 } from '@mui/x-date-pickers/DesktopTimePicker';
-import TextField, { TextFieldProps } from '@mui/material/TextField';
+import { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
 export interface DesktopTimePickerProps
   extends FieldProps,
-    Omit<MuiDesktopTimePickerProps, 'name' | 'value' | 'error'> {
+    Omit<MuiDesktopTimePickerProps<Date>, 'name' | 'value' | 'error'> {
   textField?: TextFieldProps;
 }
 
@@ -28,55 +28,41 @@ export function fieldToDesktopTimePicker({
   label,
   onChange,
   onError,
-  renderInput,
   ...props
-}: DesktopTimePickerProps): MuiDesktopTimePickerProps {
+}: DesktopTimePickerProps): MuiDesktopTimePickerProps<Date> {
   const fieldError = getIn(errors, field.name);
   const showError = getIn(touched, field.name) && !!fieldError;
+  const onBlurDefault = () => {
+    setFieldTouched(field.name, true, true);
+  };
+  const onChangeDefault = (date: Date | null) => {
+    // Do not switch this order, otherwise you might cause a race condition
+    // See https://github.com/formium/formik/issues/2083#issuecomment-884831583
+    setFieldTouched(field.name, true, false);
+    setFieldValue(field.name, date, true);
+  };
 
   return {
-    renderInput:
-      renderInput ??
-      ((params) => (
-        <TextField
-          {...params}
-          error={showError}
-          helperText={showError ? fieldError : helperText}
-          label={label}
-          onBlur={
-            onBlur ??
-            function () {
-              setFieldTouched(field.name, true, true);
-            }
-          }
-          {...textField}
-        />
-      )),
     disabled: disabled ?? isSubmitting,
-    onChange:
-      onChange ??
-      function (date) {
-        // Do not switch this order, otherwise you might cause a race condition
-        // See https://github.com/formium/formik/issues/2083#issuecomment-884831583
-        setFieldTouched(field.name, true, false);
-        setFieldValue(field.name, date, true);
-      },
+    onChange: onChange ?? onChangeDefault,
     onError:
       onError ?? createErrorHandler(fieldError, field.name, setFieldError),
+    slotProps: {
+      textField: {
+        error: showError,
+        helperText: showError ? fieldError : helperText,
+        label,
+        onBlur: onBlur ?? onBlurDefault,
+        ...textField,
+      },
+    },
     ...field,
     ...props,
   };
 }
 
-export function DesktopTimePicker({
-  children,
-  ...props
-}: DesktopTimePickerProps) {
-  return (
-    <MuiDesktopTimePicker {...fieldToDesktopTimePicker(props)}>
-      {children}
-    </MuiDesktopTimePicker>
-  );
+export function DesktopTimePicker(props: DesktopTimePickerProps) {
+  return <MuiDesktopTimePicker {...fieldToDesktopTimePicker(props)} />;
 }
 
 DesktopTimePicker.displayName = 'FormikMUIDesktopTimePicker';

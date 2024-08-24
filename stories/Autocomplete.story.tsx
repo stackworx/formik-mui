@@ -167,16 +167,15 @@ const AutocompleteStory = () => (
               options={top100Films}
               getOptionLabel={(option: Movie) => option.title}
               style={{ width: 300 }}
-              renderInput={(params: AutocompleteRenderInputParams) => (
-                <TextField
-                  {...params}
-                  name="single"
-                  error={touched['single'] && !!errors['single']}
-                  helperText={touched['single'] && errors['single']}
-                  label="Single"
-                  variant="outlined"
-                />
-              )}
+              slotProps={{
+                textField: {
+                  name: 'single',
+                  error: touched['single'] && !!errors['single'],
+                  helperText: touched['single'] && errors['single'],
+                  label: 'Single',
+                  variant: 'outlined',
+                },
+              }}
             />
           </Box>
           <Box margin={1}>

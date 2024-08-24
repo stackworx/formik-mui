@@ -1,11 +1,10 @@
 import React from 'react';
 import { test, expect } from '@jest/globals';
 import { Field } from 'formik';
-import TextField from '@mui/material/TextField';
 
 import { render } from './utils';
 
-import { Autocomplete, AutocompleteRenderInputParams } from '../Autocomplete';
+import { Autocomplete } from '../Autocomplete';
 
 const options = [
   { value: 'blues', label: 'Blues' },
@@ -25,9 +24,12 @@ test('renders', async () => {
       getOptionLabel={(option: { value: string; label: string }) =>
         option.label
       }
-      renderInput={(params: AutocompleteRenderInputParams) => (
-        <TextField {...params} label="Single" variant="outlined" />
-      )}
+      slotProps={{
+        textField: {
+          label: 'Single',
+          variant: 'outlined',
+        },
+      }}
     />,
     {
       initialValues: {

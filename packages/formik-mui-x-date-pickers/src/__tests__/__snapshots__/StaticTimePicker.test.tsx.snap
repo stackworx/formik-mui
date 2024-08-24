@@ -7,139 +7,84 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiPickerStaticWrapper-root css-1snvurg-MuiPickerStaticWrapper-root"
+    className=" MuiPickersLayout-root css-4pax7l-MuiPickersLayout-root"
   >
     <div
-      className="css-j7qwjs"
+      className="MuiPickersToolbar-root MuiTimePickerToolbar-root MuiPickersLayout-toolbar css-1q48g88-MuiPickersToolbar-root-MuiTimePickerToolbar-root"
     >
-      <div
-        className="PrivatePickersToolbar-root css-o9ifx3"
+      <span
+        className="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
       >
-        <span
-          className="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
-        >
-          Select time
-        </span>
+        Select time
+      </span>
+      <div
+        className="MuiPickersToolbar-content css-15jcv2p-MuiPickersToolbar-content"
+      >
         <div
-          className="MuiGrid-root MuiGrid-container PrivatePickersToolbar-dateTitleContainer css-171rwdv-MuiGrid-root"
+          className="MuiTimePickerToolbar-hourMinuteLabel css-trxt40-MuiTimePickerToolbar-hourMinuteLabel"
         >
-          <div
-            className="PrivateTimePickerToolbar-hourMinuteLabel css-1l4fxj8"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1x2wh54-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={-1}
-              type="button"
-            >
-              <span
-                className="MuiTypography-root MuiTypography-h3 Mui-selected css-1nql4ji-MuiTypography-root"
-              >
-                12
-              </span>
-            </button>
-            <span
-              className="MuiTypography-root MuiTypography-h3 PrivateTimePickerToolbar-separator css-1ljd80x-MuiTypography-root"
-              tabIndex={-1}
-            >
-              :
-            </span>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1x2wh54-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={-1}
-              type="button"
-            >
-              <span
-                className="MuiTypography-root MuiTypography-h3  css-1nql4ji-MuiTypography-root"
-              >
-                00
-              </span>
-            </button>
-          </div>
-          <div
-            className="PrivateTimePickerToolbar-ampmSelection css-1lz4u30"
-          >
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1x2wh54-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-              type="button"
-            >
-              <span
-                className="MuiTypography-root MuiTypography-subtitle2 PrivateTimePickerToolbar-ampmLabel Mui-selected css-frc9jk-MuiTypography-root"
-              >
-                AM
-              </span>
-            </button>
-            <button
-              className="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1x2wh54-MuiButtonBase-root-MuiButton-root"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onContextMenu={[Function]}
-              onDragLeave={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              onMouseLeave={[Function]}
-              onMouseUp={[Function]}
-              onTouchEnd={[Function]}
-              onTouchMove={[Function]}
-              onTouchStart={[Function]}
-              tabIndex={0}
-              type="button"
-            >
-              <span
-                className="MuiTypography-root MuiTypography-subtitle2 PrivateTimePickerToolbar-ampmLabel css-frc9jk-MuiTypography-root"
-              >
-                PM
-              </span>
-            </button>
-          </div>
           <button
-            aria-label="clock view is open, go to text input view"
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeMedium css-zylse7-MuiButtonBase-root-MuiIconButton-root"
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root Mui-selected css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root"
+            >
+              12
+            </span>
+          </button>
+          <span
+            className="MuiTypography-root MuiTypography-h3 MuiTimePickerToolbar-separator MuiPickersToolbarText-root css-1f43ekz-MuiTypography-root-MuiPickersToolbarText-root-MuiTimePickerToolbar-separator"
+            tabIndex={-1}
+          >
+            :
+          </span>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root"
+            >
+              00
+            </span>
+          </button>
+        </div>
+        <div
+          className="MuiTimePickerToolbar-ampmSelection css-ihhycx-MuiTimePickerToolbar-amPmSelection"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -157,211 +102,350 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
             tabIndex={0}
             type="button"
           >
+            <span
+              className="MuiTypography-root MuiTypography-subtitle2 MuiTimePickerToolbar-ampmLabel MuiPickersToolbarText-root Mui-selected css-7kirvq-MuiTypography-root-MuiPickersToolbarText-root"
+            >
+              AM
+            </span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-subtitle2 MuiTimePickerToolbar-ampmLabel MuiPickersToolbarText-root css-7kirvq-MuiTypography-root-MuiPickersToolbarText-root"
+            >
+              PM
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiPickersLayout-contentWrapper css-16b5y55-MuiPickersLayout-contentWrapper"
+    >
+      <div
+        className="MuiTimeClock-root css-ku1d3k-MuiTimeClock-root"
+      >
+        <div
+          className="MuiClock-root css-1j9v0by-MuiClock-root"
+        >
+          <div
+            className="MuiClock-clock css-4f0ona-MuiClock-clock"
+          >
+            <div
+              className="MuiClock-squareMask css-tfwo93-MuiClock-squareMask"
+              onMouseMove={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+            />
+            <div
+              className="MuiClock-pin css-umzx0k-MuiClock-pin"
+            />
+            <div
+              className="MuiClockPointer-root css-d0vs79-MuiClockPointer-root"
+              style={
+                Object {
+                  "height": 88,
+                  "transform": "rotateZ(0deg)",
+                }
+              }
+            >
+              <div
+                className="MuiClockPointer-thumb css-eg3pzz-MuiClockPointer-thumb"
+              />
+            </div>
+            <div
+              aria-label="Select hours. Selected time is 12:00 AM"
+              className="MuiClock-wrapper css-1ys9rbi-MuiClock-wrapper"
+              onKeyDown={[Function]}
+              role="listbox"
+              tabIndex={0}
+            >
+              <span
+                aria-label="1 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(45px, 13px",
+                  }
+                }
+              >
+                1
+              </span>
+              <span
+                aria-label="2 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(79px, 47px",
+                  }
+                }
+              >
+                2
+              </span>
+              <span
+                aria-label="3 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(91px, 92px",
+                  }
+                }
+              >
+                3
+              </span>
+              <span
+                aria-label="4 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(79px, 137px",
+                  }
+                }
+              >
+                4
+              </span>
+              <span
+                aria-label="5 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(45px, 171px",
+                  }
+                }
+              >
+                5
+              </span>
+              <span
+                aria-label="6 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(0px, 183px",
+                  }
+                }
+              >
+                6
+              </span>
+              <span
+                aria-label="7 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(-46px, 171px",
+                  }
+                }
+              >
+                7
+              </span>
+              <span
+                aria-label="8 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(-79px, 138px",
+                  }
+                }
+              >
+                8
+              </span>
+              <span
+                aria-label="9 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(-91px, 92px",
+                  }
+                }
+              >
+                9
+              </span>
+              <span
+                aria-label="10 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(-79px, 46px",
+                  }
+                }
+              >
+                10
+              </span>
+              <span
+                aria-label="11 hours"
+                className="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(-46px, 13px",
+                  }
+                }
+              >
+                11
+              </span>
+              <span
+                aria-label="12 hours"
+                aria-selected={true}
+                className="MuiClockNumber-root Mui-selected css-zddqwy-MuiClockNumber-root"
+                role="option"
+                style={
+                  Object {
+                    "transform": "translate(0px, 1px",
+                  }
+                }
+              >
+                12
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiPickersArrowSwitcher-root MuiTimeClock-arrowSwitcher css-2x8kvt-MuiPickersArrowSwitcher-root-MuiTimeClock-arrowSwitcher"
+        >
+          <button
+            aria-label="open previous view"
+            className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiPickersArrowSwitcher-button css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button"
+            disabled={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={-1}
+            title="open previous view"
+            type="button"
+          >
             <svg
               aria-hidden={true}
-              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-              data-testid="PenIcon"
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+              data-testid="ArrowLeftIcon"
               focusable="false"
               viewBox="0 0 24 24"
             >
               <path
-                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+              />
+            </svg>
+          </button>
+          <div
+            className="MuiPickersArrowSwitcher-spacer css-xb7uwb-MuiPickersArrowSwitcher-spacer"
+          />
+          <button
+            aria-label="open next view"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeStart MuiIconButton-sizeMedium MuiPickersArrowSwitcher-button css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            title="open next view"
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1vooibu-MuiSvgIcon-root"
+              data-testid="ArrowRightIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
               />
             </svg>
           </button>
         </div>
       </div>
-      <div
-        className="css-epd502"
+    </div>
+    <div
+      className="MuiDialogActions-root MuiDialogActions-spacing MuiPickersLayout-actionBar css-knqc4i-MuiDialogActions-root"
+    >
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
       >
-        <div
-          className="MuiClockPicker-root css-1jm66jt-MuiClockPicker-root"
-        >
-          <div
-            className="css-fhpqww"
-          >
-            <div
-              className="css-eziifo"
-            >
-              <div
-                className="css-1umqo6f"
-                onMouseMove={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-              />
-              <div
-                className="css-12ha4i7"
-              />
-              <div
-                className="css-a1rc6s"
-                style={
-                  Object {
-                    "height": 88,
-                    "transform": "rotateZ(0deg)",
-                  }
-                }
-              >
-                <div
-                  className="css-118whkv"
-                />
-              </div>
-              <div
-                aria-label="Select hours. Selected time is 12:00 AM"
-                onKeyDown={[Function]}
-                role="listbox"
-                tabIndex={0}
-              >
-                <span
-                  aria-label="1 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(45px, 13px",
-                    }
-                  }
-                >
-                  1
-                </span>
-                <span
-                  aria-label="2 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(79px, 47px",
-                    }
-                  }
-                >
-                  2
-                </span>
-                <span
-                  aria-label="3 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(91px, 92px",
-                    }
-                  }
-                >
-                  3
-                </span>
-                <span
-                  aria-label="4 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(79px, 137px",
-                    }
-                  }
-                >
-                  4
-                </span>
-                <span
-                  aria-label="5 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(45px, 171px",
-                    }
-                  }
-                >
-                  5
-                </span>
-                <span
-                  aria-label="6 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(0px, 183px",
-                    }
-                  }
-                >
-                  6
-                </span>
-                <span
-                  aria-label="7 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(-46px, 171px",
-                    }
-                  }
-                >
-                  7
-                </span>
-                <span
-                  aria-label="8 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(-79px, 138px",
-                    }
-                  }
-                >
-                  8
-                </span>
-                <span
-                  aria-label="9 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(-91px, 92px",
-                    }
-                  }
-                >
-                  9
-                </span>
-                <span
-                  aria-label="10 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(-79px, 46px",
-                    }
-                  }
-                >
-                  10
-                </span>
-                <span
-                  aria-label="11 hours"
-                  className=" css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(-46px, 13px",
-                    }
-                  }
-                >
-                  11
-                </span>
-                <span
-                  aria-label="12 hours"
-                  aria-selected={true}
-                  className="Mui-selected css-1flhz3h"
-                  role="option"
-                  style={
-                    Object {
-                      "transform": "translate(0px, 1px",
-                    }
-                  }
-                >
-                  12
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        Cancel
+      </button>
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        OK
+      </button>
     </div>
   </div>
 </form>

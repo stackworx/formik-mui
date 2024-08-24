@@ -17,8 +17,7 @@ test('StaticTimePicker Renders Correctly', () => {
           <Field
             component={StaticTimePicker}
             name="test"
-            label="Time"
-            textField={{ helperText: 'Helper text' }}
+            textField={{ label: 'Time', helperText: 'Helper text' }}
           />
         </Form>
       </Formik>
