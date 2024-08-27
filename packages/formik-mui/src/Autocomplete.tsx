@@ -5,13 +5,13 @@ import MuiAutocomplete, {
 import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
 
-export { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
+export type { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 
 export interface AutocompleteProps<
   T,
   Multiple extends boolean | undefined,
   DisableClearable extends boolean | undefined,
-  FreeSolo extends boolean | undefined
+  FreeSolo extends boolean | undefined,
 > extends FieldProps,
     Omit<
       MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
@@ -24,7 +24,7 @@ export function fieldToAutocomplete<
   T,
   Multiple extends boolean | undefined,
   DisableClearable extends boolean | undefined,
-  FreeSolo extends boolean | undefined
+  FreeSolo extends boolean | undefined,
 >({
   disabled,
   field,
@@ -79,7 +79,7 @@ export function Autocomplete<
   T,
   Multiple extends boolean | undefined,
   DisableClearable extends boolean | undefined,
-  FreeSolo extends boolean | undefined
+  FreeSolo extends boolean | undefined,
 >(props: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>) {
   return <MuiAutocomplete {...fieldToAutocomplete(props)} />;
 }

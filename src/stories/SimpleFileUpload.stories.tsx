@@ -1,9 +1,10 @@
 import Button from '@mui/material/Button';
+import { StoryFn, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
-import { SimpleFileUpload } from '../packages/formik-mui/src/main';
+import { SimpleFileUpload } from '../../packages/formik-mui/src/main';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
@@ -16,7 +17,7 @@ const schema = Yup.object().shape({
     .test(
       'file',
       'File must be less than 10MB',
-      (value) => value == null || value.size < MAX_FILE_SIZE
+      (value: any) => value == null || value.size < MAX_FILE_SIZE
     ),
 });
 
@@ -24,7 +25,16 @@ interface Values {
   file: '' | File;
 }
 
-const SimpleFileUploadStory = () => (
+export default {
+  title: "Core/SimpleFileUpload",
+  component: SimpleFileUpload,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof SimpleFileUpload>;
+
+const Template: StoryFn<typeof SimpleFileUpload> = () => (
   <Wrapper title="File Upload">
     <Formik<Values>
       validationSchema={schema}
@@ -55,4 +65,6 @@ const SimpleFileUploadStory = () => (
   </Wrapper>
 );
 
-export default SimpleFileUploadStory;
+export const Default = {
+  render: Template,
+};

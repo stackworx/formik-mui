@@ -1,5 +1,5 @@
 import React from 'react';
-import { test, expect } from '@jest/globals';
+import { test, expect, vi } from 'vitest';
 import { Field } from 'formik';
 
 import { render } from './utils';
@@ -7,7 +7,7 @@ import { render } from './utils';
 import { ToggleButtonGroup } from '../ToggleButtonGroup';
 
 test('renders', async () => {
-  const onSubmit = jest.fn();
+  const onSubmit = vi.fn();
   const { asFragment } = render(
     <Field component={ToggleButtonGroup} name="toggle" type="checkbox" />,
     {

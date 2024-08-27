@@ -1,37 +1,31 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`SimpleFileUpload Renders Correctly 1`] = `
-<form
-  action="#"
-  onReset={[Function]}
-  onSubmit={[Function]}
->
-  <div
-    className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+<DocumentFragment>
+  <form
+    action="#"
   >
-    <label
-      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink={true}
-    >
-      Select
-    </label>
     <div
-      className="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1ptx2yq-MuiInputBase-root-MuiInput-root"
-      onClick={[Function]}
+      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
     >
-      <input
-        aria-invalid={false}
-        className="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-        disabled={false}
-        name="test"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        required={false}
-        type="file"
-      />
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+      >
+        Select
+      </label>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-1eed5fa-MuiInputBase-root-MuiInput-root"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+          name="test"
+          type="file"
+          value=""
+        />
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</DocumentFragment>
 `;

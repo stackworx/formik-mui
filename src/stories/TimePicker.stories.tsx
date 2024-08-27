@@ -1,13 +1,14 @@
 import Button from '@mui/material/Button';
+import { StoryFn, Meta } from '@storybook/react';
 import LinearProgress from '@mui/material/LinearProgress';
 import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
 import * as yup from 'yup';
-import { DesktopTimePicker } from '../packages/formik-mui-x-date-pickers/src/DesktopTimePicker';
-import { MobileTimePicker } from '../packages/formik-mui-x-date-pickers/src/MobileTimePicker';
-import { StaticTimePicker } from '../packages/formik-mui-x-date-pickers/src/StaticTimePicker';
-import { TimePicker } from '../packages/formik-mui-x-date-pickers/src/TimePicker';
+import { DesktopTimePicker } from '../../packages/formik-mui-x-date-pickers/src/DesktopTimePicker';
+import { MobileTimePicker } from '../../packages/formik-mui-x-date-pickers/src/MobileTimePicker';
+import { StaticTimePicker } from '../../packages/formik-mui-x-date-pickers/src/StaticTimePicker';
+import { TimePicker } from '../../packages/formik-mui-x-date-pickers/src/TimePicker';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
@@ -19,8 +20,17 @@ const schema = yup.object().shape({
   time: yup.date().required(),
 });
 
-const TimePickerStory = () => (
-  <Wrapper title="Time Picker">
+export default {
+  title: "X-Mui/TimePicker",
+  component: TimePicker,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof TimePicker>;
+
+const Template: StoryFn<typeof TimePicker> = () => (
+  <Wrapper>
     <Formik<Values>
       initialValues={{
         time: new Date(),
@@ -81,4 +91,6 @@ const TimePickerStory = () => (
   </Wrapper>
 );
 
-export default TimePickerStory;
+export const Default = {
+  render: Template,
+};

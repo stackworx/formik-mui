@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { test } from '@jest/globals';
+import { test } from 'vitest';
 import { render, RenderOptions } from '@testing-library/react';
 import { Formik, Form, FormikConfig } from 'formik';
-import '@testing-library/jest-dom/extend-expect';
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 interface Props extends Omit<FormikConfig<any>, 'render' | 'children'> {

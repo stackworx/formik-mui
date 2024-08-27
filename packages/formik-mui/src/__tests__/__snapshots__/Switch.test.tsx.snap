@@ -1,45 +1,32 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Switch Renders Correctly 1`] = `
-<form
-  action="#"
-  onReset={[Function]}
-  onSubmit={[Function]}
->
-  <span
-    className="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+<DocumentFragment>
+  <form
+    action="#"
   >
     <span
-      className="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
-      onBlur={[Function]}
-      onContextMenu={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={null}
+      class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
     >
-      <input
-        checked={false}
-        className="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
-        disabled={false}
-        name="test"
-        onChange={[Function]}
-        type="checkbox"
-      />
       <span
-        className="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+        class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+      >
+        <input
+          class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+          name="test"
+          type="checkbox"
+        />
+        <span
+          class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+        />
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </span>
+      <span
+        class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
       />
     </span>
-    <span
-      className="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
-    />
-  </span>
-</form>
+  </form>
+</DocumentFragment>
 `;

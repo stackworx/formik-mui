@@ -1,10 +1,11 @@
 import React from 'react';
+import { StoryFn, Meta } from '@storybook/react';
 import Button from '@mui/material/Button';
 import { Formik, Form, Field } from 'formik';
 import Wrapper from './Wrapper';
 import { action } from '@storybook/addon-actions';
 
-import { RadioGroup } from '../packages/formik-mui/src/RadioGroup';
+import { RadioGroup } from '../../packages/formik-mui/src/RadioGroup';
 import LinearProgress from '@mui/material/LinearProgress';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
@@ -14,7 +15,16 @@ interface Values {
   activity: string;
 }
 
-export default () => (
+export default {
+  title: "Core/RadioGroup",
+  component: RadioGroup,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof RadioGroup>;
+
+const Template: StoryFn<typeof RadioGroup> = () => (
   <Wrapper title="Radio Group">
     <Formik<Values>
       initialValues={{
@@ -68,3 +78,7 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export const Default = {
+  render: Template,
+};

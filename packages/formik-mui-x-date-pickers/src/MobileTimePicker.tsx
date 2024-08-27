@@ -2,7 +2,7 @@ import {
   MobileTimePicker as MuiMobileTimePicker,
   MobileTimePickerProps as MuiMobileTimePickerProps,
 } from '@mui/x-date-pickers/MobileTimePicker';
-import { TextFieldProps } from '@mui/material/TextField';
+import type { TextFieldProps } from '@mui/material/TextField';
 import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
 import { createErrorHandler } from './errorHandler';

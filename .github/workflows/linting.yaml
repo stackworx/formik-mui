@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: build
         run: |
-          yarn install --frozen-lockfile
-          yarn prettier --list-different
+          npm ci
+          npm run prettier --list-different
         env:
           CI: true

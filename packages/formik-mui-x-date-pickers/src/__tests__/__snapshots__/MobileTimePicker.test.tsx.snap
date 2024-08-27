@@ -1,65 +1,58 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`MobileTimePicker Renders Correctly 1`] = `
-<form
-  action="#"
-  onReset={[Function]}
-  onSubmit={[Function]}
->
-  <div
-    className="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
-    onClick={[Function]}
-    onMouseUp={[Function]}
+<DocumentFragment>
+  <form
+    action="#"
   >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink={true}
-    >
-      Time
-    </label>
     <div
-      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
-      onClick={[Function]}
+      class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
     >
-      <input
-        aria-invalid={false}
-        aria-label="Choose time, selected time is 12:00 AM"
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-        disabled={false}
-        inputMode="text"
-        name="test"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onPaste={[Function]}
-        placeholder="hh:mm aa"
-        readOnly={true}
-        required={false}
-        type="text"
-        value="12:00 AM"
-      />
-      <fieldset
-        aria-hidden={true}
-        className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r1:"
+        id=":r1:-label"
       >
-        <legend
-          className="css-14lo706"
+        Time
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-describedby=":r1:-helper-text"
+          aria-invalid="false"
+          aria-label="Choose time, selected time is 2:00 AM"
+          autocomplete="off"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r1:"
+          inputmode="text"
+          name="test"
+          placeholder="hh:mm aa"
+          readonly=""
+          type="text"
+          value="02:00 AM"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
-          <span>
-            Time
-          </span>
-        </legend>
-      </fieldset>
+          <legend
+            class="css-14lo706"
+          >
+            <span>
+              Time
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+      <p
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        id=":r1:-helper-text"
+      >
+        Helper text
+      </p>
     </div>
-    <p
-      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-    >
-      Helper text
-    </p>
-  </div>
-</form>
+  </form>
+</DocumentFragment>
 `;

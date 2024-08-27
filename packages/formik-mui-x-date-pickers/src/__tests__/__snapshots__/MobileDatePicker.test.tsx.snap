@@ -1,65 +1,58 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`MobileDatePicker Renders Correctly 1`] = `
-<form
-  action="#"
-  onReset={[Function]}
-  onSubmit={[Function]}
->
-  <div
-    className="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
-    onClick={[Function]}
-    onMouseUp={[Function]}
+<DocumentFragment>
+  <form
+    action="#"
   >
-    <label
-      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink={true}
-    >
-      Date
-    </label>
     <div
-      className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
-      onClick={[Function]}
+      class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
     >
-      <input
-        aria-invalid={false}
-        aria-label="Choose date, selected date is Jan 1, 2020"
-        autoComplete="off"
-        autoFocus={false}
-        className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-        disabled={false}
-        inputMode="text"
-        name="test"
-        onAnimationStart={[Function]}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onPaste={[Function]}
-        placeholder="MM/DD/YYYY"
-        readOnly={true}
-        required={false}
-        type="text"
-        value="01/01/2020"
-      />
-      <fieldset
-        aria-hidden={true}
-        className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r1:"
+        id=":r1:-label"
       >
-        <legend
-          className="css-14lo706"
+        Date
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-describedby=":r1:-helper-text"
+          aria-invalid="false"
+          aria-label="Choose date, selected date is Jan 1, 2020"
+          autocomplete="off"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r1:"
+          inputmode="text"
+          name="test"
+          placeholder="MM/DD/YYYY"
+          readonly=""
+          type="text"
+          value="01/01/2020"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
-          <span>
-            Date
-          </span>
-        </legend>
-      </fieldset>
+          <legend
+            class="css-14lo706"
+          >
+            <span>
+              Date
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+      <p
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        id=":r1:-helper-text"
+      >
+        Helper text
+      </p>
     </div>
-    <p
-      className="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-    >
-      Helper text
-    </p>
-  </div>
-</form>
+  </form>
+</DocumentFragment>
 `;

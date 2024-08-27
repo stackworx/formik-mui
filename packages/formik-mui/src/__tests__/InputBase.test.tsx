@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { test, expect } from '@jest/globals';
+import { test, expect } from 'vitest';
 import { Formik, Form, Field } from 'formik';
 import { render, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 
 import { InputBase } from '../InputBase';
 import { act } from 'react-dom/test-utils';

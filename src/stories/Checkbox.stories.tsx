@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { StoryFn, Meta } from '@storybook/react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { Formik, Form, Field } from 'formik';
@@ -7,10 +8,20 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
-import { Checkbox, CheckboxWithLabel } from '../packages/formik-mui/src/main';
+import { Checkbox } from '../../packages/formik-mui/src/Checkbox';
+import { CheckboxWithLabel } from '../../packages/formik-mui/src/CheckboxWithLabel';
 import Typography from '@mui/material/Typography';
 
-export default () => (
+export default {
+  title: "Core/Checkbox",
+  component: Checkbox,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof Checkbox>;
+
+const Template: StoryFn<typeof CheckboxWithLabel> = () => (
   <Wrapper title="Checkboxes">
     <Formik
       initialValues={{
@@ -78,3 +89,7 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export const Default = {
+  render: Template,
+};

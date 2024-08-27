@@ -1,13 +1,13 @@
 import React from 'react';
-import { test, expect } from '@jest/globals';
+import '@testing-library/jest-dom/vitest';
+import { test, expect, vi } from 'vitest';
 import { Field } from 'formik';
 
 import { render, fireEvent } from './utils';
-
 import { Checkbox } from '../Checkbox';
 
 test('renders', async () => {
-  const onSubmit = jest.fn();
+  const onSubmit = vi.fn();
   const { asFragment } = render(
     <Field component={Checkbox} name="checked" type="checkbox" />,
     {
@@ -23,7 +23,7 @@ test('renders', async () => {
 
 test('checked', async () => {
   // given
-  const onSubmit = jest.fn();
+  const onSubmit = vi.fn();
   const { getByTestId, findByText } = render(
     <Field
       component={Checkbox}

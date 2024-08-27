@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [18.x, 20.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -23,11 +23,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: build
         run: |
-          yarn install --frozen-lockfile
-          yarn typecheck
-          yarn lint
-          yarn test
-          yarn build
+          npm ci
+          npm run typecheck
+          npm run lint
+          npm run test
+          npm run build
         working-directory: packages/formik-mui-x-date-pickers
         env:
           CI: true

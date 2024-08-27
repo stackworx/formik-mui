@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
+import { StoryFn, Meta } from '@storybook/react';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Formik, Form, Field } from 'formik';
 import { action } from '@storybook/addon-actions';
@@ -7,10 +8,19 @@ import { action } from '@storybook/addon-actions';
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
 
-import { Switch } from '../packages/formik-mui/src/main';
+import { Switch } from '../../packages/formik-mui/src/Switch';
 import Box from '@mui/material/Box';
 
-export default () => (
+export default {
+  title: "Core/Switch",
+  component: Switch,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof Switch>;
+
+const Template: StoryFn<typeof Switch> = () => (
   <Wrapper title="Switches">
     <Formik
       initialValues={{
@@ -84,3 +94,7 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export const Default = {
+  render: Template,
+};

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`renders 1`] = `
 <DocumentFragment>
@@ -7,7 +7,7 @@ exports[`renders 1`] = `
     data-testid="form"
   >
     <div
-      class="MuiToggleButtonGroup-root css-1gjgmky-MuiToggleButtonGroup-root"
+      class="MuiToggleButtonGroup-root css-bghv3y-MuiToggleButtonGroup-root"
       name="toggle"
       role="group"
     />
