@@ -12,10 +12,10 @@ jobs:
 
       - name: Build
         run: |
-          yarn install --frozen-lockfile
+          npm i
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Pages Action"
-          yarn deploy
+          npm run deploy
         working-directory: docs
         env:
           GIT_USER: ${{ secrets.ACCESS_TOKEN }}
