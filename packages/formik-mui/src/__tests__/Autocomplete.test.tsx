@@ -1,9 +1,10 @@
 import React from 'react';
-import { test, expect } from '@jest/globals';
+import { test, expect, vi } from 'vitest';
 import { Field } from 'formik';
+import TextField from '@mui/material/TextField';
+import type {AutocompleteRenderInputParams} from '@mui/material/Autocomplete';
 
 import { render } from './utils';
-
 import { Autocomplete } from '../Autocomplete';
 
 const options = [
@@ -14,7 +15,7 @@ const options = [
 ];
 
 test('renders', async () => {
-  const onSubmit = jest.fn();
+  const onSubmit = vi.fn();
   const { asFragment } = render(
     <Field
       component={Autocomplete}
@@ -24,12 +25,9 @@ test('renders', async () => {
       getOptionLabel={(option: { value: string; label: string }) =>
         option.label
       }
-      slotProps={{
-        textField: {
-          label: 'Single',
-          variant: 'outlined',
-        },
-      }}
+      renderInput={(params: AutocompleteRenderInputParams) => (
+        <TextField {...params} label="Single" variant="outlined" />
+      )}
     />,
     {
       initialValues: {

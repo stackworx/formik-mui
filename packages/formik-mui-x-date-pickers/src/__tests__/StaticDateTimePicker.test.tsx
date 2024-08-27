@@ -1,6 +1,6 @@
+import { test, expect } from 'vitest';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';

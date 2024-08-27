@@ -1,78 +1,71 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Select Renders Correctly 1`] = `
-<form
-  action="#"
-  onReset={[Function]}
-  onSubmit={[Function]}
->
-  <div
-    className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+<DocumentFragment>
+  <form
+    action="#"
   >
-    <label
-      className="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink={false}
-    />
     <div
-      className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
-      onClick={[Function]}
+      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
     >
-      <div
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-labelledby="mui-component-select-test"
-        className="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-        id="mui-component-select-test"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        role="button"
-        tabIndex={0}
-      >
-        <span
-          className="notranslate"
-        >
-          ​
-        </span>
-      </div>
-      <input
-        aria-hidden={true}
-        className="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-        disabled={false}
-        name="test"
-        onAnimationStart={[Function]}
-        onChange={[Function]}
-        required={false}
-        tabIndex={-1}
-        value=""
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="false"
       />
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-        data-testid="ArrowDropDownIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
-        <path
-          d="M7 10l5 5 5-5z"
-        />
-      </svg>
-      <fieldset
-        aria-hidden={true}
-        className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-      >
-        <legend
-          className="css-hdw1oc"
+        <div
+          aria-controls=":r0:"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="mui-component-select-test"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          id="mui-component-select-test"
+          role="combobox"
+          tabindex="0"
         >
           <span
-            className="notranslate"
+            class="notranslate"
           >
             ​
           </span>
-        </legend>
-      </fieldset>
+        </div>
+        <input
+          aria-hidden="true"
+          aria-invalid="false"
+          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          name="test"
+          tabindex="-1"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-ihdtdm"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</DocumentFragment>
 `;

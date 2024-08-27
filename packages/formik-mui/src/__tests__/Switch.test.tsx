@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { test, expect } from '@jest/globals';
+import { test, expect } from 'vitest';
 import { Formik, Form, Field } from 'formik';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 
 import { Switch } from '../Switch';
 
 test('Switch Renders Correctly', () => {
-  const component = renderer.create(
+  const { asFragment } = render(
     <Formik initialValues={{}} onSubmit={() => {}}>
       <Form>
         <Field component={Switch} name="test" type="checkbox" />
@@ -14,5 +14,5 @@ test('Switch Renders Correctly', () => {
     </Formik>
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

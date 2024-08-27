@@ -1,25 +1,15 @@
-const path = require('path');
-const toPath = (filePath) => path.join(process.cwd(), filePath);
-
-module.exports = {
-  stories: [
-    '../stories/**/*.stories.mdx',
-    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
-  ],
+/** @type { import('@storybook/react-vite').StorybookConfig } */
+const config = {
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  staticDirs: ["../public"],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-actions',
-    '@storybook/addon-essentials',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
   ],
-  webpackFinal: async (config) => ({
-    ...config,
-    resolve: {
-      ...config.resolve,
-      alias: {
-        ...config.resolve.alias,
-        '@emotion/core': toPath('node_modules/@emotion/react'),
-        'emotion-theming': toPath('node_modules/@emotion/react'),
-      },
-    },
-  }),
+  framework: {
+    name: "@storybook/react-vite",
+    options: {},
+  },
 };
+export default config;

@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import { StoryFn, Meta } from '@storybook/react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { action } from '@storybook/addon-actions';
@@ -8,7 +9,7 @@ import * as Yup from 'yup';
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
-} from '../packages/formik-mui/src/main';
+} from '../../packages/formik-mui/src/main';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
@@ -140,7 +141,16 @@ const groupedOptions = top100Films
   })
   .sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter));
 
-const AutocompleteStory = () => (
+  export default {
+    title: "Core/Autocomplete",
+    component: Autocomplete,
+    parameters: {
+      layout: "fullscreen",
+    },
+    argTypes: { onSubmit: { action: "submit" } },
+  } as Meta<typeof Autocomplete>;
+
+const Template: StoryFn<typeof Autocomplete> = () => (
   <Wrapper title="Autocomplete">
     <Formik
       validationSchema={schema}
@@ -167,15 +177,9 @@ const AutocompleteStory = () => (
               options={top100Films}
               getOptionLabel={(option: Movie) => option.title}
               style={{ width: 300 }}
-              slotProps={{
-                textField: {
-                  name: 'single',
-                  error: touched['single'] && !!errors['single'],
-                  helperText: touched['single'] && errors['single'],
-                  label: 'Single',
-                  variant: 'outlined',
-                },
-              }}
+              renderInput={(params: AutocompleteRenderInputParams) => (
+                <TextField {...params} label="Single" variant="outlined" />
+              )}
             />
           </Box>
           <Box margin={1}>
@@ -294,4 +298,6 @@ const AutocompleteStory = () => (
   </Wrapper>
 );
 
-export default AutocompleteStory;
+export const Default = {
+  render: Template,
+};

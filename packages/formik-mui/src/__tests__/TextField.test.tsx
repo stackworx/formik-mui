@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { test, expect } from '@jest/globals';
+import { test, expect } from 'vitest';
 import { Formik, Form, Field } from 'formik';
-import renderer from 'react-test-renderer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { render } from '@testing-library/react'
 
 import { TextField } from '../TextField';
 
 test('TextField Renders Correctly', () => {
-  const component = renderer.create(
+  const { asFragment } = render(
     <Formik initialValues={{}} onSubmit={() => {}}>
       <Form>
         <Field component={TextField} name="test" label="Text" />
@@ -15,11 +15,11 @@ test('TextField Renders Correctly', () => {
     </Formik>
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('Outlined TextField', () => {
-  const component = renderer.create(
+  const { asFragment } = render(
     <Formik initialValues={{}} onSubmit={() => {}}>
       <Form>
         <Field
@@ -32,13 +32,13 @@ test('Outlined TextField', () => {
     </Formik>
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });
 
 test('Override TextField Theme Variant', () => {
   const theme = createTheme({});
 
-  const component = renderer.create(
+  const { asFragment } = render(
     <ThemeProvider theme={theme}>
       <Formik initialValues={{}} onSubmit={() => {}}>
         <Form>
@@ -48,5 +48,5 @@ test('Override TextField Theme Variant', () => {
     </ThemeProvider>
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

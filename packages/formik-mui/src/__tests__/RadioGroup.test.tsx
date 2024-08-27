@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { test, expect } from '@jest/globals';
+import { test, expect } from 'vitest';
 import { Formik, Form, Field } from 'formik';
-import renderer from 'react-test-renderer';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { render } from '@testing-library/react';
 
 import { RadioGroup } from '../RadioGroup';
 
 test('Radio Group Renders Correctly', () => {
-  const component = renderer.create(
+  const { asFragment } = render(
     <Formik onSubmit={() => {}} initialValues={{ test: '' }}>
       <Form>
         <Field component={RadioGroup} name="radio-group">
@@ -32,5 +32,5 @@ test('Radio Group Renders Correctly', () => {
     </Formik>
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

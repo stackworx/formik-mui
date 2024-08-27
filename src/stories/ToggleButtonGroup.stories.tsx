@@ -2,6 +2,7 @@ import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
+import { StoryFn, Meta } from '@storybook/react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import ToggleButton from '@mui/material/ToggleButton';
@@ -9,11 +10,20 @@ import Typography from '@mui/material/Typography';
 import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
-import { ToggleButtonGroup } from '../packages/formik-mui/src/main';
+import { ToggleButtonGroup } from '../../packages/formik-mui/src/ToggleButtonGroup';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
-const ToggleButtonGroupStory = () => (
+export default {
+  title: "Core/ToggleButtonGroup",
+  component: ToggleButtonGroup,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof ToggleButtonGroup>;
+
+const Template: StoryFn<typeof ToggleButtonGroup> = () => (
   <Wrapper title="Toggle Button Group">
     <Formik
       initialValues={{
@@ -84,4 +94,6 @@ const ToggleButtonGroupStory = () => (
   </Wrapper>
 );
 
-export default ToggleButtonGroupStory;
+export const Default = {
+  render: Template,
+};

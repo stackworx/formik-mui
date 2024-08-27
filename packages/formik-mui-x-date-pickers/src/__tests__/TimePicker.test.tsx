@@ -1,13 +1,13 @@
-import { expect, test } from '@jest/globals';
+import * as React from 'react';
+import { test, expect } from 'vitest';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { Field, Form, Formik } from 'formik';
-import * as React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { TimePicker } from '../TimePicker';
 
 test('TimePicker Renders Correctly', () => {
-  const component = renderer.create(
+  const { asFragment } = render(
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Formik
         initialValues={{ test: new Date('2020-01-01') }}
@@ -25,5 +25,5 @@ test('TimePicker Renders Correctly', () => {
     </LocalizationProvider>
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(asFragment()).toMatchSnapshot();
 });

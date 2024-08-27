@@ -1,4 +1,5 @@
 import React from 'react';
+import { StoryFn, Meta } from '@storybook/react';
 import Button from '@mui/material/Button';
 import { Formik, Form, Field } from 'formik';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -15,7 +16,7 @@ import {
   TextField,
   Select,
   RadioGroup,
-} from '../packages/formik-mui/src/main';
+} from '../../packages/formik-mui/src/main';
 
 interface Values {
   email: string;
@@ -39,7 +40,15 @@ const sxFormControl: SxProps = {
   minWidth: 140,
 };
 
-export default () => (
+export default {
+  title: "Core/KitchenSink",
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta;
+
+const Template: StoryFn = () => (
   <Wrapper title="Kitchen Sink">
     <Formik<Values>
       initialValues={initialValues}
@@ -145,3 +154,7 @@ export default () => (
     </Formik>
   </Wrapper>
 );
+
+export const Default = {
+  render: Template,
+};

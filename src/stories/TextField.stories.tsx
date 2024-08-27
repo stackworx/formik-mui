@@ -1,4 +1,5 @@
 import Button from '@mui/material/Button';
+import { StoryFn, Meta } from '@storybook/react';
 import LinearProgress from '@mui/material/LinearProgress';
 import MenuItem from '@mui/material/MenuItem';
 import MuiTextField from '@mui/material/TextField';
@@ -10,7 +11,7 @@ import {
   fieldToTextField,
   TextField,
   TextFieldProps,
-} from '../packages/formik-mui/src/TextField';
+} from '../../packages/formik-mui/src/TextField';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
@@ -61,8 +62,17 @@ const UpperCasingTextField = (props: TextFieldProps) => {
   );
 };
 
-const TextFieldStory = () => (
-  <Wrapper title="Text Field">
+export default {
+  title: "Core/TextField",
+  component: TextField,
+  parameters: {
+    layout: "fullscreen",
+  },
+  argTypes: { onSubmit: { action: "submit" } },
+} as Meta<typeof TextField>;
+
+const Template: StoryFn<typeof TextField> = () => (
+  <Wrapper>
     <Formik<Values>
       initialValues={{
         user: { email: '' },
@@ -163,4 +173,6 @@ const TextFieldStory = () => (
   </Wrapper>
 );
 
-export default TextFieldStory;
+export const Default = {
+  render: Template,
+};
