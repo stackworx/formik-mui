@@ -4,8 +4,8 @@ import MenuItem from '@mui/material/MenuItem';
 import { SxProps } from '@mui/system';
 import { action } from '@storybook/addon-actions';
 import { Field, Form, Formik } from 'formik';
-import React from 'react';
-import { Select } from '../../packages/formik-mui/src/main';
+import * as React from 'react';
+import { Select } from '../../packages/formik-mui/src/Select';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
@@ -20,16 +20,16 @@ const sxFormControl: SxProps = {
 };
 
 export default {
-  title: "Core/Select",
+  title: 'Core/Select',
   component: Select,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof Select>;
 
 const Template: StoryFn<typeof Select> = () => (
-  <Wrapper title="Select">
+  <Wrapper>
     <Formik<Values>
       initialValues={{ age: '', pets: [] }}
       onSubmit={(values, { setSubmitting }) => {
@@ -80,8 +80,8 @@ const Template: StoryFn<typeof Select> = () => (
               !age
                 ? 'Please enter your age'
                 : age < 21
-                ? 'You must be 21 or older'
-                : undefined
+                  ? 'You must be 21 or older'
+                  : undefined
             }
           >
             <MenuItem value={10}>Ten</MenuItem>

@@ -21,12 +21,12 @@ const schema = yup.object().shape({
 });
 
 export default {
-  title: "X-Mui/TimePicker",
+  title: 'X-Mui/TimePicker',
   component: TimePicker,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof TimePicker>;
 
 const Template: StoryFn<typeof TimePicker> = () => (

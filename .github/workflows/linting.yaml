@@ -24,6 +24,6 @@ jobs:
       - name: build
         run: |
           npm ci
-          npm run prettier --list-different
+          npm run lint
         env:
           CI: true

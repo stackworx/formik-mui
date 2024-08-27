@@ -1,6 +1,7 @@
 {
   "name": "formik-mui-x-date-pickers",
   "type": "module",
+  "main": "./dist/main.js",
   "version": "1.0.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
@@ -32,16 +33,10 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/main.js",
-  "module": "./dist/esm/main.js",
   "scripts": {
     "typecheck": "tsc",
     "build": "tsc && vite build",
-    "package": "rimraf build dist && cross-env NODE_ENV=production tsc -p ./tsconfig.package.json && rollup -c && rimraf .rpt2_cache dist/.rpt2_cache",
-    "test": "vitest",
-    "test:updateSnapshot": "jest --updateSnapshot",
-    "lint": "eslint \"./{src,stories}/**/*.{tsx,ts,js}\"",
-    "lint:fix": "eslint --fix \"./{src,stories}/**/*.{tsx,ts,js}\"",
+    "test": "TZ=UTC vitest",
     "prepublishOnly": "yarn test && yarn build && yarn package"
   },
   "gitHead": "014c524940fd5c07f1492dab6147d2e7261229e7"

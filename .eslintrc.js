@@ -36,7 +36,7 @@ module.exports = {
       },
     },
     {
-      files: ['stories/index.stories.js'],
+      files: ['src/stories/*.tsx'],
       env: {
         node: true,
       },

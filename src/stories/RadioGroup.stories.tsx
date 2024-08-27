@@ -16,16 +16,16 @@ interface Values {
 }
 
 export default {
-  title: "Core/RadioGroup",
+  title: 'Core/RadioGroup',
   component: RadioGroup,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof RadioGroup>;
 
 const Template: StoryFn<typeof RadioGroup> = () => (
-  <Wrapper title="Radio Group">
+  <Wrapper>
     <Formik<Values>
       initialValues={{
         activity: '',

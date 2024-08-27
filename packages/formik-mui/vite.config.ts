@@ -2,30 +2,30 @@
 import { defineConfig } from "vite";
 import * as path from "path";
 import react from "@vitejs/plugin-react";
+import dts from "vite-plugin-dts";
 
 const external = [
+  /node_modules/,
   "react",
   "react/jsx-runtime",
   "formik",
-  "@mui/material/Autocomplete",
-  "@mui/material/Checkbox",
-  "@mui/material/RadioGroup",
-  "@mui/material/Select",
-  "@mui/material/Switch",
-  "@mui/material/TextField",
-  "@mui/material/ToggleButtonGroup",
+  "tiny-warning",
+  "@mui/utils",
+  /@mui\/material/,
 ];
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), dts({
+    rollupTypes: true,
+    // https://github.com/qmhc/vite-plugin-dts/issues/344#issuecomment-2231355823
+    tsconfigPath: "./tsconfig.app.json",
+  })],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/main.ts"),
-      name: "formik-mui",
-      formats: ["es"],
-      fileName: (format) => `formik-mui.${format}.js`,
     },
+    sourcemap: true,
     minify: false,
     rollupOptions: {
       external,
@@ -33,7 +33,6 @@ export default defineConfig({
         {
           format: "es",
           dir: "./dist",
-          sourcemap: true,
           preserveModules: true,
           entryFileNames: ({ name: fileName }) => {
             return `${fileName}.js`;

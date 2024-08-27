@@ -4,7 +4,6 @@ import Paper from '@mui/material/Paper';
 import React, { ReactNode } from 'react';
 
 interface Props {
-  title: string;
   children: ReactNode;
 }
 

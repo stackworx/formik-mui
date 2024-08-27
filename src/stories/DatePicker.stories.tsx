@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import { StoryFn, Meta } from "@storybook/react";
+import { StoryFn, Meta } from '@storybook/react';
 import LinearProgress from '@mui/material/LinearProgress';
 import { action } from '@storybook/addon-actions';
 import { subDays } from 'date-fns';
@@ -23,16 +23,16 @@ const schema = yup.object().shape({
 });
 
 export default {
-  title: "X-Mui/DatePicker",
+  title: 'X-Mui/DatePicker',
   component: DatePicker,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof DatePicker>;
 
 const Template: StoryFn<typeof DatePicker> = () => (
-  <Wrapper title="Date Picker">
+  <Wrapper>
     <Formik<Values>
       initialValues={{
         date: new Date(),

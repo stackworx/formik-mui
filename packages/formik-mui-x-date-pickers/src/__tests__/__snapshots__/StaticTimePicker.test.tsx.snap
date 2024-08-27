@@ -30,7 +30,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
               <span
                 class="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root Mui-selected css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root"
               >
-                02
+                12
               </span>
               <span
                 class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
@@ -105,7 +105,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
               />
               <div
                 class="MuiClockPointer-root css-d0vs79-MuiClockPointer-root"
-                style="height: 88px; transform: rotateZ(60deg);"
+                style="height: 88px; transform: rotateZ(0deg);"
               >
                 <div
                   class="MuiClockPointer-thumb css-f53ilk-MuiClockPointer-thumb"
@@ -113,7 +113,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
               </div>
               <div
                 aria-activedescendant=":r0:"
-                aria-label="Select hours. Selected time is 2:00 AM"
+                aria-label="Select hours. Selected time is 12:00 AM"
                 class="MuiClock-wrapper css-1ys9rbi-MuiClock-wrapper"
                 role="listbox"
                 tabindex="0"
@@ -128,9 +128,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="2 hours"
-                  aria-selected="true"
-                  class="MuiClockNumber-root Mui-selected css-zddqwy-MuiClockNumber-root"
-                  id=":r0:"
+                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(79px, 47px;"
                 >
@@ -210,7 +208,9 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="12 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  aria-selected="true"
+                  class="MuiClockNumber-root Mui-selected css-zddqwy-MuiClockNumber-root"
+                  id=":r0:"
                   role="option"
                   style="transform: translate(0px, 1px;"
                 >

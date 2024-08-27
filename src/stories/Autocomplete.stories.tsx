@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
-} from '../../packages/formik-mui/src/main';
+} from '../../packages/formik-mui/src/Autocomplete';
 import FormValues from './FormValues';
 import Wrapper from './Wrapper';
 
@@ -141,17 +141,17 @@ const groupedOptions = top100Films
   })
   .sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter));
 
-  export default {
-    title: "Core/Autocomplete",
-    component: Autocomplete,
-    parameters: {
-      layout: "fullscreen",
-    },
-    argTypes: { onSubmit: { action: "submit" } },
-  } as Meta<typeof Autocomplete>;
+export default {
+  title: 'Core/Autocomplete',
+  component: Autocomplete,
+  parameters: {
+    layout: 'fullscreen',
+  },
+  argTypes: { onSubmit: { action: 'submit' } },
+} as Meta<typeof Autocomplete>;
 
 const Template: StoryFn<typeof Autocomplete> = () => (
-  <Wrapper title="Autocomplete">
+  <Wrapper>
     <Formik
       validationSchema={schema}
       initialValues={{
@@ -242,6 +242,7 @@ const Template: StoryFn<typeof Autocomplete> = () => (
                   {...params}
                   name="multiple"
                   error={touched['multiple'] && !!errors['multiple']}
+                  // @ts-expect-error typing issue
                   helperText={touched['multiple'] && errors['multiple']}
                   label="Multiple"
                   variant="outlined"

@@ -29,13 +29,13 @@ exports[`TimePicker Renders Correctly 1`] = `
           name="test"
           placeholder="hh:mm aa"
           type="text"
-          value="02:00 AM"
+          value="12:00 AM"
         />
         <div
           class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
         >
           <button
-            aria-label="Choose time, selected time is 2:00 AM"
+            aria-label="Choose time, selected time is 12:00 AM"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
             tabindex="0"
             type="button"

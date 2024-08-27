@@ -21,11 +21,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: npm ci
       - name: build
         run: |
-          npm ci
           npm run typecheck
-          npm run lint
           npm run test
           npm run build
         working-directory: packages/formik-mui

@@ -22,7 +22,7 @@ exports[`MobileTimePicker Renders Correctly 1`] = `
         <input
           aria-describedby=":r1:-helper-text"
           aria-invalid="false"
-          aria-label="Choose time, selected time is 2:00 AM"
+          aria-label="Choose time, selected time is 12:00 AM"
           autocomplete="off"
           class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
           id=":r1:"
@@ -31,7 +31,7 @@ exports[`MobileTimePicker Renders Correctly 1`] = `
           placeholder="hh:mm aa"
           readonly=""
           type="text"
-          value="02:00 AM"
+          value="12:00 AM"
         />
         <fieldset
           aria-hidden="true"

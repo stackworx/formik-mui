@@ -31,7 +31,7 @@ exports[`MobileDateTimePicker Renders Correctly 1`] = `
           placeholder="MM/DD/YYYY hh:mm aa"
           readonly=""
           type="text"
-          value="01/01/2020 02:00 AM"
+          value="01/01/2020 12:00 AM"
         />
         <fieldset
           aria-hidden="true"

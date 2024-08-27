@@ -2,7 +2,7 @@ import React from 'react';
 import { test, expect, vi } from 'vitest';
 import { Field } from 'formik';
 import TextField from '@mui/material/TextField';
-import type {AutocompleteRenderInputParams} from '@mui/material/Autocomplete';
+import type { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 
 import { render } from './utils';
 import { Autocomplete } from '../Autocomplete';

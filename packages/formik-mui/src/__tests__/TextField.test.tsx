@@ -2,7 +2,7 @@ import * as React from 'react';
 import { test, expect } from 'vitest';
 import { Formik, Form, Field } from 'formik';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { render } from '@testing-library/react'
+import { render } from '@testing-library/react';
 
 import { TextField } from '../TextField';
 

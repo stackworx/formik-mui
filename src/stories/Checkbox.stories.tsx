@@ -13,16 +13,16 @@ import { CheckboxWithLabel } from '../../packages/formik-mui/src/CheckboxWithLab
 import Typography from '@mui/material/Typography';
 
 export default {
-  title: "Core/Checkbox",
+  title: 'Core/Checkbox',
   component: Checkbox,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof Checkbox>;
 
 const Template: StoryFn<typeof CheckboxWithLabel> = () => (
-  <Wrapper title="Checkboxes">
+  <Wrapper>
     <Formik
       initialValues={{
         on: true,
