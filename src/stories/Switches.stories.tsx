@@ -12,16 +12,16 @@ import { Switch } from '../../packages/formik-mui/src/Switch';
 import Box from '@mui/material/Box';
 
 export default {
-  title: "Core/Switch",
+  title: 'Core/Switch',
   component: Switch,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof Switch>;
 
 const Template: StoryFn<typeof Switch> = () => (
-  <Wrapper title="Switches">
+  <Wrapper>
     <Formik
       initialValues={{
         on: true,

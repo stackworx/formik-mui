@@ -15,16 +15,16 @@ interface Values {
 }
 
 export default {
-  title: "Core/InputBase",
+  title: 'Core/InputBase',
   component: InputBase,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof InputBase>;
 
 const Template: StoryFn<typeof InputBase> = () => (
-  <Wrapper title="Input Base">
+  <Wrapper>
     <Formik<Values>
       initialValues={{
         inputBase: 'Naked input',

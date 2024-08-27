@@ -29,7 +29,7 @@ exports[`DesktopDateTimePicker Renders Correctly 1`] = `
           name="test"
           placeholder="MM/DD/YYYY hh:mm aa"
           type="text"
-          value="01/01/2020 02:00 AM"
+          value="01/01/2020 12:00 AM"
         />
         <div
           class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"

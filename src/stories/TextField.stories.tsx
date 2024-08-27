@@ -63,12 +63,12 @@ const UpperCasingTextField = (props: TextFieldProps) => {
 };
 
 export default {
-  title: "Core/TextField",
+  title: 'Core/TextField',
   component: TextField,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof TextField>;
 
 const Template: StoryFn<typeof TextField> = () => (

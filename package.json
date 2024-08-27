@@ -44,9 +44,11 @@
     "eslint-plugin-react": "^7.35.0",
     "formik": "^2.2.9",
     "jsdom": "^25.0.0",
+    "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0",
     "vite": "5.4.1",
+    "vite-plugin-dts": "^4.0.3",
     "vitest": "^2.0.5",
     "yup": "^0.32.9"
   },
@@ -54,12 +56,17 @@
     "build": "tsc && vite build",
     "typecheck": "tsc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint \"./{src,packages/*/src}/**/*.{tsx,ts,js}\"",
+    "lint:fix": "eslint --fix \"./{src,packages/*/src}/**/*.{tsx,ts,js}\""
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.5.0",
     "eslint-plugin-react-hooks": "^5.1.0-beta-26f2496093-20240514",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.21.1"
   }
 }

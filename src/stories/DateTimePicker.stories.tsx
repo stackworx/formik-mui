@@ -20,16 +20,16 @@ const schema = yup.object().shape({
 });
 
 export default {
-  title: "X-Mui/DateTimePicker",
+  title: 'X-Mui/DateTimePicker',
   component: DateTimePicker,
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
-  argTypes: { onSubmit: { action: "submit" } },
+  argTypes: { onSubmit: { action: 'submit' } },
 } as Meta<typeof DateTimePicker>;
 
 const Template: StoryFn<typeof DateTimePicker> = () => (
-  <Wrapper title="Date &amp; Time Picker">
+  <Wrapper>
     <Formik<Values>
       initialValues={{
         date: new Date(),

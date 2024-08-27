@@ -1,6 +1,7 @@
 {
   "name": "formik-mui",
   "type": "module",
+  "main": "./dist/main.js",
   "version": "5.0.0-alpha.0",
   "license": "MIT",
   "typings": "dist/main.d.ts",
@@ -29,15 +30,11 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/main.js",
-  "module": "./dist/esm/main.js",
   "scripts": {
     "typecheck": "tsc",
     "build": "tsc && vite build",
     "test": "vitest",
     "test:updateSnapshot": "jest --updateSnapshot",
-    "lint": "eslint \"./{src,stories}/**/*.{tsx,ts,js}\"",
-    "lint:fix": "eslint --fix \"./{src,stories}/**/*.{tsx,ts,js}\"",
     "prepublishOnly": "yarn test && yarn build && yarn package"
   },
   "gitHead": "014c524940fd5c07f1492dab6147d2e7261229e7"

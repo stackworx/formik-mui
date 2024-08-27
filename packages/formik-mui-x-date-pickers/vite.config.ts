@@ -2,41 +2,37 @@
 import { defineConfig } from "vite";
 import * as path from "path";
 import react from "@vitejs/plugin-react";
+import dts from "vite-plugin-dts";
 
 const external = [
+  /node_modules/,
   "react",
   "react/jsx-runtime",
   "formik",
-  "@mui/x-date-pickers/DatePicker",
-  "@mui/x-date-pickers/DateTimePicker",
-  "@mui/x-date-pickers/DesktopDatePicker",
-  "@mui/x-date-pickers/DesktopTimePicker",
-  "@mui/x-date-pickers/MobileDatePicker",
-  "@mui/x-date-pickers/MobileTimePicker",
-  "@mui/x-date-pickers/MobileDateTimePicker",
-  "@mui/x-date-pickers/StaticDatePicker",
-  "@mui/x-date-pickers/StaticTimePicker",
-  "@mui/x-date-pickers/StaticDateTimePicker",
+  "tiny-warning",
+  "@mui/utils",
+  /@mui\/x-date-pickers/,
 ];
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), dts({
+    rollupTypes: true,
+    // https://github.com/qmhc/vite-plugin-dts/issues/344#issuecomment-2231355823
+    tsconfigPath: "./tsconfig.app.json",
+  })],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/main.ts"),
-      name: "formik-mui",
-      formats: ["es"],
-      fileName: (format) => `formik-mui-x-date-pickers.${format}.js`,
     },
     minify: false,
+    sourcemap: true,
     rollupOptions: {
       external,
       output: [
         {
           format: "es",
           dir: "./dist",
-          sourcemap: true,
           preserveModules: true,
           entryFileNames: ({ name: fileName }) => {
             return `${fileName}.js`;
