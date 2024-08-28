@@ -2,7 +2,7 @@
   "name": "formik-mui",
   "type": "module",
   "main": "./dist/main.js",
-  "version": "5.0.0-alpha.0",
+  "version": "5.0.0-alpha.1",
   "license": "MIT",
   "typings": "dist/main.d.ts",
   "sideEffects": false,
