@@ -37,7 +37,7 @@
     "typecheck": "tsc",
     "build": "tsc && vite build",
     "test": "TZ=UTC vitest",
-    "prepublishOnly": "yarn test && yarn build && yarn package"
+    "prepublishOnly": "npm run build"
   },
   "gitHead": "014c524940fd5c07f1492dab6147d2e7261229e7"
 }

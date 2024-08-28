@@ -44,6 +44,7 @@
     "eslint-plugin-react": "^7.35.0",
     "formik": "^2.2.9",
     "jsdom": "^25.0.0",
+    "lerna": "^8.1.8",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0",

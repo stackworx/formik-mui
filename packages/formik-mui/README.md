@@ -11,16 +11,8 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [MUI](ht
 
 ## Versions
 
-MUI >=5
-
 ```bash
-yarn add formik-mui formik-mui-x-date-pickers
+npm add formik-mui formik-mui-x-date-pickers
 ```
 
-MUI >=3
-
-```bash
-yarn add formik-material-ui formik-material-ui-lab
-```
-
-This project requires Formik>= 2.0.0. For Formik one please use formik-material-ui@1.0.x
+This project requires Formik>= 2.0.0

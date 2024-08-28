@@ -6,13 +6,13 @@ title: Getting Started
 ## Installation
 
 ```
-yarn add formik formik-mui @mui/material @emotion/react @emotion/styled
+npm add formik formik-mui @mui/material @emotion/react @emotion/styled
 ```
 
 ### MUI X Date and Time Pickers (Optional)
 
 ```
-yarn add formik-mui-x-date-pickers @mui/x-date-pickers @mui/system
+npm add formik-mui-x-date-pickers @mui/x-date-pickers @mui/system
 ```
 
 Note: You also need to install a date-library of your choice. Visit [MUI documentation](https://mui.com/x/react-date-pickers/getting-started/) for more information.
