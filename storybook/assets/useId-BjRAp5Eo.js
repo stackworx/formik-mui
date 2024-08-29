@@ -1,0 +1,1 @@
+import{r as o,a as l}from"./index-CTjT7uj6.js";function i(...t){return t.reduce((n,e)=>e==null?n:function(...a){n.apply(this,a),e.apply(this,a)},()=>{})}let s=0;function r(t){const[n,e]=o.useState(t),u=t||n;return o.useEffect(()=>{n==null&&(s+=1,e(`mui-${s}`))},[n]),u}const c=l.useId;function d(t){if(c!==void 0){const n=c();return t??n}return r(t)}export{i as c,d as u};
