@@ -23,6 +23,5 @@ jobs:
           npm run build
           mv ../storybook-static ./build/storybook
           npm run deploy -- --skip-build
-        working-directory: docs
         env:
           GIT_USER: ${{ secrets.ACCESS_TOKEN }}
