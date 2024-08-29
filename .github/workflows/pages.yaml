@@ -10,12 +10,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Build
+
+      - name: Build Pages
         run: |
+          # Build Storybook
+          npm ci
+          npm run build-storybook
+          cd docs
           npm ci
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Pages Action"
-          npm run deploy
+          npm run build
+          mv ../storybook-static ./build/storybook
+          npm run deploy -- --skip-build
         working-directory: docs
         env:
           GIT_USER: ${{ secrets.ACCESS_TOKEN }}
