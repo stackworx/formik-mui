@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
-import { StoryFn, Meta } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { StoryFn, Meta } from '@storybook/react-vite';
+import { action } from 'storybook/actions';
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';

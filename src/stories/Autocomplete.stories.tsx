@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react-vite';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';
 import * as Yup from 'yup';

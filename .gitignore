@@ -10,6 +10,7 @@ yarn.lock
 storybook-static/
 coverage
 lerna-debug.log
+debug-storybook.log
 
 # IDE Files
 *.code-workspace
