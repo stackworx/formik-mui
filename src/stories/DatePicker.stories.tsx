@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react-vite';
 import LinearProgress from '@mui/material/LinearProgress';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 import { subDays } from 'date-fns';
 import { Field, Form, Formik } from 'formik';
 import * as React from 'react';

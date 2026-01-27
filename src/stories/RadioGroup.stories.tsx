@@ -1,9 +1,9 @@
 import React from 'react';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react-vite';
 import Button from '@mui/material/Button';
 import { Formik, Form, Field } from 'formik';
 import Wrapper from './Wrapper';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import { RadioGroup } from '../../packages/formik-mui/src/RadioGroup';
 import LinearProgress from '@mui/material/LinearProgress';

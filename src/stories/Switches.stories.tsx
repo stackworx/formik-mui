@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import { StoryFn, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react-vite';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Formik, Form, Field } from 'formik';
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 import Wrapper from './Wrapper';
 import FormValues from './FormValues';
