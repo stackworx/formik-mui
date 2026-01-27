@@ -6,7 +6,8 @@ import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
 
 export interface CheckboxProps
-  extends FieldProps,
+  extends
+    FieldProps,
     Omit<
       MuiCheckboxProps,
       | 'name'

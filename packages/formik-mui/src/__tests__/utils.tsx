@@ -9,8 +9,8 @@ interface Props extends Omit<FormikConfig<any>, 'render' | 'children'> {
 }
 
 // Your test suite must contain at least one test.
-/* eslint-disable-next-line no-undef */
-test.skip('skip', () => {}); // eslint-disable-line @typescript-eslint/no-empty-function
+
+test.skip('skip', () => {});
 
 function FormikWrapper({ children, ...config }: Props): React.ReactElement {
   return (

@@ -5,8 +5,7 @@ import MuiInputBase, {
 import { FieldProps } from 'formik';
 
 export interface InputBaseProps
-  extends FieldProps,
-    Omit<MuiInputBaseProps, 'name' | 'value' | 'error'> {}
+  extends FieldProps, Omit<MuiInputBaseProps, 'name' | 'value' | 'error'> {}
 
 export function fieldToInputBase({
   disabled,

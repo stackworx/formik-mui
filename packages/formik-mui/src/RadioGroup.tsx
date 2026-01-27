@@ -5,8 +5,7 @@ import MuiRadioGroup, {
 import { FieldProps } from 'formik';
 
 export interface RadioGroupProps
-  extends FieldProps,
-    Omit<MuiRadioGroupProps, 'name' | 'value'> {}
+  extends FieldProps, Omit<MuiRadioGroupProps, 'name' | 'value'> {}
 
 export function fieldToRadioGroup({
   field: { onBlur: fieldOnBlur, ...field },
