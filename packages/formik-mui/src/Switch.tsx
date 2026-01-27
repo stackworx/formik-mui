@@ -4,7 +4,8 @@ import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
 
 export interface SwitchProps
-  extends FieldProps,
+  extends
+    FieldProps,
     Omit<
       MuiSwitchProps,
       | 'checked'
