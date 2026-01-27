@@ -5,8 +5,7 @@ import MuiTextField, {
 import { FieldProps, getIn } from 'formik';
 
 export interface TextFieldProps
-  extends FieldProps,
-    Omit<MuiTextFieldProps, 'name' | 'value' | 'error'> {}
+  extends FieldProps, Omit<MuiTextFieldProps, 'name' | 'value' | 'error'> {}
 
 export function fieldToTextField({
   disabled,

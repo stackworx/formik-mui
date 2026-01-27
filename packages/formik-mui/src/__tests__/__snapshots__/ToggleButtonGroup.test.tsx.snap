@@ -7,7 +7,7 @@ exports[`renders 1`] = `
     data-testid="form"
   >
     <div
-      class="MuiToggleButtonGroup-root css-bghv3y-MuiToggleButtonGroup-root"
+      class="MuiToggleButtonGroup-root MuiToggleButtonGroup-horizontal css-1qb8o-MuiToggleButtonGroup-root"
       name="toggle"
       role="group"
     />

@@ -6,7 +6,8 @@ import { FieldProps } from 'formik';
 import invariant from 'tiny-warning';
 
 export interface ToggleButtonGroupProps
-  extends FieldProps,
+  extends
+    FieldProps,
     Omit<MuiToggleButtonGroupProps, 'name' | 'value' | 'error'> {
   type?: string;
 }

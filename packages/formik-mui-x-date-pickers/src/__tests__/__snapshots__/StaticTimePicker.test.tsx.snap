@@ -6,78 +6,74 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
     action="#"
   >
     <div
-      class=" MuiPickersLayout-root css-gqp4xl-MuiPickersLayout-root"
+      class="MuiPickersLayout-root css-1xiumhb-MuiPickersLayout-root"
     >
       <div
-        class="MuiPickersToolbar-root MuiTimePickerToolbar-root MuiPickersLayout-toolbar css-1q48g88-MuiPickersToolbar-root-MuiTimePickerToolbar-root"
+        class="MuiPickersToolbar-root MuiTimePickerToolbar-root MuiPickersLayout-toolbar css-1kyoqes-MuiPickersToolbar-root-MuiTimePickerToolbar-root"
       >
         <span
-          class="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-overline MuiPickersToolbar-title css-6mw38q-MuiTypography-root"
         >
           Select time
         </span>
         <div
-          class="MuiPickersToolbar-content css-1wsi274-MuiPickersToolbar-content"
+          class="MuiPickersToolbar-content css-10qtiir-MuiPickersToolbar-content"
         >
           <div
-            class="MuiTimePickerToolbar-hourMinuteLabel css-trxt40-MuiTimePickerToolbar-hourMinuteLabel"
+            class="MuiTimePickerToolbar-hourMinuteLabel css-1t7mqoy-MuiTimePickerToolbar-hourMinuteLabel"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-u45mo9-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
               tabindex="-1"
               type="button"
             >
               <span
-                class="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root Mui-selected css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root"
+                class="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root css-1vx8ao-MuiTypography-root-MuiPickersToolbarText-root"
+                data-selected="true"
               >
                 12
               </span>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
             <span
-              class="MuiTypography-root MuiTypography-h3 MuiTimePickerToolbar-separator MuiPickersToolbarText-root css-1f43ekz-MuiTypography-root-MuiPickersToolbarText-root-MuiTimePickerToolbar-separator"
+              class="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root MuiTimePickerToolbar-separator css-1fl0ocn-MuiTypography-root-MuiPickersToolbarText-root-MuiTimePickerToolbar-separator"
               tabindex="-1"
             >
               :
             </span>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-u45mo9-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
               tabindex="-1"
               type="button"
             >
               <span
-                class="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root css-mvmxd9-MuiTypography-root-MuiPickersToolbarText-root"
+                class="MuiTypography-root MuiTypography-h3 MuiPickersToolbarText-root css-1vx8ao-MuiTypography-root-MuiPickersToolbarText-root"
               >
                 00
               </span>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
           <div
-            class="MuiTimePickerToolbar-ampmSelection css-ihhycx-MuiTimePickerToolbar-amPmSelection"
+            class="MuiTimePickerToolbar-ampmSelection css-1aj8kjr-MuiTimePickerToolbar-amPmSelection"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-u45mo9-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiTypography-root MuiTypography-subtitle2 MuiTimePickerToolbar-ampmLabel MuiPickersToolbarText-root Mui-selected css-7kirvq-MuiTypography-root-MuiPickersToolbarText-root"
+                class="MuiTypography-root MuiTypography-subtitle2 MuiPickersToolbarText-root MuiTimePickerToolbar-ampmLabel css-sh105w-MuiTypography-root-MuiPickersToolbarText-root"
+                data-selected="true"
               >
                 AM
               </span>
             </button>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-13u1oz-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiPickersToolbar-root css-u45mo9-MuiButtonBase-root-MuiButton-root-MuiPickersToolbarButton-root"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiTypography-root MuiTypography-subtitle2 MuiTimePickerToolbar-ampmLabel MuiPickersToolbarText-root css-7kirvq-MuiTypography-root-MuiPickersToolbarText-root"
+                class="MuiTypography-root MuiTypography-subtitle2 MuiPickersToolbarText-root MuiTimePickerToolbar-ampmLabel css-sh105w-MuiTypography-root-MuiPickersToolbarText-root"
               >
                 PM
               </span>
@@ -86,25 +82,25 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
         </div>
       </div>
       <div
-        class="MuiPickersLayout-contentWrapper css-16b5y55-MuiPickersLayout-contentWrapper"
+        class="MuiPickersLayout-contentWrapper css-n7yy7p-MuiPickersLayout-contentWrapper"
       >
         <div
-          class="MuiTimeClock-root css-eegpc0-MuiTimeClock-root"
+          class="MuiTimeClock-root css-1n0lrk4-MuiTimeClock-root"
         >
           <div
             class="MuiClock-root css-1j9v0by-MuiClock-root"
           >
             <div
-              class="MuiClock-clock css-4f0ona-MuiClock-clock"
+              class="MuiClock-clock css-182xs1g-MuiClock-clock"
             >
               <div
-                class="MuiClock-squareMask css-de3exi-MuiClock-squareMask"
+                class="MuiClock-squareMask css-189wwkn-MuiClock-squareMask"
               />
               <div
                 class="MuiClock-pin css-umzx0k-MuiClock-pin"
               />
               <div
-                class="MuiClockPointer-root css-d0vs79-MuiClockPointer-root"
+                class="MuiClockPointer-root css-pncb2q-MuiClockPointer-root"
                 style="height: 88px; transform: rotateZ(0deg);"
               >
                 <div
@@ -112,15 +108,15 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 />
               </div>
               <div
-                aria-activedescendant=":r0:"
+                aria-activedescendant=":r5:"
                 aria-label="Select hours. Selected time is 12:00 AM"
-                class="MuiClock-wrapper css-1ys9rbi-MuiClock-wrapper"
+                class="MuiClock-wrapper css-1brwns3-MuiClock-wrapper"
                 role="listbox"
                 tabindex="0"
               >
                 <span
                   aria-label="1 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(45px, 13px;"
                 >
@@ -128,7 +124,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="2 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(79px, 47px;"
                 >
@@ -136,7 +132,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="3 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(91px, 92px;"
                 >
@@ -144,7 +140,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="4 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(79px, 137px;"
                 >
@@ -152,7 +148,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="5 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(45px, 171px;"
                 >
@@ -160,7 +156,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="6 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(0px, 183px;"
                 >
@@ -168,7 +164,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="7 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(-46px, 171px;"
                 >
@@ -176,7 +172,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="8 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(-79px, 138px;"
                 >
@@ -184,7 +180,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="9 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(-91px, 92px;"
                 >
@@ -192,7 +188,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="10 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(-79px, 46px;"
                 >
@@ -200,7 +196,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 </span>
                 <span
                   aria-label="11 hours"
-                  class="MuiClockNumber-root css-zddqwy-MuiClockNumber-root"
+                  class="MuiClockNumber-root css-5wpvtd-MuiClockNumber-root"
                   role="option"
                   style="transform: translate(-46px, 13px;"
                 >
@@ -209,8 +205,8 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                 <span
                   aria-label="12 hours"
                   aria-selected="true"
-                  class="MuiClockNumber-root Mui-selected css-zddqwy-MuiClockNumber-root"
-                  id=":r0:"
+                  class="MuiClockNumber-root Mui-selected css-5wpvtd-MuiClockNumber-root"
+                  id=":r5:"
                   role="option"
                   style="transform: translate(0px, 1px;"
                 >
@@ -220,11 +216,11 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
             </div>
           </div>
           <div
-            class="MuiPickersArrowSwitcher-root MuiTimeClock-arrowSwitcher css-2x8kvt-MuiPickersArrowSwitcher-root-MuiTimeClock-arrowSwitcher"
+            class="MuiPickersArrowSwitcher-root MuiTimeClock-arrowSwitcher css-15vw5kf-MuiPickersArrowSwitcher-root-MuiTimeClock-arrowSwitcher"
           >
             <button
               aria-label="Open previous view"
-              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiPickersArrowSwitcher-button MuiPickersArrowSwitcher-previousIconButton css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button"
+              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium MuiPickersArrowSwitcher-button MuiPickersArrowSwitcher-previousIconButton css-xp4e7m-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button"
               disabled=""
               tabindex="-1"
               title="Open previous view"
@@ -232,7 +228,7 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit MuiPickersArrowSwitcher-leftArrowIcon css-1vooibu-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit MuiPickersArrowSwitcher-leftArrowIcon css-1ckov0h-MuiSvgIcon-root"
                 data-testid="ArrowLeftIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -247,14 +243,14 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
             />
             <button
               aria-label="Open next view"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeStart MuiIconButton-sizeMedium MuiPickersArrowSwitcher-button MuiPickersArrowSwitcher-nextIconButton css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeStart MuiIconButton-sizeMedium MuiPickersArrowSwitcher-button MuiPickersArrowSwitcher-nextIconButton css-1bsiu4i-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button"
               tabindex="0"
               title="Open next view"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit MuiPickersArrowSwitcher-rightArrowIcon css-1vooibu-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit MuiPickersArrowSwitcher-rightArrowIcon css-1ckov0h-MuiSvgIcon-root"
                 data-testid="ArrowRightIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -263,35 +259,26 @@ exports[`StaticTimePicker Renders Correctly 1`] = `
                   d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
       </div>
       <div
-        class="MuiDialogActions-root MuiDialogActions-spacing MuiPickersLayout-actionBar css-knqc4i-MuiDialogActions-root"
+        class="MuiDialogActions-root MuiDialogActions-spacing MuiPickersLayout-actionBar css-1x57bai-MuiDialogActions-root-MuiPickersLayout-actionBar"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           Cancel
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
           OK
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
         </button>
       </div>
     </div>

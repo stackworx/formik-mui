@@ -8,8 +8,7 @@ import { FieldProps, getIn } from 'formik';
 import * as React from 'react';
 
 export interface SelectProps
-  extends FieldProps,
-    Omit<MuiSelectProps, 'name' | 'value'> {
+  extends FieldProps, Omit<MuiSelectProps, 'name' | 'value'> {
   formControl?: FormControlProps;
   formHelperText?: FormHelperTextProps;
   inputLabel?: InputLabelProps;

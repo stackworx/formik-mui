@@ -6,10 +6,10 @@ exports[`MobileDateTimePicker Renders Correctly 1`] = `
     action="#"
   >
     <div
-      class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"
+      class="MuiFormControl-root MuiPickersTextField-root css-eqc3kq-MuiFormControl-root-MuiPickersTextField-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         for=":r1:"
         id=":r1:-label"
@@ -17,37 +17,252 @@ exports[`MobileDateTimePicker Renders Correctly 1`] = `
         Datetime
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
+        aria-describedby=":r1:-helper-text"
+        aria-invalid="false"
+        aria-labelledby=":r1:-label"
+        aria-live="polite"
+        class="MuiPickersInputBase-root MuiPickersOutlinedInput-root MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-vycme6-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
+        role="group"
       >
-        <input
-          aria-describedby=":r1:-helper-text"
-          aria-invalid="false"
-          aria-label="Choose date, selected date is Jan 1, 2020"
-          autocomplete="off"
-          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd Mui-readOnly MuiInputBase-readOnly css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-          id=":r1:"
-          inputmode="text"
-          name="test"
-          placeholder="MM/DD/YYYY hh:mm aa"
-          readonly=""
-          type="text"
-          value="01/01/2020 12:00 AM"
-        />
+        <div
+          class="MuiPickersSectionList-root MuiPickersInputBase-sectionsContainer css-1fb7els-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer"
+          contenteditable="false"
+          tabindex="0"
+        >
+          <span
+            class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+            data-sectionindex="0"
+          >
+            <span
+              class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+            <span
+              aria-disabled="false"
+              aria-label="Month"
+              aria-readonly="false"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="1"
+              aria-valuetext="January"
+              autocapitalize="none"
+              autocorrect="off"
+              class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+              contenteditable="true"
+              inputmode="numeric"
+              role="spinbutton"
+              spellcheck="false"
+              tabindex="0"
+            >
+              01
+            </span>
+            <span
+              class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            >
+              /
+            </span>
+          </span>
+          <span
+            class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+            data-sectionindex="1"
+          >
+            <span
+              class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+            <span
+              aria-disabled="false"
+              aria-label="Day"
+              aria-readonly="false"
+              aria-valuemax="31"
+              aria-valuemin="1"
+              aria-valuenow="1"
+              aria-valuetext="1st"
+              autocapitalize="none"
+              autocorrect="off"
+              class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+              contenteditable="true"
+              inputmode="numeric"
+              role="spinbutton"
+              spellcheck="false"
+              tabindex="-1"
+            >
+              01
+            </span>
+            <span
+              class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            >
+              /
+            </span>
+          </span>
+          <span
+            class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+            data-sectionindex="2"
+          >
+            <span
+              class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+            <span
+              aria-disabled="false"
+              aria-label="Year"
+              aria-readonly="false"
+              aria-valuemax="9999"
+              aria-valuemin="0"
+              aria-valuenow="2020"
+              autocapitalize="none"
+              autocorrect="off"
+              class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+              contenteditable="true"
+              inputmode="numeric"
+              role="spinbutton"
+              spellcheck="false"
+              tabindex="-1"
+            >
+              2020
+            </span>
+            <span
+              class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            >
+               
+            </span>
+          </span>
+          <span
+            class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+            data-sectionindex="3"
+          >
+            <span
+              class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+            <span
+              aria-disabled="false"
+              aria-label="Hours"
+              aria-readonly="false"
+              aria-valuemax="12"
+              aria-valuemin="1"
+              aria-valuenow="12"
+              autocapitalize="none"
+              autocorrect="off"
+              class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+              contenteditable="true"
+              inputmode="numeric"
+              role="spinbutton"
+              spellcheck="false"
+              tabindex="-1"
+            >
+              12
+            </span>
+            <span
+              class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            >
+              :
+            </span>
+          </span>
+          <span
+            class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+            data-sectionindex="4"
+          >
+            <span
+              class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+            <span
+              aria-disabled="false"
+              aria-label="Minutes"
+              aria-readonly="false"
+              aria-valuemax="59"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              autocapitalize="none"
+              autocorrect="off"
+              class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+              contenteditable="true"
+              inputmode="numeric"
+              role="spinbutton"
+              spellcheck="false"
+              tabindex="-1"
+            >
+              00
+            </span>
+            <span
+              class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            >
+               
+            </span>
+          </span>
+          <span
+            class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+            data-sectionindex="5"
+          >
+            <span
+              class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+            <span
+              aria-disabled="false"
+              aria-label="Meridiem"
+              aria-readonly="false"
+              aria-valuemax="1"
+              aria-valuemin="0"
+              aria-valuenow="0"
+              autocapitalize="none"
+              autocorrect="off"
+              class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+              contenteditable="true"
+              inputmode="text"
+              role="spinbutton"
+              spellcheck="false"
+              tabindex="-1"
+            >
+              AM
+            </span>
+            <span
+              class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+            />
+          </span>
+        </div>
+        <div
+          class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        >
+          <button
+            aria-label="Choose date, selected date is Jan 1, 2020"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+              data-testid="CalendarIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+              />
+            </svg>
+          </button>
+        </div>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiPickersOutlinedInput-notchedOutline css-lqwr9g-MuiPickersOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-14lo706"
+            class="css-kg5swy"
           >
-            <span>
+            <span
+              class="css-w48gsk"
+            >
               Datetime
             </span>
           </legend>
         </fieldset>
+        <input
+          aria-hidden="true"
+          class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
+          id=":r1:"
+          name="test"
+          tabindex="-1"
+          value="01/01/2020 12:00 AM"
+        />
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-er619e-MuiFormHelperText-root"
         id=":r1:-helper-text"
       >
         Helper text

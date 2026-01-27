@@ -8,7 +8,8 @@ import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
 export interface DesktopDatePickerProps
-  extends FieldProps,
+  extends
+    FieldProps,
     Omit<MuiDesktopDatePickerProps<Date>, 'name' | 'value' | 'error'> {
   textField?: TextFieldProps;
 }
