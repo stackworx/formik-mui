@@ -44,5 +44,13 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./vitest-setup.js'],
+    server: {
+      deps: {
+        inline: ['@mui/material', '@mui/x-date-pickers'],
+      },
+    },
+  },
+  resolve: {
+    conditions: ['import', 'module', 'browser', 'default'],
   }
 });
