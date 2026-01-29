@@ -8,8 +8,7 @@ import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
 export interface MobileTimePickerProps
-  extends
-    FieldProps,
+  extends FieldProps,
     Omit<MuiMobileTimePickerProps<Date>, 'name' | 'value' | 'error'> {
   textField?: TextFieldProps;
 }

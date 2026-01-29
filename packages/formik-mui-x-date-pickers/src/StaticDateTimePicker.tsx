@@ -8,8 +8,7 @@ import * as React from 'react';
 import { createErrorHandler } from './errorHandler';
 
 export interface StaticDateTimePickerProps
-  extends
-    FieldProps,
+  extends FieldProps,
     Omit<MuiStaticDateTimePickerProps<Date>, 'name' | 'value' | 'error'> {
   textField?: TextFieldProps;
 }
